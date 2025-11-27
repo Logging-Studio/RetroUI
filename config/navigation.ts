@@ -49,8 +49,9 @@ export const navConfig: INavigationConfig = {
         { title: "Avatar", href: `${componentsRoute}/avatar` },
         { title: "Badge", href: `${componentsRoute}/badge` },
         { title: "Breadcrumb", href: `${componentsRoute}/breadcrumb` },
-        { title: "Button", href: `${componentsRoute}/button`, tag: "Updated" },
+        { title: "Button", href: `${componentsRoute}/button` },
         { title: "Card", href: `${componentsRoute}/card` },
+        { title: "Calendar", href: `${componentsRoute}/calendar`, tag: "New" },
         { title: "Checkbox", href: `${componentsRoute}/checkbox` },
         { title: "Command", href: `${componentsRoute}/command` },
         { title: "Dialog", href: `${componentsRoute}/dialog` },
@@ -93,10 +94,10 @@ export const navConfig: INavigationConfig = {
     {
       title: "Chart",
       children: [
-        { title: "Bar Chart", href: `${chartsRoute}/bar-chart`, tag: "New" },
-        { title: "Line Chart", href: `${chartsRoute}/line-chart`, tag: "New" },
-        { title: "Area Chart", href: `${chartsRoute}/area-chart`, tag: "New" },
-        { title: "Pie Chart", href: `${chartsRoute}/pie-chart`, tag: "New" },
+        { title: "Bar Chart", href: `${chartsRoute}/bar-chart` },
+        { title: "Line Chart", href: `${chartsRoute}/line-chart` },
+        { title: "Area Chart", href: `${chartsRoute}/area-chart` },
+        { title: "Pie Chart", href: `${chartsRoute}/pie-chart` },
       ],
     },
     {

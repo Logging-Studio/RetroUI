@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { ButtonHTMLAttributes } from "react";
 import { Slot } from "@radix-ui/react-slot";
 
-const buttonVariants = cva(
+export const buttonVariants = cva(
   "font-head transition-all rounded outline-hidden cursor-pointer duration-200 font-medium flex items-center",
   {
     variants: {
@@ -15,6 +15,7 @@ const buttonVariants = cva(
         outline:
           "shadow-md hover:shadow active:shadow-none bg-transparent border-2 transition hover:translate-y-1 active:translate-y-2 active:translate-x-1",
         link: "bg-transparent hover:underline",
+        ghost: "bg-transparent hover:bg-accent"
       },
       size: {
         sm: "px-3 py-1 text-sm shadow hover:shadow-none",

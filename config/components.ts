@@ -286,6 +286,11 @@ export const componentConfig: {
         () => import("@/preview/components/button-style-with-icon"),
       ),
     },
+    "calendar-style-default": {
+      name: "calendar-style-default",
+      filePath: "preview/components/calendar-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/calendar-style-default")),
+    },
     "card-style-default": {
       name: "card-style-default",
       filePath: "preview/components/card-style-default.tsx",

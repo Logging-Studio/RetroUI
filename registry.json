@@ -151,6 +151,25 @@
         }
       ]
     },
+        {
+      "name": "calendar",
+      "type": "registry:component",
+      "title": "Calendar",
+      "description": "A customizable calendar component for showing dates. 📝",
+      "dependencies": ["react-day-picker", "lucide-react"],
+      "files": [
+        {
+          "path": "components/retroui/Calendar.tsx",
+          "target": "components/retroui/Calendar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/retroui/Button.tsx",
+          "target": "components/retroui/Button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
     {
       "name": "checkbox",
       "type": "registry:component",
