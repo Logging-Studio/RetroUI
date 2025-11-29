@@ -60,6 +60,10 @@ export const componentConfig: {
       name: "barChart",
       filePath: "components/retroui/charts/BarChart.tsx",
     },
+    carousel: {
+      name: "carousel",
+      filePath: "components/retroui/Carousel.tsx",
+    },
     checkbox: {
       name: "checkbox",
       filePath: "components/retroui/Checkbox.tsx",
@@ -294,6 +298,21 @@ export const componentConfig: {
       name: "calendar-style-default",
       filePath: "preview/components/calendar-style-default.tsx",
       preview: lazy(() => import("@/preview/components/calendar-style-default")),
+    },
+    "carousel-style-default": {
+      name: "carousel-style-default",
+      filePath: "preview/components/carousel-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/carousel-style-default")),
+    },
+    "carousel-style-sizes": {
+      name: "carousel-style-sizes",
+      filePath: "preview/components/carousel-style-sizes.tsx",
+      preview: lazy(() => import("@/preview/components/carousel-style-sizes")),
+    },
+    "carousel-style-vertical": {
+      name: "carousel-style-vertical",
+      filePath: "preview/components/carousel-style-vertical.tsx",
+      preview: lazy(() => import("@/preview/components/carousel-style-vertical")),
     },
     "card-style-default": {
       name: "card-style-default",

@@ -78,9 +78,8 @@ export default function TopNav() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="secondary" size="sm">
-                <GithubIcon size="14" className="mr-2" />
-                Star on GitHub
+              <Button variant="secondary" size="icon">
+                <GithubIcon size="14"/>
               </Button>
             </Link>
             <Button variant="secondary" size="icon" onClick={toggleTheme}>

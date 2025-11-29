@@ -52,6 +52,7 @@ export const navConfig: INavigationConfig = {
         { title: "Button", href: `${componentsRoute}/button` },
         { title: "Card", href: `${componentsRoute}/card` },
         { title: "Calendar", href: `${componentsRoute}/calendar`, tag: "New" },
+        { title: "Carousel", href: `${componentsRoute}/carousel`, tag: "New" },
         { title: "Checkbox", href: `${componentsRoute}/checkbox` },
         { title: "Command", href: `${componentsRoute}/command` },
         { title: "Dialog", href: `${componentsRoute}/dialog` },

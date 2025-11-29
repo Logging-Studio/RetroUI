@@ -2,7 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "RetroUI",
   "homepage": "https://retroui.dev",
-  "dependencies": ["tailwind-merge", "clsx"],
+  "dependencies": [
+    "tailwind-merge",
+    "clsx"
+  ],
   "items": [
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
@@ -55,7 +58,10 @@
       "name": "utils",
       "type": "registry:lib",
       "title": "Utils",
-      "dependencies": ["clsx", "tailwind-merge"],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
       "files": [
         {
           "path": "lib/utils.ts",
@@ -68,7 +74,10 @@
       "type": "registry:component",
       "title": "Accordion",
       "description": "This collapsible component let's your users read only the content they care about. 😌",
-      "dependencies": ["@radix-ui/react-accordion", "lucide-react"],
+      "dependencies": [
+        "@radix-ui/react-accordion",
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "components/retroui/Accordion.tsx",
@@ -82,7 +91,9 @@
       "type": "registry:component",
       "title": "Alert",
       "description": "Notify your users about important events and updates. 📣",
-      "dependencies": ["class-variance-authority"],
+      "dependencies": [
+        "class-variance-authority"
+      ],
       "files": [
         {
           "path": "components/retroui/Alert.tsx",
@@ -96,7 +107,9 @@
       "type": "registry:component",
       "title": "Avatar",
       "description": "Default rounded avatar that can show your users profile picture. ✨",
-      "dependencies": ["@radix-ui/react-avatar"],
+      "dependencies": [
+        "@radix-ui/react-avatar"
+      ],
       "files": [
         {
           "path": "components/retroui/Avatar.tsx",
@@ -110,7 +123,9 @@
       "type": "registry:component",
       "title": "Badge",
       "description": "The component that looks like a button but isn't clickable!",
-      "dependencies": ["class-variance-authority"],
+      "dependencies": [
+        "class-variance-authority"
+      ],
       "files": [
         {
           "path": "components/retroui/Badge.tsx",
@@ -124,7 +139,10 @@
       "type": "registry:component",
       "title": "Retro Button",
       "description": "This bold button makes sure your users click on it and perform the actions you want!",
-      "dependencies": ["class-variance-authority", "@radix-ui/react-slot"],
+      "dependencies": [
+        "class-variance-authority",
+        "@radix-ui/react-slot"
+      ],
       "files": [
         {
           "path": "components/retroui/Button.tsx",
@@ -151,16 +169,41 @@
         }
       ]
     },
-        {
+    {
       "name": "calendar",
       "type": "registry:component",
       "title": "Calendar",
       "description": "A customizable calendar component for showing dates. 📝",
-      "dependencies": ["react-day-picker", "lucide-react"],
+      "dependencies": [
+        "react-day-picker",
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "components/retroui/Calendar.tsx",
           "target": "components/retroui/Calendar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/retroui/Button.tsx",
+          "target": "components/retroui/Button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:component",
+      "title": "Carousel",
+      "description": "A customizable carousel component to show animated cards",
+      "dependencies": [
+        "embla-carousel-react",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/retroui/Carousel.tsx",
+          "target": "components/retroui/Carousel.tsx",
           "type": "registry:component"
         },
         {
@@ -212,7 +255,11 @@
       "type": "registry:component",
       "title": "Command",
       "description": "Fast, keyboard-first command palette powered by cmdk.",
-      "dependencies": ["cmdk", "@radix-ui/react-dialog", "lucide-react"],
+      "dependencies": [
+        "cmdk",
+        "@radix-ui/react-dialog",
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "components/retroui/Command.tsx",
@@ -239,7 +286,10 @@
       "type": "registry:component",
       "title": "Label",
       "description": "Label for form fields",
-      "dependencies": ["@radix-ui/react-label", "class-variance-authority"],
+      "dependencies": [
+        "@radix-ui/react-label",
+        "class-variance-authority"
+      ],
       "files": [
         {
           "path": "components/retroui/Label.tsx",
@@ -253,7 +303,9 @@
       "type": "registry:component",
       "title": "Loader",
       "description": "A loading indicator",
-      "dependencies": ["class-variance-authority"],
+      "dependencies": [
+        "class-variance-authority"
+      ],
       "files": [
         {
           "path": "components/retroui/Loader.tsx",
@@ -267,7 +319,9 @@
       "type": "registry:component",
       "title": "Menu",
       "description": "Show your users a list of actions they can take. 📋",
-      "dependencies": ["@radix-ui/react-dropdown-menu"],
+      "dependencies": [
+        "@radix-ui/react-dropdown-menu"
+      ],
       "files": [
         {
           "path": "components/retroui/Menu.tsx",
@@ -281,7 +335,10 @@
       "type": "registry:component",
       "title": "Context Menu",
       "description": "Show contextual actions on right-click.",
-      "dependencies": ["@radix-ui/react-context-menu", "lucide-react"],
+      "dependencies": [
+        "@radix-ui/react-context-menu",
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "components/retroui/ContextMenu.tsx",
@@ -295,7 +352,10 @@
       "type": "registry:component",
       "title": "Popover",
       "description": "A handy small component for your little input needs...😉",
-      "dependencies": ["@radix-ui/react-popover", "class-variance-authority"],
+      "dependencies": [
+        "@radix-ui/react-popover",
+        "class-variance-authority"
+      ],
       "author": "Ankan Bhattacharya <https://github.com/ankan002>",
       "files": [
         {
@@ -310,7 +370,9 @@
       "type": "registry:component",
       "title": "Progress",
       "description": "Show progress...",
-      "dependencies": ["@radix-ui/react-progress"],
+      "dependencies": [
+        "@radix-ui/react-progress"
+      ],
       "files": [
         {
           "path": "components/retroui/Progress.tsx",
@@ -341,7 +403,10 @@
       "type": "registry:component",
       "title": "Select",
       "description": "Let your users pick what they want.",
-      "dependencies": ["@radix-ui/react-select", "lucide-react"],
+      "dependencies": [
+        "@radix-ui/react-select",
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "components/retroui/Select.tsx",
@@ -355,7 +420,10 @@
       "type": "registry:component",
       "title": "Slider",
       "description": "Let your users pick what they want.",
-      "dependencies": ["@radix-ui/react-slider", "lucide-react"],
+      "dependencies": [
+        "@radix-ui/react-slider",
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "components/retroui/Slider.tsx",
@@ -369,7 +437,11 @@
       "type": "registry:component",
       "title": "Sonner",
       "description": "A beautiful toast component that can grab audience attention from any place.",
-      "dependencies": ["sonner", "lucide-react", "class-variance-authority"],
+      "dependencies": [
+        "sonner",
+        "lucide-react",
+        "class-variance-authority"
+      ],
       "files": [
         {
           "path": "components/retroui/Sonner.tsx",
@@ -383,7 +455,9 @@
       "type": "registry:component",
       "title": "Switch",
       "description": "Let users to turn on or off your marketing emails or notifications.",
-      "dependencies": ["@radix-ui/react-switch"],
+      "dependencies": [
+        "@radix-ui/react-switch"
+      ],
       "files": [
         {
           "path": "components/retroui/Switch.tsx",
@@ -397,7 +471,9 @@
       "type": "registry:component",
       "title": "Tab",
       "description": "Switch between different views using tabs.",
-      "dependencies": ["@headlessui/react"],
+      "dependencies": [
+        "@headlessui/react"
+      ],
       "files": [
         {
           "path": "components/retroui/Tab.tsx",
@@ -424,7 +500,9 @@
       "type": "registry:component",
       "title": "text",
       "description": "Show your texts in different styles. 💅",
-      "dependencies": ["class-variance-authority"],
+      "dependencies": [
+        "class-variance-authority"
+      ],
       "files": [
         {
           "path": "components/retroui/Text.tsx",
@@ -451,7 +529,10 @@
       "type": "registry:component",
       "title": "Toggle",
       "description": "This crazy toggling button keeps people toggling...😃",
-      "dependencies": ["@radix-ui/react-toggle", "class-variance-authority"],
+      "dependencies": [
+        "@radix-ui/react-toggle",
+        "class-variance-authority"
+      ],
       "author": "Ankan Bhattacharya <https://github.com/ankan002>",
       "files": [
         {
@@ -490,7 +571,10 @@
       "type": "registry:component",
       "title": "Tooltip",
       "description": "A cool way to give your users a hint of what a component does...😉",
-      "dependencies": ["@radix-ui/react-tooltip", "class-variance-authority"],
+      "dependencies": [
+        "@radix-ui/react-tooltip",
+        "class-variance-authority"
+      ],
       "author": "Ankan Bhattacharya <https://github.com/ankan002>",
       "files": [
         {
@@ -505,7 +589,9 @@
       "type": "registry:component",
       "title": "Area Chart",
       "description": "Beautiful area chart for data visualization with retro styling",
-      "dependencies": ["recharts"],
+      "dependencies": [
+        "recharts"
+      ],
       "files": [
         {
           "path": "components/retroui/charts/AreaChart.tsx",
@@ -519,7 +605,9 @@
       "type": "registry:component",
       "title": "Bar Chart",
       "description": "Beautiful bar chart for data visualization with retro styling",
-      "dependencies": ["recharts"],
+      "dependencies": [
+        "recharts"
+      ],
       "files": [
         {
           "path": "components/retroui/charts/BarChart.tsx",
@@ -533,7 +621,9 @@
       "type": "registry:component",
       "title": "Line Chart",
       "description": "Beautiful line chart for data visualization with retro styling",
-      "dependencies": ["recharts"],
+      "dependencies": [
+        "recharts"
+      ],
       "files": [
         {
           "path": "components/retroui/charts/LineChart.tsx",
@@ -547,7 +637,9 @@
       "type": "registry:component",
       "title": "Pie Chart",
       "description": "Beautiful pie chart for data visualization with retro styling",
-      "dependencies": ["recharts"],
+      "dependencies": [
+        "recharts"
+      ],
       "files": [
         {
           "path": "components/retroui/charts/PieChart.tsx",
@@ -560,7 +652,9 @@
       "name": "accordion-style-default",
       "title": "accordion-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/accordion.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/accordion.json"
+      ],
       "files": [
         {
           "path": "preview/components/accordion-style-default.tsx",
@@ -573,7 +667,9 @@
       "name": "alert-style-default",
       "title": "alert-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/alert.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/alert.json"
+      ],
       "files": [
         {
           "path": "preview/components/alert-style-default.tsx",
@@ -586,7 +682,9 @@
       "name": "alert-style-solid",
       "title": "alert-style-solid",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/alert.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/alert.json"
+      ],
       "files": [
         {
           "path": "preview/components/alert-style-solid.tsx",
@@ -599,7 +697,9 @@
       "name": "alert-style-with-icon",
       "title": "alert-style-with-icon",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/alert.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/alert.json"
+      ],
       "files": [
         {
           "path": "preview/components/alert-style-with-icon.tsx",
@@ -612,7 +712,9 @@
       "name": "alert-style-all-status",
       "title": "alert-style-all-status",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/alert.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/alert.json"
+      ],
       "files": [
         {
           "path": "preview/components/alert-style-all-status.tsx",
@@ -625,7 +727,9 @@
       "name": "avatar-style-circle",
       "title": "avatar-style-circle",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/avatar.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/avatar.json"
+      ],
       "files": [
         {
           "path": "preview/components/avatar-style-circle.tsx",
@@ -638,7 +742,9 @@
       "name": "avatar-style-fallbacks",
       "title": "avatar-style-fallbacks",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/avatar.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/avatar.json"
+      ],
       "files": [
         {
           "path": "preview/components/avatar-style-circle-fallbacks.tsx",
@@ -651,7 +757,9 @@
       "name": "avatar-style-circle-sizes",
       "title": "avatar-style-circle-sizes",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/avatar.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/avatar.json"
+      ],
       "files": [
         {
           "path": "preview/components/avatar-style-circle-sizes.tsx",
@@ -664,7 +772,9 @@
       "name": "badge-style-default",
       "title": "badge-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/badge.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/badge.json"
+      ],
       "files": [
         {
           "path": "preview/components/badge-style-default.tsx",
@@ -677,7 +787,9 @@
       "name": "badge-style-variants",
       "title": "badge-style-variants",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/badge.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/badge.json"
+      ],
       "files": [
         {
           "path": "preview/components/badge-style-variants.tsx",
@@ -690,7 +802,9 @@
       "name": "badge-style-default",
       "title": "badge-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/badge.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/badge.json"
+      ],
       "files": [
         {
           "path": "preview/components/badge-style-rounded.tsx",
@@ -703,7 +817,9 @@
       "name": "badge-style-sizes",
       "title": "badge-style-sizes",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/badge.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/badge.json"
+      ],
       "files": [
         {
           "path": "preview/components/badge-style-sizes.tsx",
@@ -716,7 +832,9 @@
       "name": "button-style-default",
       "title": "button-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/button.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/button.json"
+      ],
       "files": [
         {
           "path": "preview/components/button-style-default.tsx",
@@ -744,7 +862,9 @@
       "name": "button-style-secondary",
       "title": "button-style-secondary",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/button.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/button.json"
+      ],
       "files": [
         {
           "path": "preview/components/button-style-secondary.tsx",
@@ -757,7 +877,9 @@
       "name": "button-style-outline",
       "title": "button-style-outline",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/button.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/button.json"
+      ],
       "files": [
         {
           "path": "preview/components/button-style-outline.tsx",
@@ -770,7 +892,9 @@
       "name": "button-style-link",
       "title": "button-style-link",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/button.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/button.json"
+      ],
       "files": [
         {
           "path": "preview/components/button-style-link.tsx",
@@ -783,7 +907,9 @@
       "name": "button-style-with-icon",
       "title": "button-style-with-icon",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/button.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/button.json"
+      ],
       "files": [
         {
           "path": "preview/components/button-style-with-icon.tsx",
@@ -796,7 +922,9 @@
       "name": "card-style-default",
       "title": "card-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/card.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/card.json"
+      ],
       "files": [
         {
           "path": "preview/components/card-style-default.tsx",
@@ -809,7 +937,9 @@
       "name": "card-style-commerce",
       "title": "card-style-commerce",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/card.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/card.json"
+      ],
       "files": [
         {
           "path": "preview/components/card-style-commerce.tsx",
@@ -822,7 +952,9 @@
       "name": "card-style-testimonial",
       "title": "card-style-testimonial",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/card.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/card.json"
+      ],
       "files": [
         {
           "path": "preview/components/card-style-testimonial.tsx",
@@ -835,7 +967,9 @@
       "name": "checkbox-style-default",
       "title": "checkbox-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/checkbox.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/checkbox.json"
+      ],
       "files": [
         {
           "path": "preview/components/checkbox-style-default.tsx",
@@ -848,7 +982,9 @@
       "name": "checkbox-style-toggle",
       "title": "checkbox-style-toggle",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/checkbox.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/checkbox.json"
+      ],
       "files": [
         {
           "path": "preview/components/checkbox-style-variants.tsx",
@@ -861,7 +997,9 @@
       "name": "checkbox-style-default",
       "title": "checkbox-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/checkbox.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/checkbox.json"
+      ],
       "files": [
         {
           "path": "preview/components/checkbox-style-sizes.tsx",
@@ -874,7 +1012,9 @@
       "name": "input-style-default",
       "title": "input-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/input.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/input.json"
+      ],
       "files": [
         {
           "path": "preview/components/input-style-default.tsx",
@@ -887,7 +1027,9 @@
       "name": "input-style-with-label",
       "title": "input-style-with-label",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/input.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/input.json"
+      ],
       "files": [
         {
           "path": "preview/components/input-style-with-label.tsx",
@@ -900,7 +1042,9 @@
       "name": "input-style-error",
       "title": "input-style-error",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/input.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/input.json"
+      ],
       "files": [
         {
           "path": "preview/components/input-style-error.tsx",
@@ -913,7 +1057,9 @@
       "name": "menu-style-default",
       "title": "menu-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/menu.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/menu.json"
+      ],
       "files": [
         {
           "path": "preview/components/menu-style-default.tsx",
@@ -926,7 +1072,9 @@
       "name": "progress-style-default",
       "title": "progress-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/progress.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/progress.json"
+      ],
       "files": [
         {
           "path": "preview/components/progress-style-default.tsx",
@@ -939,7 +1087,9 @@
       "name": "radio-style-default",
       "title": "radio-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/radio.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/radio.json"
+      ],
       "files": [
         {
           "path": "preview/components/radio-style-default.tsx",
@@ -952,7 +1102,9 @@
       "name": "radio-style-variants",
       "title": "radio-style-variants",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/radio.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/radio.json"
+      ],
       "files": [
         {
           "path": "preview/components/radio-style-variants.tsx",
@@ -965,7 +1117,9 @@
       "name": "radio-style-sizes",
       "title": "radio-style-sizes",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/radio.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/radio.json"
+      ],
       "files": [
         {
           "path": "preview/components/radio-style-sizes.tsx",
@@ -978,7 +1132,9 @@
       "name": "select-style-default",
       "title": "select-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/select.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/select.json"
+      ],
       "files": [
         {
           "path": "preview/components/select-style-default.tsx",
@@ -991,7 +1147,9 @@
       "name": "switch-style-default",
       "title": "switch-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/switch.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/switch.json"
+      ],
       "files": [
         {
           "path": "preview/components/switch-style-default.tsx",
@@ -1004,7 +1162,9 @@
       "name": "switch-style-disabled",
       "title": "switch-style-disabled",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/switch.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/switch.json"
+      ],
       "files": [
         {
           "path": "preview/components/switch-style-disabled.tsx",
@@ -1017,7 +1177,9 @@
       "name": "table-style-default",
       "title": "table-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/table.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/table.json"
+      ],
       "files": [
         {
           "path": "preview/components/table-style-default.tsx",
@@ -1030,7 +1192,9 @@
       "name": "table-with-checkbox",
       "title": "table-with-checkbox",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/table.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/table.json"
+      ],
       "files": [
         {
           "path": "preview/components/table-with-checkbox.tsx",
@@ -1043,7 +1207,9 @@
       "name": "table-with-sticky-header",
       "title": "table-with-sticky-header",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/table.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/table.json"
+      ],
       "files": [
         {
           "path": "preview/components/table-with-sticky-header.tsx",
@@ -1056,7 +1222,9 @@
       "name": "textarea-style-default",
       "title": "textarea-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/textarea.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/textarea.json"
+      ],
       "files": [
         {
           "path": "preview/components/textarea-style-default.tsx",
@@ -1069,7 +1237,9 @@
       "name": "text-headings",
       "title": "text-headings",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/text.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/text.json"
+      ],
       "files": [
         {
           "path": "preview/components/text-headings.tsx",
@@ -1082,7 +1252,9 @@
       "name": "typography-p",
       "title": "typography-p",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/text.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/text.json"
+      ],
       "files": [
         {
           "path": "preview/components/typography-p.tsx",
@@ -1095,7 +1267,9 @@
       "name": "tab-style-default",
       "title": "tab-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/tab.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/tab.json"
+      ],
       "files": [
         {
           "path": "preview/components/tab-style-default.tsx",
@@ -1108,7 +1282,9 @@
       "name": "dialog-style-default",
       "title": "dialog-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/dialog.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/dialog.json"
+      ],
       "files": [
         {
           "path": "preview/components/dialog-style-default.tsx",
@@ -1121,7 +1297,9 @@
       "name": "dialog-style-with-footer",
       "title": "dialog-style-with-footer",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/dialog.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/dialog.json"
+      ],
       "files": [
         {
           "path": "preview/components/dialog-style-with-footer.tsx",
@@ -1134,7 +1312,9 @@
       "name": "dialog-style-width-variant",
       "title": "dialog-style-width-variant",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/dialog.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/dialog.json"
+      ],
       "files": [
         {
           "path": "preview/components/dialog-style-width-variant.tsx",
@@ -1147,7 +1327,9 @@
       "name": "dialog-style-with-form",
       "title": "dialog-style-with-form",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/dialog.json"],
+      "registryDependencies": [
+        "https://retroui.dev/r/dialog.json"
+      ],
       "files": [
         {
           "path": "preview/components/dialog-style-with-form.tsx",
@@ -1160,8 +1342,12 @@
       "name": "toggle-style-default",
       "title": "toggle-style-default",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/toggle.json"],
-      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://retroui.dev/r/toggle.json"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/toggle-style-default.tsx",
@@ -1174,8 +1360,12 @@
       "name": "toggle-style-outline-muted",
       "title": "toggle-style-outline-muted",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/toggle.json"],
-      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://retroui.dev/r/toggle.json"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/toggle-style-outline-muted.tsx",
@@ -1188,8 +1378,12 @@
       "name": "toggle-style-outlined",
       "title": "toggle-style-outlined",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/toggle.json"],
-      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://retroui.dev/r/toggle.json"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/toggle-style-outlined.tsx",
@@ -1202,8 +1396,12 @@
       "name": "toggle-style-solid",
       "title": "toggle-style-solid",
       "type": "registry:block",
-      "registryDependencies": ["https://retroui.dev/r/toggle.json"],
-      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://retroui.dev/r/toggle.json"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/toggle-style-solid.tsx",
@@ -1220,7 +1418,9 @@
         "https://retroui.dev/r/toggle.json",
         "https://retroui.dev/r/toggle-group.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/toggle-group-style-default.tsx",
@@ -1237,7 +1437,9 @@
         "https://retroui.dev/r/toggle.json",
         "https://retroui.dev/r/toggle-group.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/toggle-group-style-outline-muted.tsx",
@@ -1254,7 +1456,9 @@
         "https://retroui.dev/r/toggle.json",
         "https://retroui.dev/r/toggle-group.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/toggle-group-style-outlined.tsx",
@@ -1271,7 +1475,9 @@
         "https://retroui.dev/r/toggle.json",
         "https://retroui.dev/r/toggle-group.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/toggle-group-style-solid.tsx",
@@ -1288,7 +1494,9 @@
         "https://retroui.dev/r/tooltip.json",
         "https://retroui.dev/r/button.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/tooltip-style-default.tsx",
@@ -1305,7 +1513,9 @@
         "https://retroui.dev/r/tooltip.json",
         "https://retroui.dev/r/button.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/tooltip-style-primary.tsx",
@@ -1322,7 +1532,9 @@
         "https://retroui.dev/r/tooltip.json",
         "https://retroui.dev/r/button.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/tooltip-style-solid.tsx",
@@ -1339,7 +1551,9 @@
         "https://retroui.dev/r/sonner.json",
         "https://retroui.dev/r/button.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/sonner-style-default.tsx",
@@ -1356,7 +1570,9 @@
         "https://retroui.dev/r/sonner.json",
         "https://retroui.dev/r/button.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/sonner-style-error.tsx",
@@ -1375,7 +1591,9 @@
         "https://retroui.dev/r/input.json",
         "https://retroui.dev/r/button.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/popover-style-default.tsx",
@@ -1394,7 +1612,9 @@
         "https://retroui.dev/r/input.json",
         "https://retroui.dev/r/button.json"
       ],
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "preview/components/popover-style-default-shadow.tsx",
