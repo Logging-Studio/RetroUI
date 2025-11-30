@@ -1,0 +1,26 @@
+{
+    "pouf.chat": {
+        "name": "Pouf Chat",
+        "url": "https://pouf.chat",
+        "cover": "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/showcase/pouf.chat.png",
+        "color": "purple-200"
+    },
+    "buildersguild.space": {
+        "name": "Builders Guild",
+        "url": "https://buildersguild.space",
+        "cover": "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/showcase/buildersguild.space.png",
+        "color": "orange-200"
+    },
+    "startcod.ing": {
+        "name": "Start Coding",
+        "url": "https://startcoding.ing",
+        "cover": "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/showcase/startcod.ing.png",
+        "color": "yellow-200"
+    },
+    "rewardkitty.com": {
+        "name": "Reward Kitty",
+        "url": "https://rewardkitty.com",
+        "cover": "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/showcase/rewardkitty.com.png",
+        "color": "blue-200"
+    }
+}

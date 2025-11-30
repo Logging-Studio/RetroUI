@@ -49,7 +49,7 @@ export default function TopNav() {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-4">
             {navConfig.topNavItems.map((item) => (
               <Link
                 key={item.title}
