@@ -1,3 +1,4 @@
+import { StackedBarChart } from "@/components/retroui/charts/StackedBarChart";
 import { table } from "console";
 import { lazy } from "react";
 
@@ -59,6 +60,10 @@ export const componentConfig: {
     barChart: {
       name: "barChart",
       filePath: "components/retroui/charts/BarChart.tsx",
+    },
+    stackedBarChart: {
+      name: "stackedBarChart",
+      filePath: "components/retroui/charts/StackedBarChart.tsx",
     },
     carousel: {
       name: "carousel",
@@ -259,6 +264,26 @@ export const componentConfig: {
       preview: lazy(
         () => import("@/preview/charts/bar-chart-style-horizontal"),
       ),
+    },
+    "stacked-bar-chart-style-default": {
+      name: "stacked-bar-chart-style-default",
+      filePath: "preview/charts/stacked-bar-chart-style-default.tsx",
+      preview: lazy(() => import("@/preview/charts/stacked-bar-chart-style-default")),
+    },
+    "stacked-bar-chart-style-horizontal": {
+      name: "stacked-bar-chart-style-horizontal",
+      filePath: "preview/charts/stacked-bar-chart-style-horizontal.tsx",
+      preview: lazy(() => import("@/preview/charts/stacked-bar-chart-style-horizontal")),
+    },
+    "stacked-bar-chart-style-no-legend": {
+      name: "stacked-bar-chart-style-no-legend",
+      filePath: "preview/charts/stacked-bar-chart-style-no-legend.tsx",
+      preview: lazy(() => import("@/preview/charts/stacked-bar-chart-style-no-legend")),
+    },
+    "stacked-bar-chart-style-formatted": {
+      name: "stacked-bar-chart-style-formatted",
+      filePath: "preview/charts/stacked-bar-chart-style-formatted.tsx",
+      preview: lazy(() => import("@/preview/charts/stacked-bar-chart-style-formatted")),
     },
     "button-style-default": {
       name: "button-style-default",

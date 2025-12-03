@@ -97,6 +97,7 @@ export const navConfig: INavigationConfig = {
       title: "Chart",
       children: [
         { title: "Bar Chart", href: `${chartsRoute}/bar-chart` },
+        { title: "Stacked Bar Chart", href: `${chartsRoute}/stacked-bar-chart` },
         { title: "Line Chart", href: `${chartsRoute}/line-chart` },
         { title: "Area Chart", href: `${chartsRoute}/area-chart` },
         { title: "Pie Chart", href: `${chartsRoute}/pie-chart` },

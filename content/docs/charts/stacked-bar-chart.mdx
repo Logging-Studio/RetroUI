@@ -1,0 +1,160 @@
+---
+title: Stacked Bar Chart
+description: A customizable stacked bar chart component to visualize comparative data across categories with support for stacking, custom colors, and horizontal alignment. 📊
+lastUpdated: 03 Dec, 2025
+links:
+  source: https://github.com/Logging-Stuff/RetroUI/blob/main/components/retroui/charts/StackedBarChart.tsx
+---
+
+<ComponentShowcase name="stacked-bar-chart-style-default" />
+<br />
+<br />
+
+## Installation
+
+<ComponentInstall>
+  <ComponentInstall.Cli npmCommand="npx shadcn@latest add 'https://retroui.dev/r/stacked-bar-chart.json'" />
+  <ComponentInstall.Manual>
+
+#### 1. Install dependencies:
+
+```sh
+npm install recharts
+```
+
+<br />
+
+#### 2. Copy the code 👇 into your project:
+
+<ComponentSource name="stackedBarChart" />
+
+  </ComponentInstall.Manual>
+</ComponentInstall>
+
+<br />
+<br />
+
+## Examples
+
+### Default
+
+<ComponentShowcase name="stacked-bar-chart-style-default" />
+<br />
+<br />
+
+### Horizontal Alignment
+
+<ComponentShowcase name="stacked-bar-chart-style-horizontal" />
+<br />
+<br />
+
+### Without Legend
+
+<ComponentShowcase name="stacked-bar-chart-style-no-legend" />
+<br />
+<br />
+
+### With Formatted Values
+
+<ComponentShowcase name="stacked-bar-chart-style-formatted" />
+<br />
+<br />
+
+## API Reference
+
+<Table>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Prop</Table.Head>
+      <Table.Head>Type</Table.Head>
+      <Table.Head>Default</Table.Head>
+      <Table.Head>Description</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell className="font-medium">data</Table.Cell>
+      <Table.Cell className="*:text-xs">`Record<string, any>[]`</Table.Cell>
+      <Table.Cell className="*:text-xs">`[]`</Table.Cell>
+      <Table.Cell>Array of data objects to display</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">index</Table.Cell>
+      <Table.Cell className="*:text-xs">`string`</Table.Cell>
+      <Table.Cell className="*:text-xs">-</Table.Cell>
+      <Table.Cell>Key for the x-axis (category) data</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">categories</Table.Cell>
+      <Table.Cell className="*:text-xs">`string[]`</Table.Cell>
+      <Table.Cell className="*:text-xs">`[]`</Table.Cell>
+      <Table.Cell>Array of keys for the data values to stack in bars</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">alignment</Table.Cell>
+      <Table.Cell className="*:text-xs">`"vertical" | "horizontal"`</Table.Cell>
+      <Table.Cell className="*:text-xs">`"vertical"`</Table.Cell>
+      <Table.Cell>Orientation of the bars</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">strokeColors</Table.Cell>
+      <Table.Cell className="*:text-xs">`string[]`</Table.Cell>
+      <Table.Cell className="*:text-xs">`["var(--foreground)"]`</Table.Cell>
+      <Table.Cell>Array of stroke colors for the bars</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">fillColors</Table.Cell>
+      <Table.Cell className="*:text-xs">`string[]`</Table.Cell>
+      <Table.Cell className="*:text-xs">`["var(--primary)", "var(--secondary)", "var(--accent)"]`</Table.Cell>
+      <Table.Cell>Array of fill colors for the stacked bars</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">tooltipBgColor</Table.Cell>
+      <Table.Cell className="*:text-xs">`string`</Table.Cell>
+      <Table.Cell className="*:text-xs">`"var(--background)"`</Table.Cell>
+      <Table.Cell>Background color for tooltips</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">tooltipBorderColor</Table.Cell>
+      <Table.Cell className="*:text-xs">`string`</Table.Cell>
+      <Table.Cell className="*:text-xs">`"var(--border)"`</Table.Cell>
+      <Table.Cell>Border color for tooltips</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">gridColor</Table.Cell>
+      <Table.Cell className="*:text-xs">`string`</Table.Cell>
+      <Table.Cell className="*:text-xs">`"var(--muted)"`</Table.Cell>
+      <Table.Cell>Color for the grid lines</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">valueFormatter</Table.Cell>
+      <Table.Cell className="*:text-xs">`(value: number) => string`</Table.Cell>
+      <Table.Cell className="*:text-xs">`(value) => value.toString()`</Table.Cell>
+      <Table.Cell>Function to format values</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">showGrid</Table.Cell>
+      <Table.Cell className="*:text-xs">`boolean`</Table.Cell>
+      <Table.Cell className="*:text-xs">`true`</Table.Cell>
+      <Table.Cell>Whether to show grid lines</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">showTooltip</Table.Cell>
+      <Table.Cell className="*:text-xs">`boolean`</Table.Cell>
+      <Table.Cell className="*:text-xs">`true`</Table.Cell>
+      <Table.Cell>Whether to show tooltips on hover</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">showLegend</Table.Cell>
+      <Table.Cell className="*:text-xs">`boolean`</Table.Cell>
+      <Table.Cell className="*:text-xs">`true`</Table.Cell>
+      <Table.Cell>Whether to show the legend for categories</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell className="font-medium">className</Table.Cell>
+      <Table.Cell className="*:text-xs">`string`</Table.Cell>
+      <Table.Cell className="*:text-xs">-</Table.Cell>
+      <Table.Cell>Additional CSS classes</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
