@@ -135,7 +135,7 @@ const StackedBarChart = React.forwardRef<HTMLDivElement, StackedBarChartProps>(
                                 </span>
                               </div>
                               <span className="text-xs font-bold">
-                                {valueFormatter(entry.value as number)}
+                                {entry.value != null ? valueFormatter(entry.value as number) : '-'}
                               </span>
                             </div>
                           ))}
@@ -155,9 +155,9 @@ const StackedBarChart = React.forwardRef<HTMLDivElement, StackedBarChartProps>(
               />
             )}
 
-            {categories.map((category, index) => {
-              const fillColor = fillColors[index % fillColors.length]
-              const strokeColor = strokeColors[index % strokeColors.length] || strokeColors[0]
+            {categories.map((category, i) => {
+              const fillColor = fillColors[i % fillColors.length]
+              const strokeColor = strokeColors[i % strokeColors.length] || strokeColors[0]
 
               return (
                 <Bar

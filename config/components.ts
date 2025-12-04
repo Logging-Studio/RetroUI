@@ -1,4 +1,3 @@
-import { StackedBarChart } from "@/components/retroui/charts/StackedBarChart";
 import { table } from "console";
 import { lazy } from "react";
 
