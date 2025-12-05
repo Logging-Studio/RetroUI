@@ -1,8 +1,8 @@
 {
-    "pouf.chat": {
-        "name": "Pouf Chat",
-        "url": "https://pouf.chat",
-        "cover": "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/showcase/pouf.chat.png",
+    "codeinpublic.com": {
+        "name": "Code in Public",
+        "url": "https://codeinpublic.com",
+        "cover": "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/showcase/codeinpublic.jpg",
         "color": "purple-200"
     },
     "buildersguild.space": {
@@ -10,6 +10,12 @@
         "url": "https://buildersguild.space",
         "cover": "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/showcase/buildersguild.space.png",
         "color": "orange-200"
+    },
+    "pouf.chat": {
+        "name": "Pouf Chat",
+        "url": "https://pouf.chat",
+        "cover": "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/showcase/pouf.chat.png",
+        "color": "purple-200"
     },
     "startcod.ing": {
         "name": "Start Coding",
