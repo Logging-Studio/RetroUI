@@ -39,3 +39,4 @@ next-env.d.ts
 .contentlayer
 
 package-lock.json
+.env

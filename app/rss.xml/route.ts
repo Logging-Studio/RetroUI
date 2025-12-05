@@ -15,8 +15,8 @@ export async function GET(request: NextRequest) {
       pubDateStrategy: "githubLastEdit",
     },
     github: {
-      owner: "your-username",
-      repo: "your-repo",
+      owner: "Logging-Studio",
+      repo: "https://github.com/Logging-Studio/RetroUI",
       token: process.env.GITHUB_TOKEN,
     },
   });
