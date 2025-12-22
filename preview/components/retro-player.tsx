@@ -27,7 +27,7 @@ export default function RetroPlayerStyle() {
       </Card.Header>
       {/* card content */}
       <Card.Content className="relative px-4 sm:px-12 py-6 overflow-hidden">
-        {/* thimbnail box */}
+        {/* thumbnail box */}
         <div className="flex items-center gap-3 rounded-md p-2 border-2 border-black dark:border-white">
           <img
             src="/images/punk.svg"
@@ -41,7 +41,7 @@ export default function RetroPlayerStyle() {
               <p className="flex items-center gap-0.5">
                 <Clock
                   size={12}
-                  className="text-gray-700  dark:text-gray-200-mt-0.5"
+                  className="text-gray-700  dark:text-gray-200 -mt-0.5"
                 />{" "}
                 02:15
               </p>
