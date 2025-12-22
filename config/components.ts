@@ -678,5 +678,10 @@ export const componentConfig: {
       filePath: "preview/components/loader-style-custom.tsx",
       preview: lazy(() => import("@/preview/components/loader-style-custom"))
     },
+    "retro-player": {
+      name: "retro-player",
+      filePath: "preview/components/retro-player.tsx",
+      preview: lazy(() => import("@/preview/components/retro-player"))
+    },
   },
 };
