@@ -59,7 +59,7 @@ export const navConfig: INavigationConfig = {
         { title: "Dialog", href: `${componentsRoute}/dialog` },
         { title: "Input", href: `${componentsRoute}/input` },
         { title: "Label", href: `${componentsRoute}/label` },
-        { title: "Loader", href: `${componentsRoute}/loader`, tag: "New" },
+        { title: "Loader", href: `${componentsRoute}/loader` },
         { title: "Menu", href: `${componentsRoute}/menu` },
         { title: "Context Menu", href: `${componentsRoute}/context-menu` },
         {
@@ -76,7 +76,7 @@ export const navConfig: INavigationConfig = {
         },
         { title: "Switch", href: `${componentsRoute}/switch` },
         { title: "Tab", href: `${componentsRoute}/tab` },
-        { title: "Table", href: `${componentsRoute}/table`, tag: "Updated" },
+        { title: "Table", href: `${componentsRoute}/table` },
         { title: "Textarea", href: `${componentsRoute}/textarea` },
         { title: "Text", href: `${componentsRoute}/text` },
         {
@@ -96,7 +96,7 @@ export const navConfig: INavigationConfig = {
     {
       title: "Chart",
       children: [
-        { title: "Bar Chart", href: `${chartsRoute}/bar-chart` },
+        { title: "Bar Chart", href: `${chartsRoute}/bar-chart`, tag: "Updated" },
         { title: "Line Chart", href: `${chartsRoute}/line-chart` },
         { title: "Area Chart", href: `${chartsRoute}/area-chart` },
         { title: "Pie Chart", href: `${chartsRoute}/pie-chart` },

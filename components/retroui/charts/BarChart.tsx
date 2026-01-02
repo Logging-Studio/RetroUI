@@ -24,6 +24,7 @@ interface BarChartProps extends React.HTMLAttributes<HTMLDivElement> {
   valueFormatter?: (value: number) => string
   showGrid?: boolean
   showTooltip?: boolean
+  stacked?: boolean
   alignment?: "vertical" | "horizontal"
   className?: string
 }
@@ -35,13 +36,14 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
       index,
       categories = [],
       strokeColors = ["var(--foreground)"],
-      fillColors = ["var(--primary)"],
+      fillColors = ["var(--primary)", "var(--secondary)"],
       tooltipBgColor = "var(--background)",
       tooltipBorderColor = "var(--border)",
       gridColor = "var(--muted)",
       valueFormatter = (value: number) => value.toString(),
       showGrid = true,
       showTooltip = true,
+      stacked = false,
       alignment = "vertical",
       className,
       ...props
@@ -51,25 +53,25 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
     return (
       <div ref={ref} className={cn("h-80 w-full", className)} {...props}>
         <ResponsiveContainer width="100%" height="100%">
-          <RechartsBarChart 
-            data={data} 
+          <RechartsBarChart
+            data={data}
             layout={alignment === "horizontal" ? "vertical" : undefined}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
           >
             {showGrid && (
               <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
             )}
-            
+
             {alignment === "horizontal" ? (
               <>
-                <XAxis 
+                <XAxis
                   type="number"
                   axisLine={false}
                   tickLine={false}
                   className="text-xs fill-muted-foreground"
                   tickFormatter={valueFormatter}
                 />
-                
+
                 <YAxis
                   type="category"
                   dataKey={index}
@@ -81,13 +83,13 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
               </>
             ) : (
               <>
-                <XAxis 
+                <XAxis
                   dataKey={index}
                   axisLine={false}
                   tickLine={false}
                   className="text-xs fill-muted-foreground"
                 />
-                
+
                 <YAxis
                   axisLine={false}
                   tickLine={false}
@@ -96,18 +98,18 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
                 />
               </>
             )}
-            
+
             {showTooltip && (
               <Tooltip
                 content={({ active, payload, label }) => {
                   if (!active || !payload?.length) return null
-                  
+
                   return (
-                    <div 
+                    <div
                       className="border p-2 shadow"
-                      style={{ 
+                      style={{
                         backgroundColor: tooltipBgColor,
-                        borderColor: tooltipBorderColor 
+                        borderColor: tooltipBorderColor
                       }}
                     >
                       <div className="grid grid-cols-2 gap-2">
@@ -135,11 +137,11 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
                 }}
               />
             )}
-            
+
             {categories.map((category, index) => {
               const fillColor = fillColors[index] || fillColors[0]
               const strokeColor = strokeColors[index] || strokeColors[0]
-              
+
               return (
                 <Bar
                   key={category}
@@ -147,7 +149,7 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
                   fill={fillColor}
                   stroke={strokeColor}
                   strokeWidth={1}
-                />
+                  stackId={stacked ? "strokeId" : undefined} />
               )
             })}
           </RechartsBarChart>

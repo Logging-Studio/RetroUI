@@ -1,7 +1,7 @@
 ---
 title: Bar Chart
 description: A customizable bar chart component to visualize your data with support for multiple categories, custom colors, and horizontal alignment. 📊
-lastUpdated: 12 Aug, 2025
+lastUpdated: 02 Jan, 2026
 links:
   source: https://github.com/Logging-Stuff/RetroUI/blob/main/components/retroui/charts/BarChart.tsx
 ---
@@ -45,6 +45,12 @@ npm install recharts
 ### Grouped Data
 
 <ComponentShowcase name="bar-chart-style-grouped" />
+<br />
+<br />
+
+### Stacked Data
+
+<ComponentShowcase name="bar-chart-style-stacked" />
 <br />
 <br />
 
@@ -137,6 +143,12 @@ npm install recharts
       <Table.Cell className="*:text-xs">`boolean`</Table.Cell>
       <Table.Cell className="*:text-xs">`true`</Table.Cell>
       <Table.Cell>Whether to show tooltips on hover</Table.Cell>
+    </Table.Row>
+        <Table.Row>
+      <Table.Cell className="font-medium">stacked</Table.Cell>
+      <Table.Cell className="*:text-xs">`boolean`</Table.Cell>
+      <Table.Cell className="*:text-xs">`false`</Table.Cell>
+      <Table.Cell>Whether to stack the bars</Table.Cell>
     </Table.Row>
     <Table.Row>
       <Table.Cell className="font-medium">className</Table.Cell>

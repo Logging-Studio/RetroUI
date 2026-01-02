@@ -253,6 +253,11 @@ export const componentConfig: {
       filePath: "preview/charts/bar-chart-style-grouped.tsx",
       preview: lazy(() => import("@/preview/charts/bar-chart-style-grouped")),
     },
+    "bar-chart-style-stacked": {
+      name: "bar-chart-style-stacked",
+      filePath: "preview/charts/bar-chart-style-stacked.tsx",
+      preview: lazy(() => import("@/preview/charts/bar-chart-style-stacked")),
+    },
     "bar-chart-style-horizontal": {
       name: "bar-chart-style-horizontal",
       filePath: "preview/charts/bar-chart-style-horizontal.tsx",
