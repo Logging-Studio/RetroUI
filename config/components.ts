@@ -641,6 +641,11 @@ export const componentConfig: {
       filePath: "preview/components/toc-style-depth.tsx",
       preview: lazy(() => import("@/preview/components/toc-style-depth")),
     },
+    "toc-style-manual": {
+      name: "toc-style-manual",
+      filePath: "preview/components/toc-style-manual.tsx",
+      preview: lazy(() => import("@/preview/components/toc-style-manual")),
+    },
     "toggle-group-style-default": {
       name: "toggle-group-style-default",
       filePath: "preview/components/toggle-group-style-default.tsx",

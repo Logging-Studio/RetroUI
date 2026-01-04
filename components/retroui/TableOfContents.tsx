@@ -11,10 +11,17 @@ interface TOCItem {
     items?: TOCItem[];
 }
 
+interface ManualTOCItem {
+    id: string;
+    title: string;
+    depth: number;
+}
+
 interface TableOfContentsProps {
     depth?: number;
     className?: string;
     children?: React.ReactNode;
+    data?: ManualTOCItem[];
 }
 
 function generateTOCFromDOM(depth: number = 6): TOCItem[] {
@@ -57,6 +64,35 @@ function generateTOCFromDOM(depth: number = 6): TOCItem[] {
     return items;
 }
 
+function convertManualDataToTOC(data: ManualTOCItem[]): TOCItem[] {
+    const items: TOCItem[] = [];
+    const stack: TOCItem[] = [];
+
+    data.forEach((item) => {
+        const tocItem: TOCItem = {
+            title: item.title,
+            url: `#${item.id}`,
+            level: item.depth,
+        };
+
+        while (stack.length > 0 && stack[stack.length - 1].level >= item.depth) {
+            stack.pop();
+        }
+
+        if (stack.length === 0) {
+            items.push(tocItem);
+        } else {
+            const parent = stack[stack.length - 1];
+            if (!parent.items) parent.items = [];
+            parent.items.push(tocItem);
+        }
+
+        stack.push(tocItem);
+    });
+
+    return items;
+}
+
 function renderTOCItems(items: TOCItem[], level = 0, activeId: string | null) {
     if (!items || items.length === 0) return null;
 
@@ -88,11 +124,18 @@ export function TableOfContents({
     depth = 2,
     className = "",
     children,
+    data,
 }: TableOfContentsProps) {
     const [tocItems, setTocItems] = useState<TOCItem[]>([]);
     const [activeId, setActiveId] = useState<string | null>(null);
 
     useEffect(() => {
+        if (data) {
+            const items = convertManualDataToTOC(data);
+            setTocItems(items);
+            return;
+        }
+
         const items = generateTOCFromDOM(depth);
         setTocItems(items);
 
@@ -109,7 +152,7 @@ export function TableOfContents({
         });
 
         return () => observer.disconnect();
-    }, [depth]);
+    }, [depth, data]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
