@@ -28,6 +28,10 @@ export const componentConfig: {
       name: "alert",
       filePath: "components/retroui/Alert.tsx",
     },
+    areaChart: {
+      name: "areaChart",
+      filePath: "components/retroui/charts/AreaChart.tsx",
+    },
     avatar: {
       name: "avatar",
       filePath: "components/retroui/Avatar.tsx",
@@ -35,6 +39,14 @@ export const componentConfig: {
     badge: {
       name: "badge",
       filePath: "components/retroui/Badge.tsx",
+    },
+    barChart: {
+      name: "barChart",
+      filePath: "components/retroui/charts/BarChart.tsx",
+    },
+    breadcrumb: {
+      name: "breadcrumb",
+      filePath: "components/retroui/Breadcrumb.tsx",
     },
     button: {
       name: "button",
@@ -47,18 +59,6 @@ export const componentConfig: {
     card: {
       name: "card",
       filePath: "components/retroui/Card.tsx",
-    },
-    areaChart: {
-      name: "areaChart",
-      filePath: "components/retroui/charts/AreaChart.tsx",
-    },
-    breadcrumb: {
-      name: "breadcrumb",
-      filePath: "components/retroui/Breadcrumb.tsx",
-    },
-    barChart: {
-      name: "barChart",
-      filePath: "components/retroui/charts/BarChart.tsx",
     },
     carousel: {
       name: "carousel",
@@ -92,13 +92,13 @@ export const componentConfig: {
       name: "label",
       filePath: "components/retroui/Label.tsx",
     },
-    loader: {
-      name: "loader",
-      filePath: "components/retroui/Loader.tsx",
-    },
     lineChart: {
       name: "lineChart",
       filePath: "components/retroui/charts/LineChart.tsx",
+    },
+    loader: {
+      name: "loader",
+      filePath: "components/retroui/Loader.tsx",
     },
     menu: {
       name: "menu",
@@ -108,13 +108,13 @@ export const componentConfig: {
       name: "pieChart",
       filePath: "components/retroui/charts/PieChart.tsx",
     },
-    progress: {
-      name: "progress",
-      filePath: "components/retroui/Progress.tsx",
-    },
     popover: {
       name: "popover",
       filePath: "components/retroui/Popover.tsx",
+    },
+    progress: {
+      name: "progress",
+      filePath: "components/retroui/Progress.tsx",
     },
     radio: {
       name: "radio",
@@ -123,10 +123,6 @@ export const componentConfig: {
     select: {
       name: "select",
       filePath: "components/retroui/Select.tsx",
-    },
-    switch: {
-      name: "switch",
-      filePath: "components/retroui/Switch.tsx",
     },
     slider: {
       name: "slider",
@@ -137,6 +133,10 @@ export const componentConfig: {
       name: "sonner",
       filePath: "components/retroui/Sonner.tsx",
     },
+    switch: {
+      name: "switch",
+      filePath: "components/retroui/Switch.tsx",
+    },
     table: {
       name: "table",
       filePath: "components/retroui/Table.tsx",
@@ -144,6 +144,10 @@ export const componentConfig: {
     text: {
       name: "text",
       filePath: "components/retroui/Text.tsx",
+    },
+    toc: {
+      name: "toc",
+      filePath: "components/retroui/TableOfContents.tsx",
     },
     toggle: {
       name: "toggle",
@@ -166,6 +170,13 @@ export const componentConfig: {
         () => import("@/preview/components/accordion-style-default"),
       ),
     },
+    "alert-style-all-status": {
+      name: "alert-style-all-status",
+      filePath: "preview/components/alert-style-all-status.tsx",
+      preview: lazy(
+        () => import("@/preview/components/alert-style-all-status"),
+      ),
+    },
     "alert-style-default": {
       name: "alert-style-default",
       filePath: "preview/components/alert-style-default.tsx",
@@ -180,13 +191,6 @@ export const componentConfig: {
       name: "alert-style-with-icon",
       filePath: "preview/components/alert-style-with-icon.tsx",
       preview: lazy(() => import("@/preview/components/alert-style-with-icon")),
-    },
-    "alert-style-all-status": {
-      name: "alert-style-all-status",
-      filePath: "preview/components/alert-style-all-status.tsx",
-      preview: lazy(
-        () => import("@/preview/components/alert-style-all-status"),
-      ),
     },
     "area-chart-style-default": {
       name: "chart-style-default",
@@ -227,11 +231,6 @@ export const componentConfig: {
       filePath: "preview/components/badge-style-default.tsx",
       preview: lazy(() => import("@/preview/components/badge-style-default")),
     },
-    "badge-style-variants": {
-      name: "badge-style-variants",
-      filePath: "preview/components/badge-style-variants.tsx",
-      preview: lazy(() => import("@/preview/components/badge-style-variants")),
-    },
     "badge-style-rounded": {
       name: "badge-style-default",
       filePath: "preview/components/badge-style-rounded.tsx",
@@ -242,25 +241,20 @@ export const componentConfig: {
       filePath: "preview/components/badge-style-sizes.tsx",
       preview: lazy(() => import("@/preview/components/badge-style-sizes")),
     },
+    "badge-style-variants": {
+      name: "badge-style-variants",
+      filePath: "preview/components/badge-style-variants.tsx",
+      preview: lazy(() => import("@/preview/components/badge-style-variants")),
+    },
     "bar-chart-style-default": {
       name: "bar-chart-style-default",
       filePath: "preview/charts/bar-chart-style-default.tsx",
       preview: lazy(() => import("@/preview/charts/bar-chart-style-default")),
     },
-    "bar-chart-style-multiple": {
-      name: "bar-chart-style-multiple",
-      filePath: "preview/charts/bar-chart-style-multiple.tsx",
-      preview: lazy(() => import("@/preview/charts/bar-chart-style-multiple")),
-    },
     "bar-chart-style-grouped": {
       name: "bar-chart-style-grouped",
       filePath: "preview/charts/bar-chart-style-grouped.tsx",
       preview: lazy(() => import("@/preview/charts/bar-chart-style-grouped")),
-    },
-    "bar-chart-style-stacked": {
-      name: "bar-chart-style-stacked",
-      filePath: "preview/charts/bar-chart-style-stacked.tsx",
-      preview: lazy(() => import("@/preview/charts/bar-chart-style-stacked")),
     },
     "bar-chart-style-horizontal": {
       name: "bar-chart-style-horizontal",
@@ -269,20 +263,63 @@ export const componentConfig: {
         () => import("@/preview/charts/bar-chart-style-horizontal"),
       ),
     },
-    "drawer-style-default": {
-      name: "drawer-style-default",
-      filePath: "preview/components/drawer-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/drawer-style-default")),
+    "bar-chart-style-multiple": {
+      name: "bar-chart-style-multiple",
+      filePath: "preview/charts/bar-chart-style-multiple.tsx",
+      preview: lazy(() => import("@/preview/charts/bar-chart-style-multiple")),
     },
-    "drawer-style-right-direction": {
-      name: "drawer-style-right-direction",
-      filePath: "preview/components/drawer-style-right-direction.tsx",
-      preview: lazy(() => import("@/preview/components/drawer-style-right-direction")),
+    "bar-chart-style-stacked": {
+      name: "bar-chart-style-stacked",
+      filePath: "preview/charts/bar-chart-style-stacked.tsx",
+      preview: lazy(() => import("@/preview/charts/bar-chart-style-stacked")),
+    },
+    "breadcrumb-custom-separator": {
+      name: "breadcrumb-custom-separator",
+      filePath: "preview/components/breadcrumb-custom-separator.tsx",
+      preview: lazy(
+        () => import("@/preview/components/breadcrumb-custom-separator"),
+      ),
+    },
+    "breadcrumb-link-component": {
+      name: "breadcrumb-link-component",
+      filePath: "preview/components/breadcrumb-link-component.tsx",
+      preview: lazy(
+        () => import("@/preview/components/breadcrumb-link-component"),
+      ),
+    },
+    "breadcrumb-style-collapsed": {
+      name: "breadcrumb-style-collapsed",
+      filePath: "preview/components/breadcrumb-style-collapsed.tsx",
+      preview: lazy(
+        () => import("@/preview/components/breadcrumb-style-collapsed"),
+      ),
+    },
+    "breadcrumb-style-default": {
+      name: "breadcrumb-style-default",
+      filePath: "preview/components/breadcrumb-style-default.tsx",
+      preview: lazy(
+        () => import("@/preview/components/breadcrumb-style-default"),
+      ),
     },
     "button-style-default": {
       name: "button-style-default",
       filePath: "preview/components/button-style-default.tsx",
       preview: lazy(() => import("@/preview/components/button-style-default")),
+    },
+    "button-style-icon": {
+      name: "button-style-icon",
+      filePath: "preview/components/button-style-icon.tsx",
+      preview: lazy(() => import("@/preview/components/button-style-icon")),
+    },
+    "button-style-link": {
+      name: "button-style-link",
+      filePath: "preview/components/button-style-link.tsx",
+      preview: lazy(() => import("@/preview/components/button-style-link")),
+    },
+    "button-style-outline": {
+      name: "button-style-default",
+      filePath: "preview/components/button-style-outline.tsx",
+      preview: lazy(() => import("@/preview/components/button-style-outline")),
     },
     "button-style-secondary": {
       name: "button-style-secondary",
@@ -290,21 +327,6 @@ export const componentConfig: {
       preview: lazy(
         () => import("@/preview/components/button-style-secondary"),
       ),
-    },
-    "button-style-icon": {
-      name: "button-style-icon",
-      filePath: "preview/components/button-style-icon.tsx",
-      preview: lazy(() => import("@/preview/components/button-style-icon")),
-    },
-    "button-style-outline": {
-      name: "button-style-default",
-      filePath: "preview/components/button-style-outline.tsx",
-      preview: lazy(() => import("@/preview/components/button-style-outline")),
-    },
-    "button-style-link": {
-      name: "button-style-link",
-      filePath: "preview/components/button-style-link.tsx",
-      preview: lazy(() => import("@/preview/components/button-style-link")),
     },
     "button-style-with-icon": {
       name: "button-style-with-icon",
@@ -317,6 +339,23 @@ export const componentConfig: {
       name: "calendar-style-default",
       filePath: "preview/components/calendar-style-default.tsx",
       preview: lazy(() => import("@/preview/components/calendar-style-default")),
+    },
+    "card-style-commerce": {
+      name: "card-style-commerce",
+      filePath: "preview/components/card-style-commerce.tsx",
+      preview: lazy(() => import("@/preview/components/card-style-commerce")),
+    },
+    "card-style-default": {
+      name: "card-style-default",
+      filePath: "preview/components/card-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/card-style-default")),
+    },
+    "card-style-testimonial": {
+      name: "card-style-testimonial",
+      filePath: "preview/components/card-style-testimonial.tsx",
+      preview: lazy(
+        () => import("@/preview/components/card-style-testimonial"),
+      ),
     },
     "carousel-style-default": {
       name: "carousel-style-default",
@@ -333,23 +372,6 @@ export const componentConfig: {
       filePath: "preview/components/carousel-style-vertical.tsx",
       preview: lazy(() => import("@/preview/components/carousel-style-vertical")),
     },
-    "card-style-default": {
-      name: "card-style-default",
-      filePath: "preview/components/card-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/card-style-default")),
-    },
-    "card-style-commerce": {
-      name: "card-style-commerce",
-      filePath: "preview/components/card-style-commerce.tsx",
-      preview: lazy(() => import("@/preview/components/card-style-commerce")),
-    },
-    "card-style-testimonial": {
-      name: "card-style-testimonial",
-      filePath: "preview/components/card-style-testimonial.tsx",
-      preview: lazy(
-        () => import("@/preview/components/card-style-testimonial"),
-      ),
-    },
     "checkbox-style-default": {
       name: "checkbox-style-default",
       filePath: "preview/components/checkbox-style-default.tsx",
@@ -357,302 +379,16 @@ export const componentConfig: {
         () => import("@/preview/components/checkbox-style-default"),
       ),
     },
-    "checkbox-style-variants": {
-      name: "checkbox-style-toggle",
-      filePath: "preview/components/checkbox-style-variants.tsx",
-      preview: lazy(
-        () => import("@/preview/components/checkbox-style-variants"),
-      ),
-    },
     "checkbox-style-sizes": {
       name: "checkbox-style-default",
       filePath: "preview/components/checkbox-style-sizes.tsx",
       preview: lazy(() => import("@/preview/components/checkbox-style-sizes")),
     },
-    // "dropdown-style-default": {
-    //   name: "dropdown-style-default",
-    //   filePath: "preview/components/dropdown-style-default.tsx",
-    //   preview: lazy(() => import("@/preview/components/dropdown-style-default")),
-    // },
-    "input-style-default": {
-      name: "input-style-default",
-      filePath: "preview/components/input-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/input-style-default")),
-    },
-    "input-style-with-label": {
-      name: "input-style-with-label",
-      filePath: "preview/components/input-style-with-label.tsx",
+    "checkbox-style-variants": {
+      name: "checkbox-style-toggle",
+      filePath: "preview/components/checkbox-style-variants.tsx",
       preview: lazy(
-        () => import("@/preview/components/input-style-with-label"),
-      ),
-    },
-    "input-style-error": {
-      name: "input-style-error",
-      filePath: "preview/components/input-style-error.tsx",
-      preview: lazy(() => import("@/preview/components/input-style-error")),
-    },
-    "label-style-default": {
-      name: "label-style-default",
-      filePath: "preview/components/label-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/label-style-default")),
-    },
-    "line-chart-style-default": {
-      name: "line-chart-style-default",
-      filePath: "preview/charts/line-chart-style-default.tsx",
-      preview: lazy(() => import("@/preview/charts/line-chart-style-default")),
-    },
-    "line-chart-style-multiple": {
-      name: "line-chart-style-multiple",
-      filePath: "preview/charts/line-chart-style-multiple.tsx",
-      preview: lazy(() => import("@/preview/charts/line-chart-style-multiple")),
-    },
-    "menu-style-default": {
-      name: "menu-style-default",
-      filePath: "preview/components/menu-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/menu-style-default")),
-    },
-    "pie-chart-style-default": {
-      name: "pie-chart-style-default",
-      filePath: "preview/charts/pie-chart-style-default.tsx",
-      preview: lazy(() => import("@/preview/charts/pie-chart-style-default")),
-    },
-    "pie-chart-style-donut": {
-      name: "pie-chart-style-donut",
-      filePath: "preview/charts/pie-chart-style-donut.tsx",
-      preview: lazy(() => import("@/preview/charts/pie-chart-style-donut")),
-    },
-    "progress-style-default": {
-      name: "progress-style-default",
-      filePath: "preview/components/progress-style-default.tsx",
-      preview: lazy(
-        () => import("@/preview/components/progress-style-default"),
-      ),
-    },
-    "popover-style-default": {
-      name: "popover-style-default",
-      filePath: "preview/components/popover-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/popover-style-default")),
-    },
-    "popover-style-default-shadow": {
-      name: "popover-style-default-shadow",
-      filePath: "preview/components/popover-style-default-shadow.tsx",
-      preview: lazy(
-        () => import("@/preview/components/popover-style-default-shadow"),
-      ),
-    },
-    "radio-style-default": {
-      name: "radio-style-default",
-      filePath: "preview/components/radio-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/radio-style-default")),
-    },
-    "radio-style-variants": {
-      name: "radio-style-variants",
-      filePath: "preview/components/radio-style-variants.tsx",
-      preview: lazy(() => import("@/preview/components/radio-style-variants")),
-    },
-    "radio-style-sizes": {
-      name: "radio-style-sizes",
-      filePath: "preview/components/radio-style-sizes.tsx",
-      preview: lazy(() => import("@/preview/components/radio-style-sizes")),
-    },
-    "select-style-default": {
-      name: "select-style-default",
-      filePath: "preview/components/select-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/select-style-default")),
-    },
-    "switch-style-default": {
-      name: "switch-style-default",
-      filePath: "preview/components/switch-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/switch-style-default")),
-    },
-    "switch-style-disabled": {
-      name: "switch-style-disabled",
-      filePath: "preview/components/switch-style-disabled.tsx",
-      preview: lazy(() => import("@/preview/components/switch-style-disabled")),
-    },
-    "table-style-default": {
-      name: "table-style-default",
-      filePath: "preview/components/table-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/table-style-default")),
-    },
-    "table-with-checkbox": {
-      name: "table-with-checkbox",
-      filePath: "preview/components/table-with-checkbox.tsx",
-      preview: lazy(() => import("@/preview/components/table-with-checkbox")),
-    },
-    "table-with-sticky-header": {
-      name: "table-with-sticky-header",
-      filePath: "preview/components/table-with-sticky-header.tsx",
-      preview: lazy(
-        () => import("@/preview/components/table-with-sticky-header"),
-      ),
-    },
-    "textarea-style-default": {
-      name: "textarea-style-default",
-      filePath: "preview/components/textarea-style-default.tsx",
-      preview: lazy(
-        () => import("@/preview/components/textarea-style-default"),
-      ),
-    },
-    "text-headings": {
-      name: "text-headings",
-      filePath: "preview/components/text-headings.tsx",
-      preview: lazy(() => import("@/preview/components/text-headings")),
-    },
-    "typography-p": {
-      name: "typography-p",
-      filePath: "preview/components/typography-p.tsx",
-      preview: lazy(() => import("@/preview/components/typography-p")),
-    },
-    "tab-style-default": {
-      name: "typography-p",
-      filePath: "preview/components/tab-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/tab-style-default")),
-    },
-    "dialog-style-default": {
-      name: "dialog-style-default",
-      filePath: "preview/components/dialog-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/dialog-style-default")),
-    },
-    "dialog-style-with-footer": {
-      name: "dialog-style-with-footer",
-      filePath: "preview/components/dialog-style-with-footer.tsx",
-      preview: lazy(
-        () => import("@/preview/components/dialog-style-with-footer"),
-      ),
-    },
-    "dialog-style-width-variant": {
-      name: "dialog-style-width-variant",
-      filePath: "preview/components/dialog-style-width-variant.tsx",
-      preview: lazy(
-        () => import("@/preview/components/dialog-style-width-variant"),
-      ),
-    },
-    "dialog-style-with-form": {
-      name: "dialog-style-with-form",
-      filePath: "preview/components/dialog-style-with-form.tsx",
-      preview: lazy(
-        () => import("@/preview/components/dialog-style-with-form"),
-      ),
-    },
-    "slider-style-default": {
-      name: "slider-style-default",
-      filePath: "preview/components/slider-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/slider-style-default")),
-    },
-    "toggle-style-default": {
-      name: "toggle-style-default",
-      filePath: "preview/components/toggle-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/toggle-style-default")),
-    },
-    "toggle-style-outlined": {
-      name: "toggle-style-outlined",
-      filePath: "preview/components/toggle-style-outlined.tsx",
-      preview: lazy(() => import("@/preview/components/toggle-style-outlined")),
-    },
-    "toggle-style-solid": {
-      name: "toggle-style-solid",
-      filePath: "preview/components/toggle-style-solid.tsx",
-      preview: lazy(() => import("@/preview/components/toggle-style-solid")),
-    },
-    "toggle-style-outline-muted": {
-      name: "toggle-style-outline-muted",
-      filePath: "preview/components/toggle-style-outline-muted.tsx",
-      preview: lazy(
-        () => import("@/preview/components/toggle-style-outline-muted"),
-      ),
-    },
-    "sonner-style-default": {
-      name: "sonner-style-default",
-      filePath: "preview/components/sonner-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/sonner-style-default")),
-    },
-    "sonner-style-status": {
-      name: "sonner-style-status",
-      filePath: "preview/components/sonner-style-status.tsx",
-      preview: lazy(() => import("@/preview/components/sonner-style-status")),
-    },
-    "sonner-style-colored-status": {
-      name: "sonner-style-colored-status",
-      filePath: "preview/components/sonner-style-colored-status.tsx",
-      preview: lazy(
-        () => import("@/preview/components/sonner-style-colored-status"),
-      ),
-    },
-    label: {
-      name: "label",
-      filePath: "preview/components/label.tsx",
-      preview: lazy(() => import("@/preview/components/label")),
-    },
-    "tooltip-style-default": {
-      name: "tooltip-style-default",
-      filePath: "preview/components/tooltip-style-default.tsx",
-      preview: lazy(() => import("@/preview/components/tooltip-style-default")),
-    },
-    "tooltip-style-solid": {
-      name: "tooltip-style-solid",
-      filePath: "preview/components/tooltip-style-solid.tsx",
-      preview: lazy(() => import("@/preview/components/tooltip-style-solid")),
-    },
-    "tooltip-style-primary": {
-      name: "tooltip-style-primary",
-      filePath: "preview/components/tooltip-style-primary.tsx",
-      preview: lazy(() => import("@/preview/components/tooltip-style-primary")),
-    },
-    "toggle-group-style-default": {
-      name: "toggle-group-style-default",
-      filePath: "preview/components/toggle-group-style-default.tsx",
-      preview: lazy(
-        () => import("@/preview/components/toggle-group-style-default"),
-      ),
-    },
-    "toggle-group-style-outlined": {
-      name: "toggle-group-style-outlined",
-      filePath: "preview/components/toggle-group-style-outlined.tsx",
-      preview: lazy(
-        () => import("@/preview/components/toggle-group-style-outlined"),
-      ),
-    },
-    "toggle-group-style-outline-muted": {
-      name: "toggle-group-style-outline-muted",
-      filePath: "preview/components/toggle-group-style-outline-muted.tsx",
-      preview: lazy(
-        () => import("@/preview/components/toggle-group-style-outline-muted"),
-      ),
-    },
-    "toggle-group-style-solid": {
-      name: "toggle-group-style-solid",
-      filePath: "preview/components/toggle-group-style-solid.tsx",
-      preview: lazy(
-        () => import("@/preview/components/toggle-group-style-solid"),
-      ),
-    },
-    "breadcrumb-style-default": {
-      name: "breadcrumb-style-default",
-      filePath: "preview/components/breadcrumb-style-default.tsx",
-      preview: lazy(
-        () => import("@/preview/components/breadcrumb-style-default"),
-      ),
-    },
-    "breadcrumb-custom-separator": {
-      name: "breadcrumb-custom-separator",
-      filePath: "preview/components/breadcrumb-custom-separator.tsx",
-      preview: lazy(
-        () => import("@/preview/components/breadcrumb-custom-separator"),
-      ),
-    },
-    "breadcrumb-style-collapsed": {
-      name: "breadcrumb-style-collapsed",
-      filePath: "preview/components/breadcrumb-style-collapsed.tsx",
-      preview: lazy(
-        () => import("@/preview/components/breadcrumb-style-collapsed"),
-      ),
-    },
-    "breadcrumb-link-component": {
-      name: "breadcrumb-link-component",
-      filePath: "preview/components/breadcrumb-link-component.tsx",
-      preview: lazy(
-        () => import("@/preview/components/breadcrumb-link-component"),
+        () => import("@/preview/components/checkbox-style-variants"),
       ),
     },
     "command-style-default": {
@@ -672,15 +408,88 @@ export const componentConfig: {
         () => import("@/preview/components/context-menu-style-default"),
       ),
     },
+    "dialog-style-default": {
+      name: "dialog-style-default",
+      filePath: "preview/components/dialog-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/dialog-style-default")),
+    },
+    "dialog-style-width-variant": {
+      name: "dialog-style-width-variant",
+      filePath: "preview/components/dialog-style-width-variant.tsx",
+      preview: lazy(
+        () => import("@/preview/components/dialog-style-width-variant"),
+      ),
+    },
+    "dialog-style-with-footer": {
+      name: "dialog-style-with-footer",
+      filePath: "preview/components/dialog-style-with-footer.tsx",
+      preview: lazy(
+        () => import("@/preview/components/dialog-style-with-footer"),
+      ),
+    },
+    "dialog-style-with-form": {
+      name: "dialog-style-with-form",
+      filePath: "preview/components/dialog-style-with-form.tsx",
+      preview: lazy(
+        () => import("@/preview/components/dialog-style-with-form"),
+      ),
+    },
+    "drawer-style-default": {
+      name: "drawer-style-default",
+      filePath: "preview/components/drawer-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/drawer-style-default")),
+    },
+    "drawer-style-right-direction": {
+      name: "drawer-style-right-direction",
+      filePath: "preview/components/drawer-style-right-direction.tsx",
+      preview: lazy(() => import("@/preview/components/drawer-style-right-direction")),
+    },
+    // "dropdown-style-default": {
+    //   name: "dropdown-style-default",
+    //   filePath: "preview/components/dropdown-style-default.tsx",
+    //   preview: lazy(() => import("@/preview/components/dropdown-style-default")),
+    // },
+    "input-style-default": {
+      name: "input-style-default",
+      filePath: "preview/components/input-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/input-style-default")),
+    },
+    "input-style-error": {
+      name: "input-style-error",
+      filePath: "preview/components/input-style-error.tsx",
+      preview: lazy(() => import("@/preview/components/input-style-error")),
+    },
+    "input-style-with-label": {
+      name: "input-style-with-label",
+      filePath: "preview/components/input-style-with-label.tsx",
+      preview: lazy(
+        () => import("@/preview/components/input-style-with-label"),
+      ),
+    },
+    "label-style-default": {
+      name: "label-style-default",
+      filePath: "preview/components/label-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/label-style-default")),
+    },
+    "line-chart-style-default": {
+      name: "line-chart-style-default",
+      filePath: "preview/charts/line-chart-style-default.tsx",
+      preview: lazy(() => import("@/preview/charts/line-chart-style-default")),
+    },
+    "line-chart-style-multiple": {
+      name: "line-chart-style-multiple",
+      filePath: "preview/charts/line-chart-style-multiple.tsx",
+      preview: lazy(() => import("@/preview/charts/line-chart-style-multiple")),
+    },
+    "loader-style-custom": {
+      name: "loader-style-custom",
+      filePath: "preview/components/loader-style-custom.tsx",
+      preview: lazy(() => import("@/preview/components/loader-style-custom"))
+    },
     "loader-style-default": {
       name: "loader-style-default",
       filePath: "preview/components/loader-style-default.tsx",
       preview: lazy(() => import("@/preview/components/loader-style-default")),
-    },
-    "loader-style-solid": {
-      name: "loader-style-solid",
-      filePath: "preview/components/loader-style-solid.tsx",
-      preview: lazy(() => import("@/preview/components/loader-style-solid")),
     },
     "loader-style-outline": {
       name: "loader-style-outline",
@@ -692,15 +501,220 @@ export const componentConfig: {
       filePath: "preview/components/loader-style-sizes.tsx",
       preview: lazy(() => import("@/preview/components/loader-style-sizes")),
     },
-    "loader-style-custom": {
-      name: "loader-style-custom",
-      filePath: "preview/components/loader-style-custom.tsx",
-      preview: lazy(() => import("@/preview/components/loader-style-custom"))
+    "loader-style-solid": {
+      name: "loader-style-solid",
+      filePath: "preview/components/loader-style-solid.tsx",
+      preview: lazy(() => import("@/preview/components/loader-style-solid")),
+    },
+    "menu-style-default": {
+      name: "menu-style-default",
+      filePath: "preview/components/menu-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/menu-style-default")),
+    },
+    "pie-chart-style-default": {
+      name: "pie-chart-style-default",
+      filePath: "preview/charts/pie-chart-style-default.tsx",
+      preview: lazy(() => import("@/preview/charts/pie-chart-style-default")),
+    },
+    "pie-chart-style-donut": {
+      name: "pie-chart-style-donut",
+      filePath: "preview/charts/pie-chart-style-donut.tsx",
+      preview: lazy(() => import("@/preview/charts/pie-chart-style-donut")),
+    },
+    "popover-style-default": {
+      name: "popover-style-default",
+      filePath: "preview/components/popover-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/popover-style-default")),
+    },
+    "popover-style-default-shadow": {
+      name: "popover-style-default-shadow",
+      filePath: "preview/components/popover-style-default-shadow.tsx",
+      preview: lazy(
+        () => import("@/preview/components/popover-style-default-shadow"),
+      ),
+    },
+    "progress-style-default": {
+      name: "progress-style-default",
+      filePath: "preview/components/progress-style-default.tsx",
+      preview: lazy(
+        () => import("@/preview/components/progress-style-default"),
+      ),
+    },
+    "radio-style-default": {
+      name: "radio-style-default",
+      filePath: "preview/components/radio-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/radio-style-default")),
+    },
+    "radio-style-sizes": {
+      name: "radio-style-sizes",
+      filePath: "preview/components/radio-style-sizes.tsx",
+      preview: lazy(() => import("@/preview/components/radio-style-sizes")),
+    },
+    "radio-style-variants": {
+      name: "radio-style-variants",
+      filePath: "preview/components/radio-style-variants.tsx",
+      preview: lazy(() => import("@/preview/components/radio-style-variants")),
     },
     "retro-player": {
       name: "retro-player",
       filePath: "preview/components/retro-player.tsx",
       preview: lazy(() => import("@/preview/components/retro-player"))
+    },
+    "select-style-default": {
+      name: "select-style-default",
+      filePath: "preview/components/select-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/select-style-default")),
+    },
+    "slider-style-default": {
+      name: "slider-style-default",
+      filePath: "preview/components/slider-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/slider-style-default")),
+    },
+    "sonner-style-colored-status": {
+      name: "sonner-style-colored-status",
+      filePath: "preview/components/sonner-style-colored-status.tsx",
+      preview: lazy(
+        () => import("@/preview/components/sonner-style-colored-status"),
+      ),
+    },
+    "sonner-style-default": {
+      name: "sonner-style-default",
+      filePath: "preview/components/sonner-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/sonner-style-default")),
+    },
+    "sonner-style-status": {
+      name: "sonner-style-status",
+      filePath: "preview/components/sonner-style-status.tsx",
+      preview: lazy(() => import("@/preview/components/sonner-style-status")),
+    },
+    "switch-style-default": {
+      name: "switch-style-default",
+      filePath: "preview/components/switch-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/switch-style-default")),
+    },
+    "switch-style-disabled": {
+      name: "switch-style-disabled",
+      filePath: "preview/components/switch-style-disabled.tsx",
+      preview: lazy(() => import("@/preview/components/switch-style-disabled")),
+    },
+    "tab-style-default": {
+      name: "typography-p",
+      filePath: "preview/components/tab-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/tab-style-default")),
+    },
+    "table-style-default": {
+      name: "table-style-default",
+      filePath: "preview/components/table-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/table-style-default")),
+    },
+    "table-with-checkbox": {
+      name: "table-with-checkbox",
+      filePath: "preview/components/table-with-checkbox.tsx",
+      preview: lazy(() => import("@/preview/components/table-with-checkbox")),
+    },
+    "table-with-sticky-header": {
+      name: "table-with-sticky-header",
+      filePath: "preview/components/table-with-sticky-header.tsx",
+      preview: lazy(
+        () => import("@/preview/components/table-with-sticky-header"),
+      ),
+    },
+    "text-headings": {
+      name: "text-headings",
+      filePath: "preview/components/text-headings.tsx",
+      preview: lazy(() => import("@/preview/components/text-headings")),
+    },
+    "textarea-style-default": {
+      name: "textarea-style-default",
+      filePath: "preview/components/textarea-style-default.tsx",
+      preview: lazy(
+        () => import("@/preview/components/textarea-style-default"),
+      ),
+    },
+    "toc-style-default": {
+      name: "toc-style-default",
+      filePath: "preview/components/toc-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/toc-style-default")),
+    },
+    "toc-style-depth": {
+      name: "toc-style-depth",
+      filePath: "preview/components/toc-style-depth.tsx",
+      preview: lazy(() => import("@/preview/components/toc-style-depth")),
+    },
+    "toc-style-manual": {
+      name: "toc-style-manual",
+      filePath: "preview/components/toc-style-manual.tsx",
+      preview: lazy(() => import("@/preview/components/toc-style-manual")),
+    },
+    "toggle-group-style-default": {
+      name: "toggle-group-style-default",
+      filePath: "preview/components/toggle-group-style-default.tsx",
+      preview: lazy(
+        () => import("@/preview/components/toggle-group-style-default"),
+      ),
+    },
+    "toggle-group-style-outline-muted": {
+      name: "toggle-group-style-outline-muted",
+      filePath: "preview/components/toggle-group-style-outline-muted.tsx",
+      preview: lazy(
+        () => import("@/preview/components/toggle-group-style-outline-muted"),
+      ),
+    },
+    "toggle-group-style-outlined": {
+      name: "toggle-group-style-outlined",
+      filePath: "preview/components/toggle-group-style-outlined.tsx",
+      preview: lazy(
+        () => import("@/preview/components/toggle-group-style-outlined"),
+      ),
+    },
+    "toggle-group-style-solid": {
+      name: "toggle-group-style-solid",
+      filePath: "preview/components/toggle-group-style-solid.tsx",
+      preview: lazy(
+        () => import("@/preview/components/toggle-group-style-solid"),
+      ),
+    },
+    "toggle-style-default": {
+      name: "toggle-style-default",
+      filePath: "preview/components/toggle-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/toggle-style-default")),
+    },
+    "toggle-style-outline-muted": {
+      name: "toggle-style-outline-muted",
+      filePath: "preview/components/toggle-style-outline-muted.tsx",
+      preview: lazy(
+        () => import("@/preview/components/toggle-style-outline-muted"),
+      ),
+    },
+    "toggle-style-outlined": {
+      name: "toggle-style-outlined",
+      filePath: "preview/components/toggle-style-outlined.tsx",
+      preview: lazy(() => import("@/preview/components/toggle-style-outlined")),
+    },
+    "toggle-style-solid": {
+      name: "toggle-style-solid",
+      filePath: "preview/components/toggle-style-solid.tsx",
+      preview: lazy(() => import("@/preview/components/toggle-style-solid")),
+    },
+    "tooltip-style-default": {
+      name: "tooltip-style-default",
+      filePath: "preview/components/tooltip-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/tooltip-style-default")),
+    },
+    "tooltip-style-primary": {
+      name: "tooltip-style-primary",
+      filePath: "preview/components/tooltip-style-primary.tsx",
+      preview: lazy(() => import("@/preview/components/tooltip-style-primary")),
+    },
+    "tooltip-style-solid": {
+      name: "tooltip-style-solid",
+      filePath: "preview/components/tooltip-style-solid.tsx",
+      preview: lazy(() => import("@/preview/components/tooltip-style-solid")),
+    },
+    "typography-p": {
+      name: "typography-p",
+      filePath: "preview/components/typography-p.tsx",
+      preview: lazy(() => import("@/preview/components/typography-p")),
     },
   },
 };

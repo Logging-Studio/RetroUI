@@ -78,6 +78,7 @@ export const navConfig: INavigationConfig = {
         { title: "Switch", href: `${componentsRoute}/switch` },
         { title: "Tab", href: `${componentsRoute}/tab` },
         { title: "Table", href: `${componentsRoute}/table` },
+        { title: "Table Of Contents", href: `${componentsRoute}/toc`, tag: "New" },
         { title: "Textarea", href: `${componentsRoute}/textarea` },
         { title: "Text", href: `${componentsRoute}/text` },
         {

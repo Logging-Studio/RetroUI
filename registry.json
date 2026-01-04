@@ -155,7 +155,9 @@
       "name": "breadcrumb",
       "type": "registry:component",
       "title": "Breadcrumb",
-      "dependencies": ["@radix-ui/react-slot"],
+      "dependencies": [
+        "@radix-ui/react-slot"
+      ],
       "files": [
         {
           "path": "components/retroui/Breadcrumb.tsx",
@@ -554,6 +556,19 @@
       ]
     },
     {
+      "name": "toc",
+      "type": "registry:component",
+      "title": "Table of Contents",
+      "description": "Show your table of contents in a sidebar.",
+      "files": [
+        {
+          "path": "components/retroui/TableOfContents.tsx",
+          "target": "components/retroui/TableOfContents.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "toggle",
       "type": "registry:component",
       "title": "Toggle",
@@ -604,7 +619,6 @@
         "@radix-ui/react-tooltip",
         "class-variance-authority"
       ],
-      "author": "Ankan Bhattacharya <https://github.com/ankan002>",
       "files": [
         {
           "path": "components/retroui/Tooltip.tsx",
