@@ -1,55 +1,83 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { Theme as ColorTheme } from "@/config/theme";
 
-type Theme = "light" | "dark";
+type DarkMode = "light" | "dark";
 
 interface ThemeContextType {
-  theme: Theme;
+  darkMode: DarkMode;
+  colorTheme: ColorTheme;
+  variant: string;
   isDarkMode: boolean;
-  toggleTheme: () => void;
-  setTheme: (theme: Theme) => void;
+  toggleDarkMode: () => void;
+  setDarkMode: (theme: DarkMode) => void;
+  setColorTheme: (theme: ColorTheme) => void;
+  setVariant: (variant: string) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("light");
+  const [darkMode, setDarkModeState] = useState<DarkMode>("light");
+  const [colorTheme, setColorThemeState] = useState<ColorTheme>(ColorTheme.Default);
+  const [variant, setVariantState] = useState("box");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const savedTheme = localStorage.getItem("theme") as Theme;
-    if (savedTheme === "dark" || savedTheme === "light") {
-      setThemeState(savedTheme);
-      applyTheme(savedTheme);
+    const savedDarkMode = localStorage.getItem("darkMode") as DarkMode;
+    const savedColorTheme = localStorage.getItem("colorTheme") as ColorTheme;
+    const savedVariant = localStorage.getItem("variant") || "box";
+    
+    if (savedDarkMode === "dark" || savedDarkMode === "light") {
+      setDarkModeState(savedDarkMode);
+      applyDarkMode(savedDarkMode);
     }
+    if (savedColorTheme && Object.values(ColorTheme).includes(savedColorTheme)) {
+      setColorThemeState(savedColorTheme);
+    }
+    setVariantState(savedVariant);
   }, []);
 
-  const applyTheme = (newTheme: Theme) => {
-    if (newTheme === "dark") {
+  const applyDarkMode = (newDarkMode: DarkMode) => {
+    if (newDarkMode === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
   };
 
-  const setTheme = (newTheme: Theme) => {
-    setThemeState(newTheme);
-    localStorage.setItem("theme", newTheme);
-    applyTheme(newTheme);
+  const setDarkMode = (newDarkMode: DarkMode) => {
+    setDarkModeState(newDarkMode);
+    localStorage.setItem("darkMode", newDarkMode);
+    applyDarkMode(newDarkMode);
   };
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
+  const setColorTheme = (newColorTheme: ColorTheme) => {
+    setColorThemeState(newColorTheme);
+    localStorage.setItem("colorTheme", newColorTheme);
+  };
+
+  const setVariant = (newVariant: string) => {
+    setVariantState(newVariant);
+    localStorage.setItem("variant", newVariant);
+  };
+
+  const toggleDarkMode = () => {
+    const newDarkMode = darkMode === "light" ? "dark" : "light";
+    setDarkMode(newDarkMode);
   };
 
   const value: ThemeContextType = {
-    theme,
-    isDarkMode: theme === "dark",
-    toggleTheme,
-    setTheme,
+    darkMode,
+    colorTheme,
+    variant,
+    isDarkMode: darkMode === "dark",
+    toggleDarkMode,
+    setDarkMode,
+    setColorTheme,
+    setVariant,
   };
 
   if (!mounted) {

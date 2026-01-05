@@ -9,7 +9,7 @@ import { navConfig } from "@/config/navigation";
 import { useTheme } from "@/contexts/ThemeContext";
 
 export default function TopNav() {
-  const { isDarkMode, toggleTheme } = useTheme();
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   return (
     <nav className="sticky z-1 top-0 right-0 w-full border-b-2 bg-background">
@@ -82,7 +82,7 @@ export default function TopNav() {
                 <GithubIcon size="14"/>
               </Button>
             </Link>
-            <Button variant="secondary" size="icon" onClick={toggleTheme}>
+            <Button variant="secondary" size="icon" onClick={toggleDarkMode}>
               {isDarkMode ? <SunIcon size="14" /> : <MoonIcon size="14" />}
             </Button>
           </div>

@@ -2,7 +2,7 @@ import { Tabs, TabsPanels, TabsTrigger, TabsContent, TabsTriggerList } from "@/c
 
 export default function TabStyleDefault() {
   return (
-    <Tabs>
+    <Tabs className="w-full">
       <TabsTriggerList>
         <TabsTrigger>Home</TabsTrigger>
         <TabsTrigger>About</TabsTrigger>

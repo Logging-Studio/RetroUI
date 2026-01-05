@@ -6,6 +6,7 @@ import { Toaster } from "@/components/retroui";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import ThemeWrapper from "@/components/ThemeWrapper";
 
 const sans = Space_Grotesk({
   subsets: ["latin"],
@@ -51,8 +52,8 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
-                  const theme = localStorage.getItem('theme');
-                  if (theme === 'dark') {
+                  const darkMode = localStorage.getItem('darkMode');
+                  if (darkMode === 'dark') {
                     document.documentElement.classList.add('dark');
                   } else {
                     document.documentElement.classList.remove('dark');
@@ -80,9 +81,11 @@ export default function RootLayout({
         className={`${head.variable} ${sans.variable} ${mono.variable} bg-background text-foreground`}
       >
         <ThemeProvider>
-          <TopNav />
-          {children}
-          <Toaster />
+          <ThemeWrapper>
+            <TopNav />
+            {children}
+            <Toaster />
+          </ThemeWrapper>
         </ThemeProvider>
         <SpeedInsights />
         <Analytics />

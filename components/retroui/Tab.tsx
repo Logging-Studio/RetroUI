@@ -22,7 +22,7 @@ const TabsTriggerList = ({
   ...props
 }: ITabsTriggerList) => {
   return (
-    <TabList className={cn("flex flex-row space-x-2", className)} {...props}>
+    <TabList className={cn("flex flex-row space-x-2 w-full", className)} {...props}>
       {children}
     </TabList>
   );
@@ -51,7 +51,7 @@ interface ITabsContent extends TabPanelProps {
 const TabsContent = ({ children, className, ...props }: ITabsContent) => {
   return (
     <TabPanel
-      className={cn("border-2 border-border mt-2 p-4", className)}
+      className={cn("border-2 border-border mt-2 p-4 w-full", className)}
       {...props}
     >
       {children}
