@@ -724,5 +724,20 @@ export const componentConfig: {
       filePath: "preview/components/empty-style-default.tsx",
       preview: lazy(() => import("@/preview/components/empty-style-default"))
     },
+    "empty-style-custom-icon": {
+      name: "empty-style-custom-icon",
+      filePath: "preview/components/empty-style-custom-icon.tsx",
+      preview: lazy(() => import("@/preview/components/empty-style-custom-icon"))
+    },
+    "empty-style-custom-everything": {
+      name: "empty-style-custom-everything",
+      filePath: "preview/components/empty-style-custom-everything.tsx",
+      preview: lazy(() => import("@/preview/components/empty-style-custom-everything"))
+    },
+    "empty-style-table": {
+      name: "empty-style-table",
+      filePath: "preview/components/empty-style-table.tsx",
+      preview: lazy(() => import("@/preview/components/empty-style-table"))
+    },
   },
 };

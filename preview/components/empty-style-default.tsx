@@ -3,13 +3,14 @@ import { Empty } from "@/components/retroui/Empty";
 export default function DefaultEmpty() {
   return (
     <Empty>
-      <Empty.Header>
-        <Empty.Title>This is Empty Title</Empty.Title>
+      <Empty.Content>
+        <Empty.Icon className="size-10 md:size-12" />
+        <Empty.Title>No Results</Empty.Title>
+        <Empty.Separator />
         <Empty.Description>
-          I can not find what to write here.. so imagine I wrote some good
-          stuff.
+          Your search didn't match any items. Try adjusting your filters.
         </Empty.Description>
-      </Empty.Header>
+      </Empty.Content>
     </Empty>
   );
 }

@@ -1,6 +1,7 @@
-import { cn } from "@/lib/utils";
-import { HTMLAttributes } from "react";
 import { Text } from "@/components/retroui/Text";
+import { cn } from "@/lib/utils";
+import { Ghost } from "lucide-react";
+import { HTMLAttributes } from "react";
 
 interface IEmptyProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -10,40 +11,67 @@ const Empty = ({ className, ...props }: IEmptyProps) => {
   return (
     <div
       className={cn(
-        "inline-block border-2 rounded shadow-md transition-all hover:shadow-none bg-Empty",
+        "flex flex-col items-center justify-center p-4 md:p-8 border-2 rounded shadow-md transition-all hover:shadow-none bg-card text-center",
         className,
       )}
       {...props}
     />
   );
 };
+Empty.displayName = "Empty";
 
-const EmptyHeader = ({ className, ...props }: IEmptyProps) => {
+const EmptyContent = ({ className, ...props }: IEmptyProps) => {
   return (
     <div
-      className={cn("flex flex-col justify-start p-4", className)}
+      className={cn("flex flex-col items-center gap-3", className)}
       {...props}
     />
   );
 };
+EmptyContent.displayName = "Empty.Content";
+
+const EmptyIcon = ({ children, className, ...props }: IEmptyProps) => {
+  return (
+    <div className={cn(className)} {...props}>
+      {children || <Ghost className="w-full h-full" />}
+    </div>
+  );
+};
+EmptyIcon.displayName = "Empty.Icon";
 
 const EmptyTitle = ({ className, ...props }: IEmptyProps) => {
-  return <Text as="h3" className={cn("mb-2", className)} {...props} />;
+  return (
+    <Text
+      as="h3"
+      className={cn("text-lg md:text-2xl font-bold", className)}
+      {...props}
+    />
+  );
 };
+EmptyTitle.displayName = "Empty.Title";
 
-const EmptyDescription = ({ className, ...props }: IEmptyProps) => (
-  <p className={cn("text-muted-foreground", className)} {...props} />
+const EmptySeparator = ({ className, ...props }: IEmptyProps) => {
+  return <div className={cn("w-full h-1 bg-primary", className)} {...props} />;
+};
+EmptySeparator.displayName = "Empty.Separator";
+
+const EmptyDescription = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLParagraphElement>) => (
+  <p
+    className={cn("text-muted-foreground max-w-[320px]", className)}
+    {...props}
+  />
 );
-
-const EmptyContent = ({ className, ...props }: IEmptyProps) => {
-  return <div className={cn("p-4", className)} {...props} />;
-};
+EmptyDescription.displayName = "Empty.Description";
 
 const EmptyComponent = Object.assign(Empty, {
-  Header: EmptyHeader,
-  Title: EmptyTitle,
-  Description: EmptyDescription,
   Content: EmptyContent,
+  Icon: EmptyIcon,
+  Title: EmptyTitle,
+  Separator: EmptySeparator,
+  Description: EmptyDescription,
 });
 
 export { EmptyComponent as Empty };
