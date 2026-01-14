@@ -83,7 +83,10 @@ export const componentConfig: {
       name: "drawer",
       filePath: "components/retroui/Drawer.tsx",
     },
-
+    empty: {
+      name: "empty",
+      filePath: "components/retroui/Empty.tsx",
+    },
     input: {
       name: "input",
       filePath: "components/retroui/Input.tsx",
@@ -160,10 +163,6 @@ export const componentConfig: {
     tooltip: {
       name: "tooltip",
       filePath: "components/retroui/Tooltip.tsx",
-    },
-    empty: {
-      name: "empty",
-      filePath: "components/retroui/Empty.tsx",
     },
   },
   examples: {

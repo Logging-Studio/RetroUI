@@ -6,7 +6,6 @@ export * from "./Radio";
 export * from "./Select";
 export * from "./Switch";
 export * from "./Label";
-export * from "./Input";
 export * from "./Text";
 export * from "./Accordion";
 export * from "./Alert";

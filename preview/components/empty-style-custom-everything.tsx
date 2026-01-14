@@ -1,6 +1,6 @@
-import { Button } from "@/components/retroui";
-import { Empty } from "@/components/retroui/Empty";
+import { Button, Empty } from "@/components/retroui";
 import { InboxIcon } from "lucide-react";
+
 
 export default function CustomEverythingEmpty() {
   return (

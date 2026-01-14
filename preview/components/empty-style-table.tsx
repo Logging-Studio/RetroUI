@@ -18,9 +18,9 @@ export default function TableEmpty() {
       </Table.Header>
 
       <Table.Body>
-        {invoices?.length == 0 && (
+        {invoices?.length === 0 && (
           <Table.Row>
-            <Table.Cell colSpan={5} className="">
+            <Table.Cell colSpan={5}>
               <Empty className="border-none shadow-none">
                 <Empty.Content>
                   <Empty.Icon className="size-8" />

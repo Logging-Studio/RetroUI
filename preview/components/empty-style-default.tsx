@@ -1,4 +1,4 @@
-import { Empty } from "@/components/retroui/Empty";
+import { Empty } from "@/components/retroui";
 
 export default function DefaultEmpty() {
   return (
