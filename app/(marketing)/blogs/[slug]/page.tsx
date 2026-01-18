@@ -66,8 +66,6 @@ export default async function page({ params }: IProps) {
     return notFound();
   }
 
-  console.log(JSON.stringify(blog, null, 2))
-
   return (
     <div className="max-w-3xl mt-8 mx-auto">
       <div className="border-b border-black pb-6 mb-6">
@@ -124,13 +122,13 @@ export default async function page({ params }: IProps) {
                 </Link>
               )} */}
               {/* {blog.author.x && ( */}
-                <Link
-                  href={`https://x.com/@ariflogs`}
-                  target="_blank"
-                  className="text-muted-foreground"
-                >
-                  @ariflogs
-                </Link>
+              <Link
+                href={`https://x.com/@ariflogs`}
+                target="_blank"
+                className="text-muted-foreground"
+              >
+                @ariflogs
+              </Link>
               {/* )} */}
             </div>
           </div>
@@ -146,7 +144,10 @@ export default async function page({ params }: IProps) {
         </div>
       </div>
       {/* <MDX code={blog.body.code} type="blog" /> */}
-      <RichText data={blog.content} converters={JSXConverters} />
+      <RichText
+        data={blog.content}
+        converters={JSXConverters}
+      />
 
       <hr className="my-12" />
 
