@@ -52,6 +52,7 @@
     "rehype-slug": "^6.0.0",
     "remark": "^15.0.1",
     "remark-toc": "^9.0.0",
+    "resend": "^6.8.0",
     "shadcn": "2.4.0-canary.10",
     "sonner": "^2.0.3",
     "tailwind-merge": "^2.5.3",

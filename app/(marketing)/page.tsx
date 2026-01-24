@@ -55,7 +55,7 @@ export default async function Home() {
   return (
     <main>
       <div className="bg-image bg-cover bg-no-repeat bg-center flex flex-col items-center min-h-screen">
-        <section className="container max-w-6xl mx-auto px-4 lg:px-0 text-gray-900 flex justify-center items-center lg:gap-28 xl:gap-32 my-28">
+        <section className="container max-w-6xl mx-auto px-4 lg:px-0 text-gray-900 flex justify-center items-center lg:gap-28 my-28">
           <div className="text-center lg:text-left w-full lg:w-2/3">
             <Link href="/docs/components/toc" className="mb-4 inline-block">
               <Badge>
@@ -91,7 +91,7 @@ export default async function Home() {
           </div>
           <div className="hidden lg:block lg:w-1/3">
             <Image
-              alt="orange cool cat"
+              alt="retro tv radio"
               src="/images/tv_radio.png"
               layout="responsive"
               width={500}
@@ -205,7 +205,7 @@ export default async function Home() {
               Github Stars
             </Text>
             <Text className="text-outlined text-7xl lg:text-8xl font-head">
-              1,000+
+              1,200+
             </Text>
             <Image
               src="/images/shooting_star.svg"
@@ -291,7 +291,7 @@ export default async function Home() {
         <div className="container max-w-6xl h-full mx-auto py-16 flex flex-col justify-between gap-20">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="w-full md:w-3/5">
-              <Text as="h1">
+              <Text as="h1" className="text-4xl lg:text-5xl">
                 Ship <span className="text-outlined">Faster</span> With Blocks
                 <br />
                 and Templates 🚀
@@ -314,7 +314,7 @@ export default async function Home() {
                 src="/images/pro_showcase.svg"
                 width={1920}
                 height={1080}
-                alt="retroui code showcase"
+                alt="retroui pro ui blocks showcase"
               />
             </div>
           </div>
