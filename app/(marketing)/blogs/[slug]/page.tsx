@@ -53,11 +53,14 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
     title: `${blog.title} | RetroUI Blogs`,
     description: blog.excerpt,
     alternates: {
-      canonical: `https://www.retroui.dev/blogs/${blog.slug}`,                     
+      canonical: `https://www.retroui.dev/blogs/${blog.slug}`,
     },
     openGraph: {
+      type: "article",
       images: blog.featuredImage.url,
       title: `${blog.title} | RetroUI Blogs`,
+      publishedTime: blog.publishedAt,
+      authors: ["Arif Hossain"],
     },
   };
 }
@@ -70,7 +73,7 @@ export default async function page({ params }: IProps) {
   }
 
   return (
-    <div className="max-w-3xl mt-8 mx-auto">
+    <article className="max-w-3xl mt-8 mx-auto">
       <div className="border-b border-black pb-6 mb-6">
         <div className="flex items-center gap-4 mb-6">
           <Text className="text-muted-foreground text-sm font-medium">
@@ -138,7 +141,7 @@ export default async function page({ params }: IProps) {
 
           <Link
             target="_blank"
-            href={`https://x.com/share?url=${`https://retroui.dev/blogs/${blog.slug}`}&text=${blog.title}.%0ACheck it out 👉`}
+            href={`https://x.com/share?url=${`https://www.retroui.dev/blogs/${blog.slug}`}&text=${blog.title}.%0ACheck it out 👉`}
           >
             <Button size="sm" variant="outline">
               Share on X
@@ -157,6 +160,6 @@ export default async function page({ params }: IProps) {
       <Button asChild aria-label="Return to all blog posts" variant="secondary">
         <Link href="/blogs" className="inline-flex">← Back to blogs</Link>
       </Button>
-    </div>
+    </article>
   );
 }
