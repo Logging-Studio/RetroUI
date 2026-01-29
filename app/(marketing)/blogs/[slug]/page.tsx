@@ -1,8 +1,6 @@
 import React from "react";
-import { allBlogs } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
-import MDX from "@/components/MDX";
 import { Avatar, Badge, Button, Text } from "@/components/retroui";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -35,6 +33,9 @@ async function getBlogParams({ params }: IProps) {
   const res = await fetch(`https://cms.retroui.dev/api/posts/slug/${params.slug}`, {
     method: 'GET',
     credentials: 'include',
+    next: {
+      revalidate: 60,
+    },
   })
   const post = await res.json()
   return post;
@@ -118,16 +119,6 @@ export default async function page({ params }: IProps) {
             </Avatar>
             <div>
               <Text as="h5">Arif Hossain</Text>
-              {/* {blog.author.linkedin && (
-                <Link
-                  href={`https://www.linkedin.com/in/${blog.author.linkedin}`}
-                  target="_blank"
-                  className="text-muted-foreground"
-                >
-                  @{blog.author.linkedin}
-                </Link>
-              )} */}
-              {/* {blog.author.x && ( */}
               <Link
                 href={`https://x.com/@ariflogs`}
                 target="_blank"
@@ -135,7 +126,6 @@ export default async function page({ params }: IProps) {
               >
                 @ariflogs
               </Link>
-              {/* )} */}
             </div>
           </div>
 
@@ -149,7 +139,6 @@ export default async function page({ params }: IProps) {
           </Link>
         </div>
       </div>
-      {/* <MDX code={blog.body.code} type="blog" /> */}
       <RichText
         data={blog.content}
         converters={JSXConverters}

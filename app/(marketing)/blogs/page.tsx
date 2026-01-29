@@ -22,6 +22,9 @@ async function page() {
   const res = await fetch("https://cms.retroui.dev/api/posts/published", {
     method: 'GET',
     credentials: 'include',
+    next: {
+      revalidate: 60,
+    },
   })
   const posts = await res.json()
 

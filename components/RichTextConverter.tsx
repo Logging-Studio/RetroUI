@@ -1,16 +1,12 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import type {
   DefaultNodeTypes,
   SerializedUploadNode,
-  SerializedBlockNode,
 } from '@payloadcms/richtext-lexical'
 import {
   type JSXConvertersFunction,
-  RichText,
 } from '@payloadcms/richtext-lexical/react'
 import { Text } from '@/components/retroui'
-import { cn } from '@/lib/utils'
 import { RichTextCodeBlock } from '@/components/RichTextCodeBlock'
 
 const CustomUploadComponent: React.FC<{
