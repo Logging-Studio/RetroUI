@@ -58,6 +58,7 @@ export const navConfig: INavigationConfig = {
         { title: "Command", href: `${componentsRoute}/command` },
         { title: "Dialog", href: `${componentsRoute}/dialog` },
         { title: "Drawer", href: `${componentsRoute}/drawer`, tag: "New" },
+        { title: "Empty", href: `${componentsRoute}/empty`, tag: "New" },
         { title: "Input", href: `${componentsRoute}/input` },
         { title: "Label", href: `${componentsRoute}/label` },
         { title: "Loader", href: `${componentsRoute}/loader` },

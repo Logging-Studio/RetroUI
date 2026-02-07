@@ -1,4 +1,3 @@
-import { table } from "console";
 import { lazy } from "react";
 
 export const componentConfig: {
@@ -83,6 +82,10 @@ export const componentConfig: {
     drawer: {
       name: "drawer",
       filePath: "components/retroui/Drawer.tsx",
+    },
+    empty: {
+      name: "empty",
+      filePath: "components/retroui/Empty.tsx",
     },
     input: {
       name: "input",
@@ -715,6 +718,26 @@ export const componentConfig: {
       name: "typography-p",
       filePath: "preview/components/typography-p.tsx",
       preview: lazy(() => import("@/preview/components/typography-p")),
+    },
+    "empty-style-default": {
+      name: "empty-style-default",
+      filePath: "preview/components/empty-style-default.tsx",
+      preview: lazy(() => import("@/preview/components/empty-style-default"))
+    },
+    "empty-style-custom-icon": {
+      name: "empty-style-custom-icon",
+      filePath: "preview/components/empty-style-custom-icon.tsx",
+      preview: lazy(() => import("@/preview/components/empty-style-custom-icon"))
+    },
+    "empty-style-custom-everything": {
+      name: "empty-style-custom-everything",
+      filePath: "preview/components/empty-style-custom-everything.tsx",
+      preview: lazy(() => import("@/preview/components/empty-style-custom-everything"))
+    },
+    "empty-style-table": {
+      name: "empty-style-table",
+      filePath: "preview/components/empty-style-table.tsx",
+      preview: lazy(() => import("@/preview/components/empty-style-table"))
     },
   },
 };
