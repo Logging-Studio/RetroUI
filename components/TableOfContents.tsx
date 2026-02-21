@@ -31,7 +31,7 @@ export default function TableOfContents({ toc }: TableOfContentsProps) {
   }
 
   return (
-    <div className="border p-4 rounded-sm max-h-60 overflow-y-auto sidebar-scroll">
+    <div className="border p-4 rounded-sm max-h-60 overflow-y-scroll overscroll-y-contain sidebar-scroll">
       <h3 className="mb-3 border-b border-black pb-2">
         On this Page
       </h3>
