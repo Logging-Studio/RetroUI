@@ -57,9 +57,9 @@ export default async function Home() {
       <div className="bg-image bg-cover bg-no-repeat bg-center flex flex-col items-center min-h-screen">
         <section className="container max-w-6xl mx-auto px-4 lg:px-0 text-gray-900 flex justify-center items-center lg:gap-28 my-28">
           <div className="text-center lg:text-left w-full lg:w-2/3">
-            <Link href="/docs/components/toc" className="mb-4 inline-block">
+            <Link href="https://neo.retroui.dev" target="_blank" className="mb-4 inline-block">
               <Badge>
-                New TOC & Drawer components!
+                Introducing Neo/SS
                 <PaintbrushIcon className="ml-2 h-4 w-4 inline-block" />
               </Badge>
             </Link>

@@ -15,8 +15,9 @@ const quickLinks = [
 ];
 
 const projectLinks = [
-  { name: "CommerCN", href: "#" },
-  { name: "Tanstack Starter Kit", href: "#" },
+  { name: "CommerCN", href: "https://commercn.com" },
+  { name: "Evendeals", href: "https://evendeals.com" },
+  { name: "Tanstack Starter Kit", href: "https://tanstackstarterkit.com" },
 ];
 
 function Footer() {
