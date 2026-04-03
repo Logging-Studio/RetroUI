@@ -1,12 +1,13 @@
 import TopNav from "@/components/TopNav";
 import "./global.css";
 import { Archivo_Black, Space_Grotesk, Space_Mono } from "next/font/google";
+import Image from "next/image";
 import { Metadata } from "next";
+import { Tabs } from '@base-ui/react/tabs';
 import { Toaster } from "@/components/retroui";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/contexts/ThemeContext";
-import ThemeWrapper from "@/components/ThemeWrapper";
 
 const sans = Space_Grotesk({
   subsets: ["latin"],
@@ -81,11 +82,37 @@ export default function RootLayout({
         className={`${head.variable} ${sans.variable} ${mono.variable}`}
       >
         <ThemeProvider>
-            <div className="bg-background text-foreground">
-              <TopNav />
-              {children}
-              <Toaster />
-            </div>
+          <Tabs.Root defaultValue="react">
+            <Tabs.List className="bg-foreground h-10 flex justify-center items-end">
+              <div className="bg-background pt-1 px-1">
+                <Tabs.Tab value="react" className="data-active:bg-card data-active:border-2 font-medium text-foreground px-4 py-0.5 text-sm">
+                  <div className="flex items-center">
+                    <Image src="/images/icons/react.svg" alt="React" width={16} height={16} className="mr-2" />
+                    React
+                  </div>
+                </Tabs.Tab>
+                <Tabs.Tab value="figma" className="data-active:bg-card data-active:border-2 font-medium text-foreground px-4 py-0.5 text-sm">
+                  <div className="flex items-center">
+                    <Image src="/images/icons/figma.svg" alt="Figma" width={12} height={12} className="mr-2" />
+                    Figma
+                  </div>
+                </Tabs.Tab>
+              </div>
+              <Tabs.Indicator />
+            </Tabs.List>
+            <Tabs.Panel value="react">
+              <div className="bg-background text-foreground">
+                <TopNav />
+                {children}
+                <Toaster />
+              </div>
+            </Tabs.Panel>
+            <Tabs.Panel value="figma">
+              <div className="bg-background text-foreground">
+                Figma
+              </div>
+            </Tabs.Panel>
+          </Tabs.Root>
         </ThemeProvider>
         <SpeedInsights />
         <Analytics />
