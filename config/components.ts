@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, type JSX } from "react";
 
 export const componentConfig: {
   core: {

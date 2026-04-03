@@ -4,6 +4,7 @@ import { withContentlayer } from "next-contentlayer";
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  turbopack: {},
   images: {
     remotePatterns: [
       {

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "registry:build": "shadcn build"
   },
   "dependencies": {
@@ -42,11 +42,11 @@
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.445.0",
     "mdast-util-toc": "^7.1.0",
-    "next": "14.2.7",
+    "next": "16.2.2",
     "next-contentlayer": "^0.3.4",
-    "react": "^18",
+    "react": "19.2.4",
     "react-day-picker": "^9.11.1",
-    "react-dom": "^18",
+    "react-dom": "19.2.4",
     "recharts": "^3.1.2",
     "rehype-pretty-code": "^0.14.0",
     "rehype-slug": "^6.0.0",
@@ -66,15 +66,21 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.14",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.7",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.2",
     "postcss": "^8",
     "prettier": "^3.5.3",
     "tailwindcss": "^4.0.14",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
+  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.14",
+      "@types/react-dom": "19.2.3"
+    }
+  }
 }

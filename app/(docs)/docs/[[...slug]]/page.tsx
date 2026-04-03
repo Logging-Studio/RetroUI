@@ -10,7 +10,7 @@ import { generateToc } from "@/lib/toc";
 import TableOfContents from "@/components/TableOfContents";
 
 interface IProps {
-  params: { slug: string[] };
+  params: Promise<{ slug: string[] }>;
 }
 
 function getDocParams({ params }: IProps) {
@@ -24,7 +24,8 @@ function getDocParams({ params }: IProps) {
   return doc;
 }
 
-export async function generateMetadata({ params }: IProps): Promise<Metadata> {
+export async function generateMetadata(props: IProps): Promise<Metadata> {
+  const params = await props.params;
   const doc = getDocParams({ params });
 
   if (!doc) {
@@ -39,7 +40,8 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
   };
 }
 
-export default async function page({ params }: IProps) {
+export default async function page(props: IProps) {
+  const params = await props.params;
   const doc = getDocParams({ params });
 
   if (!doc) {

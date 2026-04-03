@@ -9,7 +9,7 @@ import { RichText } from "@payloadcms/richtext-lexical/react";
 import { JSXConverters } from "@/components/RichTextConverter";
 
 interface IProps {
-  params: { slug: string[] };
+  params: Promise<{ slug: string[] }>;
 }
 
 type Post = {
@@ -41,7 +41,8 @@ async function getBlogParams({ params }: IProps) {
   return post;
 }
 
-export async function generateMetadata({ params }: IProps): Promise<Metadata> {
+export async function generateMetadata(props: IProps): Promise<Metadata> {
+  const params = await props.params;
   const blog: Post = await getBlogParams({ params });
 
   if (!blog) {
@@ -66,7 +67,8 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
   };
 }
 
-export default async function page({ params }: IProps) {
+export default async function page(props: IProps) {
+  const params = await props.params;
   const blog: Post | null = await getBlogParams({ params });
 
   if (!blog) {
