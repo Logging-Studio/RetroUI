@@ -1,38 +1,34 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   Button,
   Text,
   Card,
   Badge,
-  Tabs,
-  TabsTriggerList,
-  TabsTrigger,
-  TabsContent,
-  TabsPanels,
   Accordion,
 } from "@/components/retroui";
 import { Check, Gift, Code2, Figma, Package } from "lucide-react";
 import Footer from "@/components/footer";
-import Image from "next/image";
-import Link from "next/link";
 
-type PricingType = "react" | "figma" | "bundle";
-type RoleType = "developer" | "designer" | "both";
+type PricingType = "react" | "figma" | "combo";
 
 const pricingData = {
   react: {
-    pro: { price: 149, label: "FOR POPULAR" },
-    team: { price: 249, label: "FOR AGENCIES" },
+    free: { price: 0, name: "OS" },
+    pro: { price: 119, label: "FOR POPULAR", name: "Solo" },
+    team: { price: 399, label: "FOR AGENCIES", name: "Team" },
   },
   figma: {
-    pro: { price: 99, label: "FOR POPULAR" },
-    team: { price: 199, label: "FOR AGENCIES" },
+    free: { price: 0, name: "Community" },
+    pro: { price: 99, label: "FOR POPULAR", name: "Solo" },
+    team: { price: 299, label: "FOR AGENCIES", name: "Team" },
   },
-  bundle: {
-    pro: { price: 199, label: "BEST VALUE" },
-    team: { price: 299, label: "FOR AGENCIES" },
+  combo: {
+    free: { price: 0, name: "Community" },
+    pro: { price: 199, label: "BEST VALUE", name: "Solo" },
+    team: { price: 499, label: "FOR AGENCIES", name: "Team" },
   },
 };
 
@@ -127,83 +123,41 @@ const faqItems = [
 
 export default function PricingPage() {
   const [pricingType, setPricingType] = useState<PricingType>("react");
-  const [roleType, setRoleType] = useState<RoleType>("developer");
 
   const currentPricing = pricingData[pricingType];
 
   return (
-    <main className="bg-[#F5F1E8]">
-      {/* Top Bar with Product Tabs */}
-      <div className="bg-black text-white">
-        <div className="container max-w-7xl mx-auto px-4 py-3 flex justify-center gap-4">
-          <button
-            onClick={() => setPricingType("react")}
-            className={`flex items-center gap-2 px-4 py-2 border-2 transition-colors ${
-              pricingType === "react"
-                ? "bg-white text-black border-white"
-                : "border-white hover:bg-white/10"
-            }`}
-          >
-            <Code2 className="w-4 h-4" />
-            React
-          </button>
-          <button
-            onClick={() => setPricingType("figma")}
-            className={`flex items-center gap-2 px-4 py-2 border-2 transition-colors ${
-              pricingType === "figma"
-                ? "bg-white text-black border-white"
-                : "border-white hover:bg-white/10"
-            }`}
-          >
-            <Figma className="w-4 h-4" />
-            Figma
-          </button>
-        </div>
-      </div>
-
-      {/* Hero Section */}
+    <main>
       <section className="container max-w-7xl mx-auto px-4 py-16 text-center">
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="w-16 h-16 bg-blue-400 rounded-lg border-2 border-black flex items-center justify-center">
-            <Gift className="w-8 h-8 text-white" />
-          </div>
-          <Text as="h1" className="text-5xl lg:text-6xl font-bold">
-            PAY ONCE, USE FOREVER
-          </Text>
-        </div>
+        <Text as="h1" className="mb-4 uppercase">
+          <span className="text-card text-outline-foreground text-shadow-foreground relative inline-block pl-8">
+            <Image
+              src="/decor/pay.svg"
+              alt="pay decoration"
+              width={120}
+              height={120}
+              className="inline-block absolute -top-16 -left-8 w-30 h-30"
+            />
+            Pay
+          </span>
+          {" "}once, use forever
+        </Text>
 
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+        <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
           Get lifetime access to premium components, templates, figma kit,
           plus all future updates for a simple one-time price.
         </p>
 
-        {/* Discount Banner */}
-        <div className="bg-black text-white border-2 border-black max-w-2xl mx-auto mb-12 flex items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
-            <Gift className="w-5 h-5 text-primary" />
-            <Text className="text-white text-sm">
-              60% off for developers in Bangladesh
-            </Text>
-          </div>
-          <div className="flex items-center gap-2">
-            <Text className="text-white text-sm">Discount code:</Text>
-            <Badge className="bg-primary text-black font-bold">
-              ALBOY <span className="ml-2">📋</span>
-            </Badge>
-          </div>
-        </div>
-
-        {/* Role Tabs */}
+        {/* Pricing Type Tabs */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-3xl mx-auto border-2 border-black bg-white p-2">
           <button
-            onClick={() => setRoleType("developer")}
-            className={`flex items-center gap-2 px-4 py-3 flex-1 border-2 border-black transition-colors ${
-              roleType === "developer" ? "bg-blue-100" : "bg-white"
-            }`}
+            onClick={() => setPricingType("react")}
+            className={`flex items-center gap-2 px-4 py-3 flex-1 border-2 border-black transition-colors ${pricingType === "react" ? "bg-blue-100" : "bg-white"
+              }`}
           >
             <Code2 className="w-5 h-5 text-blue-500" />
             <div className="text-left">
-              <Text className="font-bold text-sm">Developer</Text>
+              <Text className="font-bold text-sm">React</Text>
               <Text className="text-xs text-muted-foreground">
                 Get all coded components
               </Text>
@@ -211,14 +165,13 @@ export default function PricingPage() {
           </button>
 
           <button
-            onClick={() => setRoleType("designer")}
-            className={`flex items-center gap-2 px-4 py-3 flex-1 border-2 border-black transition-colors ${
-              roleType === "designer" ? "bg-purple-100" : "bg-white"
-            }`}
+            onClick={() => setPricingType("figma")}
+            className={`flex items-center gap-2 px-4 py-3 flex-1 border-2 border-black transition-colors ${pricingType === "figma" ? "bg-purple-100" : "bg-white"
+              }`}
           >
             <Figma className="w-5 h-5 text-purple-500" />
             <div className="text-left">
-              <Text className="font-bold text-sm">Designer</Text>
+              <Text className="font-bold text-sm">Figma</Text>
               <Text className="text-xs text-muted-foreground">
                 Get full Figma file
               </Text>
@@ -226,14 +179,13 @@ export default function PricingPage() {
           </button>
 
           <button
-            onClick={() => setRoleType("both")}
-            className={`flex items-center gap-2 px-4 py-3 flex-1 border-2 border-black transition-colors relative ${
-              roleType === "both" ? "bg-orange-100" : "bg-white"
-            }`}
+            onClick={() => setPricingType("combo")}
+            className={`flex items-center gap-2 px-4 py-3 flex-1 border-2 border-black transition-colors relative ${pricingType === "combo" ? "bg-orange-100" : "bg-white"
+              }`}
           >
             <Package className="w-5 h-5 text-orange-500" />
             <div className="text-left">
-              <Text className="font-bold text-sm">Developer + Designer</Text>
+              <Text className="font-bold text-sm">Combo</Text>
               <Text className="text-xs text-muted-foreground">
                 Get it all! Code + Figma file
               </Text>
@@ -248,13 +200,13 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <section className="container max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Essentials - Free */}
+          {/* Free Tier */}
           <Card className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-l-[6px] border-l-primary">
             <Card.Content className="p-6">
               <div className="mb-6">
                 <Gift className="w-10 h-10 mb-4" />
                 <Text as="h3" className="text-2xl font-bold mb-2">
-                  Essentials
+                  {currentPricing.free.name}
                 </Text>
                 <Text className="text-sm text-muted-foreground mb-4">
                   FOR STARTERS
@@ -291,31 +243,31 @@ export default function PricingPage() {
             </Card.Content>
           </Card>
 
-          {/* Pro */}
+          {/* Pro / Solo */}
           <Card className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-l-[6px] border-l-blue-500">
             <Card.Content className="p-6">
               <div className="mb-6">
                 <Package className="w-10 h-10 mb-4 text-blue-500" />
                 <Text as="h3" className="text-2xl font-bold mb-2">
-                  Pro
+                  {currentPricing.pro.name}
                 </Text>
                 <Text className="text-sm text-muted-foreground mb-4">
                   {currentPricing.pro.label}
                 </Text>
                 <Text className="text-sm text-muted-foreground mb-6">
                   The full RetroUI toolkit — templates, tutorials, priority
-                  support and 3 seats.
+                  support and {pricingType === "react" ? "1 developer" : pricingType === "figma" ? "1 designer" : "full"} license.
                 </Text>
                 <div className="flex items-baseline gap-2 mb-6">
                   <Text as="h2" className="text-5xl font-bold">
                     ${currentPricing.pro.price}
                   </Text>
                   <Text className="text-sm text-muted-foreground">
-                    per seat
+                    one-time
                   </Text>
                 </div>
                 <Button className="w-full bg-blue-500 border-2 border-black text-white hover:bg-blue-600">
-                  Get Pro
+                  Get {currentPricing.pro.name}
                 </Button>
                 <Text className="text-xs text-center text-muted-foreground mt-2">
                   One-time payment, lifetime access
@@ -345,7 +297,7 @@ export default function PricingPage() {
               <div className="mb-6">
                 <Package className="w-10 h-10 mb-4 text-red-500" />
                 <Text as="h3" className="text-2xl font-bold mb-2">
-                  Team
+                  {currentPricing.team.name}
                 </Text>
                 <Text className="text-sm text-muted-foreground mb-4">
                   {currentPricing.team.label}
@@ -359,11 +311,11 @@ export default function PricingPage() {
                     ${currentPricing.team.price}
                   </Text>
                   <Text className="text-sm text-muted-foreground">
-                    per seat
+                    one-time
                   </Text>
                 </div>
                 <Button className="w-full bg-red-500 border-2 border-black text-white hover:bg-red-600">
-                  Get Team
+                  Get {currentPricing.team.name}
                 </Button>
                 <Text className="text-xs text-center text-muted-foreground mt-2">
                   One-time payment, lifetime access

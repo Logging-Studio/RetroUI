@@ -71,7 +71,6 @@ export default function ReactHomepage() {
 
   return (
     <main>
-      {/* Hero Section */}
       <section className="bg-[url('/decor/bg-triangle-pattern.svg')] bg-cover bg-center">
         <div className="container max-w-7xl px-4 py-24 mx-auto text-center ">
           <Text as="h1" className="uppercase">
@@ -112,93 +111,154 @@ export default function ReactHomepage() {
         </div>
       </section>
 
-      {/* Blocks Parallax */}
       <BlocksParallax />
 
-      {/* Component Showcase Grid */}
+      {/* Features Section */}
       <section className="container max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { title: "Call-to-Action", color: "bg-primary" },
-            { title: "Multiple Style Components", color: "bg-white" },
-            { title: "Pricing Tables", color: "bg-primary" },
-            { title: "Feature Section", color: "bg-white" },
-            { title: "Avatar Groups", color: "bg-white" },
-            { title: "Stats", color: "bg-white" },
-          ].map((item, index) => (
-            <Card key={index} className={`${item.color} border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`}>
-              <Card.Header>
-                <Card.Title>{item.title}</Card.Title>
-              </Card.Header>
-              <Card.Content>
-                <div className="h-40 bg-gray-200 border-2 border-black rounded flex items-center justify-center">
-                  <Text className="text-gray-400">Component Preview</Text>
-                </div>
-              </Card.Content>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* System Designed Section */}
-      <section className="container max-w-7xl mx-auto px-4 py-16">
-        <Text as="h2" className="text-4xl lg:text-5xl font-bold text-center mb-4">
-          A SYSTEM <span className="text-outlined">DESIGNED</span> TO WORK
+        <Text as="h2" className="mb-4 uppercase text-center">
+          <span className="relative inline-block">
+            <Image src="/decor/compas.svg" alt="compass decoration" width={80} height={80} className="inline-block -mb-2" />
+          </span>
+          DESIGNED TO SHIP FAST
           <br />
-          TOGETHER SMOOTHLY.
+          WITHOUT LOOKING BORING
         </Text>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          All our components are designed to work seamlessly together, giving you a consistent design system.
+        <p className="text-muted-foreground mb-12 max-w-4xl mx-auto text-center">
+          An ecosystem tailored for developers, featuring a reliable framework, reusable elements, and complete code control. It is crafted to enhance and sustain interfaces as products evolve.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <Card className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <Card.Header>
-              <Card.Title>MODERN SYSTEM DESIGNS MEET PIXELS</Card.Title>
-            </Card.Header>
-            <Card.Content>
-              <div className="h-48 bg-gray-200 border-2 border-black rounded flex items-center justify-center mb-4">
-                <Text className="text-gray-400">Design Preview</Text>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Pixel-perfect components that look great on any screen size.
-              </p>
-            </Card.Content>
-          </Card>
+        {/* First Row - Asymmetric Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
+          {/* Left Card - Spans 3 columns */}
+          <div className="lg:col-span-3 relative">
+            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FFD93D]" />
+            <Card className="relative bg-[#FFF8E7] border-2 border-black shadow-none h-full">
+              <Card.Content className="p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Illustration Section */}
+                  <div className="flex items-center justify-center bg-[#FFF8E7] border-2 border-black p-8">
+                    <Image src="/decor/compas.svg" alt="Design illustration" width={300} height={300} className="object-contain" />
+                  </div>
 
-          <Card className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <Card.Header>
-              <Card.Title>OPTIMIZED REACT COMPONENTS</Card.Title>
-            </Card.Header>
-            <Card.Content>
-              <div className="h-48 bg-gray-200 border-2 border-black rounded flex items-center justify-center mb-4">
-                <Text className="text-gray-400">Component Preview</Text>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Built with performance in mind, our components are fast and efficient.
-              </p>
-            </Card.Content>
-          </Card>
-        </div>
+                  {/* Text and CLI Section */}
+                  <div className="flex flex-col justify-between">
+                    <div>
+                      <Text className="font-bold text-2xl mb-4">COPY-PASTE OR JUST USE YOUR CLI</Text>
+                      <p className="text-sm text-muted-foreground mb-6">
+                        Discover our bold neo-brutalist sections. With striking hero blocks, pricing tables, and feature grids, your product will stand out in the market.
+                      </p>
+                    </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { title: "THEMABLE COMPONENTS", desc: "Easily customize colors and styles" },
-            { title: "PRODUCTION READY BLOCKS", desc: "Copy and paste into your project" },
-            { title: "OPEN SOURCE", desc: "Free to use, forever" },
-          ].map((item, index) => (
-            <Card key={index} className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-              <Card.Header>
-                <Card.Title className="text-sm">{item.title}</Card.Title>
-              </Card.Header>
-              <Card.Content>
-                <div className="h-32 bg-gray-200 border-2 border-black rounded flex items-center justify-center mb-3">
-                  <Text className="text-gray-400 text-xs">Preview</Text>
+                    {/* Terminal Preview */}
+                    <div className="relative">
+                      <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-black bg-[#4ECDC4]" />
+                      <div className="relative bg-white border-2 border-black p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-3 h-3 rounded-full bg-[#FF6B6B] border border-black"></div>
+                          <div className="w-3 h-3 rounded-full bg-[#FFD93D] border border-black"></div>
+                          <div className="w-3 h-3 rounded-full bg-[#4ECDC4] border border-black"></div>
+                          <div className="ml-auto">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <rect x="8" y="8" width="8" height="8" strokeWidth="2" />
+                            </svg>
+                          </div>
+                        </div>
+                        <code className="text-sm font-mono">npx shadcn add @retroui/button</code>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-xs text-muted-foreground">{item.desc}</p>
               </Card.Content>
             </Card>
-          ))}
+          </div>
+
+          {/* Right Card - Spans 2 columns */}
+          <div className="lg:col-span-2 relative">
+            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FFD93D]" />
+            <Card className="relative bg-[#FFF8E7] border-2 border-black shadow-none h-full">
+              <Card.Content className="p-0">
+                {/* Illustration Section */}
+                <div className="flex items-center justify-center bg-[#FFF8E7] border-b-2 border-black p-8 min-h-[300px]">
+                  <Image src="/decor/customize.svg" alt="Customization" width={300} height={200} className="object-contain" />
+                </div>
+
+                {/* Text Section */}
+                <div className="p-8">
+                  <Text className="font-bold text-2xl mb-4">FULLY CUSTOMIZABLE</Text>
+                  <p className="text-sm text-muted-foreground">
+                    Own and modify every component. Tailwind CSS allows you to adjust colors, borders, shadows, and animations to fit your brand.
+                  </p>
+                </div>
+              </Card.Content>
+            </Card>
+          </div>
+        </div>
+
+        {/* Second Row - Equal Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Tech Stack Card */}
+          <div className="relative">
+            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FFD93D]" />
+            <Card className="relative bg-[#FFF8E7] border-2 border-black shadow-none">
+              <Card.Content className="p-0">
+                {/* Illustration Section */}
+                <div className="flex items-center justify-center bg-[#FFF8E7] border-b-2 border-black p-8 min-h-[280px]">
+                  <Image src="/decor/techstack-hex.svg" alt="Tech stack hexagons" width={350} height={200} className="object-contain" />
+                </div>
+
+                {/* Text Section */}
+                <div className="p-8">
+                  <Text className="font-bold text-2xl mb-4">SEAMLESSLY INTEGRATE WITH YOUR FAVORITE TECH STACK</Text>
+                  <p className="text-sm text-muted-foreground">
+                    This solution integrates smoothly with React apps using TypeScript and Tailwind CSS, adhering to Shadcn/ui patterns while offering flexibility across frameworks.
+                  </p>
+                </div>
+              </Card.Content>
+            </Card>
+          </div>
+
+          {/* MCP Server Card */}
+          <div className="relative">
+            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FFD93D]" />
+            <Card className="relative bg-[#FFF8E7] border-2 border-black shadow-none">
+              <Card.Content className="p-8">
+                <div className="mb-8">
+                  <Text className="font-bold text-2xl mb-4">NATIVE MCP SERVER SUPPORT</Text>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    Discover our bold neo-brutalist sections. With striking hero blocks, pricing tables, and feature grids, your product will stand out in the market.
+                  </p>
+                </div>
+
+                {/* Illustration Section */}
+                <div className="flex items-center justify-center bg-[#FFF8E7] border-2 border-black p-8 mb-6 min-h-[200px]">
+                  <div className="relative w-full h-48">
+                    {/* Placeholder for MCP server illustration */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-32 h-32 border-2 border-dashed border-black rounded-full" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Terminal Preview */}
+                <div className="relative">
+                  <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-black bg-[#4ECDC4]" />
+                  <div className="relative bg-white border-2 border-black p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-3 h-3 rounded-full bg-[#FF6B6B] border border-black"></div>
+                      <div className="w-3 h-3 rounded-full bg-[#FFD93D] border border-black"></div>
+                      <div className="w-3 h-3 rounded-full bg-[#4ECDC4] border border-black"></div>
+                      <div className="ml-auto">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <rect x="8" y="8" width="8" height="8" strokeWidth="2" />
+                        </svg>
+                      </div>
+                    </div>
+                    <code className="text-sm font-mono">npx @retroui/mcp start</code>
+                  </div>
+                </div>
+              </Card.Content>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -270,26 +330,60 @@ export default function ReactHomepage() {
 
       {/* UI Components Section */}
       <section className="container max-w-7xl mx-auto px-4 py-16">
-        <div className="flex items-center justify-between mb-8">
-          <Text as="h2" className="text-4xl lg:text-5xl font-bold">
-            USEFUL AND CUSTOMIZABLE UI
+        <div className="text-center mb-4">
+          <Text as="h2" className="text-4xl lg:text-5xl font-bold uppercase">
+            CUSTOMIZABLE UI
             <br />
-            <span className="text-outlined">COMPONENTS</span>
+            <span className="relative inline-block">
+              <Image src="/decor/question.svg" alt="key decoration" width={80} height={80} className="inline-block -mb-2" />
+              OMPONENTS
+            </span>
           </Text>
-          <Button className="bg-primary">Browse All Components</Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {["ACCORDION", "ALERT", "AVATAR", "BADGE", "BREADCRUMB", "BUTTON"].map((name, index) => (
-            <Card key={index} className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-              <Card.Content className="p-6">
-                <div className="h-32 bg-gray-200 border-2 border-black rounded flex items-center justify-center mb-4">
-                  <Text className="text-gray-400">{name}</Text>
-                </div>
-                <Text className="font-bold">{name}</Text>
-              </Card.Content>
-            </Card>
+        <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+          Discover scalable Shadcn UI components designed with Base UI and Radix UI, perfect for landing pages, SaaS dashboards, and modern web apps.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {[
+            { name: "ACCORDION", description: "Expandable content panels.", image: "accordion.png" },
+            { name: "ALERT", description: "Notification messages.", image: "alert.png" },
+            { name: "AVATAR", description: "User image placeholders.", image: "avatar.png" },
+            { name: "BADGE", description: "Status indicator labels.", image: "badge.png" },
+            { name: "CALENDAR", description: "Date picker interfaces.", image: "calender.png" },
+            { name: "BUTTON", description: "Interactive action triggers.", image: "button.png" },
+          ].map((component, index) => (
+            <div key={index} className="relative">
+              <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-black" />
+              <Card className="relative bg-white border-2 border-black shadow-none">
+                <Card.Content className="p-0">
+                  <div className="h-64 bg-white flex items-center justify-center border-b-2 border-black p-8">
+                    <Image
+                      src={`/images/components/${component.image}`}
+                      alt={component.name}
+                      width={300}
+                      height={200}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <Text className="font-bold text-lg mb-2">{component.name}</Text>
+                    <p className="text-sm text-muted-foreground">{component.description}</p>
+                  </div>
+                </Card.Content>
+              </Card>
+            </div>
           ))}
+        </div>
+
+        <div className="flex justify-center">
+          <div className="relative inline-block">
+            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-black" />
+            <Button className="relative bg-[#FFD93D] hover:bg-[#FFD93D]/90 text-black border-2 border-black shadow-none font-bold px-8 py-6 text-lg">
+              View All Components <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </div>
         </div>
       </section>
 

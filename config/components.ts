@@ -7,6 +7,8 @@ export const componentConfig: {
       filePath: string;
       dependencies?: string[];
       preview?: React.LazyExoticComponent<() => JSX.Element>;
+      cover?: string;
+      description?: string;
     };
   };
   examples: {
@@ -22,147 +24,212 @@ export const componentConfig: {
       name: "accordion",
       dependencies: ["@radix-ui/react-accordion", "lucide-react"],
       filePath: "components/retroui/Accordion.tsx",
+      cover: "/images/components/accordion.png",
+      description: "Expandable content panels.",
     },
     alert: {
       name: "alert",
       filePath: "components/retroui/Alert.tsx",
+      cover: "/images/components/alert.png",
+      description: "Notification messages.",
     },
     areaChart: {
       name: "areaChart",
       filePath: "components/retroui/charts/AreaChart.tsx",
+      description: "Area chart visualizations.",
     },
     avatar: {
       name: "avatar",
       filePath: "components/retroui/Avatar.tsx",
+      cover: "/images/components/avatar.png",
+      description: "User image placeholders.",
     },
     badge: {
       name: "badge",
       filePath: "components/retroui/Badge.tsx",
+      cover: "/images/components/badge.png",
+      description: "Status indicator labels.",
     },
     barChart: {
       name: "barChart",
       filePath: "components/retroui/charts/BarChart.tsx",
+      description: "Bar chart visualizations.",
     },
     breadcrumb: {
       name: "breadcrumb",
       filePath: "components/retroui/Breadcrumb.tsx",
+      cover: "/images/components/breadcrumb.png",
+      description: "Navigation breadcrumbs.",
     },
     button: {
       name: "button",
       filePath: "components/retroui/Button.tsx",
+      cover: "/images/components/button.png",
+      description: "Interactive action triggers.",
     },
     calendar: {
       name: "calendar",
       filePath: "components/retroui/Calendar.tsx",
+      cover: "/images/components/calender.png",
+      description: "Date picker interfaces.",
     },
     card: {
       name: "card",
       filePath: "components/retroui/Card.tsx",
+      cover: "/images/components/card.png",
+      description: "Content containers.",
     },
     carousel: {
       name: "carousel",
       filePath: "components/retroui/Carousel.tsx",
+      description: "Scrollable image galleries.",
     },
     checkbox: {
       name: "checkbox",
       filePath: "components/retroui/Checkbox.tsx",
+      description: "Toggle option controls.",
     },
     command: {
       name: "command",
       filePath: "components/retroui/Command.tsx",
+      description: "Command menu interfaces.",
     },
     "context-menu": {
       name: "context-menu",
       filePath: "components/retroui/ContextMenu.tsx",
+      cover: "/images/components/context-menu.png",
+      description: "Right-click context panels.",
     },
     dialog: {
       name: "dialog",
       filePath: "components/retroui/Dialog.tsx",
+      cover: "/images/components/dialog.png",
+      description: "Modal dialog windows.",
     },
     drawer: {
       name: "drawer",
       filePath: "components/retroui/Drawer.tsx",
+      cover: "/images/components/drawer.png",
+      description: "Side panel overlays.",
     },
     empty: {
       name: "empty",
       filePath: "components/retroui/Empty.tsx",
+      cover: "/images/components/empty.png",
+      description: "Empty state displays.",
     },
     input: {
       name: "input",
       filePath: "components/retroui/Input.tsx",
+      cover: "/images/components/input.png",
+      description: "Text input fields.",
     },
     label: {
       name: "label",
       filePath: "components/retroui/Label.tsx",
+      cover: "/images/components/label.png",
+      description: "Form input labels.",
     },
     lineChart: {
       name: "lineChart",
       filePath: "components/retroui/charts/LineChart.tsx",
+      description: "Line chart visualizations.",
     },
     loader: {
       name: "loader",
       filePath: "components/retroui/Loader.tsx",
+      cover: "/images/components/loader.png",
+      description: "Loading state indicators.",
     },
     menu: {
       name: "menu",
       filePath: "components/retroui/Menu.tsx",
+      cover: "/images/components/menu.png",
+      description: "Dropdown menu lists.",
     },
     pieChart: {
       name: "pieChart",
       filePath: "components/retroui/charts/PieChart.tsx",
+      description: "Pie chart visualizations.",
     },
     popover: {
       name: "popover",
       filePath: "components/retroui/Popover.tsx",
+      cover: "/images/components/popover.png",
+      description: "Floating tooltip panels.",
     },
     progress: {
       name: "progress",
       filePath: "components/retroui/Progress.tsx",
+      cover: "/images/components/progress.png",
+      description: "Progress bar indicators.",
     },
     radio: {
       name: "radio",
       filePath: "components/retroui/Radio.tsx",
+      cover: "/images/components/radio.png",
+      description: "Single choice selectors.",
     },
     select: {
       name: "select",
       filePath: "components/retroui/Select.tsx",
+      cover: "/images/components/select.png",
+      description: "Dropdown select menus.",
     },
     slider: {
       name: "slider",
       dependencies: ["@radix-ui/react-slider"],
       filePath: "components/retroui/Slider.tsx",
+      cover: "/images/components/slider.png",
+      description: "Range input controls.",
     },
     sonner: {
       name: "sonner",
       filePath: "components/retroui/Sonner.tsx",
+      cover: "/images/components/sooner.png",
+      description: "Toast notifications.",
     },
     switch: {
       name: "switch",
       filePath: "components/retroui/Switch.tsx",
+      cover: "/images/components/switch.png",
+      description: "Toggle switch buttons.",
     },
     table: {
       name: "table",
       filePath: "components/retroui/Table.tsx",
+      cover: "/images/components/table.png",
+      description: "Data table displays.",
     },
     text: {
       name: "text",
       filePath: "components/retroui/Text.tsx",
+      cover: "/images/components/text.png",
+      description: "Typography elements.",
     },
     toc: {
       name: "toc",
       filePath: "components/retroui/TableOfContents.tsx",
+      cover: "/images/components/table-of-contents.png",
+      description: "Table of contents navigation.",
     },
     toggle: {
       name: "toggle",
       filePath: "components/retroui/Toggle.tsx",
+      cover: "/images/components/toggle.png",
+      description: "Toggle action buttons.",
     },
     "toggle-group": {
       name: "toggle-group",
       filePath: "components/retroui/ToggleGroup.tsx",
+      cover: "/images/components/toggle-group.png",
+      description: "Grouped toggle switches.",
     },
     tooltip: {
       name: "tooltip",
       filePath: "components/retroui/Tooltip.tsx",
+      cover: "/images/components/tooltip.png",
+      description: "Hover tooltip popups.",
     },
   },
   examples: {

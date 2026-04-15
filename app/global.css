@@ -381,16 +381,14 @@ html {
 }
 
 .text-outline-foreground {
-  -webkit-text-stroke: 2px var(--foreground);
+  -webkit-text-stroke: 6px var(--foreground);
+  paint-order: stroke fill;
+  color: var(--card); 
 }
 
 .text-shadow-foreground {
   letter-spacing: 2px;
-  text-shadow:
-    0px 0px 0 var(--foreground),
-    0px 0px 0 var(--foreground),
-    4px 4px 0 var(--foreground),
-    4px 4px 0 var(--foreground);
+  text-shadow: 6px 6px 0 var(--foreground);
 }
 
 /* Syntax Highlighting stuff */

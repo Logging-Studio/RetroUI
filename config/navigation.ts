@@ -7,7 +7,7 @@ const utilsRoute = "/docs/utils";
 export const navConfig: INavigationConfig = {
   topNavItems: [
     { title: "Docs", href: "/docs" },
-    { title: "Components", href: `${componentsRoute}/button` },
+    { title: "Components", href: componentsRoute },
     { title: "Themes", href: "/themes" },
     { title: "Blog", href: "/blogs" },
     { title: "Showcase", href: "/showcase" },
@@ -21,23 +21,31 @@ export const navConfig: INavigationConfig = {
           title: "Installation",
           href: "/docs/install",
         },
-        // {
-        //   title: "Changelog",
-        //   href: "https://pro.retroui.dev",
-        // },
+        {
+          title: "Theming",
+          href: "/docs/theming",
+        },
+        {
+          title: "Changelog",
+          href: "/docs/changelog",
+        },
+        {
+          title: "MCP Server",
+          href: "/docs/mcp",
+        },
         {
           title: "Blocks",
-          href: "https://pro.retroui.dev/blocks",
+          href: "/blocks",
           tag: "Pro",
         },
         {
           title: "Templates",
-          href: "https://pro.retroui.dev/templates",
+          href: "/templates",
           tag: "Pro",
         },
         {
           title: "Figma Kit",
-          href: "https://pro.retroui.dev/figma",
+          href: "/figma",
           tag: "Pro",
         },
       ],
