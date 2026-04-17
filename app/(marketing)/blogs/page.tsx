@@ -1,4 +1,4 @@
-import { allBlogs } from "@/.contentlayer/generated";
+import { blogs } from "#site/content";
 import { Avatar, Card, Text } from "@/components/retroui";
 import Image from "next/image";
 import Link from "next/link";

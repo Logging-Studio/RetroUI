@@ -1,5 +1,5 @@
 import React from "react";
-import { allDocs } from "contentlayer/generated";
+import { docs } from "#site/content";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import MDX from "@/components/MDX";
@@ -13,9 +13,10 @@ interface IProps {
   params: Promise<{ slug: string[] }>;
 }
 
-function getDocParams({ params }: IProps) {
+async function getDocParams(props: IProps) {
+  const params = await props.params;
   const slug = `/docs${params.slug ? `/${params.slug.join("/")}` : ""}`;
-  const doc = allDocs.find((doc) => doc.url === slug);
+  const doc = docs.find((doc) => doc.url === slug);
 
   if (!doc) {
     return null;
@@ -25,8 +26,7 @@ function getDocParams({ params }: IProps) {
 }
 
 export async function generateMetadata(props: IProps): Promise<Metadata> {
-  const params = await props.params;
-  const doc = getDocParams({ params });
+  const doc = await getDocParams(props);
 
   if (!doc) {
     return {
@@ -41,14 +41,13 @@ export async function generateMetadata(props: IProps): Promise<Metadata> {
 }
 
 export default async function page(props: IProps) {
-  const params = await props.params;
-  const doc = getDocParams({ params });
+  const doc = await getDocParams(props);
 
   if (!doc) {
     return notFound();
   }
 
-  const toc = await generateToc(doc.body.raw);
+  const toc = await generateToc(doc.raw);
   return (
     <>
       {/* Main Content */}
@@ -84,7 +83,7 @@ export default async function page(props: IProps) {
           )}
         </div>
         <div>
-          <MDX code={doc.body.code} />
+          <MDX code={doc.code} />
         </div>
         <p className="text-right">
           Last Updated: {format(doc.lastUpdated, "dd MMM, yyy")}

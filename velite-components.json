@@ -1,0 +1,494 @@
+{
+  "core": {
+    "accordion": {
+      "name": "accordion",
+      "filePath": "components/retroui/Accordion.tsx"
+    },
+    "alert": {
+      "name": "alert",
+      "filePath": "components/retroui/Alert.tsx"
+    },
+    "avatar": {
+      "name": "avatar",
+      "filePath": "components/retroui/Avatar.tsx"
+    },
+    "badge": {
+      "name": "badge",
+      "filePath": "components/retroui/Badge.tsx"
+    },
+    "breadcrumb": {
+      "name": "breadcrumb",
+      "filePath": "components/retroui/Breadcrumb.tsx"
+    },
+    "button": {
+      "name": "button",
+      "filePath": "components/retroui/Button.tsx"
+    },
+    "calendar": {
+      "name": "calendar",
+      "filePath": "components/retroui/Calendar.tsx"
+    },
+    "card": {
+      "name": "card",
+      "filePath": "components/retroui/Card.tsx"
+    },
+    "carousel": {
+      "name": "carousel",
+      "filePath": "components/retroui/Carousel.tsx"
+    },
+    "checkbox": {
+      "name": "checkbox",
+      "filePath": "components/retroui/Checkbox.tsx"
+    },
+    "command": {
+      "name": "command",
+      "filePath": "components/retroui/Command.tsx"
+    },
+    "context-menu": {
+      "name": "context-menu",
+      "filePath": "components/retroui/ContextMenu.tsx"
+    },
+    "dialog": {
+      "name": "dialog",
+      "filePath": "components/retroui/Dialog.tsx"
+    },
+    "drawer": {
+      "name": "drawer",
+      "filePath": "components/retroui/Drawer.tsx"
+    },
+    "empty": {
+      "name": "empty",
+      "filePath": "components/retroui/Empty.tsx"
+    },
+    "input": {
+      "name": "input",
+      "filePath": "components/retroui/Input.tsx"
+    },
+    "label": {
+      "name": "label",
+      "filePath": "components/retroui/Label.tsx"
+    },
+    "loader": {
+      "name": "loader",
+      "filePath": "components/retroui/Loader.tsx"
+    },
+    "menu": {
+      "name": "menu",
+      "filePath": "components/retroui/Menu.tsx"
+    },
+    "popover": {
+      "name": "popover",
+      "filePath": "components/retroui/Popover.tsx"
+    },
+    "progress": {
+      "name": "progress",
+      "filePath": "components/retroui/Progress.tsx"
+    },
+    "radio": {
+      "name": "radio",
+      "filePath": "components/retroui/Radio.tsx"
+    },
+    "select": {
+      "name": "select",
+      "filePath": "components/retroui/Select.tsx"
+    },
+    "slider": {
+      "name": "slider",
+      "filePath": "components/retroui/Slider.tsx"
+    },
+    "sonner": {
+      "name": "sonner",
+      "filePath": "components/retroui/Sonner.tsx"
+    },
+    "switch": {
+      "name": "switch",
+      "filePath": "components/retroui/Switch.tsx"
+    },
+    "table": {
+      "name": "table",
+      "filePath": "components/retroui/Table.tsx"
+    },
+    "text": {
+      "name": "text",
+      "filePath": "components/retroui/Text.tsx"
+    },
+    "toc": {
+      "name": "toc",
+      "filePath": "components/retroui/TableOfContents.tsx"
+    },
+    "toggle": {
+      "name": "toggle",
+      "filePath": "components/retroui/Toggle.tsx"
+    },
+    "toggle-group": {
+      "name": "toggle-group",
+      "filePath": "components/retroui/ToggleGroup.tsx"
+    },
+    "tooltip": {
+      "name": "tooltip",
+      "filePath": "components/retroui/Tooltip.tsx"
+    }
+  },
+  "examples": {
+    "accordion-style-default": {
+      "name": "accordion-style-default",
+      "filePath": "preview/components/accordion-style-default.tsx"
+    },
+    "alert-style-all-status": {
+      "name": "alert-style-all-status",
+      "filePath": "preview/components/alert-style-all-status.tsx"
+    },
+    "alert-style-default": {
+      "name": "alert-style-default",
+      "filePath": "preview/components/alert-style-default.tsx"
+    },
+    "alert-style-solid": {
+      "name": "alert-style-solid",
+      "filePath": "preview/components/alert-style-solid.tsx"
+    },
+    "alert-style-with-icon": {
+      "name": "alert-style-with-icon",
+      "filePath": "preview/components/alert-style-with-icon.tsx"
+    },
+    "avatar-style-circle": {
+      "name": "avatar-style-circle",
+      "filePath": "preview/components/avatar-style-circle.tsx"
+    },
+    "avatar-style-circle-fallbacks": {
+      "name": "avatar-style-fallbacks",
+      "filePath": "preview/components/avatar-style-circle-fallbacks.tsx"
+    },
+    "avatar-style-circle-sizes": {
+      "name": "avatar-style-circle-sizes",
+      "filePath": "preview/components/avatar-style-circle-sizes.tsx"
+    },
+    "badge-style-default": {
+      "name": "badge-style-default",
+      "filePath": "preview/components/badge-style-default.tsx"
+    },
+    "badge-style-rounded": {
+      "name": "badge-style-default",
+      "filePath": "preview/components/badge-style-rounded.tsx"
+    },
+    "badge-style-sizes": {
+      "name": "badge-style-sizes",
+      "filePath": "preview/components/badge-style-sizes.tsx"
+    },
+    "badge-style-variants": {
+      "name": "badge-style-variants",
+      "filePath": "preview/components/badge-style-variants.tsx"
+    },
+    "breadcrumb-custom-separator": {
+      "name": "breadcrumb-custom-separator",
+      "filePath": "preview/components/breadcrumb-custom-separator.tsx"
+    },
+    "breadcrumb-link-component": {
+      "name": "breadcrumb-link-component",
+      "filePath": "preview/components/breadcrumb-link-component.tsx"
+    },
+    "breadcrumb-style-collapsed": {
+      "name": "breadcrumb-style-collapsed",
+      "filePath": "preview/components/breadcrumb-style-collapsed.tsx"
+    },
+    "breadcrumb-style-default": {
+      "name": "breadcrumb-style-default",
+      "filePath": "preview/components/breadcrumb-style-default.tsx"
+    },
+    "button-style-default": {
+      "name": "button-style-default",
+      "filePath": "preview/components/button-style-default.tsx"
+    },
+    "button-style-icon": {
+      "name": "button-style-icon",
+      "filePath": "preview/components/button-style-icon.tsx"
+    },
+    "button-style-link": {
+      "name": "button-style-link",
+      "filePath": "preview/components/button-style-link.tsx"
+    },
+    "button-style-outline": {
+      "name": "button-style-default",
+      "filePath": "preview/components/button-style-outline.tsx"
+    },
+    "button-style-secondary": {
+      "name": "button-style-secondary",
+      "filePath": "preview/components/button-style-secondary.tsx"
+    },
+    "button-style-with-icon": {
+      "name": "button-style-with-icon",
+      "filePath": "preview/components/button-style-with-icon.tsx"
+    },
+    "calendar-style-default": {
+      "name": "calendar-style-default",
+      "filePath": "preview/components/calendar-style-default.tsx"
+    },
+    "card-style-commerce": {
+      "name": "card-style-commerce",
+      "filePath": "preview/components/card-style-commerce.tsx"
+    },
+    "card-style-default": {
+      "name": "card-style-default",
+      "filePath": "preview/components/card-style-default.tsx"
+    },
+    "card-style-testimonial": {
+      "name": "card-style-testimonial",
+      "filePath": "preview/components/card-style-testimonial.tsx"
+    },
+    "carousel-style-default": {
+      "name": "carousel-style-default",
+      "filePath": "preview/components/carousel-style-default.tsx"
+    },
+    "carousel-style-sizes": {
+      "name": "carousel-style-sizes",
+      "filePath": "preview/components/carousel-style-sizes.tsx"
+    },
+    "carousel-style-vertical": {
+      "name": "carousel-style-vertical",
+      "filePath": "preview/components/carousel-style-vertical.tsx"
+    },
+    "checkbox-style-default": {
+      "name": "checkbox-style-default",
+      "filePath": "preview/components/checkbox-style-default.tsx"
+    },
+    "checkbox-style-sizes": {
+      "name": "checkbox-style-default",
+      "filePath": "preview/components/checkbox-style-sizes.tsx"
+    },
+    "checkbox-style-variants": {
+      "name": "checkbox-style-toggle",
+      "filePath": "preview/components/checkbox-style-variants.tsx"
+    },
+    "command-style-default": {
+      "name": "command-style-default",
+      "filePath": "preview/components/command-style-default.tsx"
+    },
+    "command-style-dialog": {
+      "name": "command-style-dialog",
+      "filePath": "preview/components/command-style-dialog.tsx"
+    },
+    "context-menu-style-default": {
+      "name": "context-menu-style-default",
+      "filePath": "preview/components/context-menu-style-default.tsx"
+    },
+    "dialog-style-default": {
+      "name": "dialog-style-default",
+      "filePath": "preview/components/dialog-style-default.tsx"
+    },
+    "dialog-style-width-variant": {
+      "name": "dialog-style-width-variant",
+      "filePath": "preview/components/dialog-style-width-variant.tsx"
+    },
+    "dialog-style-with-footer": {
+      "name": "dialog-style-with-footer",
+      "filePath": "preview/components/dialog-style-with-footer.tsx"
+    },
+    "dialog-style-with-form": {
+      "name": "dialog-style-with-form",
+      "filePath": "preview/components/dialog-style-with-form.tsx"
+    },
+    "drawer-style-default": {
+      "name": "drawer-style-default",
+      "filePath": "preview/components/drawer-style-default.tsx"
+    },
+    "drawer-style-right-direction": {
+      "name": "drawer-style-right-direction",
+      "filePath": "preview/components/drawer-style-right-direction.tsx"
+    },
+    "input-style-default": {
+      "name": "input-style-default",
+      "filePath": "preview/components/input-style-default.tsx"
+    },
+    "input-style-error": {
+      "name": "input-style-error",
+      "filePath": "preview/components/input-style-error.tsx"
+    },
+    "input-style-with-label": {
+      "name": "input-style-with-label",
+      "filePath": "preview/components/input-style-with-label.tsx"
+    },
+    "label-style-default": {
+      "name": "label-style-default",
+      "filePath": "preview/components/label-style-default.tsx"
+    },
+    "loader-style-custom": {
+      "name": "loader-style-custom",
+      "filePath": "preview/components/loader-style-custom.tsx"
+    },
+    "loader-style-default": {
+      "name": "loader-style-default",
+      "filePath": "preview/components/loader-style-default.tsx"
+    },
+    "loader-style-outline": {
+      "name": "loader-style-outline",
+      "filePath": "preview/components/loader-style-outline.tsx"
+    },
+    "loader-style-sizes": {
+      "name": "loader-style-sizes",
+      "filePath": "preview/components/loader-style-sizes.tsx"
+    },
+    "loader-style-solid": {
+      "name": "loader-style-solid",
+      "filePath": "preview/components/loader-style-solid.tsx"
+    },
+    "menu-style-default": {
+      "name": "menu-style-default",
+      "filePath": "preview/components/menu-style-default.tsx"
+    },
+    "popover-style-default": {
+      "name": "popover-style-default",
+      "filePath": "preview/components/popover-style-default.tsx"
+    },
+    "popover-style-default-shadow": {
+      "name": "popover-style-default-shadow",
+      "filePath": "preview/components/popover-style-default-shadow.tsx"
+    },
+    "progress-style-default": {
+      "name": "progress-style-default",
+      "filePath": "preview/components/progress-style-default.tsx"
+    },
+    "radio-style-default": {
+      "name": "radio-style-default",
+      "filePath": "preview/components/radio-style-default.tsx"
+    },
+    "radio-style-sizes": {
+      "name": "radio-style-sizes",
+      "filePath": "preview/components/radio-style-sizes.tsx"
+    },
+    "radio-style-variants": {
+      "name": "radio-style-variants",
+      "filePath": "preview/components/radio-style-variants.tsx"
+    },
+    "retro-player": {
+      "name": "retro-player",
+      "filePath": "preview/components/retro-player.tsx"
+    },
+    "select-style-default": {
+      "name": "select-style-default",
+      "filePath": "preview/components/select-style-default.tsx"
+    },
+    "slider-style-default": {
+      "name": "slider-style-default",
+      "filePath": "preview/components/slider-style-default.tsx"
+    },
+    "sonner-style-colored-status": {
+      "name": "sonner-style-colored-status",
+      "filePath": "preview/components/sonner-style-colored-status.tsx"
+    },
+    "sonner-style-default": {
+      "name": "sonner-style-default",
+      "filePath": "preview/components/sonner-style-default.tsx"
+    },
+    "sonner-style-status": {
+      "name": "sonner-style-status",
+      "filePath": "preview/components/sonner-style-status.tsx"
+    },
+    "switch-style-default": {
+      "name": "switch-style-default",
+      "filePath": "preview/components/switch-style-default.tsx"
+    },
+    "switch-style-disabled": {
+      "name": "switch-style-disabled",
+      "filePath": "preview/components/switch-style-disabled.tsx"
+    },
+    "tab-style-default": {
+      "name": "typography-p",
+      "filePath": "preview/components/tab-style-default.tsx"
+    },
+    "table-style-default": {
+      "name": "table-style-default",
+      "filePath": "preview/components/table-style-default.tsx"
+    },
+    "table-with-checkbox": {
+      "name": "table-with-checkbox",
+      "filePath": "preview/components/table-with-checkbox.tsx"
+    },
+    "table-with-sticky-header": {
+      "name": "table-with-sticky-header",
+      "filePath": "preview/components/table-with-sticky-header.tsx"
+    },
+    "text-headings": {
+      "name": "text-headings",
+      "filePath": "preview/components/text-headings.tsx"
+    },
+    "textarea-style-default": {
+      "name": "textarea-style-default",
+      "filePath": "preview/components/textarea-style-default.tsx"
+    },
+    "toc-style-default": {
+      "name": "toc-style-default",
+      "filePath": "preview/components/toc-style-default.tsx"
+    },
+    "toc-style-depth": {
+      "name": "toc-style-depth",
+      "filePath": "preview/components/toc-style-depth.tsx"
+    },
+    "toc-style-manual": {
+      "name": "toc-style-manual",
+      "filePath": "preview/components/toc-style-manual.tsx"
+    },
+    "toggle-group-style-default": {
+      "name": "toggle-group-style-default",
+      "filePath": "preview/components/toggle-group-style-default.tsx"
+    },
+    "toggle-group-style-outline-muted": {
+      "name": "toggle-group-style-outline-muted",
+      "filePath": "preview/components/toggle-group-style-outline-muted.tsx"
+    },
+    "toggle-group-style-outlined": {
+      "name": "toggle-group-style-outlined",
+      "filePath": "preview/components/toggle-group-style-outlined.tsx"
+    },
+    "toggle-group-style-solid": {
+      "name": "toggle-group-style-solid",
+      "filePath": "preview/components/toggle-group-style-solid.tsx"
+    },
+    "toggle-style-default": {
+      "name": "toggle-style-default",
+      "filePath": "preview/components/toggle-style-default.tsx"
+    },
+    "toggle-style-outline-muted": {
+      "name": "toggle-style-outline-muted",
+      "filePath": "preview/components/toggle-style-outline-muted.tsx"
+    },
+    "toggle-style-outlined": {
+      "name": "toggle-style-outlined",
+      "filePath": "preview/components/toggle-style-outlined.tsx"
+    },
+    "toggle-style-solid": {
+      "name": "toggle-style-solid",
+      "filePath": "preview/components/toggle-style-solid.tsx"
+    },
+    "tooltip-style-default": {
+      "name": "tooltip-style-default",
+      "filePath": "preview/components/tooltip-style-default.tsx"
+    },
+    "tooltip-style-primary": {
+      "name": "tooltip-style-primary",
+      "filePath": "preview/components/tooltip-style-primary.tsx"
+    },
+    "tooltip-style-solid": {
+      "name": "tooltip-style-solid",
+      "filePath": "preview/components/tooltip-style-solid.tsx"
+    },
+    "typography-p": {
+      "name": "typography-p",
+      "filePath": "preview/components/typography-p.tsx"
+    },
+    "empty-style-default": {
+      "name": "empty-style-default",
+      "filePath": "preview/components/empty-style-default.tsx"
+    },
+    "empty-style-custom-icon": {
+      "name": "empty-style-custom-icon",
+      "filePath": "preview/components/empty-style-custom-icon.tsx"
+    },
+    "empty-style-custom-everything": {
+      "name": "empty-style-custom-everything",
+      "filePath": "preview/components/empty-style-custom-everything.tsx"
+    },
+    "empty-style-table": {
+      "name": "empty-style-table",
+      "filePath": "preview/components/empty-style-table.tsx"
+    }
+  }
+}

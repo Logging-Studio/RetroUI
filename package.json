@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev:content": "pnpm dlx velite --watch",
+    "dev:app": "next dev",
+    "dev": "run-p dev:*",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
@@ -38,14 +40,13 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
-    "contentlayer": "^0.3.4",
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.445.0",
     "mdast-util-toc": "^7.1.0",
     "motion": "^12.38.0",
     "next": "16.2.2",
-    "next-contentlayer": "^0.3.4",
+    "npm-run-all": "^4.1.5",
     "react": "19.2.4",
     "react-day-picker": "^9.11.1",
     "react-dom": "19.2.4",
@@ -76,7 +77,8 @@
     "prettier": "^3.5.3",
     "tailwindcss": "^4.0.14",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5"
+    "typescript": "^5",
+    "velite": "^0.3.1"
   },
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
   "pnpm": {

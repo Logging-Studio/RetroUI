@@ -1,7 +1,7 @@
 "use client";
 
 import { Alert, Badge, Card, Text } from "@/components/retroui";
-import { useMDXComponent } from "next-contentlayer/hooks";
+import * as runtime from "react/jsx-runtime";
 import React, { AnchorHTMLAttributes, HTMLAttributes } from "react";
 import { ComponentShowcase } from "./ComponentShowcase";
 import { cn } from "@/lib/utils";
@@ -108,6 +108,12 @@ const components = (type: "doc" | "blog") => ({
   CliCommand,
 });
 
+// Parse the Velite generated MDX code into a React component function
+const useMDXComponent = (code: string) => {
+  const fn = new Function(code);
+  return fn({ ...runtime }).default;
+};
+
 export default function MDX({
   code,
   type = "doc",
@@ -115,7 +121,6 @@ export default function MDX({
   code: string;
   type?: "doc" | "blog";
 }) {
-  const Content = useMDXComponent(code);
-
-  return <Content components={components(type)} />;
+  const Component = useMDXComponent(code);
+  return <Component components={components(type)} />;
 }
