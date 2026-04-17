@@ -15,6 +15,9 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import { users } from "@/config/data";
 import { BlocksParallax } from "@/components/BlocksParallax";
+import { componentConfig } from "@/config/components";
+import Link from "next/link";
+import { blockConfig } from "@/config/blocks";
 
 const testimonials = [
   {
@@ -55,17 +58,15 @@ const testimonials = [
   },
 ];
 
-const componentsList = [
-  { name: "ALERT", category: "Feedback" },
-  { name: "AVATAR", category: "Display" },
-  { name: "BADGE", category: "Display" },
-  { name: "BUTTON", category: "Input" },
-  { name: "CARD", category: "Layout" },
-  { name: "CHECKBOX", category: "Input" },
-  { name: "DRAWER", category: "Overlay" },
-  { name: "DROPDOWN", category: "Overlay" },
-  { name: "INPUT FIELD", category: "Input" },
-];
+const coreComponents = Object.entries(componentConfig.core)
+  .filter(([_, component]) => component.cover)
+  .slice(0, 6)
+  .map(([key, component]) => ({
+    id: key,
+    ...component,
+    displayName: component.name.toUpperCase().replace(/-/g, " "),
+  }));
+
 
 export default function ReactHomepage() {
 
@@ -113,15 +114,16 @@ export default function ReactHomepage() {
 
       <BlocksParallax />
 
+
       {/* Features Section */}
-      <section className="container max-w-7xl mx-auto px-4 py-16">
-        <Text as="h2" className="mb-4 uppercase text-center">
-          <span className="relative inline-block">
-            <Image src="/decor/compas.svg" alt="compass decoration" width={80} height={80} className="inline-block -mb-2" />
+      <section className="container max-w-7xl mx-auto px-4 py-16 text-center">
+        <Text as="h2" className="uppercase">
+          <span className="relative text-outline-foreground text-shadow-foreground">
+            <Image src="/decor/pen_design.svg" alt="components decoration" width={140} height={140} className="absolute h-[140px] w-[140px] -left-18 -top-14" />
+            Desiged to Ship Fast
           </span>
-          DESIGNED TO SHIP FAST
           <br />
-          WITHOUT LOOKING BORING
+          Without Looking Boring
         </Text>
         <p className="text-muted-foreground mb-12 max-w-4xl mx-auto text-center">
           An ecosystem tailored for developers, featuring a reliable framework, reusable elements, and complete code control. It is crafted to enhance and sustain interfaces as products evolve.
@@ -262,44 +264,121 @@ export default function ReactHomepage() {
         </div>
       </section>
 
-      {/* 199+ Components Section */}
-      <section className="container max-w-7xl mx-auto px-4 py-16">
-        <div className="flex items-center justify-between mb-8">
-          <Text as="h2" className="text-4xl lg:text-5xl font-bold">
-            BUILD FASTER WITH <span className="text-outlined">199+</span>
+      {/* UI Components Section */}
+      <section className="container max-w-7xl mx-auto px-4 py-28 space-y-14">
+        <div className="text-center space-y-6">
+          <Text as="h2" className="uppercase">
+            Neo Brutalist UI
             <br />
-            COMPONENTS
+            <span className="relative text-outline-foreground text-shadow-foreground">
+              <Image src="/decor/compas.svg" alt="components decoration" width={80} height={80} className="absolute h-[80px] w-[80px] -left-10 -top-4" />
+              components
+            </span>
           </Text>
-          <Button className="bg-primary">Browse All Components</Button>
-        </div>
-        <p className="text-muted-foreground mb-12 max-w-2xl">
-          From simple buttons to complex data tables, we've got you covered with a vast library of pre-built components.
-        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {componentsList.map((component, index) => (
-            <Card key={index} className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-              <Card.Content className="p-6">
-                <div className="h-32 bg-gray-200 border-2 border-black rounded flex items-center justify-center mb-4">
-                  <Text className="text-gray-400 text-sm">{component.name}</Text>
+          <Text className="text-muted-foreground max-w-2xl mx-auto">
+            Discover scalable Shadcn UI components designed with Base UI and Radix UI, perfect for landing pages, SaaS dashboards, and modern web apps.
+          </Text>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {coreComponents.map((component) => (
+            <Link
+              key={component.id}
+              href={`/components/${component.id}`}
+              className="group"
+            >
+              <Card className="w-full">
+                <Card.Content className="p-0">
+                  {/* Image Section */}
+                  {component.cover && (
+                    <Image
+                      src={component.cover}
+                      alt={component.displayName}
+                      width={400}
+                      height={200}
+                      className="object-contain"
+                    />
+                  )}
+
+                  {/* Text Section */}
+                  <div className="p-4 border-t-2">
+                    <Text as="h6" className="mb-2 uppercase">
+                      {component.displayName}
+                    </Text>
+                    <p className="text-sm text-muted-foreground">
+                      {component.description}
+                    </p>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex justify-center">
+          <Button>
+            View All Components <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </div>
+      </section>
+
+      {/* Blocks Section */}
+      <section className="container max-w-7xl mx-auto px-4 py-28 space-y-14">
+        <div className="text-center space-y-6">
+          <Text as="h2" className="uppercase">
+            Build faster with 300+
+            <br />
+            <span className="relative text-outline-foreground text-shadow-foreground">
+              <Image src="/decor/lego.svg" alt="components decoration" width={90} height={90} className="absolute h-[90px] w-[90px] -left-16 -top-6" />
+              Blocks
+            </span>
+          </Text>
+
+          <Text className="text-muted-foreground max-w-2xl mx-auto">
+            Discover scalable Shadcn UI components designed with Base UI and Radix UI, perfect for landing pages, SaaS dashboards, and modern web apps.
+          </Text>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {blockConfig.blocks.slice(0, 9).map((block) => (
+            <Card key={block.slug} className="w-full group overflow-hidden">
+              <Card.Content className="p-0">
+                <div className="w-full h-auto bg-white flex items-center justify-center border-b-2 overflow-hidden">
+                  <Image
+                    src={block.cover_image}
+                    alt={block.name}
+                    width={500}
+                    height={300}
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <div className="flex items-center justify-between">
-                  <Text className="font-bold">{component.name}</Text>
-                  <Badge variant="outline" className="text-xs">{component.category}</Badge>
+                <div className="p-6">
+                  <Text as="h6" className="mb-2">{block.name}</Text>
+                  <p className="text-sm text-muted-foreground">{block.description}</p>
                 </div>
               </Card.Content>
             </Card>
           ))}
         </div>
+
+        <div className="flex justify-center">
+          <Button>
+            View All Blocks <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </div>
       </section>
 
       {/* Ready-to-Use Templates */}
-      <section className="container max-w-7xl mx-auto px-4 py-16">
+      <section className="container max-w-[1400px] mx-auto px-4 py-16">
         <div className="flex items-center justify-between mb-8">
-          <Text as="h2" className="text-4xl lg:text-5xl font-bold">
-            READY-TO-USE CUSTOMIZABLE
+          <Text as="h2" className="uppercase">
+            Pre-built and Customizable
             <br />
-            <span className="text-outlined">TEMPLATES</span>
+            <span className="relative text-outline-foreground text-shadow-foreground">
+              <Image src="/decor/paint_brush.svg" alt="components decoration" width={100} height={100} className="absolute h-[100px] w-[100px] -left-14 -top-8" />
+              Templates
+            </span>
           </Text>
           <Button className="bg-primary">Explore RetroUI Pro</Button>
         </div>
@@ -328,72 +407,20 @@ export default function ReactHomepage() {
         </div>
       </section>
 
-      {/* UI Components Section */}
-      <section className="container max-w-7xl mx-auto px-4 py-16">
-        <div className="text-center mb-4">
-          <Text as="h2" className="text-4xl lg:text-5xl font-bold uppercase">
-            CUSTOMIZABLE UI
-            <br />
-            <span className="relative inline-block">
-              <Image src="/decor/question.svg" alt="key decoration" width={80} height={80} className="inline-block -mb-2" />
-              OMPONENTS
-            </span>
-          </Text>
-        </div>
-
-        <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-          Discover scalable Shadcn UI components designed with Base UI and Radix UI, perfect for landing pages, SaaS dashboards, and modern web apps.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {[
-            { name: "ACCORDION", description: "Expandable content panels.", image: "accordion.png" },
-            { name: "ALERT", description: "Notification messages.", image: "alert.png" },
-            { name: "AVATAR", description: "User image placeholders.", image: "avatar.png" },
-            { name: "BADGE", description: "Status indicator labels.", image: "badge.png" },
-            { name: "CALENDAR", description: "Date picker interfaces.", image: "calender.png" },
-            { name: "BUTTON", description: "Interactive action triggers.", image: "button.png" },
-          ].map((component, index) => (
-            <div key={index} className="relative">
-              <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-black" />
-              <Card className="relative bg-white border-2 border-black shadow-none">
-                <Card.Content className="p-0">
-                  <div className="h-64 bg-white flex items-center justify-center border-b-2 border-black p-8">
-                    <Image
-                      src={`/images/components/${component.image}`}
-                      alt={component.name}
-                      width={300}
-                      height={200}
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <Text className="font-bold text-lg mb-2">{component.name}</Text>
-                    <p className="text-sm text-muted-foreground">{component.description}</p>
-                  </div>
-                </Card.Content>
-              </Card>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex justify-center">
-          <div className="relative inline-block">
-            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-black" />
-            <Button className="relative bg-[#FFD93D] hover:bg-[#FFD93D]/90 text-black border-2 border-black shadow-none font-bold px-8 py-6 text-lg">
-              View All Components <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className="container max-w-7xl mx-auto px-4 py-16">
-        <Text as="h2" className="text-4xl lg:text-5xl font-bold text-center mb-4">
-          <span className="text-outlined">LOVED</span> BY DEVS, DESIGNERS
-          <br />
-          & CREATORS
-        </Text>
+        <div className="text-center">
+          <Text as="h2" className="uppercase">
+            <span className="relative text-outline-foreground text-shadow-foreground">
+              <Image src="/decor/heart.svg" alt="components decoration" width={60} height={60} className="absolute h-[60px] w-[60px] -left-10 -top-4" />
+              Loved
+            </span>
+            {" "}by devs, designers
+            <br />
+            & creators
+          </Text>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           {testimonials.map((testimonial, index) => (

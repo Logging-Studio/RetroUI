@@ -1,3 +1,5 @@
+"use client";
+
 // import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
 import { AreaChart } from "@/components/retroui/charts/AreaChart";

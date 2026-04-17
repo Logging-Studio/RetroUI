@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/retroui";
 import { toast } from "sonner";
 

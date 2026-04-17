@@ -1,3 +1,5 @@
+"use client";
+
 import { Checkbox } from "@/components/retroui/Checkbox";
 
 export default function CheckboxStyleSizes() {

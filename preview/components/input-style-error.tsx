@@ -1,3 +1,5 @@
+"use client";
+
 import { Input } from "@/components/retroui/Input";
 import { Label } from "@/components/retroui/Label";
 

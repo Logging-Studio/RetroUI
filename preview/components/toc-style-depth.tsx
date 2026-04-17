@@ -1,3 +1,5 @@
+"use client";
+
 
 import { TableOfContents } from "@/components/retroui/TableOfContents";
 import { Text } from "@/components/retroui/Text";

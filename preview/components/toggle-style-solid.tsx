@@ -1,3 +1,5 @@
+"use client";
+
 import { Toggle } from "@/components/retroui";
 import { Italic } from "lucide-react";
 

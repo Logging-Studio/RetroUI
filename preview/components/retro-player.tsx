@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, Card } from "@/components/retroui";
 import { Slider } from "@/components/retroui/Slider";
 import {

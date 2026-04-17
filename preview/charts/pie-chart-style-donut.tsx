@@ -1,3 +1,5 @@
+"use client";
+
 import { PieChart } from "@/components/retroui/charts/PieChart";
 
 const data = [

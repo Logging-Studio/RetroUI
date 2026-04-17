@@ -1,3 +1,5 @@
+"use client";
+
 import { Tabs, TabsPanels, TabsTrigger, TabsContent, TabsTriggerList } from "@/components/retroui/Tab";
 
 export default function TabStyleDefault() {

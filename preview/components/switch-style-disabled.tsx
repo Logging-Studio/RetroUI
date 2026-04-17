@@ -1,3 +1,5 @@
+"use client";
+
 import { Switch } from "@/components/retroui/Switch";
 import React from "react";
 
