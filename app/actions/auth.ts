@@ -20,6 +20,7 @@ export async function verifyTokenAction(token: string): Promise<VerifyResponse> 
   try {
     const result = await authApi.verify(token);
 
+    console.log("Verify token result:", result);
     if (result.success && result.token) {
       // Set httpOnly cookie
       await setAuthCookie(result.token);

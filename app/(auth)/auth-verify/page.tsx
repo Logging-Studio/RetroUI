@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { Text } from "@/components/retroui";
+import { Button, Text } from "@/components/retroui";
 import { verifyTokenAction } from "@/app/actions/auth";
 import { useAuth } from "@/contexts/AuthContext";
+import Image from "next/image";
 
 export default function AuthVerifyPage() {
   const searchParams = useSearchParams();
@@ -66,18 +67,7 @@ export default function AuthVerifyPage() {
       <div className="w-full max-w-md text-center">
         {/* Logo */}
         <div className="flex items-center gap-2 justify-center mb-12">
-          <div className="w-8 h-8 border-2 border-black rounded-full flex items-center justify-center">
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-          </div>
+          <Image src="/images/logo.png" alt="RetroUI" width={32} height={32} />
           <Text className="text-2xl font-bold">RetroUI</Text>
         </div>
 
@@ -136,14 +126,10 @@ export default function AuthVerifyPage() {
               {errorMessage || "Invalid or expired magic link. Please try signing in again."}
             </p>
 
-            <div className="relative inline-block">
-              <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-black bg-black" />
-              <Link
-                href="/sign-in"
-                className="inline-block px-6 py-3 font-bold text-white border-2 border-black relative bg-[#10B981] hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-              >
+            <div className="flex justify-center">
+              <Button render={(props) => <Link {...props} href="/sign-in" />}>
                 Back to Sign In
-              </Link>
+              </Button>
             </div>
           </div>
         )}

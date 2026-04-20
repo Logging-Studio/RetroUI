@@ -3,9 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { User, LogOut, Settings } from "lucide-react";
+import { User, LogOut, Building } from "lucide-react";
+import Avatar, { genConfig } from "react-nice-avatar";
 import { useAuth } from "@/contexts/AuthContext";
 import type { User as UserType } from "@/types/auth";
+import { Badge } from "./retroui";
 
 export default function UserMenu({ user }: { user: UserType }) {
   const { logout } = useAuth();
@@ -17,63 +19,59 @@ export default function UserMenu({ user }: { user: UserType }) {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <button className="flex items-center gap-2 px-3 py-2 border-2 border-black bg-white hover:bg-gray-50 transition-colors relative group">
-          <div className="absolute -bottom-1 -right-1 left-1 top-1 border-2 border-black bg-black transition-all duration-200 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
-          <div className="w-6 h-6 border-2 border-black rounded-full flex items-center justify-center bg-white relative">
-            <User className="w-4 h-4" />
-          </div>
-          <span className="font-bold text-sm relative hidden sm:inline">
-            {user.name || user.email}
-          </span>
-          <svg
-            className="w-4 h-4 relative"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
+        <button className="outline-none">
+          <Avatar className="w-10 h-10 cursor-pointer border" {...genConfig(user?.email || "User")} />
         </button>
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className="min-w-[200px] bg-white border-2 border-black mt-2 relative z-50"
-          sideOffset={5}
+          className="min-w-[240px] bg-white border-2 border-black mt-2 relative z-10 shadow-md"
+          sideOffset={8}
+          align="end"
         >
-          <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-black bg-black pointer-events-none" />
-
-          <div className="relative bg-white">
-            {/* User Info */}
-            <div className="px-4 py-3 border-b-2 border-black">
-              <p className="font-bold text-sm">{user.name || "User"}</p>
-              <p className="text-xs text-muted-foreground truncate">{user.email}</p>
-              {user.isPro && (
-                <span className="inline-block mt-1 px-2 py-0.5 text-xs font-bold bg-yellow-100 border border-black">
-                  PRO
-                </span>
-              )}
+          <div className="relative bg-popover">
+            {/* User Info Header */}
+            <div className="flex items-center space-x-2 p-4">
+              <Avatar className="size-14 border bg-primary" {...genConfig(user?.email || "User")} />
+              <div>
+                <p className="font-medium mb-1">{user.name || "User"}</p>
+                <Badge size="sm" variant="solid">
+                  {user.isPro ? "Pro" : "Essential"} Plan
+                </Badge>
+              </div>
             </div>
 
+            <hr className="border mb-2" />
+
             {/* Menu Items */}
-            <div className="py-1">
+            <div className="space-y-1 p-4">
+              {user.isOrg && (
+                <DropdownMenu.Item asChild>
+                  <Link
+                    href="/organization"
+                    className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-primary transition-colors duration-200 outline-none cursor-pointer"
+                  >
+                    <Building className="w-4 h-4" />
+                    <span>Organization</span>
+                  </Link>
+                </DropdownMenu.Item>
+              )}
+
               <DropdownMenu.Item asChild>
                 <Link
-                  href="/blocks"
-                  className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100 outline-none cursor-pointer"
+                  href="/account"
+                  className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-primary transition-colors duration-200 outline-none cursor-pointer"
                 >
-                  <Settings className="w-4 h-4" />
-                  <span>Blocks</span>
+                  <User className="w-4 h-4" />
+                  <span>Account</span>
                 </Link>
               </DropdownMenu.Item>
-
-              <DropdownMenu.Separator className="h-0.5 bg-black my-1" />
 
               <DropdownMenu.Item asChild>
                 <button
                   onClick={handleLogout}
-                  className="flex items-center gap-2 w-full px-4 py-2 text-sm hover:bg-gray-100 outline-none cursor-pointer text-red-600"
+                  className="flex items-center gap-2 w-full px-3 py-2 text-sm hover:bg-primary transition-colors duration-200 outline-none cursor-pointer text-destructive"
                 >
                   <LogOut className="w-4 h-4" />
                   <span>Logout</span>

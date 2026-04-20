@@ -1,6 +1,6 @@
 import type { User, SignInResponse, VerifyResponse, ProfileUpdateData } from "@/types/auth";
 
-const API_BASE_URL = "https://workers.retroui.dev";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8787";
 
 class APIClient {
   private baseURL: string;
@@ -54,7 +54,10 @@ class APIClient {
     try {
       const data = await this.request<{ token: string; user: User }>("/auth/verify", {
         method: "POST",
-        body: JSON.stringify({ token }),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
       });
 
       return {
