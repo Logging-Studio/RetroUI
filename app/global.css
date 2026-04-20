@@ -29,6 +29,7 @@
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
+  --color-popover: var(--popover);
   --background-image: var(--background-image);
   --chart-1: var(--chart-1);
   --chart-2: var(--chart-2);
@@ -49,6 +50,7 @@
   --secondary: #000;
   --secondary-foreground: #fff;
   --muted: #d5d5d5;
+  --popover: #fff;
   --muted-foreground: #5a5a5a;
   --accent: #fae583;
   --accent-foreground: #000;
@@ -74,6 +76,7 @@
   --secondary: #3a3a3a;
   --secondary-foreground: #f5f5f5;
   --muted: #3f3f46;
+  --popover: #242424;
   --muted-foreground: #a0a0a0;
   --accent: #fae583;
   --accent-foreground: #000;

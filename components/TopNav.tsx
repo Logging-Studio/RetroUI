@@ -3,7 +3,15 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/retroui";
+import { Button } from "@/components/retroui/Button";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenuLink
+} from "@/components/ui/navigation-menu";
 import { navConfig } from "@/config/navigation";
 import { useAuth } from "@/contexts/AuthContext";
 import UserMenu from "@/components/UserMenu";
@@ -57,16 +65,46 @@ export default function TopNav() {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex space-x-4">
-            {navConfig.topNavItems.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="hover:underline decoration-primary underline-offset-2 transition-all"
-              >
-                {item.title}
-              </Link>
-            ))}
+          <div className="hidden md:flex">
+            <NavigationMenu viewport={false}>
+              <NavigationMenuList>
+                {navConfig.topNavItems.map((item) => {
+                  if (item.children && item.children.length > 0) {
+                    return (
+                      <NavigationMenuItem key={item.title} className="relative">
+                        <NavigationMenuTrigger>
+                          {item.title}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent className="border">
+                          <div className="w-48 p-2">
+                            {item.children.map((child) => (
+                              <NavigationMenuLink key={child.title} asChild className="hover:bg-none hover:underline decoration-primary decoration-4 underline-offset-4">
+                                <Link
+                                  href={child.href}
+                                  className="hover:bg-none hover:underline decoration-primary decoration-4 underline-offset-4"
+                                >
+                                  {child.title}
+                                </Link>
+                              </NavigationMenuLink>
+                            ))}
+                          </div>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    );
+                  }
+
+                  return (
+                    <NavigationMenuItem key={item.title}>
+                      <NavigationMenuLink asChild className="hover:bg-none hover:underline decoration-primary decoration-4 underline-offset-4">
+                        <Link href={item.href}>
+                          {item.title}
+                        </Link>
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  );
+                })}
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
 
           <div className="flex items-center space-x-3">

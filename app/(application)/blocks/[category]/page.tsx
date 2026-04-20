@@ -1,65 +1,66 @@
-"use client";
-
-import { useState } from "react";
-import { Card, Text } from "@/components/retroui";
-import { Tabs } from "@/components/retroui/Tab";
+import { notFound } from "next/navigation";
 import { blockConfig } from "@/config/blocks";
-import Image from "next/image";
-import { Search, Figma, Megaphone, ListMinus, LayoutGrid } from "lucide-react";
+import BlockCategoryClient from "./BlockCategoryClient";
 
-export default function BlocksPage() {
-    const [searchQuery, setSearchQuery] = useState("");
-    const [activeTab, setActiveTab] = useState("all");
+interface BlockItem {
+  id: number;
+  name: string;
+  slug: string;
+  code?: string;
+  cover_img: string | null;
+}
 
-    // Filter blocks based on active tab and search query
-    const getFilteredBlocks = () => {
-        let filtered = blockConfig.blocks.filter(block => block.stage === "published");
+interface BlockCategoryPageProps {
+  params: Promise<{
+    category: string;
+  }>;
+}
 
-        // Filter by tab
-        if (activeTab === "marketing") {
-            filtered = filtered.filter(block => block.type === "marketing");
-        } else if (activeTab === "application") {
-            filtered = filtered.filter(block => block.type === "application");
-        }
-
-        // Filter by search query
-        if (searchQuery.trim()) {
-            filtered = filtered.filter(block =>
-                block.name.toLowerCase().includes(searchQuery.toLowerCase())
-            );
-        }
-
-        return filtered;
-    };
-
-    const filteredBlocks = getFilteredBlocks();
-
-    return (
-        <main className="container mx-auto px-4 py-16">
-            {/* Header Section */}
-            <div className="mb-12">
-                <div className="flex">
-                    <Text as="h1" className="uppercase text-3xl lg:text-4xl">
-                        RetroUI {" "}
-                        <span className="text-outline-foreground-sm text-shadow-foreground-sm">Blocks</span>
-                    </Text>
-                    <Image
-                        src="/decor/lego.svg"
-                        alt="blocks decoration"
-                        width={60}
-                        height={60}
-                        className="h-[60px] w-[60px] -ml-6 -mt-4"
-                    />
-                </div>
-                <p className="text-muted-foreground max-w-4xl">
-                    Accelerate development with 300+ React UI blocks for apps, dashboards, e-commerce, and AI.
-                    RetroUI Blocks enhance open-source components with layouts and design patterns. Designed for
-                    easy integration, these blocks are responsive and compatible with any React framework, speeding
-                    up UI development for MCP and LLM workflows.
-                </p>
-            </div>
-
-
-        </main>
+async function getBlockItems(category: string): Promise<BlockItem[]> {
+  try {
+    const response = await fetch(
+      `https://workers.retroui.dev/blocks/categories/${category}`,
+      {
+        next: { revalidate: 3600 }, // Revalidate every hour
+      }
     );
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch block items");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching blocks:", error);
+    return [];
+  }
+}
+
+export default async function BlockCategoryPage(props: BlockCategoryPageProps) {
+  const params = await props.params;
+  const category = params.category;
+
+  // Get category info from config
+  const categoryInfo = blockConfig.blocks.find((block) => block.slug === category);
+
+  if (!categoryInfo) {
+    notFound();
+  }
+
+  // Fetch block items on the server
+  const blockItems = await getBlockItems(category);
+
+  return (
+    <BlockCategoryClient
+      category={category}
+      categoryInfo={categoryInfo}
+      initialBlockItems={blockItems}
+    />
+  );
+}
+
+export async function generateStaticParams() {
+  return blockConfig.blocks.map((block) => ({
+    category: block.slug,
+  }));
 }

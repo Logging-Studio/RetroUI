@@ -13,7 +13,7 @@ export const navConfig: INavigationConfig = {
     {
       title: "Resources", href: "", children: [
         { title: "Documentation", href: "/docs" },
-        { title: "Blog", href: "/blogs" },
+        { title: "Blog Posts", href: "/blogs" },
         { title: "Showcase", href: "/showcase" },
       ]
     },

@@ -1,23 +1,15 @@
-import TopNav from "@/components/TopNav";
 import "./global.css";
-import { Archivo_Black, Space_Grotesk, Host_Grotesk, Space_Mono } from "next/font/google";
-import Image from "next/image";
+import { Archivo_Black, Space_Mono, Geist } from "next/font/google";
 import { Metadata } from "next";
-import { Tabs } from '@base-ui/react/tabs';
 import { Toaster } from "@/components/retroui";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { getCurrentUser } from "@/lib/auth";
-import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-const sans = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-sans",
-  display: "swap",
-});
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const head = Archivo_Black({
   subsets: ["latin"],
@@ -51,7 +43,7 @@ export default async function RootLayout({
   const user = await getCurrentUser();
 
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -73,38 +65,11 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${head.variable} ${sans.variable} ${mono.variable} bg-background text-foreground`}
+        className={`${head.variable} ${geist.variable} ${mono.variable} bg-background text-foreground`}
       >
         <ThemeProvider>
           <AuthProvider initialUser={user}>
-            <Tabs.Root defaultValue="react">
-              <Tabs.List className="bg-foreground h-10 flex justify-center items-end">
-                <div className="bg-background pt-1 px-1">
-                  <Tabs.Tab value="react" className="data-active:bg-card data-active:border-2 font-medium text-foreground px-4 py-0.5 text-sm">
-                    <Link href="/" className="flex items-center">
-                      <Image src="/images/icons/react.svg" alt="React" width={16} height={16} className="mr-2" />
-                      React
-                    </Link>
-                  </Tabs.Tab>
-                  <Tabs.Tab value="figma" className="data-active:bg-card data-active:border-2 font-medium text-foreground px-4 py-0.5 text-sm">
-                    <Link href="/figma" className="flex items-center">
-                      <Image src="/images/icons/figma.svg" alt="Figma" width={12} height={12} className="mr-2" />
-                      Figma
-                    </Link>
-                  </Tabs.Tab>
-                </div>
-                <Tabs.Indicator />
-              </Tabs.List>
-              <TopNav />
-              <Tabs.Panel value="react">
-                <div>
-                  {children}
-                </div>
-              </Tabs.Panel>
-              <Tabs.Panel value="figma">
-                {children}
-              </Tabs.Panel>
-            </Tabs.Root>
+            {children}
           </AuthProvider>
           <Toaster />
         </ThemeProvider>
