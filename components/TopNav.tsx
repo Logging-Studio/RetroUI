@@ -40,7 +40,7 @@ export default function TopNav() {
       }`}
     >
       <div
-        className={`transition-all duration-300 ${
+        className={`transition-all mx-auto duration-300 ${
           isScrolled
             ? "bg-card border-2 px-6 max-w-7xl"
             : "px-4 lg:px-0"
