@@ -1,4 +1,5 @@
 import type { User, SignInResponse, VerifyResponse, ProfileUpdateData } from "@/types/auth";
+import type { CheckoutSessionResponse } from "@/types/pricing";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8787";
 
@@ -107,6 +108,25 @@ class APIClient {
       return {
         success: false,
         error: error instanceof Error ? error.message : "Failed to update profile",
+      };
+    }
+  }
+
+  async createCheckoutSession(priceId: string, endorselyReferral?: string): Promise<CheckoutSessionResponse> {
+    try {
+      const data = await this.request<{ sessionUrl: string }>("/checkout/create-stripe-checkout-session", {
+        method: "POST",
+        body: JSON.stringify({
+          priceId,
+          promoCode: "",
+          endorsely_referral: endorselyReferral
+        }),
+      });
+
+      return { sessionUrl: data.sessionUrl };
+    } catch (error) {
+      return {
+        error: error instanceof Error ? error.message : "Failed to create checkout session",
       };
     }
   }

@@ -40,7 +40,7 @@ export default function ReactHomepage() {
   return (
     <main>
       <section className="bg-[url('/decor/bg-triangle-pattern.svg')] bg-cover bg-center">
-        <div className="container max-w-7xl px-4 py-24 mx-auto text-center ">
+        <div className="container px-4 py-24 lg:py-28 mx-auto text-center">
           <Text as="h1" className="uppercase">
             Not every website has to
             <br />

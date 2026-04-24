@@ -1,0 +1,443 @@
+---
+title: Introducing RetroUI 2.0 - Bigger, Bolder, Better
+slug: retroui-2-launch
+coverImage: https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/blogs/retroui-2-launch/cover.png
+description: After months of work, RetroUI 2.0 is here. Base UI support, unified website, improved docs, 100+ new blocks, and a brand new template. This is our biggest update yet.
+tags:
+  - retroui
+  - announcement
+  - launch
+  - product update
+author:
+  name: Imran Hossain
+  avatar: https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/people/imran.jpg
+  linkedin: faraazhossainimran
+
+status: published
+publishedAt: 24 January, 2026
+---
+
+We've been building in the dark for months. Today, we're flipping the lights on.
+
+<br />
+
+**RetroUI 2.0 is here**, and it's the biggest update we've ever shipped. This isn't just a version bump—it's a complete evolution of what RetroUI can do and how you interact with it.
+
+<br />
+
+When we launched RetroUI, the goal was simple: give developers a UI library that doesn't look like everything else. Bold designs, neo-brutalist aesthetics, and components that make your projects stand out. That vision hasn't changed. But how we deliver on it? That's evolved dramatically.
+
+<br />
+
+Let's dive into what's new.
+
+<br />
+
+## 🎨 Base UI Support - The Foundation You've Been Asking For
+
+One of the most requested features since day one has been **Base UI support**, and it's finally here.
+
+<br />
+
+### What is Base UI?
+
+Base UI is a library of unstyled, accessible React components built by the MUI team. Think of it as the headless, framework-agnostic alternative to Material UI—you get all the behavior and accessibility logic without any styling opinions.
+
+<br />
+
+### Why This Matters for RetroUI
+
+Until now, RetroUI components were built on Radix UI primitives (which are excellent, don't get us wrong). But Base UI opens up new possibilities:
+
+- **Framework flexibility:** Base UI works seamlessly across React, Next.js, and other modern frameworks
+- **Better tree-shaking:** Smaller bundle sizes with improved optimization
+- **Enhanced accessibility:** Base UI's accessibility primitives are battle-tested and WCAG-compliant out of the box
+- **Future-proof architecture:** Built for React Server Components and the modern React ecosystem
+
+<br />
+
+What does this mean for you? RetroUI components are now more performant, more accessible, and more flexible than ever. All while keeping the bold, distinctive design language you love.
+
+<br />
+
+```tsx
+// Now powered by Base UI under the hood
+import { Button } from '@/components/retroui'
+
+<Button variant="primary">
+  Still bold. Still RetroUI. Now even better.
+</Button>
+```
+
+<br />
+<br />
+
+## 🌐 One Website, One Vision - OS and Pro United
+
+Here's something that bothered us: having separate websites for RetroUI OS (free) and RetroUI Pro felt... fragmented. Like we were splitting our community instead of bringing it together.
+
+<br />
+
+**Not anymore.**
+
+<br />
+
+### Completely Redesigned Website
+
+We've rebuilt the entire RetroUI website from the ground up, unifying OS and Pro into one cohesive experience. Here's what's new:
+
+<br />
+
+**Unified Component Library**
+
+Browse all components—free and pro—in one place. No more jumping between sites to see what's available. Everything is clearly marked, so you know what's free and what's premium.
+
+<br />
+
+**Cleaner Navigation**
+
+Finding what you need is faster and more intuitive. Components, blocks, templates, docs—everything has a logical home.
+
+<br />
+
+**More Polished Design**
+
+We practice what we preach. The new site is bolder, faster, and more refined. It's a showcase of what RetroUI can do when you commit to the aesthetic.
+
+<br />
+
+**Better Mobile Experience**
+
+The old site worked on mobile. The new one *shines* on mobile. Responsive design done right, with touch interactions that feel native.
+
+<br />
+
+The best part? It's all powered by RetroUI components. We're dogfooding our own library, which means every component you see on the site is something you can use in your projects.
+
+<br />
+<br />
+
+## 📚 Documentation That Actually Helps
+
+Let's be real: documentation is often an afterthought. Not this time.
+
+<br />
+
+We've completely overhauled the RetroUI docs with features that make your life easier:
+
+<br />
+
+### Copy as Markdown
+
+Working on documentation for your own project? Writing a blog post about RetroUI? Now you can **copy component code as Markdown** with a single click.
+
+<br />
+
+Perfect for:
+- Creating your own component documentation
+- Writing tutorials and guides
+- Sharing code examples in Markdown-based tools (Notion, GitHub, etc.)
+
+<br />
+
+### AI-Powered Documentation
+
+We've integrated AI assistance directly into the docs. Got a question about how to customize a component? Need to understand the API? The AI can help you find answers faster than digging through pages of documentation.
+
+<br />
+
+**Examples of what you can ask:**
+- "How do I make the Button component use custom colors?"
+- "What props does the Card component accept?"
+- "Show me examples of using the Modal with forms"
+
+<br />
+
+It's like having a RetroUI expert on standby, 24/7.
+
+<br />
+
+### Improved Code Examples
+
+Every component now has:
+- **Live previews** you can interact with
+- **Multiple variants** showing different use cases
+- **Copy-paste ready code** with proper imports
+- **TypeScript examples** for better type safety
+- **Accessibility notes** explaining how each component handles a11y
+
+<br />
+
+No more guessing. No more digging through source code. Just clear, helpful examples that get you building faster.
+
+<br />
+<br />
+
+## 🧱 100+ New UI Blocks - Build Faster Than Ever
+
+Components are great. But sometimes you need full sections, not just buttons and cards.
+
+<br />
+
+**That's where blocks come in.**
+
+<br />
+
+### What Are Blocks?
+
+Blocks are pre-built sections you can drop into your project: hero sections, pricing tables, feature grids, testimonials, CTAs, and more. They're fully responsive, accessible, and ready to customize.
+
+<br />
+
+### What's New in 2.0?
+
+We've added **over 100 new blocks** across every category you can think of:
+
+<br />
+
+**Hero Sections**
+- 15+ new hero variations from minimalist to full-bleed
+- Includes animated backgrounds, split-screen layouts, and video heroes
+
+<br />
+
+**Features & Benefits**
+- Icon-based feature grids
+- Screenshot showcases
+- Step-by-step guides
+- Comparison tables
+
+<br />
+
+**Pricing Tables**
+- Simple 2-column layouts to complex 4-tier pricing
+- Toggle billing (monthly/yearly)
+- Feature comparison matrices
+
+<br />
+
+**Testimonials**
+- Grid layouts, carousels, and masonry designs
+- Video testimonials
+- Logo walls for social proof
+
+<br />
+
+**CTAs & Conversions**
+- Newsletter signups
+- Waitlist forms
+- App download sections
+- Contact forms with personality
+
+<br />
+
+**Headers & Navigation**
+- Mega menus
+- Mobile-first navigation patterns
+- Sticky headers with scroll effects
+
+<br />
+
+**Footers**
+- Multi-column footers
+- Minimal single-row footers
+- Newsletter-integrated footers
+
+<br />
+
+Every block is built with the same bold RetroUI aesthetic—thick borders, hard shadows, vibrant colors, and asymmetric layouts. They're designed to stand out, not blend in.
+
+<br />
+
+```tsx
+// Drop in a complete hero section in seconds
+import { HeroBold } from '@/components/blocks'
+
+<HeroBold
+  title="Your Product Name"
+  subtitle="Ship faster with bold design"
+  cta="Get Started"
+/>
+```
+
+<br />
+<br />
+
+## 🌙 New Template: Dark Mode Dev Tool Dashboard
+
+Templates are where everything comes together—components, blocks, and design philosophy unified into a complete application.
+
+<br />
+
+**Introducing our newest template: the Dark Mode Dev Tool Dashboard.**
+
+<br />
+
+### What Is It?
+
+A fully-featured, dark-mode-first dashboard built for developer tools, SaaS platforms, and admin panels. It's everything you need to build a production-ready application with RetroUI's bold aesthetic.
+
+<br />
+
+### What's Included?
+
+**Complete Dashboard Layout**
+- Sidebar navigation with collapsible menu
+- Top header with search and user profile
+- Responsive design that works on mobile, tablet, and desktop
+
+<br />
+
+**Pre-Built Pages**
+- Dashboard overview with metrics and charts
+- User management (list, detail, edit)
+- Settings page with form examples
+- API documentation page
+- Billing and subscription management
+
+<br />
+
+**Dark Mode Done Right**
+- Not just inverted colors—intentionally designed for dark backgrounds
+- High contrast for readability
+- Vibrant accent colors that pop against dark backgrounds
+
+<br />
+
+**Production-Ready Features**
+- Authentication screens (login, signup, forgot password)
+- Error states and empty states
+- Loading skeletons
+- Toast notifications
+- Modal dialogs and confirmations
+
+<br />
+
+**Developer-Friendly**
+- Built with TypeScript
+- Documented component structure
+- Easy to customize and extend
+- Follows Next.js App Router conventions
+
+<br />
+
+This isn't a toy template. It's a foundation you can build on for real products. Whether you're launching a new SaaS, building an internal tool, or creating a developer platform, this template gives you a head start.
+
+<br />
+
+And yes, it looks nothing like every other dashboard template out there. That's the point.
+
+<br />
+<br />
+
+## Why This Matters
+
+RetroUI 2.0 isn't just about adding features. It's about making RetroUI more powerful, more flexible, and more useful for real-world projects.
+
+<br />
+
+**Base UI support** means better performance and accessibility.
+
+**Unified website** means easier discovery and a better experience for everyone.
+
+**Improved docs** means less time searching, more time building.
+
+**100+ new blocks** means you can ship complete pages in minutes, not days.
+
+**Dark mode template** means you have a solid foundation for your next project.
+
+<br />
+
+Together, these updates make RetroUI 2.0 the most complete, production-ready UI library for developers who refuse to build boring interfaces.
+
+<br />
+<br />
+
+## What's Next?
+
+This is a big release, but we're not stopping here. Here's what's on the roadmap:
+
+<br />
+
+- **More templates** (light mode variants, landing pages, e-commerce)
+- **Figma to Code** integration for faster design-to-development workflow
+- **Additional Base UI components** as we expand the library
+- **Community showcase** featuring projects built with RetroUI
+- **Video tutorials** walking through common patterns and use cases
+
+<br />
+
+We're also listening. If there's a component you need, a feature you want, or a problem you're facing, let us know. RetroUI is built for developers, by developers. Your feedback shapes what we build next.
+
+<br />
+<br />
+
+## Try RetroUI 2.0 Today
+
+Ready to dive in? Here's how to get started:
+
+<br />
+
+### For New Users
+
+```bash
+# Install RetroUI
+npx retroui-cli init
+
+# Or install via npm
+npm install @retroui/react
+```
+
+<br />
+
+Browse the components, explore the blocks, and grab the new template. Everything is ready to use in your Next.js, React, or Vite project.
+
+<br />
+
+### For Existing Users
+
+If you're already using RetroUI, upgrading to 2.0 is straightforward:
+
+```bash
+npm install @retroui/react@latest
+```
+
+<br />
+
+Check the [migration guide](https://retroui.dev/docs/migration) for any breaking changes (there are very few, and we've documented workarounds for all of them).
+
+<br />
+<br />
+
+## Thank You
+
+RetroUI exists because developers like you are tired of generic designs. You want to build things that stand out, that have personality, that feel different.
+
+<br />
+
+We're here to make that easier.
+
+<br />
+
+Version 2.0 is the result of months of work, hundreds of commits, countless design iterations, and feedback from an amazing community. Thank you for being part of this journey.
+
+<br />
+
+Now go build something bold. 🚀
+
+<br />
+
+---
+
+<br />
+
+**Explore RetroUI 2.0:**
+- [Browse Components](https://retroui.dev/components)
+- [Check Out Blocks](https://retroui.dev/blocks)
+- [Get the Template](https://retroui.dev/templates)
+- [Read the Docs](https://retroui.dev/docs)
+- [Join the Community](https://discord.gg/retroui)
+
+<br />
+
+Questions? Feedback? Found a bug? [Open an issue on GitHub](https://github.com/retroui/retroui) or reach out on [Twitter/X](https://twitter.com/retrouidev).

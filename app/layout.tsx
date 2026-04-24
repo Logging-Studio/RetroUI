@@ -9,7 +9,7 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { getCurrentUser } from "@/lib/auth";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const head = Archivo_Black({
   subsets: ["latin"],
@@ -63,6 +63,7 @@ export default async function RootLayout({
             `,
           }}
         />
+        <script async src="https://assets.endorsely.com/endorsely.js" data-endorsely="7e205a3d-7039-41f3-9b4f-52929d5489d2" />
       </head>
       <body
         className={`${head.variable} ${geist.variable} ${mono.variable} bg-background text-foreground`}

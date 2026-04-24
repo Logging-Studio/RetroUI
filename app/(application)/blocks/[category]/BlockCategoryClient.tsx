@@ -367,16 +367,13 @@ export default function BlockCategoryClient({
                         deviceMode[item.slug]
                       )} transition-all duration-300`}
                     >
-                      {/* Placeholder for iframe/preview */}
-                      <div className="w-full h-[400px] border-2 border-dashed border-gray-300 rounded flex items-center justify-center bg-white">
-                        <div className="text-center">
-                          <Code2 className="w-12 h-12 mx-auto mb-2 text-gray-400" />
-                          <p className="text-gray-500 font-bold">Preview Coming Soon</p>
-                          <p className="text-sm text-gray-400">
-                            Component preview will be rendered here
-                          </p>
-                        </div>
-                      </div>
+                      {/* Live Preview iframe */}
+                      <iframe
+                        src={`https://retroui-blocks.vercel.app/${category}/${item.slug}`}
+                        className="w-full h-[600px] border-2 border-black rounded bg-white"
+                        title={`Preview of ${item.name}`}
+                        loading="lazy"
+                      />
                     </div>
                   </div>
                 ) : (
