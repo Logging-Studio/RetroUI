@@ -6,10 +6,177 @@ description: This guide will help you get started with RetroUI.
 lastUpdated: 30 May, 2025
 ---
 
-RetroUI is meant to be compatible with all major `React` frameworks. But for now we are primarily working on `Next.js` , documentation for other frameworks will be live soon...
+RetroUI is a trusted registry for shadcn/ui components. Start building unique, playful interfaces with retro-brutalist design in minutes!
 
 <br />
-## Pick Framework
+
+## Quick Start
+
+Add components directly from the RetroUI registry using the shadcn CLI:
+
+<CliCommand npmCommand="npx shadcn@latest add @retroui/button" />
+
+This will automatically add the RetroUI registry to your `components.json`:
+
+```json
+{
+  "registries": {
+    "@retroui": "https://retroui.dev/r/{name}.json"
+  }
+}
+```
+
+<br />
+
+## Installing Components
+
+To install any component from RetroUI, use the following command:
+
+<CliCommand npmCommand="npx shadcn@latest add @retroui/[component]" />
+
+**Examples:**
+
+<CliCommand npmCommand="npx shadcn@latest add @retroui/card" />
+<CliCommand npmCommand="npx shadcn@latest add @retroui/input" />
+<CliCommand npmCommand="npx shadcn@latest add @retroui/dialog" />
+
+<br />
+
+## Monorepo Support
+
+Working in a monorepo? Specify the path to your workspace with the `-c` or `--cwd` option:
+
+<CliCommand npmCommand="npx shadcn@latest init -c ./apps/web" />
+
+Or when adding components:
+
+<CliCommand npmCommand="npx shadcn@latest add @retroui/button -c ./apps/web" />
+
+<br />
+
+## Discovery & Search
+
+### View Components
+Preview components from the RetroUI registry before installing:
+
+<CliCommand npmCommand="npx shadcn@latest view @retroui" />
+
+### Search Components
+Search for specific components across the registry:
+
+<CliCommand npmCommand="npx shadcn@latest search @retroui" />
+
+### List All Components
+See the complete list of available components:
+
+<CliCommand npmCommand="npx shadcn@latest list @retroui" />
+
+<br />
+
+## Fonts & Theme Setup
+
+RetroUI uses bold, playful typography and vibrant colors. Here's how to set it up:
+
+### 1. Add Fonts
+
+We use `Archivo Black` for headings and `Space Grotesk` for body text:
+
+```tsx
+import { Archivo_Black, Space_Grotesk } from "next/font/google";
+
+const archivoBlack = Archivo_Black({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-head",
+  display: "swap",
+});
+
+const space = Space_Grotesk({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={`${archivoBlack.variable} ${space.variable}`}>
+        {children}
+      </body>
+    </html>
+  );
+}
+```
+
+### 2. Add Theme
+
+Add this RetroUI theme to your `global.css`:
+
+```scss
+@theme {
+  --font-head: var(--font-head);
+  --font-sans: var(--font-sans);
+  --radius: var(--radius);
+
+  --shadow-xs: 1px 1px 0 0 var(--border);
+  --shadow-sm: 2px 2px 0 0 var(--border);
+  --shadow: 3px 3px 0 0 var(--border);
+  --shadow-md: 4px 4px 0 0 var(--border);
+  --shadow-lg: 6px 6px 0 0 var(--border);
+  --shadow-xl: 10px 10px 0 1px var(--border);
+  --shadow-2xl: 16px 16px 0 1px var(--border);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+}
+
+:root {
+  --radius: 0;
+  --background: #fff;
+  --foreground: #000;
+  --card: #fff;
+  --card-foreground: #000;
+  --primary: #ffdb33;
+  --primary-hover: #ffcc00;
+  --primary-foreground: #000;
+  --secondary: #000;
+  --secondary-foreground: #fff;
+  --muted: #aeaeae;
+  --muted-foreground: #5a5a5a;
+  --accent: #fae583;
+  --accent-foreground: #000;
+  --destructive: #e63946;
+  --destructive-foreground: #fff;
+  --border: #000;
+}
+```
+
+Looking for more color schemes? Check out our [Themes Gallery](/themes) for a collection of pre-made RetroUI themes.
+
+<br />
+
+## Framework Support
+
+RetroUI is designed to work with all major React frameworks:
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
@@ -38,3 +205,9 @@ RetroUI is meant to be compatible with all major `React` frameworks. But for now
     </Link>
   </Card>
 </div>
+
+<br />
+
+## Need Help?
+
+Join our Discord community for support, inspiration, and to share what you're building with RetroUI!

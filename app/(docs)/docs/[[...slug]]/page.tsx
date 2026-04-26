@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import { MoveUpRightIcon } from "lucide-react";
 import { generateToc } from "@/lib/toc";
 import TableOfContents from "@/components/TableOfContents";
+import { CopyPageButton } from "@/components/CopyPageButton";
 
 interface IProps {
   params: Promise<{ slug: string[] }>;
@@ -49,16 +50,23 @@ export default async function page(props: IProps) {
 
   const toc = await generateToc(doc.raw);
   return (
-    <>
+    <div className="relative flex items-start">
       {/* Main Content */}
-      <div className="flex-1 space-y-12 py-12 px-4 max-w-2xl mx-auto w-full">
+      <div className="flex-1 space-y-12 px-4 max-w-4xl mx-auto w-full">
         <div className="border-b pb-6">
-          <Text as="h1" className="text-4xl">
-            {doc.title}
-          </Text>
-          <p className="text-lg text-muted-foreground mt-2">
-            {doc.description}
-          </p>
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex-1">
+              <Text as="h1">
+                <span className="text-card text-outline-foreground text-shadow-foreground">
+                  {doc.title}
+                </span>
+              </Text>
+              <p className="text-lg text-muted-foreground mt-2">
+                {doc.description}
+              </p>
+            </div>
+            <CopyPageButton rawContent={doc.raw} title={doc.title} />
+          </div>
           {doc.links && (
             <div className="flex space-x-4 text-sm mt-4 text-black">
               {doc.links?.api_reference && (
@@ -91,9 +99,9 @@ export default async function page(props: IProps) {
       </div>
 
       {/* Table of Contents */}
-      <div className="hidden lg:block lg:w-60 flex-shrink-0 sticky top-36 self-start space-y-6">
+      <div className="hidden lg:block sticky lg:w-60 flex-shrink-0 top-30 self-start space-y-6">
         <TableOfContents toc={toc} />
       </div>
-    </>
+    </div>
   );
 }

@@ -8,6 +8,7 @@ import {
   Card,
   Badge,
   Accordion,
+  Button,
 } from "@/components/retroui";
 import { Check, Gift, Rocket, Crown, Users } from "lucide-react";
 import { toast } from "sonner";
@@ -16,49 +17,43 @@ import { authApi } from "@/lib/api-client";
 import { getPriceId, type PricingTier } from "@/lib/pricing";
 
 const osFeatures = [
-  { text: "20+ open-source components", enabled: true },
+  { text: "All RetroUI base components", enabled: true },
+  { text: "Figma community kit", enabled: true },
   { text: "Community Discord access", enabled: true },
   { text: "Public documentation", enabled: true },
-  { text: "Personal use license", enabled: true },
-  { text: "Premium components (80+)", enabled: false },
-  { text: "Figma Design Kit", enabled: false },
-  { text: "Video tutorials", enabled: false },
-  { text: "Commercial license", enabled: false },
+  { text: "Commercial Usage", enabled: true }
 ];
 
 const starterFeatures = [
+  { text: "1 seat", enabled: true },
+  { text: "200+ pro UI blocks", enabled: true },
+  { text: "Lifetime access to future updates", enabled: true },
+  { text: "Priority support", enabled: true },
   { text: "Everything in OS", enabled: true },
-  { text: "80+ premium components", enabled: true },
-  { text: "10+ website templates", enabled: true },
-  { text: "Figma Design Kit", enabled: true },
-  { text: "Commercial use license", enabled: true },
-  { text: "Email support", enabled: true },
-  { text: "1 developer seat", enabled: true },
-  { text: "Priority support", enabled: false },
 ];
 
 const proFeatures = [
-  { text: "Everything in Starter", enabled: true },
-  { text: "30+ premium templates", enabled: true },
-  { text: "Video tutorials", enabled: true },
-  { text: "Priority email support", enabled: true },
-  { text: "Advanced Figma components", enabled: true },
-  { text: "Up to 3 developer seats", enabled: true },
-  { text: "Early access to new components", enabled: true },
-  { text: "MCP server integration", enabled: true },
+  { text: "1 seat", enabled: true },
+  { text: "200+ pro UI blocks", enabled: true },
+  { text: "5 marketing site templates", enabled: true },
+  { text: "1 admin dashboard template", enabled: true },
+  { text: "Pro Figma kit access", enabled: true },
   { text: "Lifetime updates", enabled: true },
+  { text: "Lifetime access to future updates", enabled: true },
+  { text: "Priority support", enabled: true },
+  { text: "Everything in OS", enabled: true },
 ];
 
 const teamFeatures = [
-  { text: "Everything in Pro", enabled: true },
-  { text: "Unlimited developer seats", enabled: true },
-  { text: "Custom component requests", enabled: true },
-  { text: "Dedicated Slack channel", enabled: true },
-  { text: "White-label license", enabled: true },
-  { text: "Team onboarding call", enabled: true },
-  { text: "Priority feature requests", enabled: true },
-  { text: "Advanced design system kit", enabled: true },
-  { text: "Custom integrations", enabled: true },
+  { text: "10 seat", enabled: true },
+  { text: "200+ pro UI blocks", enabled: true },
+  { text: "5 marketing site templates", enabled: true },
+  { text: "1 admin dashboard template", enabled: true },
+  { text: "Pro Figma kit access", enabled: true },
+  { text: "Lifetime updates", enabled: true },
+  { text: "Lifetime access to future updates", enabled: true },
+  { text: "Priority support", enabled: true },
+  { text: "Everything in OS", enabled: true },
 ];
 
 
@@ -174,258 +169,188 @@ export default function PricingPage() {
       <section className="container max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* OS - Free Tier */}
-          <div className="relative">
-            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FFD93D]" />
-            <Card className="relative bg-white border-2 border-black shadow-none h-full">
-              <Card.Content className="p-6">
-                <div className="mb-6">
-                  <Gift className="w-10 h-10 mb-4" />
-                  <Text as="h3" className="text-2xl font-bold mb-2 uppercase">
-                    OS
-                  </Text>
-                  <Text className="text-xs font-bold text-muted-foreground mb-3 uppercase tracking-wider">
-                    TO EXPLORE
-                  </Text>
-                  <Text className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                    Start building with RetroUI at zero cost.
-                  </Text>
-                  <Text className="text-5xl font-bold mb-4">
-                    Free
-                  </Text>
-                  <div className="relative inline-block group w-full mb-2">
-                    <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-black bg-black transition-all duration-200" />
-                    <button className="w-full px-4 py-2 text-sm font-head border-2 border-black transition-all duration-200 relative bg-white shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5">
-                      Browse For Free
-                    </button>
-                  </div>
-                  <Text className="text-xs text-center text-muted-foreground">
-                    No credit card required
-                  </Text>
-                </div>
+          <Card className="shadow-none h-full">
+            <Card.Header className="p-6">
+              <Gift className="w-6 h-6 mb-4" />
+              <Text as="h4" className="mb-2">
+                OS
+              </Text>
+              <Text className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                Start building with RetroUI at zero cost.
+              </Text>
+              <Text className="text-5xl font-head mb-8">
+                $0
+              </Text>
+              <Button>
+                Browse Components
+              </Button>
+            </Card.Header>
 
-                <div className="space-y-2 border-t-2 border-black pt-4">
-                  <Text className="font-bold text-xs mb-3 uppercase tracking-wider">WHAT'S INCLUDED</Text>
-                  {osFeatures.map((feature, index) => (
-                    <div
-                      key={index}
-                      className={`flex items-start gap-2 ${!feature.enabled ? "opacity-40" : ""}`}
-                    >
-                      <div className={`w-4 h-4 border-2 border-black flex-shrink-0 flex items-center justify-center ${feature.enabled ? "bg-black" : "bg-white"}`}>
-                        {feature.enabled && (
-                          <Check className="w-2.5 h-2.5 text-white stroke-[3]" />
-                        )}
-                        {!feature.enabled && (
-                          <svg className="w-2.5 h-2.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                          </svg>
-                        )}
-                      </div>
-                      <Text className="text-xs leading-tight">{feature.text}</Text>
-                    </div>
-                  ))}
+            <Card.Content className="space-y-3 border-t-2 p-6">
+              <Text className="font-bold text-sm mb-4 uppercase tracking-wider">WHAT'S INCLUDED</Text>
+              {osFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`flex items-start gap-2 ${!feature.enabled ? "opacity-40" : ""}`}
+                >
+                  <div className={`w-4 h-4 border-2 border-black flex-shrink-0 flex items-center justify-center ${feature.enabled ? "bg-black" : "bg-white"}`}>
+                    {feature.enabled && (
+                      <Check className="w-2.5 h-2.5 text-white" />
+                    )}
+                    {!feature.enabled && (
+                      <svg className="w-2.5 h-2.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    )}
+                  </div>
+                  <Text className="text-sm leading-tight">{feature.text}</Text>
                 </div>
-              </Card.Content>
-            </Card>
-          </div>
+              ))}
+            </Card.Content>
+          </Card>
 
           {/* Starter */}
-          <div className="relative">
-            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#A8E6CF]" />
-            <Card className="relative bg-white border-2 border-black shadow-none h-full">
-              <Card.Content className="p-6">
-                <div className="mb-6">
-                  <Rocket className="w-10 h-10 mb-4" />
-                  <Text as="h3" className="text-2xl font-bold mb-2 uppercase">
-                    Starter
-                  </Text>
-                  <Text className="text-xs font-bold text-muted-foreground mb-3 uppercase tracking-wider">
-                    FOR INDIVIDUALS
-                  </Text>
-                  <Text className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                    Perfect for solo developers and small projects.
-                  </Text>
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <Text className="text-5xl font-bold">
-                      $119
-                    </Text>
-                    <Text className="text-xs text-muted-foreground">
-                      one-time
-                    </Text>
-                  </div>
-                  <div className="relative inline-block group w-full mb-2">
-                    <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-black bg-black transition-all duration-200" />
-                    <button
-                      onClick={() => handleCheckout("starter")}
-                      disabled={loadingTier === "starter"}
-                      className="w-full px-4 py-2 text-sm font-head border-2 border-black transition-all duration-200 relative bg-[#A8E6CF] shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {loadingTier === "starter" ? "Loading..." : "Get Starter"}
-                    </button>
-                  </div>
-                  <Text className="text-xs text-center text-muted-foreground">
-                    One-time · Lifetime access
-                  </Text>
-                </div>
+          <Card className="relative bg-white border-2 border-black shadow-none h-full">
+            <Card.Header className="p-6">
+              <Rocket className="w-6 h-6 mb-4" />
+              <Text as="h4" className="mb-2">
+                Starter
+              </Text>
+              <Text className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                Only want Blocks and don't care for the rest?
+              </Text>
+              <Text className="text-5xl font-head mb-8">
+                $119
+              </Text>
+              <Button
+                onClick={() => handleCheckout("starter")}
+                disabled={loadingTier === "starter"}
+              >
+                {loadingTier === "starter" ? "Loading..." : "Get Starter"}
+              </Button>
+            </Card.Header>
 
-                <div className="space-y-2 border-t-2 border-black pt-4">
-                  <Text className="font-bold text-xs mb-3 uppercase tracking-wider">WHAT'S INCLUDED</Text>
-                  {starterFeatures.map((feature, index) => (
-                    <div
-                      key={index}
-                      className={`flex items-start gap-2 ${!feature.enabled ? "opacity-40" : ""}`}
-                    >
-                      <div className={`w-4 h-4 border-2 border-black flex-shrink-0 flex items-center justify-center ${feature.enabled ? "bg-[#A8E6CF]" : "bg-white"}`}>
-                        {feature.enabled && (
-                          <Check className="w-2.5 h-2.5 text-black stroke-[3]" />
-                        )}
-                        {!feature.enabled && (
-                          <svg className="w-2.5 h-2.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                          </svg>
-                        )}
-                      </div>
-                      <Text className="text-xs leading-tight">{feature.text}</Text>
-                    </div>
-                  ))}
+            <Card.Content className="space-y-3 border-t-2 p-6">
+              <Text className="font-bold text-sm mb-4 uppercase tracking-wider">WHAT'S INCLUDED</Text>
+              {starterFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`flex items-start gap-2 ${!feature.enabled ? "opacity-40" : ""}`}
+                >
+                  <div className={`w-4 h-4 border-2 border-black flex-shrink-0 flex items-center justify-center ${feature.enabled ? "bg-black" : "bg-white"}`}>
+                    {feature.enabled && (
+                      <Check className="w-2.5 h-2.5 text-white" />
+                    )}
+                    {!feature.enabled && (
+                      <svg className="w-2.5 h-2.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    )}
+                  </div>
+                  <Text className="text-sm leading-tight">{feature.text}</Text>
                 </div>
-              </Card.Content>
-            </Card>
-          </div>
+              ))}
+            </Card.Content>
+          </Card>
 
           {/* Pro - Most Popular */}
           <div className="relative">
             <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 bg-primary text-black text-xs font-bold px-3 py-1 border-2 border-black">
               MOST POPULAR
             </Badge>
-            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#4ECDC4]" />
+            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-primary" />
             <Card className="relative bg-white border-2 border-black shadow-none h-full">
-              <Card.Content className="p-6">
-                <div className="mb-6">
-                  <Crown className="w-10 h-10 mb-4" />
-                  <Text as="h3" className="text-2xl font-bold mb-2 uppercase">
-                    Pro
-                  </Text>
-                  <Text className="text-xs font-bold text-muted-foreground mb-3 uppercase tracking-wider">
-                    BEST VALUE
-                  </Text>
-                  <Text className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                    The full RetroUI toolkit with priority support.
-                  </Text>
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <Text className="text-5xl font-bold">
-                      $199
-                    </Text>
-                    <Text className="text-xs text-muted-foreground">
-                      one-time
-                    </Text>
-                  </div>
-                  <div className="relative inline-block group w-full mb-2">
-                    <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-black bg-black transition-all duration-200" />
-                    <button
-                      onClick={() => handleCheckout("pro")}
-                      disabled={loadingTier === "pro"}
-                      className="w-full px-4 py-2 text-sm font-head border-2 border-black transition-all duration-200 relative bg-[#4ECDC4] shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {loadingTier === "pro" ? "Loading..." : "Get Pro"}
-                    </button>
-                  </div>
-                  <Text className="text-xs text-center text-muted-foreground">
-                    One-time · Lifetime access
-                  </Text>
-                </div>
+              <Card.Header className="p-6">
+                <Crown className="w-6 h-6 mb-4" />
+                <Text as="h4" className="mb-2">
+                  Pro
+                </Text>
+                <Text className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                  Get everything RetroUI has to offer - Blocks, Template & Figma Kit
+                </Text>
+                <Text className="text-5xl font-head mb-8">
+                  $199
+                </Text>
+                <Button
+                  onClick={() => handleCheckout("pro")}
+                  variant="secondary"
+                  disabled={loadingTier === "pro"}
+                >
+                  {loadingTier === "pro" ? "Loading..." : "Get Pro"}
+                </Button>
+              </Card.Header>
 
-                <div className="space-y-2 border-t-2 border-black pt-4">
-                  <Text className="font-bold text-xs mb-3 uppercase tracking-wider">WHAT'S INCLUDED</Text>
-                  {proFeatures.map((feature, index) => (
-                    <div
-                      key={index}
-                      className={`flex items-start gap-2 ${!feature.enabled ? "opacity-40" : ""}`}
-                    >
-                      <div className={`w-4 h-4 border-2 border-black flex-shrink-0 flex items-center justify-center ${feature.enabled ? "bg-[#4ECDC4]" : "bg-white"}`}>
-                        {feature.enabled && (
-                          <Check className="w-2.5 h-2.5 text-black stroke-[3]" />
-                        )}
-                        {!feature.enabled && (
-                          <svg className="w-2.5 h-2.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                          </svg>
-                        )}
-                      </div>
-                      <Text className="text-xs leading-tight">{feature.text}</Text>
+              <Card.Content className="space-y-3 border-t-2 p-6">
+                <Text className="font-bold text-sm mb-4 uppercase tracking-wider">WHAT'S INCLUDED</Text>
+                {proFeatures.map((feature, index) => (
+                  <div
+                    key={index}
+                    className={`flex items-start gap-2 ${!feature.enabled ? "opacity-40" : ""}`}
+                  >
+                    <div className={`w-4 h-4 border-2 border-black flex-shrink-0 flex items-center justify-center ${feature.enabled ? "bg-primary" : "bg-white"}`}>
+                      {feature.enabled && (
+                        <Check className="w-2.5 h-2.5 text-black stroke-[3]" />
+                      )}
+                      {!feature.enabled && (
+                        <svg className="w-2.5 h-2.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                          <line x1="18" y1="6" x2="6" y2="18"></line>
+                          <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                      )}
                     </div>
-                  ))}
-                </div>
+                    <Text className="text-sm leading-tight">{feature.text}</Text>
+                  </div>
+                ))}
               </Card.Content>
             </Card>
           </div>
 
           {/* Team */}
-          <div className="relative">
-            <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FF6B6B]" />
-            <Card className="relative bg-white border-2 border-black shadow-none h-full">
-              <Card.Content className="p-6">
-                <div className="mb-6">
-                  <Users className="w-10 h-10 mb-4" />
-                  <Text as="h3" className="text-2xl font-bold mb-2 uppercase">
-                    Team
-                  </Text>
-                  <Text className="text-xs font-bold text-muted-foreground mb-3 uppercase tracking-wider">
-                    FOR AGENCIES
-                  </Text>
-                  <Text className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                    Full suite for teams building at scale.
-                  </Text>
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <Text className="text-5xl font-bold">
-                      $499
-                    </Text>
-                    <Text className="text-xs text-muted-foreground">
-                      one-time
-                    </Text>
-                  </div>
-                  <div className="relative inline-block group w-full mb-2">
-                    <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-black bg-black transition-all duration-200" />
-                    <button
-                      onClick={() => handleCheckout("team")}
-                      disabled={loadingTier === "team"}
-                      className="w-full px-4 py-2 text-sm font-head border-2 border-black transition-all duration-200 relative bg-[#FF6B6B] shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {loadingTier === "team" ? "Loading..." : "Get Team"}
-                    </button>
-                  </div>
-                  <Text className="text-xs text-center text-muted-foreground">
-                    One-time · Lifetime access
-                  </Text>
-                </div>
+          <Card className="relative bg-white border-2 border-black shadow-none h-full">
+            <Card.Header className="p-6">
+              <Users className="w-6 h-6 mb-4" />
+              <Text as="h4" className="mb-2">
+                Team
+              </Text>
+              <Text className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                Full collaboration suite for studios and teams building at scale.
+              </Text>
+              <Text className="text-5xl font-head mb-8">
+                $499
+              </Text>
+              <Button
+                onClick={() => handleCheckout("team")}
+                disabled={loadingTier === "team"}
+              >
+                {loadingTier === "team" ? "Loading..." : "Get Team"}
+              </Button>
+            </Card.Header>
 
-                <div className="space-y-2 border-t-2 border-black pt-4">
-                  <Text className="font-bold text-xs mb-3 uppercase tracking-wider">WHAT'S INCLUDED</Text>
-                  {teamFeatures.map((feature, index) => (
-                    <div
-                      key={index}
-                      className={`flex items-start gap-2 ${!feature.enabled ? "opacity-40" : ""}`}
-                    >
-                      <div className={`w-4 h-4 border-2 border-black flex-shrink-0 flex items-center justify-center ${feature.enabled ? "bg-[#FF6B6B]" : "bg-white"}`}>
-                        {feature.enabled && (
-                          <Check className="w-2.5 h-2.5 text-white stroke-[3]" />
-                        )}
-                        {!feature.enabled && (
-                          <svg className="w-2.5 h-2.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                          </svg>
-                        )}
-                      </div>
-                      <Text className="text-xs leading-tight">{feature.text}</Text>
-                    </div>
-                  ))}
+            <Card.Content className="space-y-3 border-t-2 p-6">
+              <Text className="font-bold text-sm mb-4 uppercase tracking-wider">WHAT'S INCLUDED</Text>
+              {teamFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`flex items-start gap-2 ${!feature.enabled ? "opacity-40" : ""}`}
+                >
+                  <div className={`w-4 h-4 border-2 border-black flex-shrink-0 flex items-center justify-center ${feature.enabled ? "bg-black" : "bg-white"}`}>
+                    {feature.enabled && (
+                      <Check className="w-2.5 h-2.5 text-white stroke-[3]" />
+                    )}
+                    {!feature.enabled && (
+                      <svg className="w-2.5 h-2.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    )}
+                  </div>
+                  <Text className="text-sm leading-tight">{feature.text}</Text>
                 </div>
-              </Card.Content>
-            </Card>
-          </div>
+              ))}
+            </Card.Content>
+          </Card>
         </div>
       </section>
 
@@ -479,13 +404,13 @@ export default function PricingPage() {
               friendly team.
             </Text>
             {/* <Button className="w-full bg-primary border-2 border-black"> */}
-              Contact Support
+            Contact Support
             {/* </Button> */}
           </Card.Content>
         </Card>
       </section>
 
       <Footer />
-    </main>
+    </main >
   );
 }
