@@ -1,5 +1,5 @@
 import showcaseData from "@/showcase.json";
-import { Card, Text, Button } from "@/components/base-retroui";
+import { Card, Text, Button } from "@/components/retroui";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";

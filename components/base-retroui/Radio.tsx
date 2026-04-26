@@ -1,5 +1,8 @@
+"use client";
+
 import { cn } from "@/lib/utils";
-import { RadioGroup as BaseRadioGroup } from "@base-ui/react/radio-group";
+import { Radio as RadioPrimitive } from "@base-ui/react/radio";
+import { RadioGroup as RadioGroupPrimitive } from "@base-ui/react/radio-group";
 import { cva, VariantProps } from "class-variance-authority";
 
 const radioVariants = cva("border-border border-2", {
@@ -21,7 +24,7 @@ const radioVariants = cva("border-border border-2", {
   },
 });
 
-const radioIndicatorVariants = cva("flex ", {
+const radioIndicatorVariants = cva("flex", {
   variants: {
     variant: {
       default: "bg-primary border-2 border-border",
@@ -40,40 +43,47 @@ const radioIndicatorVariants = cva("flex ", {
   },
 });
 
-interface RadioGroupProps
-  extends React.ComponentProps<typeof BaseRadioGroup.Root> {}
+function RadioGroupRoot({ className, ...props }: RadioGroupPrimitive.Props) {
+  return (
+    <RadioGroupPrimitive
+      data-slot="radio-group"
+      className={cn("grid gap-2", className)}
+      {...props}
+    />
+  );
+}
 
-export const RadioGroupRoot = ({ className, ...props }: RadioGroupProps) => (
-  <BaseRadioGroup.Root className={cn("grid gap-2", className)} {...props} />
-);
-
-interface RadioProps
-  extends React.ComponentProps<typeof BaseRadioGroup.Item>,
+interface RadioItemProps
+  extends RadioPrimitive.Root.Props,
     VariantProps<typeof radioVariants> {}
 
-export const RadioItem = ({
-  children,
+function RadioItem({
   className,
   size,
   variant,
   ...props
-}: RadioProps) => (
-  <BaseRadioGroup.Item
-    {...props}
-    className={cn(
-      radioVariants({
-        size,
-        variant,
-      }),
-      className,
-    )}
-  >
-    <BaseRadioGroup.Indicator className="flex justify-center items-center">
-      <span className={radioIndicatorVariants({ size, variant })}></span>
-    </BaseRadioGroup.Indicator>
-    {children}
-  </BaseRadioGroup.Item>
-);
+}: RadioItemProps) {
+  return (
+    <RadioPrimitive.Root
+      data-slot="radio-group-item"
+      className={cn(
+        radioVariants({
+          size,
+          variant,
+        }),
+        className
+      )}
+      {...props}
+    >
+      <RadioPrimitive.Indicator
+        data-slot="radio-group-indicator"
+        className="flex items-center justify-center"
+      >
+        <span className={radioIndicatorVariants({ size, variant })} />
+      </RadioPrimitive.Indicator>
+    </RadioPrimitive.Root>
+  );
+}
 
 const RadioComponent = Object.assign(RadioGroupRoot, {
   Item: RadioItem,

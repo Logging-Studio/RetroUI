@@ -28,7 +28,7 @@ type Post = {
   },
 }
 
-async function getBlogParams({ params }: IProps) {
+async function getBlogParams(params: { slug: string[] }) {
   const res = await fetch(`https://cms.retroui.dev/api/posts/slug/${params.slug}`, {
     method: 'GET',
     credentials: 'include',
@@ -42,7 +42,7 @@ async function getBlogParams({ params }: IProps) {
 
 export async function generateMetadata(props: IProps): Promise<Metadata> {
   const params = await props.params;
-  const blog: Post = await getBlogParams({ params });
+  const blog: Post = await getBlogParams(params);
 
   if (!blog) {
     return {
@@ -68,7 +68,7 @@ export async function generateMetadata(props: IProps): Promise<Metadata> {
 
 export default async function page(props: IProps) {
   const params = await props.params;
-  const blog: Post | null = await getBlogParams({ params });
+  const blog: Post | null = await getBlogParams(params);
 
   if (!blog) {
     return notFound();
