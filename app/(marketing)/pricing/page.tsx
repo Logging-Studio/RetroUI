@@ -7,12 +7,11 @@ import {
   Text,
   Card,
   Badge,
-  Accordion,
   Button,
 } from "@/components/base-retroui";
+import { Accordion } from "@/components/retroui/Accordion";
 import { Check, Gift, Rocket, Crown, Users } from "lucide-react";
 import { toast } from "sonner";
-import Footer from "@/components/footer";
 import { authApi } from "@/lib/api-client";
 import { getPriceId, type PricingTier } from "@/lib/pricing";
 
@@ -142,31 +141,27 @@ export default function PricingPage() {
 
   return (
     <main>
-      <section className="container max-w-7xl mx-auto px-4 py-16 text-center">
-        <div className="mb-6">
-          <Text as="h1" className="uppercase inline-flex items-center justify-center">
+      <section className="container mx-auto px-4 py-24 lg:py-28 space-y-14">
+        <div className="text-center space-y-4">
+          <Text as="h1" className="uppercase inline-flex items-center justify-center relative">
             <Image
               src="/decor/pay.svg"
               alt="pay decoration"
-              width={80}
-              height={80}
-              className="inline-block w-20 h-20 -mr-2"
+              width={100}
+              height={100}
+              className="inline-block absolute -bottom-2 -left-12"
             />
             <span className="text-card text-outline-foreground text-shadow-foreground">
               Pay
             </span>
             {" "}once, use forever
           </Text>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Get lifetime access to premium components, templates, figma kit,
+            plus all future updates for a simple one-time price.
+          </p>
         </div>
 
-        <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-          Get lifetime access to premium components, templates, figma kit,
-          plus all future updates for a simple one-time price.
-        </p>
-      </section>
-
-      {/* Pricing Cards */}
-      <section className="container max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* OS - Free Tier */}
           <Card className="shadow-none h-full">
@@ -355,62 +350,72 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="container max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <Text as="h2" className="text-4xl lg:text-5xl font-bold mb-4">
-              FREQUENTLY ASKED
-              <br />
-              <span className="text-outlined">QUESTIONS</span>
-            </Text>
-            <p className="text-muted-foreground mb-8">
-              Find answers to common questions about our products and services.
-            </p>
+      <section className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+          <div className="flex flex-col justify-between">
+            <div>
+              <Text as="h2" className="mb-4">
+                FREQUENTLY ASKED
+                <br />
+                <span className="text-card text-outline-foreground text-shadow-foreground relative">
+                  <Image
+                    src="/decor/question.svg"
+                    alt="question"
+                    width={40}
+                    height={40}
+                    className="inline-block absolute -bottom-2 -left-4"
+                  />
+                  QUESTIONS</span>
+              </Text>
+              <p className="text-muted-foreground mb-8">
+                Find answers to common questions about our products and services.
+              </p>
+            </div>
+
+            <Card className="max-w-2xl shadow-none">
+              <Card.Content>
+                <Text as="h4" className="text-2xl font-bold mb-2">
+                  Still have a question?
+                </Text>
+                <Text className="text-muted-foreground mb-6">
+                  Can't find the answer you're looking for? Please reach out to me or join our community.
+                </Text>
+
+                <div className="flex gap-4">
+                  <Button className="w-full" variant="secondary">
+                    Contact Support
+                  </Button>
+                  <Button className="w-full" variant="secondary">
+                    Join Community
+                  </Button>
+                </div>
+
+              </Card.Content>
+            </Card>
           </div>
 
           <div>
-            <Accordion className="space-y-4">
-              {faqs.map((item, index) => (
-                <Accordion.Item key={index} value={`item-${index}`}>
-                  <Accordion.Header>
-                    <Text className="font-bold text-sm">{item.question}</Text>
-                  </Accordion.Header>
-                  <Accordion.Content>
-                    <ul className="space-y-2">
-                      {item.answer.map((line, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-primary mt-1">→</span>
-                          <Text className="text-sm">{line}</Text>
-                        </li>
-                      ))}
-                    </ul>
-                  </Accordion.Content>
-                </Accordion.Item>
-              ))}
+            <Accordion type="single" collapsible className="space-y-4 w-full">
+              {faqs.map((faq) => {
+                return (
+                  <Accordion.Item key={faq.question} value={faq.question} className="bg-card">
+                    <Accordion.Header className="text-left text-lg font-sans font-semibold gap-4 p-4">{faq.question}</Accordion.Header>
+                    <Accordion.Content className="border-t-2 p-4">
+                      <ul className="space-y-2">
+                        {faq.answer.map((line, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <Text className="text-sm">{line}</Text>
+                          </li>
+                        ))}
+                      </ul>
+                    </Accordion.Content>
+                  </Accordion.Item>
+                );
+              })}
             </Accordion>
           </div>
         </div>
       </section>
-
-      {/* Contact Support CTA */}
-      <section className="container max-w-7xl mx-auto px-4 py-16">
-        <Card className="bg-white border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] max-w-2xl">
-          <Card.Content className="p-8">
-            <Text as="h3" className="text-2xl font-bold mb-2">
-              STILL HAVE A QUESTION?
-            </Text>
-            <Text className="text-muted-foreground mb-6">
-              Can't find the answer you're looking for? Please chat to our
-              friendly team.
-            </Text>
-            {/* <Button className="w-full bg-primary border-2 border-black"> */}
-            Contact Support
-            {/* </Button> */}
-          </Card.Content>
-        </Card>
-      </section>
-
-      <Footer />
     </main >
   );
 }

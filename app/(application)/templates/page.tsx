@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { Text } from "@/components/base-retroui";
 import { Tabs } from "@/components/base-retroui/Tab";
+import { Button } from "@/components/base-retroui";
 import { templateConfig } from "@/config/templates";
 import Image from "next/image";
-import { Search, Newspaper, ShoppingCart, LayoutDashboard, Sparkles, ArrowRight, Check } from "lucide-react";
+import { Search, Newspaper, ShoppingCart, LayoutDashboard, Sparkles, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 export default function TemplatesPage() {
@@ -92,9 +93,8 @@ export default function TemplatesPage() {
           <Tabs.List className="flex flex-row flex-wrap gap-2">
             <Tabs.Trigger value="all" className="relative">
               <div
-                className={`absolute inset-0 ${
-                  activeTab === "all" ? "bg-primary" : "bg-transparent"
-                } -z-10`}
+                className={`absolute inset-0 ${activeTab === "all" ? "bg-primary" : "bg-transparent"
+                  } -z-10`}
               />
               <Sparkles className="w-4 h-4 mr-2" />
               All Templates
@@ -138,9 +138,9 @@ export default function TemplatesPage() {
         <Tabs.Content value="landing">
           <TemplatesGrid templates={filteredTemplates} />
         </Tabs.Content>
-        <Tabs.Content value="ecommerce">
+        {/* <Tabs.Content value="ecommerce">
           <TemplatesGrid templates={filteredTemplates} />
-        </Tabs.Content>
+        </Tabs.Content> */}
         <Tabs.Content value="dashboard">
           <TemplatesGrid templates={filteredTemplates} />
         </Tabs.Content>
@@ -166,67 +166,30 @@ function TemplatesGrid({
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
       {templates.map((template) => (
-        <div key={template.slug} className="space-y-6">
-          {/* Template Preview Image */}
-          <div className="relative group">
-            <div
-              className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black"
-              style={{ backgroundColor: template.color }}
+        <div key={template.name} className="shadow-none">
+          <div className="w-full h-auto relative mb-8">
+            <div className={`absolute top-2 left-2 -bottom-2 -right-2 border-2 border-border`} style={{ backgroundColor: template.color }}></div>
+            <Image
+              src={template.cover_image}
+              alt={template.name}
+              width={600}
+              height={800}
+              className="object-contain relative z-1 border-2 border-border"
             />
-            <div className="relative border-2 border-black overflow-hidden bg-white">
-              <Image
-                src={template.cover_image}
-                alt={template.name}
-                width={800}
-                height={600}
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
           </div>
 
-          {/* Template Info */}
-          <div className="space-y-4">
-            <Text as="h3" className="text-2xl font-bold uppercase">
-              {template.name.split("|")[1]?.trim() || template.name}
-            </Text>
+          <div>
+            <Text as="h3" className="mb-2 font-normal">{template.name}</Text>
+            <Text className="text-muted-foreground mb-4 text-sm">{template.description}</Text>
+            <div className="flex justify-between gap-6">
+              <Link href={`/templates/${template.slug}`} className="relative inline-block group flex-1">
+                <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 bg-primary transition-all duration-200" />
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {template.description}
-            </p>
-
-            {/* Features List */}
-            <div className="space-y-2">
-              {template.features.slice(0, 3).map((feature, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <div className="w-5 h-5 border-2 border-black bg-primary flex items-center justify-center flex-shrink-0">
-                    <Check className="w-3 h-3 text-black stroke-[3]" />
-                  </div>
-                  <Text className="text-sm">{feature}</Text>
-                </div>
-              ))}
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex items-center gap-4 pt-2">
-              {/* Get Template Button */}
-              <div className="relative inline-block flex-1">
-                <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-black bg-primary transition-all duration-200" />
-                <Link
-                  href={`/templates/${template.slug}`}
-                  className="block w-full px-6 py-3 font-bold border-2 border-black transition-all duration-200 relative bg-white shadow-none hover:translate-x-1 hover:translate-y-1 active:translate-x-1.5 active:translate-y-1.5 text-center"
-                >
-                  Get Template
-                </Link>
-              </div>
-
-              {/* Live Preview Link */}
-              <Link
-                href={`/templates/${template.slug}/preview`}
-                className="flex items-center gap-2 font-bold text-sm hover:underline whitespace-nowrap"
-              >
-                Live Preview
-                <ArrowRight className="w-4 h-4" />
+                <button className="px-4 py-1.5 font-head w-full border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5">
+                  View Details
+                </button>
               </Link>
+              <Button variant="link" className="flex-1">Live Preview <ArrowUpRight className="ml-2" /></Button>
             </div>
           </div>
         </div>

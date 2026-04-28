@@ -6,7 +6,7 @@ import { format } from "date-fns";
 import MDX from "@/components/MDX";
 import { Text } from "@/components/base-retroui";
 import { MoveUpRightIcon } from "lucide-react";
-import { generateToc } from "@/lib/toc";
+import { generateToc, TableOfContents as TOCType } from "@/lib/toc";
 import TableOfContents from "@/components/TableOfContents";
 import { CopyPageButton } from "@/components/CopyPageButton";
 import { Tab, TabGroup, TabList } from "@headlessui/react";
@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
 export default function Page() {
   const params = useParams();
   const { library, setLibrary } = useLibrary();
-  const [toc, setToc] = useState<any[]>([]);
+  const [toc, setToc] = useState<TOCType>({});
 
   // Construct slug from params
   const slug = Array.isArray(params.slug)

@@ -15,7 +15,7 @@ export default function ComponentsPage() {
     }));
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen lg:ml-12">
         {/* Header */}
         <div className="mb-12">
           <Text as="h1" className="mb-4 uppercase relative lg:text-4xl">

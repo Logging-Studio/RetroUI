@@ -9,8 +9,8 @@ import { Textarea } from "@/components/base-retroui/Textarea"
 
 export default function DrawerStyleRightDirection() {
     return (
-        <Drawer direction="right">
-            <Drawer.Trigger asChild>
+        <Drawer swipeDirection="right">
+            <Drawer.Trigger>
                 <Button>Review Us</Button>
             </Drawer.Trigger>
             <Drawer.Content>

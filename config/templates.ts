@@ -21,7 +21,7 @@ export const templateConfig = {
                 "Easy to customize"
             ],
             color: "#11b7e4",
-            description: "A modern landing page template for devtools.",
+            description: "A modern dark themed landing page template for devtools. Suitable for Open Source projects, SaaS, Cloud/Hosting, and more.",
             platform: "react",
             version: "1.0.0",
             release_date: "25th April, 2026",
