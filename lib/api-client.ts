@@ -130,6 +130,23 @@ class APIClient {
       };
     }
   }
+
+  async downloadTemplate(slug: string, token: string): Promise<{ downloadUrl?: string; error?: string }> {
+    try {
+      const data = await this.request<{ downloadUrl: string }>(`/products/download/${slug}`, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      return { downloadUrl: data.downloadUrl };
+    } catch (error) {
+      return {
+        error: error instanceof Error ? error.message : "Failed to get download link",
+      };
+    }
+  }
 }
 
 export const authApi = new APIClient(API_BASE_URL);

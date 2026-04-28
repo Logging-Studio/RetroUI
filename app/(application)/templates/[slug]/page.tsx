@@ -1,9 +1,11 @@
 import { templateConfig } from "@/config/templates";
 import { notFound } from "next/navigation";
-import { Text, Button, Badge } from "@/components/retroui";
+import { Text, Button, Badge } from "@/components/base-retroui";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Calendar, Package } from "lucide-react";
+import { getCurrentUser } from "@/lib/auth";
+import { DownloadButton } from "@/components/DownloadButton";
 
 interface TemplatePageProps {
   params: Promise<{
@@ -22,25 +24,29 @@ export default async function TemplatePage(props: TemplatePageProps) {
     notFound();
   }
 
+  const user = await getCurrentUser();
+  const isProUser = user?.isPro === true;
+
   return (
     <main className="min-h-screen pt-16 space-y-12">
       {/* Header with Title and Preview Button */}
-      <section className="container mx-auto px-4">
-        <div className="flex items-start justify-between gap-4 mb-8">
-          <div className="max-w-4xl">
-            <Text as="h1" className="text-4xl lg:text-5xl">
-              {template.name}
-            </Text>
-            <Text className="text-muted-foreground mt-2">
-              {template.description}
-            </Text>
-          </div>
-          <div className="relative inline-block group flex-shrink-0">
-            <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 bg-primary transition-all duration-200" />
-            <button className="px-6 py-2 font-head border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5 whitespace-nowrap">
-              Get Full Kit
-            </button>
-          </div>
+      <section className="container max-w-7xl mx-auto px-4">
+        <div className="max-w-4xl mb-6">
+          <Text as="h1" className="text-4xl lg:text-5xl">
+            {template.name}
+          </Text>
+          <Text className="text-muted-foreground mt-2">
+            {template.description}
+          </Text>
+        </div>
+
+        <div className="flex gap-4">
+          {isProUser ? (
+            <DownloadButton slug={params.slug} templateName={template.name} />
+          ) : (
+            <Button render={<Link href="/pricing">Get Full Kit</Link>} />
+          )}
+          <Button variant="outline" className="bg-card" render={<Link href={template.live_demo_url} target="_blank">Live Demo</Link>} />
         </div>
       </section>
 
@@ -70,13 +76,13 @@ export default async function TemplatePage(props: TemplatePageProps) {
           {/* Left Column - Description and Features */}
           <div className="lg:col-span-2 space-y-12">
             <div>
-              <Text as="h3" className="mb-6">
+              <Text as="h2" className="mb-6">
                 About this Template
               </Text>
               <div dangerouslySetInnerHTML={{ __html: template.about }} />
             </div>
             <div>
-              <Text as="h3" className="mb-6">
+              <Text as="h2" className="mb-6">
                 Built With
               </Text>
               <div className="flex flex-wrap gap-3">
@@ -99,7 +105,7 @@ export default async function TemplatePage(props: TemplatePageProps) {
               </div>
             </div>
             <div>
-              <Text as="h3" className="mb-6">
+              <Text as="h2" className="mb-6">
                 Features
               </Text>
               <div className="space-y-3">
@@ -164,12 +170,16 @@ export default async function TemplatePage(props: TemplatePageProps) {
               Get instant access to {template.name.split('|')[0].trim()} and start building your project today.
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="relative inline-block group">
-                <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 bg-primary transition-all duration-200" />
-                <button className="px-8 py-3 font-head border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5">
-                  Get Access Now
-                </button>
-              </div>
+              {isProUser ? (
+                <DownloadButton slug={params.slug} templateName={template.name} />
+              ) : (
+                <div className="relative inline-block group">
+                  <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 bg-primary transition-all duration-200" />
+                  <button className="px-8 py-3 font-head border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5">
+                    Get Access Now
+                  </button>
+                </div>
+              )}
               <Button variant="link" className="text-lg">
                 View Live Preview <ArrowUpRight className="w-5 h-5 ml-2" />
               </Button>

@@ -5,7 +5,7 @@ export const templateConfig = {
             slug: "brutstack",
             stage: "published",
             type: "marketing",
-           
+            live_demo_url: "https://brutstack.retroui.dev",
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_1.png",
@@ -36,6 +36,7 @@ export const templateConfig = {
             slug: "neoflux",
             stage: "published",
             type: "marketing",
+            live_demo_url: "https://retroui-template-logging-image.vercel.app",
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/neoflux/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/neoflux/screen_1.png",
@@ -65,6 +66,7 @@ export const templateConfig = {
             slug: "brutstudio",
             stage: "published",
             type: "marketing",
+            live_demo_url: "https://agency-demo.retroui.dev",
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstudio/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstudio/screen_1.png",
@@ -94,6 +96,7 @@ export const templateConfig = {
             slug: "defolio",
             stage: "published",
             type: "marketing",
+            live_demo_url: "https://retroui-profolio-tmeplate.vercel.app",
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/defolio/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/defolio/screen_1.png",
@@ -123,6 +126,7 @@ export const templateConfig = {
             slug: "artis",
             stage: "published",
             type: "marketing",
+            live_demo_url: "https://retroui-template-logging-image.vercel.app",
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/artis/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/artis/screen_1.png",
