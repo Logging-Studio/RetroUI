@@ -22,12 +22,15 @@ export default function Page() {
   const slug = Array.isArray(params.slug)
     ? `/${params.slug.join("/")}`
     : params.slug
-    ? `/${params.slug}`
-    : "";
+      ? `/${params.slug}`
+      : "";
 
-  // Construct the doc path based on library selection
+  // Check if this is a component page
+  const isComponentPage = slug.startsWith("/components");
+
+  // Construct the doc path based on library selection (only for component pages)
   const basePath = library === "baseui" ? "/components/baseui" : "/components";
-  const fullPath = slug.startsWith("/components")
+  const fullPath = isComponentPage
     ? slug.replace("/components", basePath)
     : slug;
   const docUrl = `/docs${fullPath}`;
@@ -35,8 +38,8 @@ export default function Page() {
   // Find the doc based on library selection
   let doc = docs.find((d) => d.url === docUrl);
 
-  // Fallback: if Base UI doc not found, try Radix UI doc
-  if (!doc && library === "baseui") {
+  // Fallback: if Base UI doc not found, try Radix UI doc (only for component pages)
+  if (!doc && library === "baseui" && isComponentPage) {
     const radixUrl = `/docs${slug}`;
     doc = docs.find((d) => d.url === radixUrl);
   }
@@ -60,9 +63,9 @@ export default function Page() {
       {/* Main Content */}
       <div className="flex-1 space-y-12 max-w-2xl mx-auto w-full">
         <div className="border-b pb-6">
-          <div className="flex items-start justify-between gap-4">
+          <div className="flex items-start justify-between gap-4 mb-8">
             <div className="flex-1">
-              <Text as="h1">
+              <Text as="h1" className="lg:text-4xl">
                 <span className="text-card text-outline-foreground text-shadow-foreground">
                   {doc.title}
                 </span>
@@ -73,46 +76,54 @@ export default function Page() {
             </div>
             <CopyPageButton rawContent={doc.raw} title={doc.title} />
           </div>
-          {doc.links && (
-            <div className="flex space-x-4 text-sm mt-4 text-black">
-              {doc.links?.api_reference && (
-                <a
-                  className="flex items-center bg-gray-200 px-1.5 py-.5"
-                  href={doc.links.api_reference}
-                  target="_blank"
-                >
-                  API Reference <MoveUpRightIcon className="h-3 w-3 ml-1" />
-                </a>
-              )}
-              {doc.links && doc.links?.source && (
-                <a
-                  className="flex items-center bg-gray-200 px-1.5 py-.5"
-                  href={doc.links.source}
-                  target="_blank"
-                >
-                  Source <MoveUpRightIcon className="h-3 w-3 ml-1" />
-                </a>
-              )}
-            </div>
-          )}
+
+
+          <div className="flex justify-between items-start">
+            {isComponentPage && (
+              <TabGroup
+                selectedIndex={selectedIndex}
+                onChange={(index) => {
+                  setLibrary(index === 1 ? "baseui" : "radix");
+                }}
+              >
+                <TabList className="border bg-card p-1 text-sm inline-flex">
+                  <Tab className="w-20 cursor-pointer relative text-sm p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus:outline-hidden">
+                    Radix UI
+                  </Tab>
+                  <Tab className="w-20 cursor-pointer relative p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus:outline-hidden">
+                    Base UI
+                  </Tab>
+                </TabList>
+              </TabGroup>
+            )}
+
+            {doc.links && (
+              <div className="flex space-x-2 text-sm">
+                {doc.links?.api_reference && (
+                  <a
+                    className="flex items-center bg-card text-foreground px-1.5 py-1"
+                    href={doc.links.api_reference}
+                    target="_blank"
+                  >
+                    API Reference <MoveUpRightIcon className="h-3 w-3 ml-1" />
+                  </a>
+                )}
+                {doc.links && doc.links?.source && (
+                  <a
+                    className="flex items-center bg-card text-foreground px-1.5 py-1"
+                    href={doc.links.source}
+                    target="_blank"
+                  >
+                    Source <MoveUpRightIcon className="h-3 w-3 ml-1" />
+                  </a>
+                )}
+              </div>
+            )}
+
+          </div>
         </div>
 
         <div>
-          <TabGroup
-            selectedIndex={selectedIndex}
-            onChange={(index) => {
-              setLibrary(index === 1 ? "baseui" : "radix");
-            }}
-          >
-            <TabList className="border bg-card p-1 text-sm inline-flex">
-              <Tab className="w-20 cursor-pointer relative text-sm p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus:outline-hidden">
-                Radix UI
-              </Tab>
-              <Tab className="w-20 cursor-pointer relative p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus:outline-hidden">
-                Base UI
-              </Tab>
-            </TabList>
-          </TabGroup>
           <MDX code={doc.code} />
         </div>
         <p className="text-right">

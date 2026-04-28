@@ -174,7 +174,7 @@
     },
     "baseui-context-menu": {
       "name": "baseui-context-menu",
-      "filePath": "components/base-retroui/Context-menu.tsx"
+      "filePath": "components/base-retroui/ContextMenu.tsx"
     },
     "baseui-dialog": {
       "name": "baseui-dialog",
@@ -254,7 +254,7 @@
     },
     "baseui-toggle-group": {
       "name": "baseui-toggle-group",
-      "filePath": "components/base-retroui/Toggle-group.tsx"
+      "filePath": "components/base-retroui/ToggleGroup.tsx"
     },
     "baseui-toggle": {
       "name": "baseui-toggle",

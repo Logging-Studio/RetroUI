@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CopyIcon, ChevronDownIcon, CheckIcon } from "lucide-react";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -38,11 +39,11 @@ export function CopyPageButton({ rawContent, title }: CopyPageButtonProps) {
   };
 
   return (
-    <div className="inline-flex border-2 border-border bg-card shadow-sm">
+    <div className="inline-flex border border-border bg-card shadow">
       {/* Copy Button */}
       <button
         onClick={handleCopy}
-        className="flex items-center gap-2 px-3 py-1.5 hover:bg-muted transition-colors text-sm font-medium"
+        className="flex items-center gap-2 px-3 py-1.5 hover:bg-accent transition-colors text-sm font-medium"
       >
         {copied ? (
           <CheckIcon className="h-3.5 w-3.5" />
@@ -53,45 +54,24 @@ export function CopyPageButton({ rawContent, title }: CopyPageButtonProps) {
       </button>
 
       {/* Divider */}
-      <div className="w-[2px] bg-border" />
+      <div className="w-[1px] bg-border" />
 
       {/* Dropdown Menu */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button className="px-2 py-1.5 hover:bg-muted transition-colors">
+          <button className="px-2 py-1.5 hover:bg-accent transition-colors focus:ring-none">
             <ChevronDownIcon className="h-3.5 w-3.5" />
           </button>
         </DropdownMenuTrigger>
 
-        <DropdownMenuContent align="end" className="w-48">
-          <DropdownMenuItem onClick={openInClaude}>
-            <svg
-              className="h-4 w-4 mr-2"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14.5 2H9.5C8.67157 2 8 2.67157 8 3.5V4.5C8 5.32843 8.67157 6 9.5 6H14.5C15.3284 6 16 5.32843 16 4.5V3.5C16 2.67157 15.3284 2 14.5 2Z"
-                fill="currentColor"
-              />
-              <path
-                d="M12 8C10.3431 8 9 9.34315 9 11V20C9 21.6569 10.3431 23 12 23C13.6569 23 15 21.6569 15 20V11C15 9.34315 13.6569 8 12 8Z"
-                fill="currentColor"
-              />
-            </svg>
+        <DropdownMenuContent align="end" className="w-48 rounded-none border">
+          <DropdownMenuItem onClick={openInClaude} className="h-8">
+            <Image src="/images/logos/claude.svg" alt="Claude" width={16} height={16} />
             Open in Claude
           </DropdownMenuItem>
 
-          <DropdownMenuItem onClick={openInChatGPT}>
-            <svg
-              className="h-4 w-4 mr-2"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M22.2819 9.8211C22.9528 10.4921 22.9528 11.5742 22.2819 12.2452L13.7181 20.8089C13.0471 21.4799 11.965 21.4799 11.294 20.8089C10.623 20.1379 10.623 19.0558 11.294 18.3848L18.6461 11.0327L11.294 3.68055C10.623 3.00958 10.623 1.92748 11.294 1.25651C11.965 0.585537 13.0471 0.585537 13.7181 1.25651L22.2819 9.8211ZM2.21808 9.8211C2.88906 10.4921 2.88906 11.5742 2.21808 12.2452L10.7819 20.8089C11.4528 21.4799 12.535 21.4799 13.206 20.8089C13.8769 20.1379 13.8769 19.0558 13.206 18.3848L5.85385 11.0327L13.206 3.68055C13.8769 3.00958 13.8769 1.92748 13.206 1.25651C12.535 0.585537 11.4528 0.585537 10.7819 1.25651L2.21808 9.8211Z" />
-            </svg>
+          <DropdownMenuItem onClick={openInChatGPT} className="h-8">
+            <Image src="/images/logos/chatgpt.png" alt="ChatGPT" width={16} height={16} />
             Open in ChatGPT
           </DropdownMenuItem>
         </DropdownMenuContent>
