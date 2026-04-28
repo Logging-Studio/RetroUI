@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge, Checkbox } from "@/components/retroui"
 import {
   Table,

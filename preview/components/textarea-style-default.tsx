@@ -1,3 +1,5 @@
+"use client";
+
 import { Textarea } from "@/components/retroui/Textarea";
 
 export default function TextareaStyleDefault() {

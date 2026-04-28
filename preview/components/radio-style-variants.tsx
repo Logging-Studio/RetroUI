@@ -1,3 +1,5 @@
+"use client";
+
 import { RadioGroup } from "@/components/retroui/Radio";
 
 export default function RadioStyleVariants() {

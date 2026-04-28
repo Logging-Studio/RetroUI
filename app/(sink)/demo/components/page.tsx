@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { TableOfContents } from "@/components/retroui/TableOfContents";
 
 export default function page() {

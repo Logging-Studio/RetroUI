@@ -1,9 +1,7 @@
-import { withContentlayer } from "next-contentlayer";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  turbopack: {},
   images: {
     remotePatterns: [
       {
@@ -14,8 +12,30 @@ const nextConfig = {
         protocol: "https",
         hostname: "cms.retroui.dev",
       },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
     ],
+  },
+  // Velite integration
+  webpack: (config) => {
+    config.plugins.push(new VeliteWebpackPlugin());
+    return config;
   },
 };
 
-export default withContentlayer(nextConfig);
+class VeliteWebpackPlugin {
+  static started = false;
+  apply(compiler) {
+    compiler.hooks.beforeCompile.tapPromise("VeliteWebpackPlugin", async () => {
+      if (VeliteWebpackPlugin.started) return;
+      VeliteWebpackPlugin.started = true;
+      const dev = compiler.options.mode === "development";
+      const { build } = await import("velite");
+      await build({ watch: dev, clean: !dev });
+    });
+  }
+}
+
+export default nextConfig;

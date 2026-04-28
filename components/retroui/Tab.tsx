@@ -1,19 +1,10 @@
 import { cn } from "@/lib/utils";
-import {
-  Tab,
-  TabGroup,
-  TabList,
-  TabListProps,
-  TabPanel,
-  TabPanelProps,
-  TabPanels,
-  TabProps,
-} from "@headlessui/react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
 
-const Tabs = TabGroup;
-const TabsPanels = TabPanels;
+const Tabs = TabsPrimitive.Root;
 
-interface ITabsTriggerList extends TabListProps {
+interface ITabsTriggerList
+  extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> {
   className?: string;
 }
 const TabsTriggerList = ({
@@ -22,41 +13,52 @@ const TabsTriggerList = ({
   ...props
 }: ITabsTriggerList) => {
   return (
-    <TabList className={cn("flex flex-row space-x-2 w-full", className)} {...props}>
+    <TabsPrimitive.List
+      className={cn("flex flex-row space-x-2 w-full", className)}
+      {...props}
+    >
       {children}
-    </TabList>
+    </TabsPrimitive.List>
   );
 };
 
-interface ITabsTrigger extends TabProps {
+interface ITabsTrigger
+  extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> {
   className?: string;
 }
 const TabsTrigger = ({ children, className, ...props }: ITabsTrigger) => {
   return (
-    <Tab
+    <TabsPrimitive.Trigger
       className={cn(
-        "px-4 py-1 border-2 border-transparent data-selected:border-border data-selected:bg-primary data-selected:text-primary-foreground data-selected:font-semibold focus:outline-hidden",
-        className,
+        "px-4 py-1 border-2 border-transparent data-[state=active]:border-border data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-semibold focus:outline-hidden",
+        className
       )}
       {...props}
     >
       {children}
-    </Tab>
+    </TabsPrimitive.Trigger>
   );
 };
 
-interface ITabsContent extends TabPanelProps {
+interface ITabsContent
+  extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content> {
   className?: string;
 }
 const TabsContent = ({ children, className, ...props }: ITabsContent) => {
   return (
-    <TabPanel
+    <TabsPrimitive.Content
       className={cn("border-2 border-border mt-2 p-4 w-full", className)}
       {...props}
     >
       {children}
-    </TabPanel>
+    </TabsPrimitive.Content>
   );
 };
 
-export { Tabs, TabsPanels, TabsTrigger, TabsContent, TabsTriggerList };
+const TabsObj = Object.assign(Tabs, {
+  Trigger: TabsTrigger,
+  Content: TabsContent,
+  List: TabsTriggerList,
+});
+
+export { TabsObj as Tabs };

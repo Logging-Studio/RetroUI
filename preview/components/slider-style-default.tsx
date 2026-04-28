@@ -1,3 +1,5 @@
+"use client";
+
 import { Slider } from "@/components/retroui/Slider";
 
 export default function SliderDefault() {

@@ -1,21 +1,21 @@
-import { Tabs, TabsPanels, TabsTrigger, TabsContent, TabsTriggerList } from "@/components/retroui/Tab";
+"use client";
+
+import { Tabs } from "@/components/retroui/Tab";
 
 export default function TabStyleDefault() {
   return (
     <Tabs className="w-full">
-      <TabsTriggerList>
-        <TabsTrigger>Home</TabsTrigger>
-        <TabsTrigger>About</TabsTrigger>
-        <TabsTrigger>Contact</TabsTrigger>
-      </TabsTriggerList>
-      <TabsPanels>
-        <TabsContent>
-          Welcome to RetroUI, a retro styled UI library built with React,
-          Tailwind CSS & Headless UI.
-        </TabsContent>
-        <TabsContent>This is the about section!</TabsContent>
-        <TabsContent>And, this is the contact section!</TabsContent>
-      </TabsPanels>
+      <Tabs.List>
+        <Tabs.Trigger value="home">Home</Tabs.Trigger>
+        <Tabs.Trigger value="about">About</Tabs.Trigger>
+        <Tabs.Trigger value="contact">Contact</Tabs.Trigger>
+      </Tabs.List>
+      <Tabs.Content value="home">
+        Welcome to RetroUI, a retro styled UI library built with React,
+        Tailwind CSS & Headless UI.
+      </Tabs.Content>
+      <Tabs.Content value="about">This is the about section!</Tabs.Content>
+      <Tabs.Content value="contact">And, this is the contact section!</Tabs.Content>
     </Tabs>
   );
 }

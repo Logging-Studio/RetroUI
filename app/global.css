@@ -29,6 +29,8 @@
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
+  --color-popover: var(--popover);
+  --color-input: var(--input);
   --background-image: var(--background-image);
   --chart-1: var(--chart-1);
   --chart-2: var(--chart-2);
@@ -39,7 +41,7 @@
 
 :root {
   --radius: 0;
-  --background: #fff;
+  --background: #F5ECE7;
   --foreground: #000;
   --card: #fff;
   --card-foreground: #000;
@@ -49,12 +51,14 @@
   --secondary: #000;
   --secondary-foreground: #fff;
   --muted: #d5d5d5;
+  --popover: #fff;
   --muted-foreground: #5a5a5a;
   --accent: #fae583;
   --accent-foreground: #000;
   --destructive: #e63946;
   --destructive-foreground: #fff;
   --border: #000;
+  --input: #fff;
   --background-image: url("/images/banner_void_2.svg");
   --chart-1: #c4a1ff;
   --chart-2: #01ffcc;
@@ -74,12 +78,14 @@
   --secondary: #3a3a3a;
   --secondary-foreground: #f5f5f5;
   --muted: #3f3f46;
+  --popover: #242424;
   --muted-foreground: #a0a0a0;
   --accent: #fae583;
   --accent-foreground: #000;
   --destructive: #e63946;
   --destructive-foreground: #fff;
   --border: #5c5c5c;
+  --input: #fff;
   --background-image: url("/images/bg_void_3.svg");
   --chart-1: #ffdb33;
   --chart-2: #000;
@@ -380,15 +386,26 @@ html {
   background-position: center;
 }
 
-.text-outlined {
-  letter-spacing: 2px;
-  text-shadow:
-    0px 0px 0 var(--primary),
-    0px 0px 0 var(--primary),
-    4px 4px 0 var(--primary),
-    4px 4px 0 var(--primary);
+.text-outline-foreground {
+  -webkit-text-stroke: 6px var(--foreground);
+  paint-order: stroke fill;
+  color: var(--card); 
+}
+.text-outline-foreground-sm {
+  -webkit-text-stroke: 4px var(--foreground);
+  paint-order: stroke fill;
+  color: var(--card); 
 }
 
+.text-shadow-foreground {
+  letter-spacing: 2px;
+  text-shadow: 6px 6px 0 var(--foreground);
+}
+
+.text-shadow-foreground-sm {
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 0 var(--foreground);
+}
 /* Syntax Highlighting stuff */
 
 pre code.hljs {

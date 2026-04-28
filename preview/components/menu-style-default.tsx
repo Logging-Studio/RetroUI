@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/retroui/Button";
 import { Menu } from "@/components/retroui/Menu";
 

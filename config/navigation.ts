@@ -6,11 +6,18 @@ const utilsRoute = "/docs/utils";
 
 export const navConfig: INavigationConfig = {
   topNavItems: [
-    { title: "Docs", href: "/docs" },
-    { title: "Components", href: `${componentsRoute}/button` },
-    { title: "Themes", href: "/themes" },
-    { title: "Blog", href: "/blogs" },
-    { title: "Showcase", href: "/showcase" },
+    { title: "Components", href: componentsRoute },
+    { title: "Blocks", href: "/blocks" },
+    { title: "Templates", href: "/templates" },
+    { title: "Figma", href: "/figma" },
+    {
+      title: "Resources", href: "", children: [
+        { title: "Themes", href: "/themes" },
+        { title: "Documentation", href: "/docs" },
+        { title: "Blog Posts", href: "/blogs" },
+        { title: "Showcase", href: "/showcase" },
+      ]
+    },
   ],
   sideNavItems: [
     {
@@ -21,23 +28,31 @@ export const navConfig: INavigationConfig = {
           title: "Installation",
           href: "/docs/install",
         },
-        // {
-        //   title: "Changelog",
-        //   href: "https://pro.retroui.dev",
-        // },
+        {
+          title: "Themes",
+          href: "/themes",
+        },
+        {
+          title: "Changelog",
+          href: "/docs/changelog",
+        },
+        {
+          title: "MCP Server",
+          href: "/docs/mcp",
+        },
         {
           title: "Blocks",
-          href: "https://pro.retroui.dev/blocks",
+          href: "/blocks",
           tag: "Pro",
         },
         {
           title: "Templates",
-          href: "https://pro.retroui.dev/templates",
+          href: "/templates",
           tag: "Pro",
         },
         {
           title: "Figma Kit",
-          href: "https://pro.retroui.dev/figma",
+          href: "/figma",
           tag: "Pro",
         },
       ],

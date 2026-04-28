@@ -1,327 +1,368 @@
-"use server";
-
 import {
   Button,
   Text,
-  Input,
-  Textarea,
   Card,
-  Avatar,
-  Badge,
-  CommandDisplay,
-} from "@/components/retroui";
-import AccordionStyleDefault from "@/preview/components/accordion-style-default";
-import AlertStyleDefaultIcon from "@/preview/components/alert-style-with-icon";
-import AvatarStyleCircle from "@/preview/components/avatar-style-circle-sizes";
-import BadgeStyleVariants from "@/preview/components/badge-style-variants";
+} from "@/components/base-retroui";
 import {
-  ArrowRightIcon,
-  ChartArea,
-  GithubIcon,
+  ArrowRight,
+  ArrowUpRight,
+  CopyIcon,
   MessageCircle,
-  PaintbrushIcon,
+  Star,
 } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import Footer from "@/components/footer";
-import WorksWithSection from "@/components/WorksWithSection";
+import Image from "next/image";
+import { users } from "@/config/data";
+import { BlocksParallax } from "@/components/BlocksParallax";
+import { componentConfig } from "@/config/components";
+import Link from "next/link";
+import { blockConfig } from "@/config/blocks";
+import { templateConfig } from "@/config/templates";
+import { StatsSection } from "@/components/StatsSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 
-async function getContributors(): Promise<
-  { avatar: string; username: string; url: string }[]
-> {
-  const request = await fetch(
-    `https://api.github.com/repos/logging-studio/RetroUI/contributors`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    },
-  );
+const coreComponents = Object.entries(componentConfig.core)
+  .filter(([_, component]) => component.cover)
+  .slice(0, 6)
+  .map(([key, component]) => ({
+    id: key,
+    ...component,
+    displayName: component.name.toUpperCase().replace(/-/g, " "),
+  }));
 
-  const contributorsList = await request.json();
-  return contributorsList.map(
-    (c: { avatar_url: string; login: string; html_url: string }) => ({
-      avatar: c.avatar_url,
-      username: c.login,
-      url: c.html_url,
-    }),
-  );
-}
 
-export default async function Home() {
-  const contributors = await getContributors();
+export default function ReactHomepage() {
 
   return (
     <main>
-      <div className="bg-image bg-cover bg-no-repeat bg-center flex flex-col items-center min-h-screen">
-        <section className="container max-w-6xl mx-auto px-4 lg:px-0 text-gray-900 flex justify-center items-center lg:gap-28 my-28">
-          <div className="text-center lg:text-left w-full lg:w-2/3">
-            <Link href="https://neo.retroui.dev" target="_blank" className="mb-4 inline-block">
-              <Badge>
-                Introducing Neo/SS
-                <PaintbrushIcon className="ml-2 h-4 w-4 inline-block" />
-              </Badge>
-            </Link>
+      <section className="bg-[url('/decor/bg-triangle-pattern.svg')] bg-cover bg-center">
+        <div className="container px-4 py-24 lg:py-28 mx-auto text-center">
+          <Text as="h1" className="uppercase text-5xl lg:text-6xl">
+            Not every website has to
+            <br />
+            <span className="text-card text-outline-foreground text-shadow-foreground">L<Image src="/decor/eye.svg" alt="look decoration" height={98} width={98} className="inline-block -mx-2" />k the same!</span>
+          </Text>
 
-            <Text as="h1" className="text-5xl text-foreground lg:text-6xl mt-8">
-              Make your projects
-              <br />
-              <span className="text-outlined">stand out!</span>
-            </Text>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+            A bold, modern React + TailwindCSS UI library that makes your projects stand out from the crowd.
+          </p>
 
-            <p className="text-lg text-muted-foreground mb-8 mt-4">
-              A NeoBrutalism styled React + TailwindCSS UI library for building bold, modern web apps.
-              Perfect for any project using Shadcn/ui.
-            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
 
-            <div className="flex flex-col md:flex-row items-center gap-4">
-              <Link href="/docs" passHref>
-                <Button
-                  className="w-full"
-                  aria-label="Get Started with RetroUI"
-                >
-                  Get Started
-                </Button>
-              </Link>
-              <div className="w-full max-w-72 shadow shadow-primary">
-                <CommandDisplay command='npx shadcn add @retroui/button' />
-              </div>
+            <div className="relative inline-block group">
+              {/* Outline frame - sits behind, extends to cover shadow */}
+              <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 bg-primary transition-all duration-200" />
+
+              <button className="px-4 py-1.5 font-head border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5">
+                Browse Blocks
+              </button>
+            </div>
+            <Button variant="link">
+              All Products <ArrowRight className="w-4 h-4 ml-1" />
+            </Button>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-sm">
+            <div className="flex -space-x-3">
+              {users.map((user) => (
+                <div key={user.name} className="rounded-full border-2 bg-card">
+                  <Image src={user.avatar} alt={user.name} width={40} height={40} className="w-10 h-10 rounded-full" />
+                </div>
+              ))}
+            </div>
+            <Text className="text-sm">Loved by <span className="font-bold">1,500+</span><br />Devs & Designers</Text>
+          </div>
+        </div>
+      </section>
+
+      <BlocksParallax />
+
+
+      {/* Features Section */}
+      <section className="container mx-auto px-4 py-28 space-y-14">
+        <div className="text-center space-y-6">
+          <Text as="h2" className="uppercase text-4xl lg:text-5xl">
+            <span className="relative text-outline-foreground text-shadow-foreground">
+              <Image src="/decor/pen_design.svg" alt="components decoration" width={140} height={140} className="absolute h-[140px] w-[140px] -left-18 -top-14" />
+              Desiged to Ship Fast
+            </span>
+            <br />
+            Without Looking Boring
+          </Text>
+          <p className="text-muted-foreground mb-12 max-w-4xl mx-auto text-center">
+            An ecosystem tailored for developers, featuring a reliable framework, reusable elements, and complete code control. It is crafted to enhance and sustain interfaces as products evolve.
+          </p>
+        </div>
+
+        <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+            <div className="lg:col-span-3 relative">
+              <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FFD93D]" />
+              <Card className="relative h-full shadow-none">
+                <div className="grid grid-cols-1 lg:grid-cols-2 divide-x-2 h-full">
+                  <div className="bg-background relative overflow-hidden">
+                    <Image src="/decor/clipboard.png" alt="Design illustration" width={450} height={450} className="object-fit h-[400px] w-auto absolute -right-14 -bottom-12" />
+                  </div>
+
+                  <div className="flex flex-col justify-between p-6">
+                    <div>
+                      <Text as="h4" className="mb-4">Copy-paste or just use your CLI</Text>
+                      <p className="text-sm text-muted-foreground mb-6">
+                        Discover our bold neo-brutalist sections. With striking hero blocks, pricing tables, and feature grids, your product will stand out in the market.
+                      </p>
+                    </div>
+
+                    {/* Terminal Preview */}
+                    <div className="relative">
+                      <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-border bg-primary" />
+                      <div className="relative bg-background border-2 border-border p-3">
+                        <div className="flex items-center gap-1.5 mb-3 pb-2 border-b-2">
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#FF6B6B] border"></div>
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#FFD93D] border"></div>
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#4ECDC4] border"></div>
+                          <div className="ml-auto">
+                            <CopyIcon className="w-4 h-4" />
+                          </div>
+                        </div>
+                        <code className="text-sm font-mono">npx shadcn add @retroui/button</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            {/* Right Card - Spans 2 columns */}
+            <div className="lg:col-span-2 relative">
+              <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FFD93D]" />
+              <Card className="relative shadow-none h-full divide-y-2">
+                <div className="flex bg-background relative h-[250px] overflow-hidden">
+                  <Image src="/decor/customize.svg" alt="Customization" width={450} height={450} className="object-contain h-[220px] w-auto absolute -left-8 -bottom-8" />
+                </div>
+
+                <div className="p-6">
+                  <Text as="h4" className="mb-4">Fully customizable</Text>
+                  <p className="text-sm text-muted-foreground">
+                    Own and modify every component. Tailwind CSS allows you to adjust colors, borders, shadows, and animations to fit your brand.
+                  </p>
+                </div>
+              </Card>
             </div>
           </div>
-          <div className="hidden lg:block lg:w-1/3">
-            <Image
-              alt="retro tv radio"
-              src="/images/tv_radio.png"
-              layout="responsive"
-              width={500}
-              height={500}
-              className="h-full w-full"
-            />
-          </div>
-        </section>
-        <section className="container max-w-6xl mx-auto px-4 lg:px-0 lg:my-36">
-          {/* <Text as="h2" className="mb-16 text-center">
-              Old school with modern twist! ✨
-            </Text> */}
-          <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-8">
-            <Card className="w-full bg-background shadow-none">
-              <Card.Header>
-                <Card.Title>Button</Card.Title>
-              </Card.Header>
-              <Card.Content>
-                <div className="flex flex-wrap gap-4">
-                  <Button>Primary</Button>
-                  <Button variant="outline">Outline</Button>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 ">
+            {/* Tech Stack Card */}
+            <div className="relative lg:col-span-2">
+              <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FFD93D]" />
+              <Card className="relative shadow-none divide-y-2">
+                <div className="bg-background h-[250px] overflow-hidden relative">
+                  <Image src="/decor/techstack-hex.svg" alt="Tech stack hexagons" width={400} height={200} className="object-contain absolute -right-12 -bottom-12" />
                 </div>
-              </Card.Content>
-            </Card>
-            <Card className="w-full bg-background shadow-none">
-              <Card.Header>
-                <Card.Title>Badge</Card.Title>
-              </Card.Header>
-              <Card.Content>
-                <BadgeStyleVariants />
-              </Card.Content>
-            </Card>
-            <Card className="w-full bg-background shadow-none">
-              <Card.Header>
-                <Card.Title>Avatar</Card.Title>
-              </Card.Header>
-              <Card.Content>
-                <AvatarStyleCircle />
-              </Card.Content>
-            </Card>
-            <Card className="w-full bg-background shadow-none">
-              <Card.Header>
-                <Card.Title>Accordion</Card.Title>
-              </Card.Header>
-              <Card.Content>
-                <AccordionStyleDefault />
-              </Card.Content>
-            </Card>
-            <Card className="w-full bg-background shadow-none">
-              <Card.Header>
-                <Card.Title>Input & Textarea</Card.Title>
-              </Card.Header>
-              <Card.Content>
-                <Input />
-                <div className="h-4"></div>
-                <Textarea className="border-foreground" />
-              </Card.Content>
-            </Card>
 
-            <Card className="w-full bg-background shadow-none">
-              <Card.Header>
-                <Card.Title>Alert</Card.Title>
-              </Card.Header>
-              <Card.Content>
-                <AlertStyleDefaultIcon />
-              </Card.Content>
-            </Card>
+                <div className="p-6">
+                  <Text as="h4" className="mb-4">Integrate with your favorite tech stack</Text>
+                  <p className="text-sm text-muted-foreground">
+                    This solution integrates smoothly with React apps using TypeScript and Tailwind CSS, adhering to Shadcn/ui patterns while offering flexibility across frameworks.
+                  </p>
+                </div>
+              </Card>
+            </div>
+
+            {/* MCP Server Card */}
+            <div className="relative lg:col-span-3">
+              <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-[#FFD93D]" />
+              <Card className="relative shadow-none h-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 divide-x-2 h-full">
+                  <div className="bg-background relative overflow-hidden">
+                    <Image src="/decor/retroui_mcp.png" alt="Design illustration" width={400} height={400} className="object-contain h-[350px] w-[350px] absolute -right-6 -bottom-0" />
+                  </div>
+
+                  <div className="flex flex-col justify-between p-6">
+                    <div>
+                      <Text as="h4" className="mb-4">Native MCP server support</Text>
+                      <p className="text-sm text-muted-foreground mb-6">
+                        Discover our bold neo-brutalist sections. With striking hero blocks, pricing tables, and feature grids, your product will stand out in the market.
+                      </p>
+                    </div>
+
+                    {/* Terminal Preview */}
+                    <div className="relative">
+                      <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 border-border bg-primary" />
+                      <div className="relative bg-background border-2 border-border p-3">
+                        <div className="flex items-center gap-1.5 mb-3 pb-2 border-b-2">
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#FF6B6B] border"></div>
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#FFD93D] border"></div>
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#4ECDC4] border"></div>
+                          <div className="ml-auto">
+                            <CopyIcon className="w-4 h-4" />
+                          </div>
+                        </div>
+                        <code className="text-sm font-mono">npx @retroui/mcp start</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <section className="container max-w-6xl mx-auto px-4 lg:px-0 flex flex-col lg:flex-row gap-12 lg:gap-16 lg:grid-cols-2 my-36">
-        <div className="w-full lg:w-3/5">
-          <Text as="h2">
-            Easily <span className="text-outlined">Customize</span> to Your Own
-            Needs! 🛠️
+      {/* UI Components Section */}
+      <section className="container max-w-7xl mx-auto px-4 py-28 space-y-14">
+        <div className="text-center space-y-6">
+          <Text as="h2" className="uppercase text-4xl lg:text-5xl">
+            Neo Brutalist UI
+            <br />
+            <span className="relative text-outline-foreground text-shadow-foreground">
+              <Image src="/decor/compas.svg" alt="components decoration" width={80} height={80} className="absolute h-[80px] w-[80px] -left-10 -top-4" />
+              components
+            </span>
           </Text>
-          <div className="flex flex-col space-y-1 mt-6 mb-8 text-muted-foreground">
-            <Text className="text-lg">
-              Copy-Paste Ready: Components that you can just copy paste.
-            </Text>
-            <Text className="text-lg">
-              Tailwind Based: Customizable with Tailwind CSS.
-            </Text>
-            <Text className="text-lg">
-              Type Safe: Typescript support for all components.
-            </Text>
-          </div>
-          <Link href="/docs/components/button" passHref>
-            <Button>See Examples</Button>
-          </Link>
+
+          <Text className="text-muted-foreground max-w-2xl mx-auto">
+            Discover scalable Shadcn UI components designed with Base UI and Radix UI, perfect for landing pages, SaaS dashboards, and modern web apps.
+          </Text>
         </div>
-        <div className="w-full lg:w-2/5">
-          <Image
-            src="/images/code_show.svg"
-            width={600}
-            height={400}
-            alt="retroui code showcase"
-          />
-        </div>
-      </section>
 
-      <section className="container max-w-6xl max-lg:px-4 mx-auto bg-[url('/images/starts_bg.svg')] bg-cover bg-no-repeat py-12">
-        <Text as="h2" className="text-center mb-28 max-w-2xl mx-auto">
-          A <span className="text-outlined">Growing</span> Community of Developers and Designers.
-        </Text>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl mx-auto">
-          <div className="flex flex-col items-start relative mx-auto">
-            <Text as="h3" className="mb-2 font-sans">
-              Github Stars
-            </Text>
-            <Text className="text-outlined text-7xl lg:text-8xl font-head">
-              1,200+
-            </Text>
-            <Image
-              src="/images/shooting_star.svg"
-              width={120}
-              height={120}
-              alt="shotting stars"
-              className="absolute -top-[80px] -left-[80px]"
-            />
-          </div>
-          <div className="flex flex-col items-start relative mx-auto">
-            <Text as="h3" className="mb-2 font-sans">
-              Discord Members
-            </Text>
-            <Text className="text-outlined text-7xl lg:text-8xl font-head">
-              100+
-            </Text>
-            <Image
-              src="/images/shooting_star.svg"
-              width={120}
-              height={120}
-              alt="shotting stars"
-              className="absolute -right-[80px] -bottom-[80px] rotate-180"
-            />
-          </div>
-        </div>
-      </section>
-
-      <WorksWithSection />
-
-      <section className="container max-w-6xl mx-auto border-2 bg-primary border-black py-16 px-4 lg:p-16 my-36">
-        <Text as="h2" className="text-center text-black mb-2">
-          Community Contributors
-        </Text>
-        <Text className="text-xl text-center text-black mb-8">
-          RetroUI core is free and open-source, and it is made possible by our
-          awesome contributors.
-        </Text>
-        <div className="max-w-2xl mx-auto flex flex-wrap justify-center gap-2 lg:gap-4">
-          {contributors.map((contributor) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {coreComponents.map((component) => (
             <Link
-              key={contributor.username}
-              href={contributor.url}
-              target="_blank"
-              passHref
-              className="flex flex-col items-center"
+              key={component.id}
+              href={`/components/${component.id}`}
+              className="group"
             >
-              <Avatar className="h-10 w-10 border-black lg:h-16 lg:w-16">
-                <Avatar.Image
-                  src={contributor.avatar}
-                  alt={contributor.username}
-                />
-              </Avatar>
+              <Card className="w-full">
+                <Card.Content className="p-0">
+                  {/* Image Section */}
+                  {component.cover && (
+                    <Image
+                      src={component.cover}
+                      alt={component.displayName}
+                      width={400}
+                      height={200}
+                      className="object-contain"
+                    />
+                  )}
+
+                  {/* Text Section */}
+                  <div className="p-4 border-t-2">
+                    <Text as="h6" className="mb-2 uppercase">
+                      {component.displayName}
+                    </Text>
+                    <p className="text-sm text-muted-foreground">
+                      {component.description}
+                    </p>
+                  </div>
+                </Card.Content>
+              </Card>
             </Link>
           ))}
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mt-12">
-          <Link
-            href="https://github.com/logging-studio/retroui"
-            target="_blank"
-            passHref
-          >
-            <Button
-              className="bg-background"
-              variant="outline"
-            >
-              <GithubIcon size="16" className="mr-2" />
-              Star on Github
-            </Button>
-          </Link>
-          <Link href="https://discord.gg/Jum3NJxK6Q" target="_blank" passHref>
-            <Button
-              className="bg-background"
-              variant="outline"
-            >
-              <MessageCircle size="16" className="mr-2" />
-              Join Community
-            </Button>
-          </Link>
+
+        <div className="flex justify-center">
+          <Button>
+            View All Components <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
         </div>
       </section>
 
-      <section className="mx-auto px-4">
-        <div className="container max-w-6xl h-full mx-auto py-16 flex flex-col justify-between gap-20">
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="w-full md:w-3/5">
-              <Text as="h1" className="text-4xl lg:text-5xl">
-                Ship <span className="text-outlined">Faster</span> With Blocks
-                <br />
-                and Templates 🚀
-              </Text>
-              <Text
-                as="p"
-                className="text-muted-foreground font-medium text-xl mt-2 mb-8"
-              >
-                Get access to 100+ premium blocks, templates and figma kit,
-                ready to make your project stand out.
-              </Text>
+      {/* Blocks Section */}
+      <section className="container mx-auto px-4 py-28 space-y-14">
+        <div className="text-center space-y-6">
+          <Text as="h2" className="uppercase text-4xl lg:text-5xl">
+            Build faster with 200+
+            <br />
+            <span className="relative text-outline-foreground text-shadow-foreground">
+              <Image src="/decor/lego.svg" alt="components decoration" width={90} height={90} className="absolute h-[90px] w-[90px] -left-16 -top-6" />
+              Blocks
+            </span>
+          </Text>
 
-              <Link href="https://pro.retroui.dev/blocks" target="_blank">
-                <Button>Explore RetroUI Pro</Button>
-              </Link>
-            </div>
+          <Text className="text-muted-foreground max-w-2xl mx-auto">
+            Discover scalable Shadcn UI components designed with Base UI and Radix UI, perfect for landing pages, SaaS dashboards, and modern web apps.
+          </Text>
+        </div>
 
-            <div className="w-full md:w-2/5">
-              <Image
-                src="/images/pro_showcase.svg"
-                width={1920}
-                height={1080}
-                alt="retroui pro ui blocks showcase"
-              />
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {blockConfig.blocks.slice(0, 9).map((block) => (
+            <Card key={block.slug} className="w-full group overflow-hidden">
+              <Card.Content className="p-0">
+                <div className="w-full h-auto bg-white flex items-center justify-center border-b-2 overflow-hidden">
+                  <Image
+                    src={block.cover_image}
+                    alt={block.name}
+                    width={500}
+                    height={300}
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <Text as="h6" className="mb-2">{block.name}</Text>
+                  <p className="text-sm text-muted-foreground">{block.description}</p>
+                </div>
+              </Card.Content>
+            </Card>
+          ))}
+        </div>
+
+        <div className="flex justify-center">
+          <Button render={<Link href="/blocks" />}>
+            View All Blocks <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
         </div>
       </section>
 
-      <Footer />
+      {/* Ready-to-Use Templates */}
+      <section className="container mx-auto px-4 py-28 space-y-14">
+        <div className="flex flex-col md:flex-row gap-8 items-start md:items-center md:justify-between">
+          <Text as="h2" className="uppercase text-4xl lg:text-5xl">
+            Pre-built and Customizable
+            <br />
+            <span className="relative text-outline-foreground text-shadow-foreground">
+              <Image src="/decor/paint_brush.svg" alt="components decoration" width={100} height={100} className="absolute h-[100px] w-[100px] -left-14 -top-8" />
+              Templates
+            </span>
+          </Text>
+          <Button className="bg-primary">Explore RetroUI Pro</Button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {templateConfig.templates.slice(0, 3).map((template) => (
+            <div key={template.name} className="shadow-none">
+              <div className="w-full h-auto relative mb-8">
+                <div className={`absolute top-2 left-2 -bottom-2 -right-2 border-2 border-border`} style={{ backgroundColor: template.color }}></div>
+                <Image
+                  src={template.cover_image}
+                  alt={template.name}
+                  width={600}
+                  height={800}
+                  className="object-contain relative z-1 border-2 border-border"
+                />
+              </div>
+
+              <div>
+                <Text as="h3" className="mb-2 font-normal">{template.name}</Text>
+                <Text className="text-sm text-muted-foreground mb-4">{template.description}</Text>
+                <div className="flex justify-between gap-6">
+                  <Link href={`/templates/${template.slug}`} className="relative inline-block group flex-1">
+                    <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 bg-primary transition-all duration-200" />
+
+                    <button className="px-4 py-1.5 font-head w-full border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5">
+                      View Details
+                    </button>
+                  </Link>
+                  <Button variant="link" className="flex-1">Live Preview <ArrowUpRight className="ml-2" /></Button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+      <TestimonialsSection />
+      <StatsSection />
     </main>
   );
 }

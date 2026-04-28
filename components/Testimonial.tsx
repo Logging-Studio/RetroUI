@@ -1,4 +1,4 @@
-import { Text, Card, Avatar } from "@/components/retroui";
+import { Text, Card, Avatar } from "@/components/base-retroui";
 
 interface TestimonialCardProps {
   quote: string;

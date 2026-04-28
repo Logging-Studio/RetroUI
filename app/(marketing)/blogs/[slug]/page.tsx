@@ -1,7 +1,6 @@
-import React from "react";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
-import { Avatar, Badge, Button, Text } from "@/components/retroui";
+import { Avatar, Badge, Button, Text } from "@/components/base-retroui";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +8,7 @@ import { RichText } from "@payloadcms/richtext-lexical/react";
 import { JSXConverters } from "@/components/RichTextConverter";
 
 interface IProps {
-  params: { slug: string[] };
+  params: Promise<{ slug: string[] }>;
 }
 
 type Post = {
@@ -29,7 +28,7 @@ type Post = {
   },
 }
 
-async function getBlogParams({ params }: IProps) {
+async function getBlogParams(params: { slug: string[] }) {
   const res = await fetch(`https://cms.retroui.dev/api/posts/slug/${params.slug}`, {
     method: 'GET',
     credentials: 'include',
@@ -41,8 +40,9 @@ async function getBlogParams({ params }: IProps) {
   return post;
 }
 
-export async function generateMetadata({ params }: IProps): Promise<Metadata> {
-  const blog: Post = await getBlogParams({ params });
+export async function generateMetadata(props: IProps): Promise<Metadata> {
+  const params = await props.params;
+  const blog: Post = await getBlogParams(params);
 
   if (!blog) {
     return {
@@ -66,8 +66,9 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
   };
 }
 
-export default async function page({ params }: IProps) {
-  const blog: Post | null = await getBlogParams({ params });
+export default async function page(props: IProps) {
+  const params = await props.params;
+  const blog: Post | null = await getBlogParams(params);
 
   if (!blog) {
     return notFound();
@@ -146,9 +147,7 @@ export default async function page({ params }: IProps) {
 
       <hr className="my-12" />
 
-      <Button asChild aria-label="Return to all blog posts" variant="secondary">
-        <Link href="/blogs" className="inline-flex">← Back to blogs</Link>
-      </Button>
+      <Button render={() => <Link href="/blogs" className="inline-flex">← Back to blogs</Link>} aria-label="Return to all blog posts" variant="secondary" />
     </article>
   );
 }

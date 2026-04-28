@@ -1,3 +1,5 @@
+"use client";
+
 import { Checkbox } from "@/components/retroui/Checkbox";
 import { Text } from "@/components/retroui/Text";
 

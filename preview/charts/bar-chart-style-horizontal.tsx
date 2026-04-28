@@ -1,3 +1,5 @@
+"use client";
+
 import { BarChart } from "@/components/retroui/charts/BarChart";
 
 const data = [

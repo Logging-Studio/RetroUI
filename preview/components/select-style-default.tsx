@@ -1,3 +1,5 @@
+"use client";
+
 import { Select } from "@/components/retroui/Select";
 import React from "react";
 

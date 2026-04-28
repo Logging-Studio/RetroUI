@@ -1,3 +1,5 @@
+"use client";
+
 import { AreaChart } from "@/components/retroui/charts/AreaChart";
 
 const data = [

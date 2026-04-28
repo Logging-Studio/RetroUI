@@ -1,10 +1,7 @@
-import { allBlogs } from "@/.contentlayer/generated";
-import { Avatar, Card, Text } from "@/components/retroui";
+import { Card, Text } from "@/components/base-retroui";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { format } from "date-fns";
-import { sdk } from "@/lib/payload"
 
 type Post = {
   id: number,

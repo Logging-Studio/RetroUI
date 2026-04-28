@@ -1,19 +1,15 @@
-import TopNav from "@/components/TopNav";
 import "./global.css";
-import { Archivo_Black, Space_Grotesk, Space_Mono } from "next/font/google";
+import { Archivo_Black, Space_Mono, Geist } from "next/font/google";
 import { Metadata } from "next";
-import { Toaster } from "@/components/retroui";
+import { Toaster } from "@/components/base-retroui";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/contexts/ThemeContext";
-import ThemeWrapper from "@/components/ThemeWrapper";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { getCurrentUser } from "@/lib/auth";
+import { cn } from "@/lib/utils";
 
-const sans = Space_Grotesk({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-sans",
-  display: "swap",
-});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const head = Archivo_Black({
   subsets: ["latin"],
@@ -39,13 +35,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const user = await getCurrentUser();
+
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -65,27 +63,16 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* <script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="97dd6182-c656-4265-97e0-ee9613b88078"
-        /> */}
-        <script
-          defer
-          data-website-id="dfid_zlQSgC5h2RNuCLHQTf7Fd"
-          data-domain="retroui.dev"
-          src="https://datafa.st/js/script.js">
-        </script>
+        <script async src="https://assets.endorsely.com/endorsely.js" data-endorsely="7e205a3d-7039-41f3-9b4f-52929d5489d2" />
       </head>
       <body
-        className={`${head.variable} ${sans.variable} ${mono.variable}`}
+        className={`${head.variable} ${geist.variable} ${mono.variable} bg-background text-foreground`}
       >
         <ThemeProvider>
-            <div className="bg-background text-foreground">
-              <TopNav />
-              {children}
-              <Toaster />
-            </div>
+          <AuthProvider initialUser={user}>
+            {children}
+          </AuthProvider>
+          <Toaster />
         </ThemeProvider>
         <SpeedInsights />
         <Analytics />

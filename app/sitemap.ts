@@ -1,4 +1,5 @@
-import { allDocs } from "@/.contentlayer/generated";
+import allDocs from "@/.velite/docs.json";
+import allBlogs from "@/.velite/blogs.json";
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -12,6 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...allDocs.map((doc) => ({
       url: `https://retroui.dev${doc.url}`,
       lastModified: doc.lastUpdated,
+    })),
+    ...allBlogs.map((blog) => ({
+      url: `https://retroui.dev/blog/${blog.url}`,
+      published: blog.publishedAt,
     })),
   ];
 }

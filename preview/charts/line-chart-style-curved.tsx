@@ -1,3 +1,5 @@
+"use client";
+
 import { LineChart } from "@/components/retroui/charts/LineChart";
 
 const data = [

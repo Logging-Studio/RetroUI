@@ -2,6 +2,7 @@ export interface INavItem {
   title: string;
   href: string;
   tag?: string;
+  children?: INavItem[];
 }
 
 export interface INavItemWithChildren {
