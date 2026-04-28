@@ -9,6 +9,7 @@ lastUpdated: 30 May, 2025
 RetroUI is a trusted registry for shadcn/ui components. Start building unique, playful interfaces with retro-brutalist design in minutes!
 
 <br />
+<br />
 
 ## Quick Start
 
@@ -27,55 +28,15 @@ This will automatically add the RetroUI registry to your `components.json`:
 ```
 
 <br />
-
-## Installing Components
-
-To install any component from RetroUI, use the following command:
-
-<CliCommand npmCommand="npx shadcn@latest add @retroui/[component]" />
-
-**Examples:**
-
-<CliCommand npmCommand="npx shadcn@latest add @retroui/card" />
-<CliCommand npmCommand="npx shadcn@latest add @retroui/input" />
-<CliCommand npmCommand="npx shadcn@latest add @retroui/dialog" />
-
 <br />
-
-## Monorepo Support
-
-Working in a monorepo? Specify the path to your workspace with the `-c` or `--cwd` option:
-
-<CliCommand npmCommand="npx shadcn@latest init -c ./apps/web" />
-
-Or when adding components:
-
-<CliCommand npmCommand="npx shadcn@latest add @retroui/button -c ./apps/web" />
-
-<br />
-
-## Discovery & Search
-
-### View Components
-Preview components from the RetroUI registry before installing:
-
-<CliCommand npmCommand="npx shadcn@latest view @retroui" />
-
-### Search Components
-Search for specific components across the registry:
-
-<CliCommand npmCommand="npx shadcn@latest search @retroui" />
-
-### List All Components
-See the complete list of available components:
-
-<CliCommand npmCommand="npx shadcn@latest list @retroui" />
 
 <br />
 
 ## Fonts & Theme Setup
 
-RetroUI uses bold, playful typography and vibrant colors. Here's how to set it up:
+RetroUI uses bold, playful typography and vibrant colors. You can customize the fonts and colors to match your brand. Here's how to set it up:
+
+<br />
 
 ### 1. Add Fonts
 
@@ -112,6 +73,8 @@ export default function RootLayout({
   );
 }
 ```
+<br />
+
 
 ### 2. Add Theme
 
@@ -167,47 +130,78 @@ Add this RetroUI theme to your `global.css`:
   --destructive: #e63946;
   --destructive-foreground: #fff;
   --border: #000;
+  --input: #fff;
 }
 ```
 
-Looking for more color schemes? Check out our [Themes Gallery](/themes) for a collection of pre-made RetroUI themes.
+Looking for more color schemes? Check out our other [/themes](/themes) for a collection of pre-made RetroUI themes.
+
+<br />
+<br />
+
+## Installing Components
+
+To install any component from RetroUI, use the following command:
+
+<CliCommand npmCommand="npx shadcn@latest add @retroui/[component]" />
+
+**Examples:**
+
+```bash
+pnpm dlx shadcn@latest add @retroui/card
+# or
+pnpm dlx shadcn@latest add @retroui/input
+# or
+pnpm dlx shadcn@latest add @retroui/dialog
+```
+
+<br />
+<br />
+
+## Discovery & Search
+
+### View Components
+Preview components from the RetroUI registry before installing:
+
+<CliCommand npmCommand="npx shadcn@latest view @retroui" />
 
 <br />
 
-## Framework Support
+### Search Components
+Search for specific components across the registry:
 
-RetroUI is designed to work with all major React frameworks:
+<CliCommand npmCommand="npx shadcn@latest search @retroui" />
 
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<br />
 
-<Card>
-  <Link href="/docs/install/nextjs">
-    <Card.Header className="flex items-center justify-center space-y-4 py-8">
-      <Image
-        src="/images/logos/nextjs.png"
-        alt="nextjs logo"
-        height={50}
-        width={50}
-      />
-      <Card.Description className="text-xl">Next.js</Card.Description>
-    </Card.Header>
-  </Link>
-</Card>
+### List All Components
+See the complete list of available components:
 
-  <Card>
-    <Link href="/docs/install/vite">
-    <Card.Header className="flex items-center justify-center space-y-4 py-8">
-      <Image src="/images/logos/vite.png" alt="vite logo" height={50} width={50} />
-      <div className="flex items-center space-x-2">
-        <Card.Description className="text-xl">Vite</Card.Description>
-      </div>
-    </Card.Header>
-    </Link>
-  </Card>
-</div>
+<CliCommand npmCommand="npx shadcn@latest list @retroui" />
 
+<br />
+<br />
+
+## Monorepo Support
+
+Working in a monorepo? Specify the path to your workspace with the `-c` or `--cwd` option:
+
+<CliCommand npmCommand="npx shadcn@latest init -c ./apps/web" />
+
+<br />
+
+Or when adding components:
+
+<CliCommand npmCommand="npx shadcn@latest add @retroui/button -c ./apps/web" />
+
+<br />
 <br />
 
 ## Need Help?
 
-Join our Discord community for support, inspiration, and to share what you're building with RetroUI!
+Join our Community or reach out via Twitter/X or Email.
+
+→ [ Discord Community ](https://discord.gg/retro-ui)  
+→ [ Twitter/X ](https://x.com/ariflogs)  
+→ [ Email ](mailto:arif@retroui.dev)
+

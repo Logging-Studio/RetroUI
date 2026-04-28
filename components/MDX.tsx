@@ -24,7 +24,7 @@ const components = (type: "doc" | "blog") => ({
       <Text as="h2" className="border-b pb-1 mb-6" {...props} />
     ),
   h3: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Text as="h3" className="mb-4" {...props} />
+    <Text as="h3" className="mb-3" {...props} />
   ),
   h4: (props: HTMLAttributes<HTMLHeadingElement>) => (
     <Text as="h4" className="mb-2" {...props} />

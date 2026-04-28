@@ -58,7 +58,7 @@ export default function TemplatesPage() {
       {/* Header Section */}
       <div className="mb-12">
         <div className="flex items-start mb-4">
-          <Text as="h1" className="text-3xl lg:text-4xl font-bold uppercase">
+          <Text as="h1">
             Modern React{" "}
             <span className="relative inline-flex items-center">
               Templates

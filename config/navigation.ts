@@ -29,8 +29,8 @@ export const navConfig: INavigationConfig = {
           href: "/docs/install",
         },
         {
-          title: "Theming",
-          href: "/docs/theming",
+          title: "Themes",
+          href: "/themes",
         },
         {
           title: "Changelog",

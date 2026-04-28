@@ -9,7 +9,7 @@ import { u } from "unist-builder";
 
 const docs = defineCollection({
   name: "Doc",
-  pattern: "docs/**/*.mdx",
+  pattern: "docs/{*,**/*}.mdx",
   schema: s
     .object({
       title: s.string(),
@@ -28,7 +28,7 @@ const docs = defineCollection({
     })
     .transform((data) => ({
       ...data,
-      url: `/docs${data.path}`,
+      url: data.path === "/" ? "/docs" : `/docs${data.path}`,
     })),
 });
 

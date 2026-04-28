@@ -1,0 +1,123 @@
+---
+title: MCP Server
+path: /mcp
+description: Configure the RetroUI MCP server for seamless component integration in your AI-powered development workflow.
+lastUpdated: 28 Apr, 2026
+---
+
+The Model Context Protocol (MCP) server allows you to integrate RetroUI components directly into your AI-assisted development workflow. Add components through natural language commands in Claude, Cursor, VS Code, and other MCP-enabled editors.
+<br />
+For more information about the MCP server, please refer to the [shadcn/ui MCP documentation](https://ui.shadcn.com/docs/mcp).
+
+<br />
+<br />
+
+## Automatic Configuration
+
+### Claude Code
+
+Run the following command to automatically configure the MCP server for Claude Code:
+
+<CliCommand npmCommand="npx shadcn@latest mcp init --client claude" />
+<br />
+
+
+### Cursor
+
+Run the following command to automatically configure the MCP server for Cursor:
+
+<CliCommand npmCommand="npx shadcn@latest mcp init --client cursor" />
+<br />
+
+
+### VS Code
+
+Run the following command to automatically configure the MCP server for VS Code:
+
+<CliCommand npmCommand="npx shadcn@latest mcp init --client vscode" />
+<br />
+<br />
+
+## Manual Configuration
+
+First, install the shadcn package as a dev dependency:
+
+<CliCommand npmCommand="npm install -D shadcn@latest" />
+
+Then, configure the MCP server based on your editor:
+<br />
+
+### Claude Code
+
+Add the following to your `.mcp.json` file:
+
+```json title=".mcp.json"
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    }
+  }
+}
+```
+<br />
+
+### Cursor
+
+Add the following to your `.cursorrules` file:
+
+```json title=".cursorrules"
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    }
+  }
+}
+```
+<br />
+
+### VS Code
+
+Add the following to your `.vscode/settings.json` file:
+
+```json title=".vscode/settings.json"
+{
+  "mcp.servers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    }
+  }
+}
+```
+<br />
+
+### Windsurf
+
+Add the following to your `.windsurfrules` file:
+
+```json title=".windsurfrules"
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    }
+  }
+}
+```
+<br />
+<br />
+
+## Usage
+
+Once configured, you can use natural language commands in your AI-powered editor to add RetroUI components:
+
+- → "Add a retroui button component"
+- → "Install the accordion component from RetroUI"
+- → "Add the card component with neobrutalist styling"
+
+The MCP server will automatically install the components with the correct configuration for RetroUI's design system.
