@@ -1,0 +1,66 @@
+---
+title: Table
+path: /components/baseui/table
+description: Display your data in a structured tabular format.
+lastUpdated: 14 Nov, 2025
+links:
+  source: https://github.com/logging-studio/RetroUI/blob/main/components/base-retroui/Table.tsx
+---
+
+<ComponentShowcase name="baseui-table-style-default" />
+<br />
+<br />
+
+<ComponentInstall>
+  <ComponentInstall.Cli npmCommand="npx shadcn@latest add @retroui/baseui-table" />
+  <ComponentInstall.Manual>
+#### 1. Install dependencies:
+
+```sh
+npm install class-variance-authority
+```
+
+<br />
+
+#### 2. Copy the code 👇 into your project:
+
+<ComponentSource name="table" />
+
+  </ComponentInstall.Manual>
+</ComponentInstall>
+
+<br />
+<br />
+
+## Examples
+
+### Default
+
+<ComponentShowcase name="baseui-table-style-default" />
+<br />
+<br />
+
+### With Checkbox Selection
+
+<ComponentShowcase name="baseui-table-with-checkbox" />
+<br />
+<br />
+
+### With Sticky Header
+
+<ComponentShowcase name="baseui-table-with-sticky-header" />
+<br />
+<br />
+
+## API Reference
+
+The Table component is composed of several sub-components:
+<br />
+
+  - `Table` - The main table wrapper
+  - `Table.Header` - Table header section (`<thead>`)
+  - `Table.Body` - Table body section (`<tbody>`)
+  - `Table.Footer` - Table footer section (`<tfoot>`)
+  - `Table.Row` - Table row (`<tr>`)
+  - `Table.Head` - Table header cell (`<th>`)
+  - `Table.Cell` - Table data cell (`<td>`)

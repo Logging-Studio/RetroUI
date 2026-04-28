@@ -30,6 +30,7 @@
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-popover: var(--popover);
+  --color-input: var(--input);
   --background-image: var(--background-image);
   --chart-1: var(--chart-1);
   --chart-2: var(--chart-2);
@@ -57,6 +58,7 @@
   --destructive: #e63946;
   --destructive-foreground: #fff;
   --border: #000;
+  --input: #fff;
   --background-image: url("/images/banner_void_2.svg");
   --chart-1: #c4a1ff;
   --chart-2: #01ffcc;
@@ -83,6 +85,7 @@
   --destructive: #e63946;
   --destructive-foreground: #fff;
   --border: #5c5c5c;
+  --input: #fff;
   --background-image: url("/images/bg_void_3.svg");
   --chart-1: #ffdb33;
   --chart-2: #000;

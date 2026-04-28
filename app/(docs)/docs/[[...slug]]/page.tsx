@@ -1,54 +1,60 @@
-import React from "react";
+"use client";
+
 import { docs } from "#site/content";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { format } from "date-fns";
 import MDX from "@/components/MDX";
 import { Text } from "@/components/base-retroui";
-import { Metadata } from "next";
 import { MoveUpRightIcon } from "lucide-react";
 import { generateToc } from "@/lib/toc";
 import TableOfContents from "@/components/TableOfContents";
 import { CopyPageButton } from "@/components/CopyPageButton";
+import { Tab, TabGroup, TabList } from "@headlessui/react";
+import { useLibrary } from "@/contexts/LibraryContext";
+import { useEffect, useState } from "react";
 
-interface IProps {
-  params: Promise<{ slug: string[] }>;
-}
+export default function Page() {
+  const params = useParams();
+  const { library, setLibrary } = useLibrary();
+  const [toc, setToc] = useState<any[]>([]);
 
-async function getDocParams(props: IProps) {
-  const params = await props.params;
-  const slug = `/docs${params.slug ? `/${params.slug.join("/")}` : ""}`;
-  const doc = docs.find((doc) => doc.url === slug);
+  // Construct slug from params
+  const slug = Array.isArray(params.slug)
+    ? `/${params.slug.join("/")}`
+    : params.slug
+    ? `/${params.slug}`
+    : "";
 
-  if (!doc) {
-    return null;
+  // Construct the doc path based on library selection
+  const basePath = library === "baseui" ? "/components/baseui" : "/components";
+  const fullPath = slug.startsWith("/components")
+    ? slug.replace("/components", basePath)
+    : slug;
+  const docUrl = `/docs${fullPath}`;
+
+  // Find the doc based on library selection
+  let doc = docs.find((d) => d.url === docUrl);
+
+  // Fallback: if Base UI doc not found, try Radix UI doc
+  if (!doc && library === "baseui") {
+    const radixUrl = `/docs${slug}`;
+    doc = docs.find((d) => d.url === radixUrl);
   }
 
-  return doc;
-}
-
-export async function generateMetadata(props: IProps): Promise<Metadata> {
-  const doc = await getDocParams(props);
-
-  if (!doc) {
-    return {
-      title: "Not Found | Retro UI",
-    };
-  }
-
-  return {
-    title: `${doc.title} | Retro UI`,
-    description: doc.description,
-  };
-}
-
-export default async function page(props: IProps) {
-  const doc = await getDocParams(props);
+  // Generate table of contents when doc changes
+  useEffect(() => {
+    if (doc) {
+      generateToc(doc.raw).then(setToc);
+    }
+  }, [doc]);
 
   if (!doc) {
     return notFound();
   }
 
-  const toc = await generateToc(doc.raw);
+  // Calculate selected tab index based on library
+  const selectedIndex = library === "baseui" ? 1 : 0;
+
   return (
     <div className="relative flex items-start">
       {/* Main Content */}
@@ -90,7 +96,23 @@ export default async function page(props: IProps) {
             </div>
           )}
         </div>
+
         <div>
+          <TabGroup
+            selectedIndex={selectedIndex}
+            onChange={(index) => {
+              setLibrary(index === 1 ? "baseui" : "radix");
+            }}
+          >
+            <TabList className="border bg-card p-1 text-sm inline-flex">
+              <Tab className="w-20 cursor-pointer relative text-sm p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus:outline-hidden">
+                Radix UI
+              </Tab>
+              <Tab className="w-20 cursor-pointer relative p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus:outline-hidden">
+                Base UI
+              </Tab>
+            </TabList>
+          </TabGroup>
           <MDX code={doc.code} />
         </div>
         <p className="text-right">

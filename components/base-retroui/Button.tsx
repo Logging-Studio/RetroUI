@@ -18,7 +18,7 @@ export const buttonVariants = cva(
         ghost: "bg-transparent hover:bg-accent"
       },
       size: {
-        sm: "px-3 py-1 text-sm shadow hover:shadow-none",
+        sm: "px-3 py-1 text-sm shadow hover:shadow-sm",
         md: "px-4 py-1.5 text-base",
         lg: "px-6 lg:px-8 py-2 lg:py-3 text-md lg:text-lg",
         icon: "p-2",

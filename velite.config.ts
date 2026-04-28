@@ -84,11 +84,21 @@ export default defineConfig({
             const nameAttr = node.attributes?.find((attr: any) => attr.name === "name");
             const name = nameAttr?.value;
 
-            if (!name || !componentConfig?.core?.[name]) {
+            if (!name) {
               return null;
             }
 
-            const component = componentConfig.core[name];
+            // Try to get component, with fallback for Base UI
+            let component = componentConfig?.core?.[name];
+            if (!component && name.startsWith('baseui-')) {
+              // Fallback to Radix version
+              const radixName = name.replace('baseui-', '');
+              component = componentConfig?.core?.[radixName];
+            }
+
+            if (!component) {
+              return null;
+            }
             const filePath = path.join(process.cwd(), component.filePath);
             const source = fs.readFileSync(filePath, "utf8");
 
@@ -120,11 +130,21 @@ export default defineConfig({
             const nameAttr = node.attributes?.find((attr: any) => attr.name === "name");
             const name = nameAttr?.value;
 
-            if (!name || !componentConfig?.examples?.[name]) {
+            if (!name) {
               return null;
             }
 
-            const component = componentConfig.examples[name];
+            // Try to get example, with fallback for Base UI
+            let component = componentConfig?.examples?.[name];
+            if (!component && name.startsWith('baseui-')) {
+              // Fallback to Radix version
+              const radixName = name.replace('baseui-', '');
+              component = componentConfig?.examples?.[radixName];
+            }
+
+            if (!component) {
+              return null;
+            }
             const filePath = path.join(process.cwd(), component.filePath);
             const source = fs.readFileSync(filePath, "utf8");
 

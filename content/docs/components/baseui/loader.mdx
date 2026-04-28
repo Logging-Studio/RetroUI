@@ -1,0 +1,146 @@
+---
+title: Loader
+path: /components/baseui/loader
+description: A customizable loading indicator with bouncing squares. 🔄
+lastUpdated: 20 Aug, 2025
+links:
+  source: https://github.com/logging-studio/RetroUI/blob/main/components/base-retroui/Loader.tsx
+---
+
+<ComponentShowcase name="baseui-loader-style-default" />
+<br />
+<br />
+
+<ComponentInstall>
+  <ComponentInstall.Cli npmCommand="npx shadcn@latest add @retroui/baseui-loader" />
+  <ComponentInstall.Manual>
+#### 1. Install dependencies:
+
+```sh
+npm install class-variance-authority
+```
+
+<br />
+
+#### 2. Copy the code 👇 into your project:
+
+<ComponentSource name="loader" />
+
+  </ComponentInstall.Manual>
+</ComponentInstall>
+
+<br />
+<br />
+
+## Examples
+
+### Default
+
+<ComponentShowcase name="baseui-loader-style-default" />
+<br />
+<br />
+
+### Secondary
+
+<ComponentShowcase name="baseui-loader-style-solid" />
+<br />
+<br />
+
+### Outline
+
+<ComponentShowcase name="baseui-loader-style-outline" />
+<br />
+<br />
+
+### Sizes
+
+<ComponentShowcase name="baseui-loader-style-sizes" />
+<br />
+<br />
+
+### Custom Configurations
+
+<ComponentShowcase name="baseui-loader-style-custom" />
+<br />
+<br />
+
+## Usage
+
+```tsx
+import { Loader } from "@/components/ui/loader"
+
+// Default
+<Loader />
+
+// With variants
+<Loader variant="secondary" size="lg" />
+
+// Custom configuration
+<Loader
+  count={4}           // Number of squares
+  duration={1.2}      // Animation duration in seconds
+  delayStep={120}     // Delay between squares in milliseconds
+/>
+
+// Fully customized
+<Loader
+  variant="secondary"
+  size="lg"
+  count={4}
+  duration={1.2}
+  delayStep={120}
+  className="my-4"
+/>
+```
+
+## Props
+
+- - `variant`
+
+  * Type: `default` | `secondary` | `outline`
+  * Default: `default`
+  * Description: Defines the style variant for the component
+
+- - `size`
+
+  * Type: `sm` | `md` | `lg`
+  * Default: `md`
+  * Description: Controls the size of the loader squares
+
+- - `count`
+
+  * Type: `number`
+  * Default: `3`
+  * Description: Sets the number of bouncing squares
+
+- - `duration`
+
+  * Type: `number`
+  * Default: `0.5`
+  * Description: Controls the animation duration in seconds
+
+- - `delayStep`
+
+  * Type: `number`
+  * Default: `100`
+  * Description: Defines the delay between squares in milliseconds
+
+- - `className`
+
+  * Type: `string`
+  * Default: `undefined`
+  * Description: Allows for adding additional CSS classes for custom styling
+
+- - `asChild`
+  * Type: `boolean`
+  * Default: `false`
+  * Description: When `true`, merges the component's props onto its immediate child element
+
+## Accessibility
+
+The Loader component includes the following attributes:
+
+- `role="status"`
+- `aria-label="Loading..."`
+
+This ensures screen readers can properly announce the loading state to users.
