@@ -36,10 +36,10 @@ export default function ReactHomepage() {
   return (
     <main>
       <section className="bg-[url('/decor/bg-triangle-pattern.svg')] bg-cover bg-center">
-        <div className="container px-4 py-24 lg:py-28 mx-auto text-center">
-          <Image src="/images/logos/tailwind.svg" alt="figma logo" width={60} height={60} className="hidden lg:block absolute top-10 right-10 transform -rotate-30" />
-          <Image src="/images/logos/react.svg" alt="dribbble logo" width={60} height={60} className="hidden lg:block absolute bottom-10 right-12 transform -rotate-30" />
-          <Image src="/images/logos/nextjs.svg" alt="lucide logo" width={70} height={70} className="hidden lg:block absolute bottom-20 left-32 transform -rotate-30" />
+        <div className="container px-4 py-24 lg:py-28 mx-auto text-center relative">
+          {/* <Image src="/images/logos/tailwind.svg" alt="tailwind logo" width={80} height={60} className="hidden lg:block absolute top-6 right-50 transform" />
+          <Image src="/images/logos/react.svg" alt="react logo" width={70} height={70} className="hidden lg:block absolute bottom-10 right-12 transform" />
+          <Image src="/images/logos/nextjs.svg" alt="nextjs logo" width={70} height={70} className="hidden lg:block absolute bottom-30 -left-6 transform" /> */}
 
 
           <Text as="h1" className="uppercase text-5xl lg:text-6xl">

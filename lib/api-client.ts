@@ -119,7 +119,7 @@ class APIClient {
         body: JSON.stringify({
           priceId,
           promoCode: "",
-          endorsely_referral: endorselyReferral
+          endorsely_referral: endorselyReferral ?? "",
         }),
       });
 
