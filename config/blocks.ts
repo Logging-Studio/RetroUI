@@ -94,7 +94,7 @@ export const blockConfig: {
         slug: "faq-sections",
         stage: "draft",
         type: "marketing",
-        cover_image: "/placeholder.svg?height=200&width=400",
+        cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/blocks/faq.png",
         description: "Answer common questions about your product.",
         platform: "react"
     }, {
