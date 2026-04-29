@@ -27,10 +27,10 @@ export function ComponentShowcase({ name, children }: IComponentShowcase) {
   return (
     <TabGroup>
       <TabList className="border bg-card p-1 text-sm inline-flex">
-        <Tab className="w-20 cursor-pointer relative text-sm p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus:outline-hidden">
+        <Tab className="w-20 cursor-pointer relative text-sm p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           Preview
         </Tab>
-        <Tab className="w-20 cursor-pointer relative p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus:outline-hidden">
+        <Tab className="w-20 cursor-pointer relative p-1 bg-transparent data-selected:border data-selected:bg-primary data-selected:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           Code
         </Tab>
       </TabList>

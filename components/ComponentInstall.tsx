@@ -54,16 +54,16 @@ export function CliCommand({
   return (
     <TabGroup className="p-4 my-2 bg-gray-800 rounded-md text-background/90">
       <TabList className="flex space-x-4 mb-6 text-sm">
-        <Tab className="cursor-pointer text-gray-400 relative px-2 py-1 bg-transparent data-selected:border-b-2 border-accent data-selected:text-white focus:outline-hidden">
+        <Tab className="cursor-pointer text-gray-400 relative px-2 py-1 bg-transparent data-selected:border-b-2 border-accent data-selected:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           pnpm
         </Tab>
-        <Tab className="cursor-pointer text-gray-400 relative px-2 py-1 bg-transparent data-selected:border-b-2 border-accent data-selected:text-white focus:outline-hidden">
+        <Tab className="cursor-pointer text-gray-400 relative px-2 py-1 bg-transparent data-selected:border-b-2 border-accent data-selected:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           npm
         </Tab>
-        <Tab className="cursor-pointer text-gray-400 relative px-2 py-1 bg-transparent data-selected:border-b-2 border-accent data-selected:text-white focus:outline-hidden">
+        <Tab className="cursor-pointer text-gray-400 relative px-2 py-1 bg-transparent data-selected:border-b-2 border-accent data-selected:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           yarn
         </Tab>
-        <Tab className="cursor-pointer text-gray-400 relative px-2 py-1 bg-transparent data-selected:border-b-2 border-accent data-selected:text-white focus:outline-hidden">
+        <Tab className="cursor-pointer text-gray-400 relative px-2 py-1 bg-transparent data-selected:border-b-2 border-accent data-selected:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           bun
         </Tab>
       </TabList>
@@ -116,10 +116,10 @@ function ComponentInstall({ children }: IComponentShowcase) {
   return (
     <TabGroup>
       <TabList className="border-b bg-transparent flex space-x-4 mb-6 text-sm">
-        <Tab className="min-w-12 cursor-pointer relative px-2 py-1 bg-transparent data-selected:border data-selected:border-b-0 data-selected:bg-black data-selected:text-white focus:outline-hidden">
+        <Tab className="min-w-12 cursor-pointer relative px-2 py-1 bg-transparent data-selected:border data-selected:border-b-0 data-selected:bg-black data-selected:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           CLI
         </Tab>
-        <Tab className="min-w-12 cursor-pointer relative px-2 py-1 bg-transparent data-selected:border data-selected:border-b-0 data-selected:bg-black data-selected:text-white focus:outline-hidden">
+        <Tab className="min-w-12 cursor-pointer relative px-2 py-1 bg-transparent data-selected:border data-selected:border-b-0 data-selected:bg-black data-selected:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           Manual
         </Tab>
       </TabList>

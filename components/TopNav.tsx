@@ -130,7 +130,7 @@ export default function TopNav() {
                       Menu
                     </Drawer.Title>
                     <Drawer.Close asChild>
-                      <Button variant="outline" size="sm" className="p-2 bg-card">
+                      <Button variant="outline" size="sm" className="p-2 bg-card" aria-label="Close menu">
                         <X className="h-5 w-5" />
                       </Button>
                     </Drawer.Close>

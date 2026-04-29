@@ -23,7 +23,7 @@ const AccordionHeader = ({ className, children, ref, ...props }: BaseAccordion.T
     <BaseAccordion.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-start justify-between px-4 py-2 font-head cursor-pointer focus:outline-hidden [&[data-open]>svg]:rotate-180",
+        "flex flex-1 items-start justify-between px-4 py-2 font-head cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary [&[data-open]>svg]:rotate-180",
         className,
       )}
       {...props}

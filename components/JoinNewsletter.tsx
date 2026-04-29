@@ -159,16 +159,21 @@ export function JoinNewsletter() {
               onSubmit={handleSubmit}
               className="flex space-x-2 w-full lg:w-1/2"
             >
+              <label htmlFor="newsletter-email" className="sr-only">
+                Email address
+              </label>
               <Input
+                id="newsletter-email"
                 placeholder={formStyles.placeholderText}
                 value={email}
-                type="text"
+                type="email"
                 name="email"
                 required={true}
                 onChange={(e) => setEmail(e.target.value)}
+                aria-label="Email address for newsletter"
               />
 
-              <Button>Subscribe</Button>
+              <Button type="submit">Subscribe</Button>
             </form>
           </div>
         </div>
@@ -215,6 +220,7 @@ export function JoinNewsletter() {
         onMouseOut={() => setIsHovered(false)}
         onMouseOver={() => setIsHovered(true)}
         onClick={resetForm}
+        aria-label="Go back to subscription form"
       >
         &larr; Back
       </button>

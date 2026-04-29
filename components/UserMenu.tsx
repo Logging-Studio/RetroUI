@@ -19,7 +19,7 @@ export default function UserMenu({ user }: { user: UserType }) {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <button className="outline-none">
+        <button className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" aria-label="Open user menu">
           <Avatar className="w-10 h-10 cursor-pointer border" {...genConfig(user?.email || "User")} />
         </button>
       </DropdownMenu.Trigger>

@@ -44,6 +44,7 @@ export function CopyPageButton({ rawContent, title }: CopyPageButtonProps) {
       <button
         onClick={handleCopy}
         className="flex items-center gap-2 px-3 py-1.5 hover:bg-accent transition-colors text-sm font-medium"
+        aria-label="Copy page content to clipboard"
       >
         {copied ? (
           <CheckIcon className="h-3.5 w-3.5" />
@@ -59,7 +60,7 @@ export function CopyPageButton({ rawContent, title }: CopyPageButtonProps) {
       {/* Dropdown Menu */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button className="px-2 py-1.5 hover:bg-accent transition-colors focus:ring-none">
+          <button className="px-2 py-1.5 hover:bg-accent transition-colors focus:ring-none" aria-label="More copy options" aria-haspopup="menu">
             <ChevronDownIcon className="h-3.5 w-3.5" />
           </button>
         </DropdownMenuTrigger>

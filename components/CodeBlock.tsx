@@ -45,6 +45,8 @@ export function CodeBlock({ className, children, ...props }: ICodeBlock) {
           className="absolute top-4 right-4 z-10"
           size="sm"
           onClick={handleClickCopy}
+          aria-label="Copy code to clipboard"
+          aria-live="polite"
         >
           {hasCopied ? "Copied" : "Copy"}
         </Button>

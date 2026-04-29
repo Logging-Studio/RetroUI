@@ -15,6 +15,8 @@ export default function HamburgerMenu() {
         variant="outline"
         className="p-2"
         onClick={() => setIsOpen((prev) => !prev)}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isOpen}
       >
         {isOpen ? (
           <X className="h-4 w-4" />
@@ -24,10 +26,14 @@ export default function HamburgerMenu() {
       </Button>
 
       {isOpen && (
-        <div
-          className="absolute top-0 left-0 right-0 w-full h-screen bg-black opacity-50"
+        <button
+          className="absolute top-0 left-0 right-0 w-full h-screen bg-black opacity-50 cursor-default"
           onClick={() => setIsOpen(false)}
-        />
+          aria-label="Close menu overlay"
+          tabIndex={0}
+        >
+          <span className="sr-only">Close menu</span>
+        </button>
       )}
 
       {isOpen && (
