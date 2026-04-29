@@ -5,7 +5,7 @@ export const templateConfig = {
             slug: "brutstack",
             stage: "published",
             type: "marketing",
-            live_demo_url: "https://brutstack.retroui.dev",
+            live_demo_url: "https://brutstack-retroui-template.vercel.app",
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_1.png",

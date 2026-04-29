@@ -61,16 +61,6 @@ export default function TemplatesPage() {
         <div className="flex items-start mb-4">
           <Text as="h1">
             Modern React{" "}
-            {/* <span className="relative inline-flex items-center">
-              Templates
-              <Image
-                src="/decor/pay.svg"
-                alt="templates decoration"
-                width={60}
-                height={60}
-                className="h-[60px] w-[60px] -ml-2 -mt-2 inline-block"
-              />
-            </span> */}
             <span className="relative text-outline-foreground text-shadow-foreground">
               <Image src="/decor/paint_brush.svg" alt="components decoration" width={100} height={100} className="absolute h-[100px] w-[100px] -left-14 -top-8" />
               Templates
@@ -193,7 +183,7 @@ function TemplatesGrid({
                   View Details
                 </button>
               </Link>
-              <Button variant="link" className="flex-1">Live Preview <ArrowUpRight className="ml-2" /></Button>
+              <Button variant="link" className="flex-1" render={<Link href={template.live_demo_url} target="_blank">Live Preview <ArrowUpRight className="ml-2" /></Link>} />
             </div>
           </div>
         </div>

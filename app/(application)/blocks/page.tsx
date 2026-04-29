@@ -38,7 +38,7 @@ export default function BlocksPage() {
     <main className="container mx-auto px-4 py-16">
       {/* Header Section */}
       <div className="mb-12">
-        <div className="flex">
+        <div className="flex mb-2">
           <Text as="h1">
             RetroUI {" "}
             <span className="text-outline-foreground-sm text-shadow-foreground-sm">Blocks</span>
@@ -46,9 +46,9 @@ export default function BlocksPage() {
           <Image
             src="/decor/lego.svg"
             alt="blocks decoration"
-            width={60}
-            height={60}
-            className="h-[60px] w-[60px] -ml-6 -mt-4"
+            width={80}
+            height={80}
+            className="-ml-6 -mt-4"
           />
         </div>
         <p className="text-muted-foreground max-w-4xl">
@@ -66,7 +66,7 @@ export default function BlocksPage() {
       >
         <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center mb-12">
           {/* Tabs */}
-          <Tabs.List className="flex flex-row space-x-2">
+          <Tabs.List className="flex flex-wrap flex-row space-x-2">
             <Tabs.Trigger value="all">
               <ListMinus className="w-4 h-4 mr-2" />
               All Blocks

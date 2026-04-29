@@ -359,7 +359,7 @@ export default function ReactHomepage() {
                       View Details
                     </button>
                   </Link>
-                  <Button variant="link" className="flex-1">Live Preview <ArrowUpRight className="ml-2" /></Button>
+                  <Button variant="link" className="flex-1" render={<Link href={template.live_demo_url} target="_blank">Live Preview <ArrowUpRight className="ml-2" /></Link>} />
                 </div>
               </div>
             </div>
