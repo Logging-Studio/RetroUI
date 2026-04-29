@@ -70,13 +70,13 @@ export const componentConfig: {
     calendar: {
       name: "calendar",
       filePath: "components/retroui/Calendar.tsx",
-      cover: "/images/components/calender.svg",
+      cover: "/images/components/calendar.svg",
       description: "Date picker interfaces.",
     },
     card: {
       name: "card",
       filePath: "components/retroui/Card.tsx",
-      cover: "/images/components/card.svg",
+      cover: "/images/components/card.png",
       description: "Content containers.",
     },
     carousel: {
@@ -163,7 +163,7 @@ export const componentConfig: {
     progress: {
       name: "progress",
       filePath: "components/retroui/Progress.tsx",
-      cover: "/images/components/progress.svg",
+      cover: "/images/components/progress.png",
       description: "Progress bar indicators.",
     },
     radio: {
@@ -182,7 +182,7 @@ export const componentConfig: {
       name: "slider",
       dependencies: ["@radix-ui/react-slider"],
       filePath: "components/retroui/Slider.tsx",
-      cover: "/images/components/slider.svg",
+      cover: "/images/components/slider.png",
       description: "Range input controls.",
     },
     sonner: {

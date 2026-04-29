@@ -27,7 +27,7 @@ const coreComponents = Object.entries(componentConfig.core)
   .map(([key, component]) => ({
     id: key,
     ...component,
-    displayName: component.name.toUpperCase().replace(/-/g, " "),
+    displayName: component.name.charAt(0).toUpperCase() + component.name.slice(1).replace(/-/g, " "),
   }));
 
 
@@ -252,7 +252,7 @@ export default function ReactHomepage() {
 
                   {/* Text Section */}
                   <div className="p-4 border-t-2">
-                    <Text as="h3" className="mb-2">
+                    <Text as="h4" className="mb-2">
                       {component.displayName}
                     </Text>
                     <p className="text-sm text-muted-foreground">
@@ -304,7 +304,7 @@ export default function ReactHomepage() {
                     />
                   </div>
                   <div className="p-6">
-                    <Text as="h3" className="mb-2">{block.name}</Text>
+                    <Text as="h4" className="mb-2">{block.name}</Text>
                     <p className="text-sm text-muted-foreground">{block.description}</p>
                   </div>
                 </Card.Content>
@@ -349,7 +349,7 @@ export default function ReactHomepage() {
               </div>
 
               <div>
-                <Text as="h3" className="mb-2 font-normal">{template.name}</Text>
+                <Text as="h4" className="mb-2 font-normal">{template.name}</Text>
                 <Text className="text-sm text-muted-foreground mb-4">{template.description}</Text>
                 <div className="flex justify-between gap-6">
                   <Link href={`/templates/${template.slug}`} className="relative inline-block group flex-1">

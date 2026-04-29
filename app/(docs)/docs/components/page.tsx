@@ -7,11 +7,11 @@ import Link from "next/link";
 
 export default function ComponentsPage() {
   const coreComponents = Object.entries(componentConfig.core)
-    .filter(([_, component]) => component.cover)
+    .filter(([_, component]) => component.cover && !component.name.includes("baseui"))
     .map(([key, component]) => ({
       id: key,
       ...component,
-      displayName: component.name.toUpperCase().replace(/-/g, " "),
+      displayName: component.name.charAt(0).toUpperCase() + component.name.slice(1).replace(/-/g, " "),
     }));
 
   return (
@@ -50,7 +50,7 @@ export default function ComponentsPage() {
 
                   {/* Text Section */}
                   <div className="p-4 border-t-2">
-                    <Text as="h3" className="mb-2 uppercase">
+                    <Text as="h4" className="mb-2">
                       {component.displayName}
                     </Text>
                     <p className="text-sm text-muted-foreground">

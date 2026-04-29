@@ -140,7 +140,7 @@ function BlocksGrid({ blocks }: { blocks: typeof blockConfig.blocks }) {
                 />
               </div>
               <div className="p-6">
-                <Text as="h3" className="mb-2">
+                <Text as="h4" className="mb-2">
                   {block.name}
                 </Text>
                 <p className="text-sm text-muted-foreground">
