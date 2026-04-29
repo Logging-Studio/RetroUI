@@ -89,7 +89,7 @@ export default function ReactHomepage() {
           <Text as="h2" className="uppercase text-4xl lg:text-5xl">
             <span className="relative text-outline-foreground text-shadow-foreground">
               <Image src="/decor/pen_design.svg" alt="components decoration" width={140} height={140} className="absolute h-[140px] w-[140px] -left-18 -top-14" />
-              Desiged to Ship Fast
+              Designed to Ship Fast
             </span>
             <br />
             Without Looking Boring
