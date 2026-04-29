@@ -1,5 +1,5 @@
 import "./global.css";
-import { Archivo_Black, Space_Mono, Geist } from "next/font/google";
+import { Archivo_Black, Space_Mono, Geist, Space_Grotesk } from "next/font/google";
 import { Metadata } from "next";
 import { Toaster } from "@/components/base-retroui";
 import { Analytics } from "@vercel/analytics/next";
@@ -9,7 +9,6 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { getCurrentUser } from "@/lib/auth";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const head = Archivo_Black({
   subsets: ["latin"],
@@ -17,6 +16,8 @@ const head = Archivo_Black({
   variable: "--font-head",
   display: "swap",
 });
+
+const space = Space_Grotesk({ subsets: ['latin'], variable: '--font-sans' });
 
 const mono = Space_Mono({
   subsets: ["latin"],
@@ -43,7 +44,7 @@ export default async function RootLayout({
   const user = await getCurrentUser();
 
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en" className={cn("font-sans", space.variable)}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -66,7 +67,7 @@ export default async function RootLayout({
         <script async src="https://assets.endorsely.com/endorsely.js" data-endorsely="7e205a3d-7039-41f3-9b4f-52929d5489d2" />
       </head>
       <body
-        className={`${head.variable} ${geist.variable} ${mono.variable} bg-background text-foreground`}
+        className={`${head.variable} ${space.variable} ${mono.variable} bg-background text-foreground`}
       >
         <ThemeProvider>
           <AuthProvider initialUser={user}>

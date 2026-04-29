@@ -141,7 +141,7 @@ export const templateConfig = {
                 "Easy to customize"
             ],
             color: "#FFEA8E",
-            description: "A bright and bold SaaS template with a focus on AI image generation. Use this for your next million dollor AI Wrapper",
+            description: "A bright and bold SaaS template with a focus on AI image generation. Use this for your next million dollar AI Wrapper",
             platform: "react",
             version: "1.0.0",
             release_date: "10 September, 2025",
