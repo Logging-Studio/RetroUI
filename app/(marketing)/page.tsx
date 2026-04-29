@@ -54,16 +54,16 @@ export default function ReactHomepage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
 
-            <div className="relative inline-block group">
+            <Link className="relative inline-block group" href="/blocks">
               {/* Outline frame - sits behind, extends to cover shadow */}
               <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 bg-primary transition-all duration-200" />
 
               <button className="px-4 py-1.5 text-lg font-head border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5">
                 Browse Blocks
               </button>
-            </div>
-            <Button variant="link" className="text-lg">
-              All Products <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
+            <Button variant="link" className="text-lg" render={<Link href="/pricing" />}>
+              Get All Access <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
           </div>
 
@@ -266,7 +266,7 @@ export default function ReactHomepage() {
         </div>
 
         <div className="flex justify-center">
-          <Button>
+          <Button render={<Link href="/docs/components" />}>
             View All Components <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
@@ -331,7 +331,7 @@ export default function ReactHomepage() {
               Templates
             </span>
           </Text>
-          <Button className="bg-primary">Explore RetroUI Pro</Button>
+          <Button className="bg-primary" render={<Link href="/templates">All Templates</Link>} />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
