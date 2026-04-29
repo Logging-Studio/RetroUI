@@ -36,7 +36,7 @@ export function ComponentShowcase({ name, children }: IComponentShowcase) {
       </TabList>
       <TabPanels>
         <TabPanel>
-          <div className="border px-6 lg:px-12 py-24 flex justify-center items-center min-h-80 mt-4 relative bg-card">
+          <div className="border px-4 lg:px-12 py-24 flex justify-center items-center min-h-80 mt-4 relative bg-card">
             {Preview ? <Preview /> : <div className="text-muted-foreground">Preview not available</div>}
           </div>
         </TabPanel>

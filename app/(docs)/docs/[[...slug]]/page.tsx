@@ -63,7 +63,7 @@ export default function Page() {
       {/* Main Content */}
       <div className="flex-1 space-y-12 max-w-2xl mx-auto w-full">
         <div className="border-b pb-6">
-          <div className="flex items-start justify-between gap-4 mb-8">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-4 mb-8">
             <div className="flex-1">
               <Text as="h1" className="lg:text-4xl">
                 <span className="text-card text-outline-foreground text-shadow-foreground">

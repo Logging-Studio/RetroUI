@@ -18,7 +18,7 @@ const CopyableCommand = ({ command }: { command: string }) => {
 
   return (
     <div className="flex items-center justify-between gap-2 group">
-      <code className="flex-1">{command}</code>
+      <code className="flex-1 overflow-x-auto">{command}</code>
       <Button size="sm" onClick={copyToClipboard} className="hidden md:block" title="Copy to clipboard">
         {copied ? "Copied" : "Copy"}
       </Button>
@@ -52,7 +52,7 @@ export function CliCommand({
   }
 
   return (
-    <TabGroup className="p-4 my-2 bg-gray-800 rounded-md text-background/90">
+    <TabGroup className="p-4 my-2 bg-gray-800 rounded-md text-background/90 w-full">
       <TabList className="flex space-x-4 mb-6 text-sm">
         <Tab className="cursor-pointer text-gray-400 relative px-2 py-1 bg-transparent data-selected:border-b-2 border-accent data-selected:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
           pnpm

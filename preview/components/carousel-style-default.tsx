@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react"
-
 import { Card } from "@/components/retroui/Card"
 import {
     Carousel,
@@ -9,7 +7,7 @@ import {
 
 export default function CarouselStyleDefault() {
     return (
-        <Carousel className="w-full max-w-xs">
+        <Carousel className="w-1/2 md:w-full max-w-xs">
             <Carousel.Content>
                 {Array.from({ length: 5 }).map((_, index) => (
                     <Carousel.Item key={index}>
