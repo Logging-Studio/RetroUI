@@ -39,7 +39,7 @@ export default function BlocksPage() {
       {/* Header Section */}
       <div className="mb-12">
         <div className="flex">
-          <Text as="h1" className="uppercase text-3xl lg:text-4xl">
+          <Text as="h1">
             RetroUI {" "}
             <span className="text-outline-foreground-sm text-shadow-foreground-sm">Blocks</span>
           </Text>

@@ -18,8 +18,8 @@ export default function ComponentsPage() {
     <main className="min-h-screen lg:ml-12">
         {/* Header */}
         <div className="mb-12">
-          <Text as="h1" className="mb-4 uppercase relative lg:text-4xl">
-            <Image src="/decor/react_blue.svg" alt="React" width={60} height={60} className="inline-block absolute -top-4 -left-10" />
+          <Text as="h1" className="mb-4 uppercase relative">
+            <Image src="/decor/react_blue.svg" alt="React" width={80} height={80} className="inline-block absolute -top-4 -left-12" />
             <span className="text-card text-outline-foreground text-shadow-foreground">React</span> Components
           </Text>
           <p className="text-muted-foreground max-w-4xl mb-6">

@@ -174,7 +174,7 @@ export const blockConfig: {
         slug: "sidebar",
         stage: "published",
         type: "application",
-        cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/blocks/sidebar.png",
+        cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/blocks/siebar.png",
         description: "Application sidebars and navigation panels.",
         platform: "react"
     }, {
