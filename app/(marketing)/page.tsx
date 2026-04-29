@@ -214,7 +214,7 @@ export default function ReactHomepage() {
       </section>
 
       {/* UI Components Section */}
-      <section className="container max-w-7xl mx-auto px-4 py-28 space-y-14">
+      <section className="container mx-auto px-4 py-28 space-y-14">
         <div className="text-center space-y-6">
           <Text as="h2" className="uppercase text-4xl lg:text-5xl">
             Neo Brutalist UI
@@ -234,7 +234,7 @@ export default function ReactHomepage() {
           {coreComponents.map((component) => (
             <Link
               key={component.id}
-              href={`/components/${component.id}`}
+              href={`/docs/components/${component.id}`}
               className="group"
             >
               <Card className="w-full">
@@ -291,23 +291,25 @@ export default function ReactHomepage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blockConfig.blocks.slice(0, 9).map((block) => (
-            <Card key={block.slug} className="w-full group overflow-hidden">
-              <Card.Content className="p-0">
-                <div className="w-full h-auto bg-white flex items-center justify-center border-b-2 overflow-hidden">
-                  <Image
-                    src={block.cover_image}
-                    alt={block.name}
-                    width={500}
-                    height={300}
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <Text as="h5" className="mb-2">{block.name}</Text>
-                  <p className="text-sm text-muted-foreground">{block.description}</p>
-                </div>
-              </Card.Content>
-            </Card>
+            <Link key={block.slug} href={`/blocks/${block.slug}`}>
+              <Card className="w-full group overflow-hidden">
+                <Card.Content className="p-0">
+                  <div className="w-full h-auto bg-white flex items-center justify-center border-b-2 overflow-hidden">
+                    <Image
+                      src={block.cover_image}
+                      alt={block.name}
+                      width={500}
+                      height={300}
+                      className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <Text as="h3" className="mb-2">{block.name}</Text>
+                    <p className="text-sm text-muted-foreground">{block.description}</p>
+                  </div>
+                </Card.Content>
+              </Card>
+            </Link>
           ))}
         </div>
 

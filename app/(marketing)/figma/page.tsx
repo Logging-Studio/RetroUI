@@ -40,13 +40,12 @@ export default function FigmaHomepage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
             <div className="relative inline-block group">
               <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 bg-primary transition-all duration-200" />
-              <button className="px-6 py-3 font-head border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5 flex items-center gap-2">
-                <Figma className="w-4 h-4" />
-                Get Started
-              </button>
+              <a href="https://www.figma.com/design/B6pBWOppQhrykmIz7fKsRY/RetroUI-Pro-Figma-%7C-v-1.3.0?node-id=4470-1149&t=MdhjWjH05QdSGtQt-1" target="_blank" className="px-6 py-3 font-head border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5 flex items-center gap-2">
+                Live Preview
+              </a>
             </div>
-            <Button variant="link">
-              Notion Docs
+            <Button variant="link" render={<Link href="/pricing" />}>
+              Access Now
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
@@ -70,21 +69,17 @@ export default function FigmaHomepage() {
             </div>
 
             {/* Figma Interface */}
-            <div className="bg-white h-[500px] flex items-center justify-center relative overflow-hidden">
-              {/* Placeholder for Figma screenshot */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100" />
-              <div className="relative text-center z-10">
-                <div className="mb-6 relative">
-                  <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-full" />
-                  <Figma className="w-32 h-32 mx-auto text-gray-300 relative" />
-                </div>
-                <Text className="text-gray-400 text-3xl font-bold mb-2">
-                  Figma Interface Preview
-                </Text>
-                <Text className="text-gray-400 text-sm">
-                  Complete design system with components
-                </Text>
-              </div>
+            <div className="bg-white h-[320px] lg:h-[600px] flex items-center justify-center relative overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/figma-kit/v1.2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
@@ -196,7 +191,7 @@ export default function FigmaHomepage() {
 
       <StatsSection />
       {/* Figma Preview Window */}
-      <section className="container max-w-7xl mx-auto px-4 py-24">
+      {/* <section className="container max-w-7xl mx-auto px-4 py-24">
         <div className="text-center mb-12">
           <Text as="h2" className="uppercase mb-4 text-4xl lg:text-5xl">
             <span className="relative inline-block">
@@ -220,7 +215,6 @@ export default function FigmaHomepage() {
           <div className="absolute -bottom-2 -right-2 left-2 top-2 border-2 border-black bg-gray-300" />
           <Card className="relative bg-white border-2 border-black shadow-none">
             <Card.Content className="p-4">
-              {/* Browser Top Bar */}
               <div className="bg-white border-2 border-black p-3 flex items-center gap-3">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 bg-[#FF5F56] rounded-full border border-black" />
@@ -232,7 +226,6 @@ export default function FigmaHomepage() {
                 </div>
               </div>
 
-              {/* Preview Content */}
               <div className="bg-gray-100 border-2 border-black border-t-0 h-[500px] flex items-center justify-center">
                 <div className="text-center">
                   <div className="mb-6 relative">
@@ -248,7 +241,6 @@ export default function FigmaHomepage() {
                 </div>
               </div>
 
-              {/* Browser Bottom Bar */}
               <div className="bg-[#FFD93D] border-2 border-black border-t-0 p-3 flex items-center justify-center gap-2">
                 <div className="w-2.5 h-2.5 bg-black rounded-full" />
                 <div className="w-2.5 h-2.5 bg-black/30 rounded-full" />
@@ -258,7 +250,7 @@ export default function FigmaHomepage() {
           </Card>
         </div>
       </section>
-
+ */}
 
       {/* Start Building CTA */}
       <section className="container max-w-7xl mx-auto px-4 py-24">
