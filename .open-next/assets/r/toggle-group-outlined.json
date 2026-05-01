@@ -1,0 +1,18 @@
+{
+  "name": "toggle-group-style-outline-muted",
+  "title": "toggle-group-style-outline-muted",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://retroui.dev/r/toggle.json",
+    "https://retroui.dev/r/toggle-group.json"
+  ],
+  "dependencies": ["lucide-react"],
+  "files": [
+    {
+      "path": "preview/components/toggle-group-style-outline-muted.tsx",
+      "target": "components/retroui/preview/toggle-group-style-outline-muted.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { ToggleGroup, ToggleGroupItem } from \"@/components/retroui\";\nimport { Bold, Italic, Underline } from \"lucide-react\";\n\nexport default function ToggleGroupStyleOutlined() {\n  return (\n    <ToggleGroup type=\"multiple\" variant=\"outlined\">\n      <ToggleGroupItem value=\"bold\">\n        <Bold className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n\n      <ToggleGroupItem value=\"italic\">\n        <Italic className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n\n      <ToggleGroupItem value=\"underline\">\n        <Underline className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n    </ToggleGroup>\n  );\n}\n"
+    }
+  ]
+}

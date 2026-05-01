@@ -1,0 +1,3 @@
+module.exports=[746984,a=>{"use strict";var b=a.i(201918),c=a.i(174162);a.s(["default",0,function(){return(0,b.jsxs)("div",{className:"space-x-4",children:[(0,b.jsx)(c.Badge,{variant:"solid",className:"rounded-sm",children:"Rounded"}),(0,b.jsx)(c.Badge,{variant:"solid",className:"rounded-full",children:"Full"})]})}])}];
+
+//# sourceMappingURL=preview_components_badge-style-rounded_tsx_0k.i9gr._.js.map

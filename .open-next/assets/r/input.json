@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input",
+  "type": "registry:component",
+  "title": "Input",
+  "description": "This pretty input makes your users want to type stuff! ⌨️",
+  "files": [
+    {
+      "path": "components/retroui/Input.tsx",
+      "content": "import React, { InputHTMLAttributes } from \"react\";\n\ninterface InputProps extends InputHTMLAttributes<HTMLInputElement> {\n  className?: string;\n}\n\nexport const Input: React.FC<InputProps> = ({\n  type = \"text\",\n  placeholder = \"Enter text\",\n  className = \"\",\n  ...props\n}) => {\n  return (\n    <input\n      type={type}\n      placeholder={placeholder}\n      className={`px-4 py-2 w-full rounded border-2 shadow-md transition focus:outline-hidden focus:shadow-xs ${\n        props[\"aria-invalid\"]\n          ? \"border-destructive text-destructive shadow-xs shadow-destructive\"\n          : \"\"\n      } ${className}`}\n      {...props}\n    />\n  );\n};\n",
+      "type": "registry:component",
+      "target": "components/retroui/Input.tsx"
+    }
+  ]
+}

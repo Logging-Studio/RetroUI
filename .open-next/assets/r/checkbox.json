@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox",
+  "type": "registry:component",
+  "title": "Checkbox",
+  "description": "Let users confirm or reject an option.",
+  "dependencies": [
+    "@radix-ui/react-checkbox",
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Checkbox.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\nimport * as CheckboxPrimitive from \"@radix-ui/react-checkbox\";\nimport { cva, VariantProps } from \"class-variance-authority\";\nimport { Check } from \"lucide-react\";\n\nconst checkboxVariants = cva(\"border-2 rounded\", {\n  variants: {\n    variant: {\n      default: \"data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground \",\n      outline: \"\",\n      solid:\n        \"data-[state=checked]:bg-foreground data-[state=checked]:text-background\",\n    },\n    size: {\n      sm: \"h-4 w-4\",\n      md: \"h-5 w-5\",\n      lg: \"h-6 w-6\",\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n    size: \"md\",\n  },\n});\n\ninterface CheckboxProps\n  extends React.ComponentProps<typeof CheckboxPrimitive.Root>,\n    VariantProps<typeof checkboxVariants> {}\n\nexport const Checkbox = ({\n  className,\n  size,\n  variant,\n  ...props\n}: CheckboxProps) => (\n  <CheckboxPrimitive.Root\n    className={cn(\n      checkboxVariants({\n        size,\n        variant,\n      }),\n      className,\n    )}\n    {...props}\n  >\n    <CheckboxPrimitive.Indicator className=\"h-full w-full\">\n      <Check className=\"h-full w-full\" />\n    </CheckboxPrimitive.Indicator>\n  </CheckboxPrimitive.Root>\n);\n",
+      "type": "registry:component",
+      "target": "components/retroui/Checkbox.tsx"
+    }
+  ]
+}

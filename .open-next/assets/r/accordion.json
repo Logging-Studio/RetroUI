@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion",
+  "type": "registry:component",
+  "title": "Accordion",
+  "description": "This collapsible component let's your users read only the content they care about. 😌",
+  "dependencies": [
+    "@radix-ui/react-accordion",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Accordion.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport * as AccordionPrimitive from \"@radix-ui/react-accordion\";\nimport { ChevronDown } from \"lucide-react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst Accordion = AccordionPrimitive.Root;\n\nconst AccordionItem = React.forwardRef<\n  React.ElementRef<typeof AccordionPrimitive.Item>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>\n>(({ className, ...props }, ref) => (\n  <AccordionPrimitive.Item\n    ref={ref}\n    className={cn(\n      \"border-2 bg-background rounded text-foreground shadow-md hover:shadow-sm data-[state=open]:shadow-sm transition-all overflow-hidden\",\n      className,\n    )}\n    {...props}\n  />\n));\nAccordionItem.displayName = AccordionPrimitive.Item.displayName;\n\nconst AccordionHeader = React.forwardRef<\n  React.ElementRef<typeof AccordionPrimitive.Trigger>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>\n>(({ className, children, ...props }, ref) => (\n  <AccordionPrimitive.Header className=\"flex\">\n    <AccordionPrimitive.Trigger\n      ref={ref}\n      className={cn(\n        \"flex flex-1 items-start justify-between px-4 py-2 font-head cursor-pointer focus:outline-hidden [&[data-state=open]>svg]:rotate-180\",\n        className,\n      )}\n      {...props}\n    >\n      {children}\n      <ChevronDown className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\n    </AccordionPrimitive.Trigger>\n  </AccordionPrimitive.Header>\n));\nAccordionHeader.displayName = AccordionPrimitive.Header.displayName;\n\nconst AccordionContent = React.forwardRef<\n  React.ElementRef<typeof AccordionPrimitive.Content>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>\n>(({ className, children, ...props }, ref) => (\n  <AccordionPrimitive.Content\n    ref={ref}\n    className=\"overflow-hidden font-body bg-white text-gray-700 data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up\"\n    {...props}\n  >\n    <div className={cn(\"px-4 pt-2 pb-4\", className)}>{children}</div>\n  </AccordionPrimitive.Content>\n));\n\nAccordionContent.displayName = AccordionPrimitive.Content.displayName;\n\nconst AccordionComponent = Object.assign(Accordion, {\n  Item: AccordionItem,\n  Header: AccordionHeader,\n  Content: AccordionContent,\n});\n\nexport { AccordionComponent as Accordion };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Accordion.tsx"
+    }
+  ]
+}

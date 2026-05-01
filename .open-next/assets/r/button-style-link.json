@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-style-link",
+  "type": "registry:block",
+  "title": "button-style-link",
+  "registryDependencies": [
+    "https://retroui.dev/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/button-style-link.tsx",
+      "content": "import { Button } from \"@/components/retroui/Button\";\n\nexport default function ButtonStyleLink() {\n  return <Button variant=\"link\">Click Me!</Button>;\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/button-style-link.tsx"
+    }
+  ]
+}

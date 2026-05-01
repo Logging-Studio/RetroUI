@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-style-default",
+  "type": "registry:block",
+  "title": "select-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/select.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/select-style-default.tsx",
+      "content": "import { Select } from \"@/components/retroui/Select\";\nimport React from \"react\";\n\nexport default function SelectStyleDefault() {\n  return (\n    <Select>\n      <Select.Trigger className=\"w-60\">\n        <Select.Value placeholder=\"Pick your Pokemon\" />\n      </Select.Trigger>\n      <Select.Content>\n        <Select.Group>\n          <Select.Item value=\"pikachu\">Pikachu</Select.Item>\n          <Select.Item value=\"charizard\">Charizard</Select.Item>\n          <Select.Item value=\"bulbasaur\">Bulbasaur</Select.Item>\n          <Select.Item value=\"squirtle\">Squirtle</Select.Item>\n        </Select.Group>\n      </Select.Content>\n    </Select>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/select-style-default.tsx"
+    }
+  ]
+}

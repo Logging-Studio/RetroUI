@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label",
+  "type": "registry:component",
+  "title": "Label",
+  "description": "Label for form fields",
+  "dependencies": [
+    "@radix-ui/react-label",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Label.tsx",
+      "content": "import * as React from \"react\";\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\nimport { cva } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst labelVariants = cva(\n  \"leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\",\n);\n\nexport const Label = ({\n  className,\n  ...props\n}: React.ComponentProps<typeof LabelPrimitive.Root>) => (\n  <LabelPrimitive.Root className={cn(labelVariants(), className)} {...props} />\n);\n",
+      "type": "registry:component",
+      "target": "components/retroui/Label.tsx"
+    }
+  ]
+}

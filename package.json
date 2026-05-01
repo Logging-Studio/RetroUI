@@ -10,11 +10,15 @@
     "build": "pnpm build:content && next build",
     "start": "next start",
     "lint": "eslint .",
-    "registry:build": "shadcn build"
+    "registry:build": "shadcn build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
     "@headlessui/react": "^2.1.9",
+    "@opennextjs/cloudflare": "^1.19.5",
     "@payloadcms/richtext-lexical": "^3.71.1",
     "@payloadcms/sdk": "^3.71.1",
     "@radix-ui/react-accordion": "^1.2.1",
@@ -82,7 +86,8 @@
     "tailwindcss": "^4.0.14",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5",
-    "velite": "^0.3.1"
+    "velite": "^0.3.1",
+    "wrangler": "^4.87.0"
   },
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
   "pnpm": {

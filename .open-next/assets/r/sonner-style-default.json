@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-style-default",
+  "type": "registry:block",
+  "title": "sonner-style-default",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://retroui.dev/r/sonner.json",
+    "https://retroui.dev/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/sonner-style-default.tsx",
+      "content": "import { Button } from \"@/components/retroui\";\nimport { toast } from \"sonner\";\n\nexport default function SonnerStyleDefault() {\n  const onClick = () => {\n    toast(\"Event has been created\", {\n      description: \"Sunday, December 03, 2025\",\n      cancel: {\n        label: \"Undo\",\n        onClick: () => {},\n      },\n    });\n  };\n\n  return <Button onClick={onClick}>Show Toast</Button>;\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/sonner-style-default.tsx"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-style-default",
+  "type": "registry:block",
+  "title": "card-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/card-style-default.tsx",
+      "content": "import { Card } from \"@/components/retroui/Card\";\n\nexport default function BasicCard() {\n  return (\n    <Card>\n      <Card.Header>\n        <Card.Title>This is Card Title</Card.Title>\n        <Card.Description>\n          I can not find what to write here.. so imagine I wrote some good\n          stuff.\n        </Card.Description>\n      </Card.Header>\n    </Card>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/card-style-default.tsx"
+    }
+  ]
+}

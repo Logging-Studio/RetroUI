@@ -1,0 +1,3 @@
+module.exports=[359085,a=>{"use strict";var b=a.i(201918),c=a.i(727239),d=a.i(98503);a.s(["default",0,function(){return(0,b.jsxs)("div",{className:"grid w-full max-w-sm items-center gap-1.5",children:[(0,b.jsx)(d.Label,{htmlFor:"pokemon",children:"Favorite Pokemon"}),(0,b.jsx)(c.Input,{type:"pokemon",id:"pokemon",placeholder:"Charmander",defaultValue:"Son Goku","aria-invalid":!0}),(0,b.jsx)("p",{className:"text-sm text-red-500",children:"Please provide a valid pokemon!"})]})}])}];
+
+//# sourceMappingURL=preview_components_input-style-error_tsx_0.g.y57._.js.map

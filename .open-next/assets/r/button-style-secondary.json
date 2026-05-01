@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-style-secondary",
+  "type": "registry:block",
+  "title": "button-style-secondary",
+  "registryDependencies": [
+    "https://retroui.dev/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/button-style-secondary.tsx",
+      "content": "import { Button } from \"@/components/retroui/Button\";\n\nexport default function ButtonStyleSecondary() {\n  return <Button variant=\"secondary\">Click Me!</Button>;\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/button-style-secondary.tsx"
+    }
+  ]
+}

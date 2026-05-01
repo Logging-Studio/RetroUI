@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,907243,t=>{"use strict";var e=t.i(157700),i=t.i(968739);t.s(["default",0,function(){return(0,e.jsx)(i.Button,{children:"Click Me!"})}])}]);

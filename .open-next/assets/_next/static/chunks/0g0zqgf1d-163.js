@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,479923,i=>{"use strict";var e=i.i(157700),t=i.i(544230);i.s(["default",0,function(){return(0,e.jsx)("div",{className:"flex items-center space-x-2",children:(0,e.jsx)(t.Switch,{id:"notification",disabled:!0})})}])}]);

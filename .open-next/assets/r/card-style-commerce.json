@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-style-commerce",
+  "type": "registry:block",
+  "title": "card-style-commerce",
+  "registryDependencies": [
+    "https://retroui.dev/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/card-style-commerce.tsx",
+      "content": "import { Button } from \"@/components/retroui/Button\";\nimport { Card } from \"@/components/retroui/Card\";\n\nexport default function CommerceCard() {\n  return (\n    <Card className=\"w-[350px] shadow-none hover:shadow-none\">\n      <Card.Content className=\"pb-0\">\n        <img\n          src=\"/images/gameboy.jpg\"\n          className=\"w-full h-full\"\n          alt=\"Gameboy\"\n        />\n      </Card.Content>\n      <Card.Header className=\"pb-0\">\n        <Card.Title>Classic 8-bit Gameboy</Card.Title>\n      </Card.Header>\n      <Card.Content className=\"flex justify-between items-center\">\n        <p className=\"text-lg font-semibold\">$29.90</p>\n        <Button>Add to cart</Button>\n      </Card.Content>\n    </Card>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/card-style-commerce.tsx"
+    }
+  ]
+}

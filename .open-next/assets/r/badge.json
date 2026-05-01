@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge",
+  "type": "registry:component",
+  "title": "Badge",
+  "description": "The component that looks like a button but isn't clickable!",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Badge.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\nimport { cva, VariantProps } from \"class-variance-authority\";\nimport React, { HTMLAttributes } from \"react\";\n\nconst badgeVariants = cva(\"font-semibold rounded\", {\n  variants: {\n    variant: {\n      default: \"bg-muted text-muted-foreground\",\n      outline: \"outline-2 outline-foreground text-foreground\",\n      solid: \"bg-foreground text-background\",\n      surface: \"outline-2 bg-primary text-primary-foreground\",\n    },\n    size: {\n      sm: \"px-2 py-1 text-xs\",\n      md: \"px-2.5 py-1.5 text-sm\",\n      lg: \"px-3 py-2 text-base\",\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n    size: \"md\",\n  },\n});\n\ninterface ButtonProps\n  extends HTMLAttributes<HTMLSpanElement>,\n    VariantProps<typeof badgeVariants> {}\n\nexport function Badge({\n  children,\n  size = \"md\",\n  variant = \"default\",\n  className = \"\",\n  ...props\n}: ButtonProps) {\n  return (\n    <span\n      className={cn(badgeVariants({ variant, size }), className)}\n      {...props}\n    >\n      {children}\n    </span>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/retroui/Badge.tsx"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-style-error",
+  "type": "registry:block",
+  "title": "input-style-error",
+  "registryDependencies": [
+    "https://retroui.dev/r/input.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/input-style-error.tsx",
+      "content": "import { Input } from \"@/components/retroui/Input\";\nimport { Label } from \"@/components/retroui/Label\";\n\nexport default function InputStyleError() {\n  return (\n    <div className=\"grid w-full max-w-sm items-center gap-1.5\">\n      <Label htmlFor=\"pokemon\">Favorite Pokemon</Label>\n      <Input\n        type=\"pokemon\"\n        id=\"pokemon\"\n        placeholder=\"Charmander\"\n        defaultValue=\"Son Goku\"\n        aria-invalid\n      />\n      <p className=\"text-sm text-red-500\">Please provide a valid pokemon!</p>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/input-style-error.tsx"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-style-with-footer",
+  "type": "registry:block",
+  "title": "dialog-style-with-footer",
+  "registryDependencies": [
+    "https://retroui.dev/r/dialog.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/dialog-style-with-footer.tsx",
+      "content": "import { Button } from \"@/components/retroui/Button\";\nimport { Text } from \"@/components/retroui/Text\";\nimport { Dialog } from \"@/components/retroui/Dialog\";\n\nexport default function DialogStyleWithFooter() {\n  return (\n    <Dialog>\n      <Dialog.Trigger asChild>\n        <Button>Open Dialog</Button>\n      </Dialog.Trigger>\n      <Dialog.Content>\n        <Dialog.Header position={\"fixed\"} asChild>\n          <Text as=\"h5\">Confirm your action?</Text>\n        </Dialog.Header>\n        <section className=\"flex flex-col gap-4 p-4\">\n          <section className=\"text-xl\">\n            <p>Are you sure you want to delete this item?</p>\n            <p>This action cannout be undone.</p>\n          </section>\n        </section>\n        <Dialog.Footer>\n          <Dialog.Trigger asChild>\n            <Button>Confirm</Button>\n          </Dialog.Trigger>\n          <Dialog.Trigger asChild>\n            <Button variant={\"outline\"}>Close</Button>\n          </Dialog.Trigger>\n        </Dialog.Footer>\n      </Dialog.Content>\n    </Dialog>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/dialog-style-with-footer.tsx"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+module.exports=[221907,a=>{"use strict";var b=a.i(201918),c=a.i(135269);a.s(["default",0,function(){return(0,b.jsxs)(c.Select,{children:[(0,b.jsx)(c.Select.Trigger,{className:"w-60",children:(0,b.jsx)(c.Select.Value,{placeholder:"Pick your Pokemon"})}),(0,b.jsx)(c.Select.Content,{children:(0,b.jsxs)(c.Select.Group,{children:[(0,b.jsx)(c.Select.Item,{value:"pikachu",children:"Pikachu"}),(0,b.jsx)(c.Select.Item,{value:"charizard",children:"Charizard"}),(0,b.jsx)(c.Select.Item,{value:"bulbasaur",children:"Bulbasaur"}),(0,b.jsx)(c.Select.Item,{value:"squirtle",children:"Squirtle"})]})})]})}])}];
+
+//# sourceMappingURL=preview_components_select-style-default_tsx_0dsjt8a._.js.map

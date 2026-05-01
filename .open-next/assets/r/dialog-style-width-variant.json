@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-style-width-variant",
+  "type": "registry:block",
+  "title": "dialog-style-width-variant",
+  "registryDependencies": [
+    "https://retroui.dev/r/dialog.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/dialog-style-width-variant.tsx",
+      "content": "import { Button } from \"@/components/retroui/Button\";\nimport { Dialog } from \"@/components/retroui/Dialog\";\nimport { Text } from \"@/components/retroui/Text\";\nimport { useState } from \"react\";\n\ntype Variants =\n  | \"auto\"\n  | \"sm\"\n  | \"md\"\n  | \"lg\"\n  | \"xl\"\n  | \"2xl\"\n  | \"3xl\"\n  | \"4xl\"\n  | \"screen\";\n\nexport default function DialogStyleWidthVariant() {\n  const [variant, setVariant] = useState<Variants>(\"auto\");\n\n  const sizes: Variants[] = [\n    \"auto\",\n    \"sm\",\n    \"md\",\n    \"lg\",\n    \"xl\",\n    \"2xl\",\n    \"3xl\",\n    \"4xl\",\n    \"screen\",\n  ];\n\n  return (\n    <Dialog>\n      <Dialog.Trigger asChild>\n        <Button>Open Dialog</Button>\n      </Dialog.Trigger>\n      <Dialog.Content size={variant}>\n        <Dialog.Header>\n          <Text as=\"h5\">Dialog with variants</Text>\n        </Dialog.Header>\n        <section className=\"flex flex-col gap-4 p-4\">\n          <section className=\"text-xl\">\n            <p>Choose your width size</p>\n            <section className=\"flex flex-wrap gap-4\">\n              {sizes.map((singleVariant) => (\n                <Button\n                  key={\"variant-list-\" + singleVariant}\n                  type=\"button\"\n                  variant={singleVariant == variant ? \"default\" : \"outline\"}\n                  onClick={() => setVariant(singleVariant)}\n                >\n                  {singleVariant}\n                </Button>\n              ))}\n            </section>\n          </section>\n        </section>\n      </Dialog.Content>\n    </Dialog>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/dialog-style-width-variant.tsx"
+    }
+  ]
+}

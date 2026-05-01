@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,663633,e=>{"use strict";var s=e.i(157700),i=e.i(184720);e.s(["default",0,function(){return(0,s.jsxs)("div",{className:"flex items-end gap-4",children:[(0,s.jsx)(i.Loader,{size:"sm"}),(0,s.jsx)(i.Loader,{size:"md"}),(0,s.jsx)(i.Loader,{size:"lg"})]})}])}]);

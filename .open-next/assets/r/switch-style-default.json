@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-style-default",
+  "type": "registry:block",
+  "title": "switch-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/switch.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/switch-style-default.tsx",
+      "content": "import { Switch } from \"@/components/retroui/Switch\";\nimport React from \"react\";\n\nexport default function SwitchStyleDefault() {\n  return (\n    <div className=\"flex items-center space-x-2\">\n      <Switch id=\"notification\" />\n      <label htmlFor=\"notification\">Email Notifications</label>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/switch-style-default.tsx"
+    }
+  ]
+}

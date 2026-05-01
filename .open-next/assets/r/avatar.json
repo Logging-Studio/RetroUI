@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar",
+  "type": "registry:component",
+  "title": "Avatar",
+  "description": "Default rounded avatar that can show your users profile picture. ✨",
+  "dependencies": [
+    "@radix-ui/react-avatar"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Avatar.tsx",
+      "content": "import * as React from \"react\";\nimport * as AvatarPrimitive from \"@radix-ui/react-avatar\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst Avatar = React.forwardRef<\n  React.ElementRef<typeof AvatarPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <AvatarPrimitive.Root\n    ref={ref}\n    className={cn(\n      \"relative flex h-14 w-14 border-2 rounded-full overflow-hidden\",\n      className,\n    )}\n    {...props}\n  />\n));\nAvatar.displayName = \"Avatar\";\n\nconst AvatarImage = React.forwardRef<\n  React.ElementRef<typeof AvatarPrimitive.Image>,\n  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>\n>(({ className, ...props }, ref) => (\n  <AvatarPrimitive.Image\n    ref={ref}\n    className={cn(\"aspect-square h-full w-full\", className)}\n    {...props}\n  />\n));\nAvatarImage.displayName = \"Avatar.Image\";\n\nconst AvatarFallback = React.forwardRef<\n  React.ElementRef<typeof AvatarPrimitive.Fallback>,\n  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>\n>(({ className, ...props }, ref) => (\n  <AvatarPrimitive.Fallback\n    ref={ref}\n    className={cn(\n      \"flex h-full w-full items-center justify-center rounded-full bg-muted bg-primary\",\n      className,\n    )}\n    {...props}\n  />\n));\nAvatarFallback.displayName = \"Avatar.Fallback\";\n\nconst AvatarComponent = Object.assign(Avatar, {\n  Image: AvatarImage,\n  Fallback: AvatarFallback,\n});\n\nexport { AvatarComponent as Avatar };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Avatar.tsx"
+    }
+  ]
+}

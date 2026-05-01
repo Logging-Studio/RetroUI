@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pie-chart",
+  "type": "registry:component",
+  "title": "Pie Chart",
+  "description": "Beautiful pie chart for data visualization with retro styling",
+  "dependencies": [
+    "recharts"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/charts/PieChart.tsx",
+      "content": "\"use client\"\n\nimport { cn } from \"@/lib/utils\"\nimport React from \"react\"\nimport {\n  Cell,\n  Pie,\n  PieChart as RechartsPieChart,\n  ResponsiveContainer,\n  Tooltip,\n} from \"recharts\"\n\ninterface PieChartProps extends React.HTMLAttributes<HTMLDivElement> {\n  data: Record<string, any>[]\n  dataKey: string\n  nameKey: string\n  colors?: string[]\n  tooltipBgColor?: string\n  tooltipBorderColor?: string\n  valueFormatter?: (value: number) => string\n  showTooltip?: boolean\n  innerRadius?: number\n  outerRadius?: number\n  className?: string\n}\n\nconst PieChart = React.forwardRef<HTMLDivElement, PieChartProps>(\n  (\n    {\n      data = [],\n      dataKey,\n      nameKey,\n      colors = [\"var(--chart-1)\", \"var(--chart-2)\", \"var(--chart-3)\", \"var(--chart-4)\", \"var(--chart-5)\"],\n      tooltipBgColor = \"var(--background)\",\n      tooltipBorderColor = \"var(--border)\",\n      valueFormatter = (value: number) => value.toString(),\n      showTooltip = true,\n      innerRadius = 0,\n      outerRadius = 100,\n      className,\n      ...props\n    },\n    ref\n  ) => {\n    return (\n      <div ref={ref} className={cn(\"h-80 w-full\", className)} {...props}>\n        <ResponsiveContainer width=\"100%\" height=\"100%\">\n          <RechartsPieChart>\n            <Pie\n              data={data}\n              dataKey={dataKey}\n              nameKey={nameKey}\n              cx=\"50%\"\n              cy=\"50%\"\n              innerRadius={innerRadius}\n              outerRadius={outerRadius}\n              isAnimationActive={false}\n              className=\"w-full h-full\"\n            >\n              {data.map((entry, index) => (\n                <Cell \n                  key={`cell-${index}`} \n                  fill={colors[index % colors.length]} \n                />\n              ))}\n            </Pie>\n            \n            {showTooltip && (\n              <Tooltip\n                content={({ active, payload }) => {\n                  if (!active || !payload?.length) return null\n                  \n                  const data = payload[0]\n                  \n                  return (\n                    <div \n                      className=\"border p-2 shadow\"\n                      style={{ \n                        backgroundColor: tooltipBgColor,\n                        borderColor: tooltipBorderColor \n                      }}\n                    >\n                      <div className=\"flex flex-col gap-1\">\n                        <span className=\"text-[0.70rem] uppercase text-muted-foreground\">\n                          {data.name}\n                        </span>\n                        <span className=\"font-bold text-foreground\">\n                          {valueFormatter(data.value as number)}\n                        </span>\n                      </div>\n                    </div>\n                  )\n                }}\n              />\n            )}\n          </RechartsPieChart>\n        </ResponsiveContainer>\n      </div>\n    )\n  }\n)\n\nPieChart.displayName = \"PieChart\"\n\nexport { PieChart, type PieChartProps }",
+      "type": "registry:component",
+      "target": "components/retroui/charts/PieChart.tsx"
+    }
+  ]
+}

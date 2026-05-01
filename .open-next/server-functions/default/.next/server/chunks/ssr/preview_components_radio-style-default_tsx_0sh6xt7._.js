@@ -1,0 +1,3 @@
+module.exports=[162987,a=>{"use strict";var b=a.i(201918),c=a.i(820546);a.s(["default",0,function(){return(0,b.jsxs)(c.RadioGroup,{children:[(0,b.jsxs)("div",{className:"flex items-center space-x-2",children:[(0,b.jsx)(c.RadioGroup.Item,{value:"1"}),(0,b.jsx)("label",{htmlFor:"1",children:" Option 1"})]}),(0,b.jsxs)("div",{className:"flex items-center space-x-2",children:[(0,b.jsx)(c.RadioGroup.Item,{value:"2"}),(0,b.jsx)("label",{htmlFor:"2",children:" Option 2"})]}),(0,b.jsxs)("div",{className:"flex items-center space-x-2",children:[(0,b.jsx)(c.RadioGroup.Item,{value:"3"}),(0,b.jsx)("label",{htmlFor:"3",children:" Option 3"})]})]})}])}];
+
+//# sourceMappingURL=preview_components_radio-style-default_tsx_0sh6xt7._.js.map

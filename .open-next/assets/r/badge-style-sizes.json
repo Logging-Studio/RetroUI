@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-style-sizes",
+  "type": "registry:block",
+  "title": "badge-style-sizes",
+  "registryDependencies": [
+    "https://retroui.dev/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/badge-style-sizes.tsx",
+      "content": "import { Badge } from \"@/components/retroui/Badge\";\n\nexport default function BadgeStyleVariants() {\n  return (\n    <div className=\"space-x-4\">\n      <Badge size=\"sm\">small</Badge>\n      <Badge>medium</Badge>\n      <Badge size=\"lg\">large</Badge>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/badge-style-sizes.tsx"
+    }
+  ]
+}

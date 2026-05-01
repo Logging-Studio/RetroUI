@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,840278,e=>{"use strict";var o=e.i(157700),s=e.i(673201);e.s(["default",0,function(){return(0,o.jsx)(s.Textarea,{rows:4,placeholder:"type something...",className:"px-4 py-2 w-full border-2 shadow-md transition focus:outline-hidden focus:shadow-xs"})}])}]);

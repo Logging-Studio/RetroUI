@@ -1,0 +1,36 @@
+<svg width="318" height="174" viewBox="0 0 318 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1577_5295)">
+<rect x="81" y="42" width="156" height="90" fill="white"/>
+<mask id="path-3-inside-1_1577_5295" fill="white">
+<path d="M81 42H237V66H81V42Z"/>
+</mask>
+<path d="M81 42H237V66H81V42Z" fill="#FFDB33"/>
+<path d="M237 66V64.41H81V66V67.59H237V66Z" fill="black" mask="url(#path-3-inside-1_1577_5295)"/>
+<rect width="36" height="3" transform="translate(89 51.7051)" fill="black"/>
+<rect width="36" height="3" transform="translate(141 51.7051)" fill="black"/>
+<rect width="36" height="3" transform="translate(193 51.7051)" fill="black"/>
+<mask id="path-5-inside-2_1577_5295" fill="white">
+<path d="M81 66H237V88H81V66Z"/>
+</mask>
+<path d="M237 88V86.41H81V88V89.59H237V88Z" fill="black" mask="url(#path-5-inside-2_1577_5295)"/>
+<rect width="36" height="3" transform="translate(89 74.7051)" fill="black"/>
+<rect width="36" height="3" transform="translate(141 74.7051)" fill="black"/>
+<rect width="36" height="3" transform="translate(193 74.7051)" fill="black"/>
+<mask id="path-7-inside-3_1577_5295" fill="white">
+<path d="M81 88H237V110H81V88Z"/>
+</mask>
+<path d="M237 110V108.41H81V110V111.59H237V110Z" fill="black" mask="url(#path-7-inside-3_1577_5295)"/>
+<rect width="36" height="3" transform="translate(89 96.7051)" fill="black"/>
+<rect width="36" height="3" transform="translate(141 96.7051)" fill="black"/>
+<rect width="36" height="3" transform="translate(193 96.7051)" fill="black"/>
+<rect width="36" height="3" transform="translate(89 119.5)" fill="black"/>
+<rect width="36" height="3" transform="translate(141 119.5)" fill="black"/>
+<rect width="36" height="3" transform="translate(193 119.5)" fill="black"/>
+</g>
+<rect x="81.795" y="42.795" width="154.41" height="88.41" stroke="black" stroke-width="1.59"/>
+<defs>
+<clipPath id="clip0_1577_5295">
+<rect x="81" y="42" width="156" height="90" fill="white"/>
+</clipPath>
+</defs>
+</svg>

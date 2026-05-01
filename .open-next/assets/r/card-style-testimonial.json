@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-style-testimonial",
+  "type": "registry:block",
+  "title": "card-style-testimonial",
+  "registryDependencies": [
+    "https://retroui.dev/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/card-style-testimonial.tsx",
+      "content": "import { Text } from \"@/components/retroui/Text\";\nimport { Card } from \"@/components/retroui/Card\";\nimport { Avatar } from \"@/components/retroui/Avatar\";\n\nexport default function TestimonialCard() {\n  return (\n    <Card className=\"w-full max-w-[400px] shadow-none hover:shadow-md\">\n      <Card.Content>\n        <Text className=\"text-lg\">\n          &quot; RetroUI is the cooling looking UI library out there! &quot;\n        </Text>\n\n        <div className=\"flex items-center space-x-2 mt-6\">\n          <Avatar className=\"h-10 w-10\">\n            <Avatar.Image\n              alt=\"avatar\"\n              src=\"https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80\"\n            />\n          </Avatar>\n          <div>\n            <div className=\"font-medium\">Leroy Jenkins</div>\n            <div className=\"text-sm text-gray-500 dark:text-gray-400\">\n              CEO of Uber\n            </div>\n          </div>\n        </div>\n      </Card.Content>\n    </Card>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/card-style-testimonial.tsx"
+    }
+  ]
+}

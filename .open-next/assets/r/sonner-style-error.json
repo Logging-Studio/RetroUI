@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-style-error",
+  "type": "registry:block",
+  "title": "sonner-style-error",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://retroui.dev/r/sonner.json",
+    "https://retroui.dev/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/sonner-style-error.tsx",
+      "content": "import { Button } from \"@/components/retroui\";\nimport { toast } from \"sonner\";\n\nexport default function SonnerStyleError() {\n  const onClick = () => {\n    toast.error(\"Oops! you ran into a pot hole\");\n  };\n\n  return <Button onClick={onClick}>Show Toast (Error)</Button>;\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/sonner-style-error.tsx"
+    }
+  ]
+}

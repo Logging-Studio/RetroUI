@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,894894,t=>{"use strict";var o=t.i(157700);t.i(880806);var r=t.i(968739),e=t.i(689922);t.s(["default",0,function(){return(0,o.jsx)(r.Button,{onClick:()=>{e.toast.success("Congrats man (Colored) 🎉",{richColors:!0})},children:"Congratulate Me"})}])}]);

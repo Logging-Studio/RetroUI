@@ -1,0 +1,306 @@
+module.exports=[556704,(a,b,c)=>{b.exports=a.x("next/dist/server/app-render/work-async-storage.external.js",()=>require("next/dist/server/app-render/work-async-storage.external.js"))},832319,(a,b,c)=>{b.exports=a.x("next/dist/server/app-render/work-unit-async-storage.external.js",()=>require("next/dist/server/app-render/work-unit-async-storage.external.js"))},324725,(a,b,c)=>{b.exports=a.x("next/dist/server/app-render/after-task-async-storage.external.js",()=>require("next/dist/server/app-render/after-task-async-storage.external.js"))},120635,(a,b,c)=>{b.exports=a.x("next/dist/server/app-render/action-async-storage.external.js",()=>require("next/dist/server/app-render/action-async-storage.external.js"))},43285,(a,b,c)=>{b.exports=a.x("next/dist/server/app-render/dynamic-access-async-storage.external.js",()=>require("next/dist/server/app-render/dynamic-access-async-storage.external.js"))},759147,(a,b,c)=>{"use strict";b.exports=a.r(93431).vendored["react-ssr"].ReactServerDOMTurbopackClient},936503,(a,b,c)=>{"use strict";b.exports=a.r(93431).vendored.contexts.AppRouterContext},27951,(a,b,c)=>{"use strict";b.exports=a.r(93431).vendored.contexts.HooksClientContext},99667,(a,b,c)=>{"use strict";b.exports=a.r(93431).vendored.contexts.ServerInsertedHtml},788273,a=>{"use strict";var b=Symbol("NOT_FOUND"),c=a=>Array.isArray(a)?a:[a],d=0,e=class{revision=d;_value;_lastValue;_isEqual=f;constructor(a,b=f){this._value=this._lastValue=a,this._isEqual=b}get value(){return this._value}set value(a){this.value!==a&&(this._value=a,this.revision=++d)}};function f(a,b){return a===b}function g(a){return a instanceof e||console.warn("Not a valid cell! ",a),a.value}var h=(a,b)=>!1;function i(){return function(a=f){return new e(null,a)}(h)}var j=a=>{let b=a.collectionTag;null===b&&(b=a.collectionTag=i()),g(b)};Symbol();var k=0,l=Object.getPrototypeOf({}),m=class{constructor(a){this.value=a,this.value=a,this.tag.value=a}proxy=new Proxy(this,n);tag=i();tags={};children={};collectionTag=null;id=k++},n={get:(a,b)=>(function(){let{value:c}=a,d=Reflect.get(c,b);if("symbol"==typeof b||b in l)return d;if("object"==typeof d&&null!==d){var e;let c=a.children[b];return void 0===c&&(c=a.children[b]=Array.isArray(e=d)?new o(e):new m(e)),c.tag&&g(c.tag),c.proxy}{let c=a.tags[b];return void 0===c&&((c=a.tags[b]=i()).value=d),g(c),d}})(),ownKeys:a=>(j(a),Reflect.ownKeys(a.value)),getOwnPropertyDescriptor:(a,b)=>Reflect.getOwnPropertyDescriptor(a.value,b),has:(a,b)=>Reflect.has(a.value,b)},o=class{constructor(a){this.value=a,this.value=a,this.tag.value=a}proxy=new Proxy([this],p);tag=i();tags={};children={};collectionTag=null;id=k++},p={get:([a],b)=>("length"===b&&j(a),n.get(a,b)),ownKeys:([a])=>n.ownKeys(a),getOwnPropertyDescriptor:([a],b)=>n.getOwnPropertyDescriptor(a,b),has:([a],b)=>n.has(a,b)},q=(a,b)=>a===b,r="u">typeof WeakRef?WeakRef:class{constructor(a){this.value=a}deref(){return this.value}};function s(){return{s:0,v:void 0,o:null,p:null}}function t(a,b={}){let c,d=s(),{resultEqualityCheck:e}=b,f=0;function g(){let b,g=d,{length:h}=arguments;for(let a=0;a<h;a++){let b=arguments[a];if("function"==typeof b||"object"==typeof b&&null!==b){let a=g.o;null===a&&(g.o=a=new WeakMap);let c=a.get(b);void 0===c?(g=s(),a.set(b,g)):g=c}else{let a=g.p;null===a&&(g.p=a=new Map);let c=a.get(b);void 0===c?(g=s(),a.set(b,g)):g=c}}let i=g;if(1===g.s)b=g.v;else if(b=a.apply(null,arguments),f++,e){let a=c?.deref?.()??c;null!=a&&e(a,b)&&(b=a,0!==f&&f--),c="object"==typeof b&&null!==b||"function"==typeof b?new r(b):b}return i.s=1,i.v=b,b}return g.clearCache=()=>{d=s(),g.resetResultsCount()},g.resultsCount=()=>f,g.resetResultsCount=()=>{f=0},g}function u(a,...b){let d="function"==typeof a?{memoize:a,memoizeOptions:b}:a,e=(...a)=>{let b,e,f=0,g=0,h={},i=a.pop();"object"==typeof i&&(h=i,i=a.pop()),function(a,b=`expected a function, instead received ${typeof a}`){if("function"!=typeof a)throw TypeError(b)}(i,`createSelector expects an output function after the inputs, but received: [${typeof i}]`);let{memoize:j,memoizeOptions:k=[],argsMemoize:l=t,argsMemoizeOptions:m=[],devModeChecks:n={}}={...d,...h},o=c(k),p=c(m),q=(!function(a,b="expected all items to be functions, instead received the following types: "){if(!a.every(a=>"function"==typeof a)){let c=a.map(a=>"function"==typeof a?`function ${a.name||"unnamed"}()`:typeof a).join(", ");throw TypeError(`${b}[${c}]`)}}(b=Array.isArray(a[0])?a[0]:a,"createSelector expects all input-selectors to be functions, but received the following types: "),b),r=j(function(){return f++,i.apply(null,arguments)},...o);return Object.assign(l(function(){g++;let a=function(a,b){let c=[],{length:d}=a;for(let e=0;e<d;e++)c.push(a[e].apply(null,b));return c}(q,arguments);return e=r.apply(null,a)},...p),{resultFunc:i,memoizedResultFunc:r,dependencies:q,dependencyRecomputations:()=>g,resetDependencyRecomputations:()=>{g=0},lastResult:()=>e,recomputations:()=>f,resetRecomputations:()=>{f=0},memoize:j,argsMemoize:l})};return Object.assign(e,{withTypes:()=>e}),e}var v=u(t),w=Object.assign((a,b=v)=>{!function(a,b=`expected an object, instead received ${typeof a}`){if("object"!=typeof a)throw TypeError(b)}(a,`createStructuredSelector expects first argument to be an object where each property is a selector, instead received a ${typeof a}`);let c=Object.keys(a);return b(c.map(b=>a[b]),(...a)=>a.reduce((a,b,d)=>(a[c[d]]=b,a),{}))},{withTypes:()=>w});a.s(["createSelector",0,v,"createSelectorCreator",0,u,"lruMemoize",0,function(a,c){let d,{equalityCheck:e=q,maxSize:f=1,resultEqualityCheck:g}="object"==typeof c?c:{equalityCheck:c},h=function(a,b){if(null===a||null===b||a.length!==b.length)return!1;let{length:c}=a;for(let d=0;d<c;d++)if(!e(a[d],b[d]))return!1;return!0},i=0,j=f<=1?{get:a=>d&&h(d.key,a)?d.value:b,put(a,b){d={key:a,value:b}},getEntries:()=>d?[d]:[],clear(){d=void 0}}:function(a,c){let d=[];function e(a){let e=d.findIndex(b=>c(a,b.key));if(e>-1){let a=d[e];return e>0&&(d.splice(e,1),d.unshift(a)),a.value}return b}return{get:e,put:function(c,f){e(c)===b&&(d.unshift({key:c,value:f}),d.length>a&&d.pop())},getEntries:function(){return d},clear:function(){d=[]}}}(f,h);function k(){let c=j.get(arguments);if(c===b){if(c=a.apply(null,arguments),i++,g){let a=j.getEntries().find(a=>g(a.value,c));a&&(c=a.value,0!==i&&i--)}j.put(arguments,c)}return c}return k.clearCache=()=>{j.clear(),k.resetResultsCount()},k.resultsCount=()=>i,k.resetResultsCount=()=>{i=0},k},"weakMapMemoize",0,t])},974868,a=>{"use strict";let b=(0,a.i(41184).default)("ArrowLeft",[["path",{d:"m12 19-7-7 7-7",key:"1l729n"}],["path",{d:"M19 12H5",key:"x3x0zl"}]]);a.s(["ArrowLeft",0,b],974868)},766487,(a,b,c)=>{"use strict";Object.defineProperty(c,"__esModule",{value:!0});var d={callServer:function(){return f.callServer},createServerReference:function(){return h.createServerReference},findSourceMapURL:function(){return g.findSourceMapURL}};for(var e in d)Object.defineProperty(c,e,{enumerable:!0,get:d[e]});let f=a.r(587296),g=a.r(372769),h=a.r(759147)},671630,a=>{"use strict";let b=new class{baseURL;constructor(a){this.baseURL=a}async request(a,b={}){let c=`${this.baseURL}${a}`,d=await fetch(c,{...b,headers:{"Content-Type":"application/json",...b.headers}});if(!d.ok)throw Error((await d.json().catch(()=>({}))).message||`HTTP error! status: ${d.status}`);return d.json()}async signIn(a){try{return await this.request("/auth/sign-in",{method:"POST",body:JSON.stringify({email:a})}),{success:!0,message:"Magic link sent! Check your email."}}catch(a){return{success:!1,error:a instanceof Error?a.message:"Failed to send magic link"}}}async verify(a){try{let b=await this.request("/auth/verify",{method:"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${a}`}});return{success:!0,token:b.token,user:b.user}}catch(a){return{success:!1,error:a instanceof Error?a.message:"Failed to verify token"}}}async getMe(a){try{return await this.request("/auth/me",{method:"GET",headers:{Authorization:`Bearer ${a}`}})}catch(a){return console.error("Failed to fetch user:",a),null}}async updateProfile(a,b){try{let c=await this.request("/auth/profile",{method:"POST",headers:{Authorization:`Bearer ${a}`},body:JSON.stringify(b)});return{success:!0,user:c}}catch(a){return{success:!1,error:a instanceof Error?a.message:"Failed to update profile"}}}async createCheckoutSession(a,b){try{return{sessionUrl:(await this.request("/checkout/create-stripe-checkout-session",{method:"POST",body:JSON.stringify({priceId:a,promoCode:"",endorsely_referral:b??""})})).sessionUrl}}catch(a){return{error:a instanceof Error?a.message:"Failed to create checkout session"}}}async downloadTemplate(a,b){try{return{downloadUrl:(await this.request(`/products/download/${a}`,{method:"GET",headers:{Authorization:`Bearer ${b}`}})).downloadUrl}}catch(a){return{error:a instanceof Error?a.message:"Failed to get download link"}}}}("https://workers.retroui.dev");a.s(["authApi",0,b])},736545,a=>{"use strict";var b=a.i(201918),c=a.i(542965);a.i(671630);var d=a.i(766487);let e=(0,d.createServerReference)("00408cb8d7d1915fa9d393b6c48a5a1627fe642d82",d.callServer,void 0,d.findSourceMapURL,"logoutAction"),f=(0,c.createContext)(void 0);a.s(["AuthProvider",0,function({children:a,initialUser:d}){let[g,h]=(0,c.useState)(d||null),[i,j]=(0,c.useState)(!1),[k,l]=(0,c.useState)(null),[m,n]=(0,c.useState)(!1);(0,c.useEffect)(()=>{n(!0)},[d]);let o=async()=>{},p=async()=>{j(!0);try{await e(),h(null),l(null),window.location.href="/"}catch(a){l(a instanceof Error?a.message:"Logout failed")}finally{j(!1)}};return m?(0,b.jsx)(f.Provider,{value:{user:g,isLoading:i,error:k,checkAuth:o,logout:p},children:a}):null},"useAuth",0,function(){let a=(0,c.useContext)(f);if(void 0===a)throw Error("useAuth must be used within an AuthProvider");return a}],736545)},618200,170767,a=>{"use strict";var b,c=a.i(201918),d=a.i(542965),e=((b={}).Default="default",b.Purple="purple",b.Lime="lime",b.Red="red",b.Lavender="lavender",b.Orange="orange",b.Green="green",b);let f=({hasRadius:a=!1})=>({default:{name:"default",color:`:root {
+    --radius: ${a?"0.5rem":"0"};
+    --background: #fff;
+    --foreground: #000;
+    --card: #fff;
+    --card-foreground: #000;
+    --primary: #ffdb33;
+    --primary-hover: #ffcc00;
+    --primary-foreground: #000;
+    --secondary: #000;
+    --secondary-foreground: #fff;
+    --muted: #cccccc;
+    --muted-foreground: #5a5a5a;
+    --accent: #fae583;
+    --accent-foreground: #000;
+    --destructive: #e63946;
+    --destructive-foreground: #fff;
+    --border: #000;
+}
+
+.dark {
+    --background: #1a1a1a;
+    --foreground: #f5f5f5;
+    --card: #242424;
+    --card-foreground: #f5f5f5;
+    --primary: #ffdb33;
+    --primary-hover: #ffcc00;
+    --primary-foreground: #000;
+    --secondary: #3a3a3a;
+    --secondary-foreground: #f5f5f5;
+    --muted: #3f3f46;
+    --muted-foreground: #a0a0a0;
+    --accent: #fae583;
+    --accent-foreground: #000;
+    --destructive: #e63946;
+    --destructive-foreground: #fff;
+    --border: #5c5c5c;
+}
+`},purple:{name:"purple",color:`:root {
+    --radius: ${a?"0.5rem":"0"};
+    --background: #f5f5f5;
+    --foreground: #1a1a1a;
+    --card: #FFFFFF;
+    --card-foreground: #f5f5f5;
+    --primary: #5F4FE6;
+    --primary-hover: #4938C2;
+    --primary-foreground: #fff;
+    --secondary: #3a3a3a;
+    --secondary-foreground: #f5f5f5;
+    --muted: #CFCCEA;
+    --muted-foreground: #5B5686;
+    --accent: #FED13B;
+    --accent-foreground: #000000;
+    --destructive: #EF4444;
+    --destructive-foreground: #fff;
+    --border: #3a3a3a;
+}
+
+.dark {
+    --background: #0f0f12;
+    --foreground: #f5f5f5;
+    --card: #1a1a1d;
+    --card-foreground: #eaeaea;
+    --primary: #7b6df5;
+    --primary-hover: #5F4FE6;
+    --primary-foreground: #fff;
+    --secondary: #2a2a2e;
+    --secondary-foreground: #eaeaea;
+    --muted: #3d395a;
+    --muted-foreground: #a49fce;
+    --accent: #FED13B;
+    --accent-foreground: #000;
+    --destructive: #EF4444;
+    --destructive-foreground: #fff;
+    --border: #2e2e32;
+}
+`},lime:{name:"Lime",color:`:root {
+    --radius: ${a?"0.5rem":"0"};
+    --background: #FFFFFF;
+    --foreground: #000000;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --input: #FFFFFF;
+    --ring: #AAFC3D;
+    --primary: #AAFC3D;
+    --primary-hover: #97f819;
+    --primary-foreground: #FFFFFF;
+    --secondary: #5252FF;
+    --secondary-foreground: #000000;
+    --muted: #F3F4F6;
+    --muted-foreground: #6B7280;
+    --accent: #FF00FF;
+    --accent-foreground: #000000;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #3a3a3a;
+}
+
+.dark {
+    --background: #FFFFFF;
+    --foreground: #000000;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --input: #FFFFFF;
+    --border: #000000;
+    --ring: #AAFC3D;
+    --primary: #AAFC3D;
+    --primary-hover: #97f819;
+    --primary-foreground: #000000;
+    --secondary: #000000;
+    --secondary-foreground: #FFFFFF;
+    --muted: #F3F3F3;
+    --muted-foreground: #444444;
+    --accent: #FF4FD8;
+    --accent-foreground: #000000;
+    --destructive: #FF0033;
+    --destructive-foreground: #FFFFFF;
+}
+`},red:{name:"Red",color:`:root {
+    --radius: ${a?"0.5rem":"0"};
+    --background: #FCFFE7;
+    --foreground: #000000;
+    --muted: #EFD0D5;
+    --muted-foreground: #A42439;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --popover: #FFFFFF;
+    --popover-foreground: #000000;
+    --border: #000000;
+    --input: #FFFFFF;
+    --primary: #EA435F;
+    --primary-hover: #D00000;
+    --primary-foreground: #FFFFFF;
+    --secondary: #FFDA5C;
+    --secondary-foreground: #000000;
+    --accent: #CEEBFC;
+    --accent-foreground: #000000;
+    --destructive: #D00000;
+    --destructive-foreground: #FFFFFF;
+    --ring: #000000;
+}
+    
+.dark {
+    --background: #0f0f0f;
+    --foreground: #f5f5f5;
+    --muted: #3a1f24;
+    --muted-foreground: #f2a7b2;
+    --card: #1a1a1a;
+    --card-foreground: #ffffff;
+    --popover: #1a1a1a;
+    --popover-foreground: #ffffff;
+    --border: #2a2a2a;
+    --input: #2a2a2a;
+    --primary: #EA435F;
+    --primary-hover: #D00000;
+    --primary-foreground: #ffffff;
+    --secondary: #FFDA5C;
+    --secondary-foreground: #000000;
+    --accent: #2a3b45;
+    --accent-foreground: #CEEBFC;
+    --destructive: #D00000;
+    --destructive-foreground: #ffffff;
+    --ring: #EA435F;
+}
+`},lavender:{name:"Lavender",color:`:root {
+    --radius: ${a?"0.5rem":"0"};
+    --background: #F9F5F2;
+    --foreground: #000000;
+    --muted: #EDE3FF;
+    --muted-foreground: #5B3B98;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --popover: #FFFFFF;
+    --popover-foreground: #000000;
+    --border: #000000;
+    --input: #FFFFFF;
+    --primary: #C4A1FF;
+    --primary-hover: #9678FF;
+    --primary-foreground: #000000;
+    --secondary: #E7F193;
+    --secondary-foreground: #000000;
+    --accent: #FE91E9;
+    --accent-foreground: #000000;
+    --destructive: #FE3B3B;
+    --destructive-foreground: #FFFFFF;
+    --ring: #000000;
+}
+
+.dark {
+    --background: #121014;
+    --foreground: #f5f5f5;
+    --muted: #2d2440;
+    --muted-foreground: #c7b6f3;
+    --card: #1a1820;
+    --card-foreground: #ffffff;
+    --popover: #1a1820;
+    --popover-foreground: #ffffff;
+    --border: #2a2a2e;
+    --input: #2a2a2e;
+    --primary: #C4A1FF;
+    --primary-hover: #9678FF;
+    --primary-foreground: #000000;
+    --secondary: #E7F193;
+    --secondary-foreground: #000000;
+    --accent: #FE91E9;
+    --accent-foreground: #000000;
+    --destructive: #FE3B3B;
+    --destructive-foreground: #ffffff;
+    --ring: #C4A1FF;
+}
+
+`},orange:{name:"Orange",color:`:root {
+    --radius: ${a?"0.5rem":"0"};
+    --background: #F9F5F2;
+    --foreground: #000000;
+    --muted: #EFD0D5;
+    --muted-foreground: #A42439;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --popover: #FFFFFF;
+    --popover-foreground: #000000;
+    --border: #000000;
+    --input: #FFFFFF;
+    --primary: #EA435F;
+    --primary-hover: #D00000;
+    --primary-foreground: #FFFFFF;
+    --secondary: #FFDA5C;
+    --secondary-foreground: #000000;
+    --accent: #CEEBFC;
+    --accent-foreground: #000000;
+    --destructive: #D00000;
+    --destructive-foreground: #FFFFFF;
+    --ring: #000000;
+}
+
+.dark {
+    --background: #12100e;
+    --foreground: #f5f5f5;
+    --muted: #3a2617;
+    --muted-foreground: #ffb679;
+    --card: #1a1a1a;
+    --card-foreground: #ffffff;
+    --popover: #1a1a1a;
+    --popover-foreground: #ffffff;
+    --border: #2a2a2a;
+    --input: #2a2a2a;
+    --primary: #F07200;
+    --primary-hover: #ff8011;
+    --primary-foreground: #FDEAD9;
+    --secondary: #EF8C27;
+    --secondary-foreground: #000000;
+    --accent: #FF6B6B;
+    --accent-foreground: #000000;
+    --destructive: #FE3B3B;
+    --destructive-foreground: #ffffff;
+    --ring: #F07200;
+}
+`},green:{name:"Green",color:`:root {
+    --radius: ${a?"0.5rem":"0"};
+    --background: #F9F5F2;
+    --foreground: #000000;
+    --muted: #EFD0D5;
+    --muted-foreground: #A42439;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --popover: #FFFFFF;
+    --popover-foreground: #000000;
+    --border: #000000;
+    --input: #FFFFFF;
+    --primary: #EA435F;
+    --primary-hover: #D00000;
+    --primary-foreground: #FFFFFF;
+    --secondary: #FFDA5C;
+    --secondary-foreground: #000000;
+    --accent: #CEEBFC;
+    --accent-foreground: #000000;
+    --destructive: #D00000;
+    --destructive-foreground: #FFFFFF;
+    --ring: #000000;
+}
+
+.dark {
+    --background: #0f1210;
+    --foreground: #f5f5f5;
+    --muted: #1f3a2d;
+    --muted-foreground: #9cd9b8;
+    --card: #181c19;
+    --card-foreground: #ffffff;
+    --popover: #181c19;
+    --popover-foreground: #ffffff;
+    --border: #2a2e2b;
+    --input: #2a2e2b;
+    --primary: #599D77;
+    --primary-hover: #39654c;
+    --primary-foreground: #ffffff;
+    --secondary: #3a6f52;
+    --secondary-foreground: #ffffff;
+    --accent: #FFE75A;
+    --accent-foreground: #000000;
+    --destructive: #F05D5D;
+    --destructive-foreground: #ffffff;
+    --ring: #599D77;
+}
+`}});Object.keys(f({hasRadius:!1})),a.s(["Theme",()=>e,"themeConfig",0,f],170767);let g=(0,d.createContext)(void 0);a.s(["ThemeProvider",0,function({children:a}){let[b,f]=(0,d.useState)("light"),[h,i]=(0,d.useState)(e.Default),[j,k]=(0,d.useState)("box"),[l,m]=(0,d.useState)(!1);(0,d.useEffect)(()=>{m(!0);let a=localStorage.getItem("darkMode"),b=localStorage.getItem("colorTheme"),c=localStorage.getItem("variant")||"box";("dark"===a||"light"===a)&&(f(a),n(a)),b&&Object.values(e).includes(b)&&i(b),k(c)},[]);let n=a=>{"dark"===a?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")},o=a=>{f(a),localStorage.setItem("darkMode",a),n(a)};return l?(0,c.jsx)(g.Provider,{value:{darkMode:b,colorTheme:h,variant:j,isDarkMode:"dark"===b,toggleDarkMode:()=>{o("light"===b?"dark":"light")},setDarkMode:o,setColorTheme:a=>{i(a),localStorage.setItem("colorTheme",a)},setVariant:a=>{k(a),localStorage.setItem("variant",a)}},children:a}):null},"useTheme",0,function(){let a=(0,d.useContext)(g);if(void 0===a)throw Error("useTheme must be used within a ThemeProvider");return a}],618200)},950966,a=>{"use strict";var b=a.i(542965),c=a.i(577809);function d(a){return RegExp(`/${a.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(?=[/?#]|$)`)}function e(a){return(0,b.useEffect)(()=>{var b;a.beforeSend&&(null==(b=window.va)||b.call(window,"beforeSend",a.beforeSend))},[a.beforeSend]),(0,b.useEffect)(()=>{!function(a={debug:!0}){}({framework:a.framework||"react",basePath:a.basePath??function(){if("u">typeof process&&void 0!==process.env)return process.env.REACT_APP_VERCEL_OBSERVABILITY_BASEPATH}(),...void 0!==a.route&&{disableAutoTrack:!0},...a})},[]),(0,b.useEffect)(()=>{a.route&&a.path&&function({route:a,path:b}){var c;null==(c=window.va)||c.call(window,"pageview",{route:a,path:b})}({route:a.route,path:a.path})},[a.route,a.path]),null}function f(a){let f,g,h,{route:i,path:j}=(f=(0,c.useParams)(),g=(0,c.useSearchParams)(),h=(0,c.usePathname)(),f?{route:function(a,b){if(!a||!b)return a;let c=a;try{let a=Object.entries(b);for(let[b,e]of a)if(!Array.isArray(e)){let a=d(e);a.test(c)&&(c=c.replace(a,`/[${b}]`))}for(let[b,e]of a)if(Array.isArray(e)){let a=d(e.join("/"));a.test(c)&&(c=c.replace(a,`/[...${b}]`))}return c}catch(b){return a}}(h,Object.keys(f).length?f:Object.fromEntries(g.entries())),path:h}:{route:null,path:h});return b.default.createElement(e,{path:j,route:i,...a,basePath:function(){if("u">typeof process&&void 0!==process.env)return process.env.NEXT_PUBLIC_VERCEL_OBSERVABILITY_BASEPATH}(),framework:"next"})}a.s(["Analytics",0,function(a){return b.default.createElement(b.Suspense,{fallback:null},b.default.createElement(f,{...a}))}])},57966,a=>{"use strict";var b=a.i(542965),c=a.i(577809);function d(a){return RegExp(`/${a.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(?=[/?#]|$)`)}function e(a){(0,b.useEffect)(()=>{var b;a.beforeSend&&(null==(b=window.si)||b.call(window,"beforeSend",a.beforeSend))},[a.beforeSend]);let c=(0,b.useRef)(null);return(0,b.useEffect)(()=>{if(c.current)a.route&&c.current(a.route);else{let b=function(a={}){return null}({framework:a.framework??"react",basePath:a.basePath??function(){if("u">typeof process&&void 0!==process.env)return process.env.REACT_APP_VERCEL_OBSERVABILITY_BASEPATH}(),...a});b&&(c.current=b.setRoute)}},[a.route]),null}function f(a){let f=(()=>{let a=(0,c.useParams)(),b=(0,c.useSearchParams)()||new URLSearchParams,e=(0,c.usePathname)();if(!a)return null;let f=Object.keys(a).length?a:Object.fromEntries(b.entries());if(!e||!f)return e;let g=e;try{let a=Object.entries(f);for(let[b,c]of a)if(!Array.isArray(c)){let a=d(c);a.test(g)&&(g=g.replace(a,`/[${b}]`))}for(let[b,c]of a)if(Array.isArray(c)){let a=d(c.join("/"));a.test(g)&&(g=g.replace(a,`/[...${b}]`))}return g}catch(a){return e}})();return b.default.createElement(e,{route:f,...a,framework:"next",basePath:function(){if("u">typeof process&&void 0!==process.env)return process.env.NEXT_PUBLIC_VERCEL_OBSERVABILITY_BASEPATH}()})}a.s(["SpeedInsights",0,function(a){return b.default.createElement(b.Suspense,{fallback:null},b.default.createElement(f,{...a}))}])}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__0y7w6ji._.js.map

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-style-default",
+  "type": "registry:block",
+  "title": "accordion-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/accordion.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/accordion-style-default.tsx",
+      "content": "\"use client\";\n\nimport { Accordion } from \"@/components/retroui/Accordion\";\n\nexport default function AccordionStyleDefault() {\n  return (\n    <Accordion type=\"single\" collapsible className=\"space-y-4 w-full\">\n      <Accordion.Item value=\"item-1\">\n        <Accordion.Header>Accordion Item 1</Accordion.Header>\n        <Accordion.Content>\n          This is the content of the first accordion item.\n        </Accordion.Content>\n      </Accordion.Item>\n      <Accordion.Item value=\"item-2\">\n        <Accordion.Header>Accordion Item 2</Accordion.Header>\n        <Accordion.Content>\n          This is the content of the second accordion item.\n        </Accordion.Content>\n      </Accordion.Item>\n      <Accordion.Item value=\"item-3\">\n        <Accordion.Header>Accordion Item 3</Accordion.Header>\n        <Accordion.Content>\n          This is the content of the third accordion item.\n        </Accordion.Content>\n      </Accordion.Item>\n    </Accordion>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/accordion-style-default.tsx"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+module.exports=[880095,a=>{"use strict";let b=(0,a.i(41184).default)("Italic",[["line",{x1:"19",x2:"10",y1:"4",y2:"4",key:"15jd3p"}],["line",{x1:"14",x2:"5",y1:"20",y2:"20",key:"bu0au3"}],["line",{x1:"15",x2:"9",y1:"4",y2:"20",key:"uljnxc"}]]);a.s(["Italic",0,b],880095)},243542,a=>{"use strict";var b=a.i(201918);a.i(703736);var c=a.i(892631),d=a.i(880095);a.s(["default",0,function(){return(0,b.jsxs)(c.Toggle,{variant:"solid",children:[(0,b.jsx)(d.Italic,{})," Italics"]})}])}];
+
+//# sourceMappingURL=_0o3diif._.js.map

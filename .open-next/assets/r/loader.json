@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "loader",
+  "type": "registry:component",
+  "title": "Loader",
+  "description": "A loading indicator",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Loader.tsx",
+      "content": "import * as React from \"react\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst loaderVariants = cva(\"flex gap-1\", {\n  variants: {\n    variant: {\n      default: \"[&>div]:bg-primary [&>div]:border-black\",\n      secondary:\n        \"[&>div]:bg-secondary [&>div]:border-black\",\n      outline: \"[&>div]:bg-transparent [&>div]:border-black\",\n    },\n    size: {\n      sm: \"[&>div]:w-2 [&>div]:h-2\",\n      md: \"[&>div]:w-3 [&>div]:h-3\",\n      lg: \"[&>div]:w-4 [&>div]:h-4\",\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n    size: \"md\",\n  },\n});\n\ninterface LoaderProps\n  extends Omit<React.HTMLAttributes<HTMLDivElement>, \"color\">,\n    VariantProps<typeof loaderVariants> {\n  asChild?: boolean;\n  count?: number; // number of bouncing dots\n  duration?: number; // animation duration in seconds\n  delayStep?: number; // delay in ms\n}\n\nconst Loader = React.forwardRef<HTMLDivElement, LoaderProps>(\n  (\n    {\n      className,\n      variant,\n      size,\n      count = 3,\n      duration = 0.5,\n      delayStep = 100,\n      ...props\n    },\n    ref,\n  ) => {\n    return (\n      <div\n        className={cn(loaderVariants({ variant, size }), className)}\n        ref={ref}\n        role=\"status\"\n        aria-label=\"Loading...\"\n        {...props}\n      >\n        {Array.from({ length: count }).map((_, i) => (\n          <div\n            key={i}\n            className=\"border-2 animate-bounce\"\n            style={{\n              animationDuration: `${duration}s`,\n              animationIterationCount: \"infinite\",\n              animationDelay: `${i * delayStep}ms`,\n            }}\n          />\n        ))}\n      </div>\n    );\n  },\n);\n\nLoader.displayName = \"Loader\";\nexport { Loader };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Loader.tsx"
+    }
+  ]
+}

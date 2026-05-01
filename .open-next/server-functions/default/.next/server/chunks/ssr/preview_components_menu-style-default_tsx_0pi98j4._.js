@@ -1,0 +1,3 @@
+module.exports=[397691,a=>{"use strict";var b=a.i(201918),c=a.i(836098),d=a.i(320542);a.s(["default",0,function(){return(0,b.jsxs)(d.Menu,{children:[(0,b.jsx)(d.Menu.Trigger,{asChild:!0,children:(0,b.jsx)(c.Button,{children:"Menu"})}),(0,b.jsxs)(d.Menu.Content,{className:"min-w-36",children:[(0,b.jsx)(d.Menu.Item,{children:"Menu Item 1"}),(0,b.jsx)(d.Menu.Item,{children:"Menu Item 2"}),(0,b.jsx)(d.Menu.Item,{children:"Menu Item 3"})]})]})}])}];
+
+//# sourceMappingURL=preview_components_menu-style-default_tsx_0pi98j4._.js.map

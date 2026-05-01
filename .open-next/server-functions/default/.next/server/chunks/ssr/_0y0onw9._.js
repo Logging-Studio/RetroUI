@@ -1,0 +1,3 @@
+module.exports=[265961,a=>{"use strict";let b=(0,a.i(41184).default)("Bold",[["path",{d:"M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8",key:"mg9rjx"}]]);a.s(["Bold",0,b],265961)},384244,a=>{"use strict";var b=a.i(201918);a.i(703736);var c=a.i(892631),d=a.i(265961);a.s(["default",0,function(){return(0,b.jsx)(c.Toggle,{variant:"outline-muted",children:(0,b.jsx)(d.Bold,{})})}])}];
+
+//# sourceMappingURL=_0y0onw9._.js.map

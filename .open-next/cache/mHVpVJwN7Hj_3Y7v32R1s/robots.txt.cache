@@ -1,0 +1,1 @@
+{"type":"route","meta":{"status":200,"headers":{"cache-control":"public, max-age=0, must-revalidate","content-type":"text/plain","x-next-cache-tags":"_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt"}},"body":"User-Agent: *\nAllow: /\n\nSitemap: https://retroui.dev/sitemap.xml\n"}

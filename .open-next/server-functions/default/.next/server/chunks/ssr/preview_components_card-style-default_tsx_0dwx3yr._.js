@@ -1,0 +1,3 @@
+module.exports=[837590,a=>{"use strict";var b=a.i(201918),c=a.i(379892);a.s(["default",0,function(){return(0,b.jsx)(c.Card,{children:(0,b.jsxs)(c.Card.Header,{children:[(0,b.jsx)(c.Card.Title,{children:"This is Card Title"}),(0,b.jsx)(c.Card.Description,{children:"I can not find what to write here.. so imagine I wrote some good stuff."})]})})}])}];
+
+//# sourceMappingURL=preview_components_card-style-default_tsx_0dwx3yr._.js.map

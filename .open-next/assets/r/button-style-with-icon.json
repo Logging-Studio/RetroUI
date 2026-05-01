@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-style-with-icon",
+  "type": "registry:block",
+  "title": "button-style-with-icon",
+  "registryDependencies": [
+    "https://retroui.dev/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/button-style-with-icon.tsx",
+      "content": "import { Button } from \"@/components/retroui/Button\";\nimport { Trash } from \"lucide-react\";\n\nexport default function ButtonStyleWithIcon() {\n  return (\n    <Button className=\"bg-destructive text-white hover:bg-destructive/90\">\n      <Trash className=\"h-4 w-4 mr-2\" /> Delete\n    </Button>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/button-style-with-icon.tsx"
+    }
+  ]
+}

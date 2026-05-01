@@ -1,0 +1,17 @@
+<svg width="318" height="174" viewBox="0 0 318 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="140" height="102" transform="translate(89 36)" fill="white"/>
+<rect x="89.795" y="36.795" width="74.41" height="28.41" fill="#FFDB33"/>
+<rect x="89.795" y="36.795" width="74.41" height="28.41" stroke="black" stroke-width="1.59"/>
+<rect width="8" height="8" transform="translate(102.59 47)" fill="black"/>
+<rect width="30.82" height="3" transform="translate(120.59 49.5)" fill="black"/>
+<mask id="path-2-inside-1_1577_5124" fill="white">
+<path d="M89 78H229V108H89V78Z"/>
+</mask>
+<path d="M89 78V76.41H87.41V78H89ZM229 78H230.59V76.41H229V78ZM89 78V79.59H229V78V76.41H89V78ZM229 78H227.41V108H229H230.59V78H229ZM89 108H90.59V78H89H87.41V108H89Z" fill="black" mask="url(#path-2-inside-1_1577_5124)"/>
+<rect width="8" height="8" transform="translate(102.59 89.7949)" fill="black"/>
+<rect width="48" height="3" transform="translate(120.59 92.2949)" fill="black"/>
+<rect x="89.795" y="108.795" width="138.41" height="28.41" fill="#FAE583"/>
+<rect x="89.795" y="108.795" width="138.41" height="28.41" stroke="black" stroke-width="1.59"/>
+<rect width="8" height="8" transform="translate(102.59 119)" fill="black"/>
+<rect width="48" height="3" transform="translate(120.59 121.5)" fill="black"/>
+</svg>

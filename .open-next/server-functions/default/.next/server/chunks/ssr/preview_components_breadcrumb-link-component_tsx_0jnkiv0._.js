@@ -1,0 +1,3 @@
+module.exports=[201362,a=>{"use strict";var b=a.i(201918),c=a.i(613556),d=a.i(380650);a.s(["default",0,function(){return(0,b.jsx)(d.Breadcrumb,{children:(0,b.jsxs)(d.Breadcrumb.List,{children:[(0,b.jsx)(d.Breadcrumb.Item,{children:(0,b.jsx)(d.Breadcrumb.Link,{asChild:!0,children:(0,b.jsx)(c.default,{href:"/",children:"Home"})})}),(0,b.jsx)(d.Breadcrumb.Separator,{}),(0,b.jsx)(d.Breadcrumb.Item,{children:(0,b.jsx)(d.Breadcrumb.Link,{asChild:!0,children:(0,b.jsx)(c.default,{href:"/docs/components",children:"Components"})})}),(0,b.jsx)(d.Breadcrumb.Separator,{}),(0,b.jsx)(d.Breadcrumb.Item,{children:(0,b.jsx)(d.Breadcrumb.Page,{children:"Breadcrumb"})})]})})}])}];
+
+//# sourceMappingURL=preview_components_breadcrumb-link-component_tsx_0jnkiv0._.js.map

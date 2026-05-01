@@ -1,0 +1,3 @@
+export const production = {"NEXT_PUBLIC_API_BASE_URL":"https://workers.retroui.dev","NEXT_PUBLIC_WANDRY_REGISTRY_TOKEN":"56|aXHq5OQ2GvJcroTj9pDIVpPS4gQWgUUyEg6ENi2H59830e3f","RESEND_API_KEY":"re_bEUS465j_8gYjzTEBzpCLJ2NiH1nA9Ka4","RESEND_AUDIENCE_ID":"a2e26de9-41ac-4664-a7a4-bd7b5d568021"};
+export const development = {"NEXT_PUBLIC_API_BASE_URL":"https://workers.retroui.dev","NEXT_PUBLIC_WANDRY_REGISTRY_TOKEN":"56|aXHq5OQ2GvJcroTj9pDIVpPS4gQWgUUyEg6ENi2H59830e3f","RESEND_API_KEY":"re_bEUS465j_8gYjzTEBzpCLJ2NiH1nA9Ka4","RESEND_AUDIENCE_ID":"a2e26de9-41ac-4664-a7a4-bd7b5d568021"};
+export const test = {"NEXT_PUBLIC_API_BASE_URL":"https://workers.retroui.dev"};

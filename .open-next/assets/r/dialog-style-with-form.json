@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-style-with-form",
+  "type": "registry:block",
+  "title": "dialog-style-with-form",
+  "registryDependencies": [
+    "https://retroui.dev/r/dialog.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/dialog-style-with-form.tsx",
+      "content": "import { Button } from \"@/components/retroui/Button\";\nimport { Dialog } from \"@/components/retroui/Dialog\";\nimport { Input } from \"@/components/retroui/Input\";\nimport { Text } from \"@/components/retroui/Text\";\n\nexport default function DialogStyleWithForm() {\n  return (\n    <Dialog>\n      <Dialog.Trigger asChild>\n        <Button>Open Form</Button>\n      </Dialog.Trigger>\n      <Dialog.Content size={\"md\"}>\n        <Dialog.Header position={\"fixed\"}>\n          <Text as=\"h5\">Contact Us</Text>\n        </Dialog.Header>\n        <form className=\"flex flex-col gap-4\">\n          <div className=\"flex flex-col p-4 gap-4\">\n            <div className=\"flex-col gap-2\">\n              <label htmlFor=\"name\">\n                Your name <span className=\"text-red-500\">*</span>\n              </label>\n              <Input placeholder=\"Type your name\" required />\n            </div>\n            <div className=\"flex-col gap-2\">\n              <label htmlFor=\"name\">\n                Your e-email <span className=\"text-red-500\">*</span>\n              </label>\n              <Input placeholder=\"Type your name\" required />\n            </div>\n          </div>\n          <Dialog.Footer>\n            <Dialog.Trigger asChild>\n              <Button type=\"submit\">Submit</Button>\n            </Dialog.Trigger>\n          </Dialog.Footer>\n        </form>\n      </Dialog.Content>\n    </Dialog>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/dialog-style-with-form.tsx"
+    }
+  ]
+}

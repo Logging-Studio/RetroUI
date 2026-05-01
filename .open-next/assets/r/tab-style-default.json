@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tab-style-default",
+  "type": "registry:block",
+  "title": "tab-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/tab.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/tab-style-default.tsx",
+      "content": "import { Tabs, TabsPanels, TabsTrigger, TabsContent, TabsTriggerList } from \"@/components/retroui/Tab\";\n\nexport default function TabStyleDefault() {\n  return (\n    <Tabs>\n      <TabsTriggerList>\n        <TabsTrigger>Home</TabsTrigger>\n        <TabsTrigger>About</TabsTrigger>\n        <TabsTrigger>Contact</TabsTrigger>\n      </TabsTriggerList>\n      <TabsPanels>\n        <TabsContent>\n          Welcome to RetroUI, a retro styled UI library built with React,\n          Tailwind CSS & Headless UI.\n        </TabsContent>\n        <TabsContent>This is the about section!</TabsContent>\n        <TabsContent>And, this is the contact section!</TabsContent>\n      </TabsPanels>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/tab-style-default.tsx"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,36597,e=>{"use strict";var t=e.i(157700),c=e.i(523561),i=e.i(17505);e.s(["default",0,function(){return(0,t.jsxs)("div",{className:"flex gap-2 items-center",children:[(0,t.jsx)(c.Checkbox,{}),(0,t.jsx)(i.Text,{children:"Accept terms and conditions"})]})}])}]);

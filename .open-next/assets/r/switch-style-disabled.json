@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-style-disabled",
+  "type": "registry:block",
+  "title": "switch-style-disabled",
+  "registryDependencies": [
+    "https://retroui.dev/r/switch.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/switch-style-disabled.tsx",
+      "content": "import { Switch } from \"@/components/retroui/Switch\";\nimport React from \"react\";\n\nexport default function SwitchStyleDisabled() {\n  return (\n    <div className=\"flex items-center space-x-2\">\n      <Switch id=\"notification\" disabled />\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/switch-style-disabled.tsx"
+    }
+  ]
+}

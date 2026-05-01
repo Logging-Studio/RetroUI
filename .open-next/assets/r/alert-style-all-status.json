@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-style-all-status",
+  "type": "registry:block",
+  "title": "alert-style-all-status",
+  "registryDependencies": [
+    "https://retroui.dev/r/alert.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/alert-style-all-status.tsx",
+      "content": "import { Alert } from \"@/components/retroui/Alert\";\nimport { CheckCircle, InfoIcon, XIcon } from \"lucide-react\";\n\nexport default function AlertAllStatus() {\n  return (\n    <div className=\"space-y-4\">\n      <Alert status=\"success\" className=\"flex items-center\">\n        <CheckCircle className=\"h-4 w-4 mr-4\" />\n        <Alert.Title>This is a success alert!</Alert.Title>\n      </Alert>\n      <Alert status=\"info\" className=\"flex items-center\">\n        <InfoIcon className=\"h-4 w-4 mr-4\" />\n        <Alert.Title>This is an info alert!</Alert.Title>\n      </Alert>\n      <Alert status=\"error\" className=\"flex items-center\">\n        <XIcon className=\"h-4 w-4 mr-4\" />\n        <Alert.Title>This is an error alert!</Alert.Title>\n      </Alert>\n      <Alert status=\"warning\" className=\"flex items-center\">\n        <InfoIcon className=\"h-4 w-4 mr-4\" />\n        <Alert.Title>This is an error alert!</Alert.Title>\n      </Alert>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/alert-style-all-status.tsx"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+module.exports=[66455,a=>{"use strict";var b=a.i(316820),c=a.i(330972);a.s(["default",0,function(){return(0,b.jsx)(c.Text,{className:"font-sans text-base",children:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat eos, doloremque inventore nesciunt quo sequi veniam impedit alias libero dolorem tempore quia esse fugit fuga iste aliquam expedita molestias iusto?"})}])}];
+
+//# sourceMappingURL=preview_components_typography-p_tsx_0j~tsm_._.js.map

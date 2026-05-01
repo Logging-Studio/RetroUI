@@ -1,0 +1,304 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,922353,e=>{"use strict";var r=e.i(149748);function t(e,r){if("function"==typeof e)return e(r);null!=e&&(e.current=r)}function o(...e){return r=>{let o=!1,n=e.map(e=>{let n=t(e,r);return o||"function"!=typeof n||(o=!0),n});if(o)return()=>{for(let r=0;r<n.length;r++){let o=n[r];"function"==typeof o?o():t(e[r],null)}}}}e.s(["composeRefs",0,o,"useComposedRefs",0,function(...e){return r.useCallback(o(...e),e)}])},951459,e=>{"use strict";var r=e.i(149748),t=e.i(922353),o=e.i(157700);function n(e){var n;let a,u=(n=e,(a=r.forwardRef((e,o)=>{var n;let a,u,{children:i,...d}=e,s=r.isValidElement(i)?(n=i,(u=(a=Object.getOwnPropertyDescriptor(n.props,"ref")?.get)&&"isReactWarning"in a&&a.isReactWarning)?n.ref:(u=(a=Object.getOwnPropertyDescriptor(n,"ref")?.get)&&"isReactWarning"in a&&a.isReactWarning)?n.props.ref:n.props.ref||n.ref):void 0,c=(0,t.useComposedRefs)(s,o);if(r.isValidElement(i)){let e=function(e,r){let t={...r};for(let o in r){let n=e[o],a=r[o];/^on[A-Z]/.test(o)?n&&a?t[o]=(...e)=>{let r=a(...e);return n(...e),r}:n&&(t[o]=n):"style"===o?t[o]={...n,...a}:"className"===o&&(t[o]=[n,a].filter(Boolean).join(" "))}return{...e,...t}}(d,i.props);return i.type!==r.Fragment&&(e.ref=c),r.cloneElement(i,e)}return r.Children.count(i)>1?r.Children.only(null):null})).displayName=`${n}.SlotClone`,a),i=r.forwardRef((e,t)=>{let{children:n,...a}=e,i=r.Children.toArray(n),d=i.find(s);if(d){let e=d.props.children,n=i.map(t=>t!==d?t:r.Children.count(e)>1?r.Children.only(null):r.isValidElement(e)?e.props.children:null);return(0,o.jsx)(u,{...a,ref:t,children:r.isValidElement(e)?r.cloneElement(e,void 0,n):null})}return(0,o.jsx)(u,{...a,ref:t,children:n})});return i.displayName=`${e}.Slot`,i}var a=n("Slot"),u=Symbol("radix.slottable");function i(e){let r=({children:e})=>(0,o.jsx)(o.Fragment,{children:e});return r.displayName=`${e}.Slottable`,r.__radixId=u,r}var d=i("Slottable");function s(e){return r.isValidElement(e)&&"function"==typeof e.type&&"__radixId"in e.type&&e.type.__radixId===u}e.s(["Root",0,a,"Slot",0,a,"Slottable",0,d,"createSlot",0,n,"createSlottable",0,i])},968739,e=>{"use strict";var r=e.i(157700),t=e.i(647163),o=e.i(89440),n=e.i(149748),a=e.i(951459);let u=(0,o.cva)("font-head transition-all rounded outline-hidden cursor-pointer duration-200 font-medium flex justify-center items-center disabled:opacity-60 disabled:cursor-not-allowed",{variants:{variant:{default:"shadow-md hover:shadow active:shadow-none bg-primary text-primary-foreground border-2 border-black transition hover:translate-y-1 active:translate-y-2 active:translate-x-1 hover:bg-primary-hover",secondary:"shadow-md hover:shadow active:shadow-none bg-secondary shadow-primary text-secondary-foreground border-2 border-black transition hover:translate-y-1 active:translate-y-2 active:translate-x-1 hover:bg-secondary-hover",outline:"shadow-md hover:shadow active:shadow-none bg-transparent border-2 transition hover:translate-y-1 active:translate-y-2 active:translate-x-1",link:"bg-transparent hover:underline",ghost:"bg-transparent hover:bg-accent"},size:{sm:"px-3 py-1 text-sm shadow hover:shadow-sm",md:"px-4 py-1.5 text-base",lg:"px-6 lg:px-8 py-2 lg:py-3 text-md lg:text-lg",icon:"p-2"}},defaultVariants:{size:"md",variant:"default"}}),i=n.default.forwardRef(({children:e,size:o="md",className:n="",variant:i="default",asChild:d=!1,...s},c)=>{let f=d?a.Slot:"button";return(0,r.jsx)(f,{ref:c,className:(0,t.cn)(u({variant:i,size:o}),n),...s,children:e})});i.displayName="Button",e.s(["Button",0,i,"buttonVariants",0,u])},891802,(e,r,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"warnOnce",{enumerable:!0,get:function(){return o}});let o=e=>{}},271785,(e,r,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o={DecodeError:function(){return h},MiddlewareNotFoundError:function(){return E},MissingStaticPage:function(){return b},NormalizeError:function(){return y},PageNotFoundError:function(){return v},SP:function(){return g},ST:function(){return m},WEB_VITALS:function(){return a},execOnce:function(){return u},getDisplayName:function(){return f},getLocationOrigin:function(){return s},getURL:function(){return c},isAbsoluteUrl:function(){return d},isResSent:function(){return l},loadGetInitialProps:function(){return p},normalizeRepeatedSlashes:function(){return F},stringifyError:function(){return w}};for(var n in o)Object.defineProperty(t,n,{enumerable:!0,get:o[n]});let a=["CLS","FCP","FID","INP","LCP","TTFB"];function u(e){let r,t=!1;return(...o)=>(t||(t=!0,r=e(...o)),r)}let i=/^[a-zA-Z][a-zA-Z\d+\-.]*?:/,d=e=>i.test(e);function s(){let{protocol:e,hostname:r,port:t}=window.location;return`${e}//${r}${t?":"+t:""}`}function c(){let{href:e}=window.location,r=s();return e.substring(r.length)}function f(e){return"string"==typeof e?e:e.displayName||e.name||"Unknown"}function l(e){return e.finished||e.headersSent}function F(e){let r=e.split("?");return r[0].replace(/\\/g,"/").replace(/\/\/+/g,"/")+(r[1]?`?${r.slice(1).join("?")}`:"")}async function p(e,r){let t=r.res||r.ctx&&r.ctx.res;if(!e.getInitialProps)return r.ctx&&r.Component?{pageProps:await p(r.Component,r.ctx)}:{};let o=await e.getInitialProps(r);if(t&&l(t))return o;if(!o)throw Object.defineProperty(Error(`"${f(e)}.getInitialProps()" should resolve to an object. But found "${o}" instead.`),"__NEXT_ERROR_CODE",{value:"E1025",enumerable:!1,configurable:!0});return o}let g="u">typeof performance,m=g&&["mark","measure","getEntriesByName"].every(e=>"function"==typeof performance[e]);class h extends Error{}class y extends Error{}class v extends Error{constructor(e){super(),this.code="ENOENT",this.name="PageNotFoundError",this.message=`Cannot find module for page: ${e}`}}class b extends Error{constructor(e,r){super(),this.message=`Failed to load static file for page: ${e} ${r}`}}class E extends Error{constructor(){super(),this.code="ENOENT",this.message="Cannot find the middleware module"}}function w(e){return JSON.stringify({message:e.message,stack:e.stack})}},401885,(e,r,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o={assign:function(){return d},searchParamsToUrlQuery:function(){return a},urlQueryToSearchParams:function(){return i}};for(var n in o)Object.defineProperty(t,n,{enumerable:!0,get:o[n]});function a(e){let r={};for(let[t,o]of e.entries()){let e=r[t];void 0===e?r[t]=o:Array.isArray(e)?e.push(o):r[t]=[e,o]}return r}function u(e){return"string"==typeof e?e:("number"!=typeof e||isNaN(e))&&"boolean"!=typeof e?"":String(e)}function i(e){let r=new URLSearchParams;for(let[t,o]of Object.entries(e))if(Array.isArray(o))for(let e of o)r.append(t,u(e));else r.set(t,u(o));return r}function d(e,...r){for(let t of r){for(let r of t.keys())e.delete(r);for(let[r,o]of t.entries())e.append(r,o)}return e}},463107,(e,r,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o={callServer:function(){return a.callServer},createServerReference:function(){return i.createServerReference},findSourceMapURL:function(){return u.findSourceMapURL}};for(var n in o)Object.defineProperty(t,n,{enumerable:!0,get:o[n]});let a=e.r(783411),u=e.r(58289),i=e.r(901866)},44215,e=>{"use strict";let r=new class{baseURL;constructor(e){this.baseURL=e}async request(e,r={}){let t=`${this.baseURL}${e}`,o=await fetch(t,{...r,headers:{"Content-Type":"application/json",...r.headers}});if(!o.ok)throw Error((await o.json().catch(()=>({}))).message||`HTTP error! status: ${o.status}`);return o.json()}async signIn(e){try{return await this.request("/auth/sign-in",{method:"POST",body:JSON.stringify({email:e})}),{success:!0,message:"Magic link sent! Check your email."}}catch(e){return{success:!1,error:e instanceof Error?e.message:"Failed to send magic link"}}}async verify(e){try{let r=await this.request("/auth/verify",{method:"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${e}`}});return{success:!0,token:r.token,user:r.user}}catch(e){return{success:!1,error:e instanceof Error?e.message:"Failed to verify token"}}}async getMe(e){try{return await this.request("/auth/me",{method:"GET",headers:{Authorization:`Bearer ${e}`}})}catch(e){return console.error("Failed to fetch user:",e),null}}async updateProfile(e,r){try{let t=await this.request("/auth/profile",{method:"POST",headers:{Authorization:`Bearer ${e}`},body:JSON.stringify(r)});return{success:!0,user:t}}catch(e){return{success:!1,error:e instanceof Error?e.message:"Failed to update profile"}}}async createCheckoutSession(e,r){try{return{sessionUrl:(await this.request("/checkout/create-stripe-checkout-session",{method:"POST",body:JSON.stringify({priceId:e,promoCode:"",endorsely_referral:r??""})})).sessionUrl}}catch(e){return{error:e instanceof Error?e.message:"Failed to create checkout session"}}}async downloadTemplate(e,r){try{return{downloadUrl:(await this.request(`/products/download/${e}`,{method:"GET",headers:{Authorization:`Bearer ${r}`}})).downloadUrl}}catch(e){return{error:e instanceof Error?e.message:"Failed to get download link"}}}}("https://workers.retroui.dev");e.s(["authApi",0,r])},383642,e=>{"use strict";var r=e.i(157700),t=e.i(149748),o=e.i(44215),n=e.i(463107);let a=(0,n.createServerReference)("00408cb8d7d1915fa9d393b6c48a5a1627fe642d82",n.callServer,void 0,n.findSourceMapURL,"logoutAction"),u=(0,t.createContext)(void 0);e.s(["AuthProvider",0,function({children:e,initialUser:n}){let[i,d]=(0,t.useState)(n||null),[s,c]=(0,t.useState)(!1),[f,l]=(0,t.useState)(null),[F,p]=(0,t.useState)(!1);(0,t.useEffect)(()=>{p(!0),(async()=>{let e=localStorage.getItem("auth_token");n&&e||e&&!n&&await g()})()},[n]);let g=async()=>{let e=localStorage.getItem("auth_token");if(!e){d(null),l("No authentication token");return}c(!0),l(null);try{let r=await o.authApi.getMe(e);r?(d(r),l(null)):(d(null),l("Failed to fetch user data"),localStorage.removeItem("auth_token"))}catch(e){d(null),l(e instanceof Error?e.message:"Authentication failed"),localStorage.removeItem("auth_token")}finally{c(!1)}},m=async()=>{c(!0);try{await a(),d(null),l(null),localStorage.removeItem("auth_token"),window.location.href="/"}catch(e){l(e instanceof Error?e.message:"Logout failed")}finally{c(!1)}};return F?(0,r.jsx)(u.Provider,{value:{user:i,isLoading:s,error:f,checkAuth:g,logout:m},children:e}):null},"useAuth",0,function(){let e=(0,t.useContext)(u);if(void 0===e)throw Error("useAuth must be used within an AuthProvider");return e}],383642)},905552,(e,r,t)=>{r.exports=e.r(772246)},847613,383513,e=>{"use strict";var r,t=e.i(157700),o=e.i(149748),n=((r={}).Default="default",r.Purple="purple",r.Lime="lime",r.Red="red",r.Lavender="lavender",r.Orange="orange",r.Green="green",r);let a=({hasRadius:e=!1})=>({default:{name:"default",color:`:root {
+    --radius: ${e?"0.5rem":"0"};
+    --background: #fff;
+    --foreground: #000;
+    --card: #fff;
+    --card-foreground: #000;
+    --primary: #ffdb33;
+    --primary-hover: #ffcc00;
+    --primary-foreground: #000;
+    --secondary: #000;
+    --secondary-foreground: #fff;
+    --muted: #cccccc;
+    --muted-foreground: #5a5a5a;
+    --accent: #fae583;
+    --accent-foreground: #000;
+    --destructive: #e63946;
+    --destructive-foreground: #fff;
+    --border: #000;
+}
+
+.dark {
+    --background: #1a1a1a;
+    --foreground: #f5f5f5;
+    --card: #242424;
+    --card-foreground: #f5f5f5;
+    --primary: #ffdb33;
+    --primary-hover: #ffcc00;
+    --primary-foreground: #000;
+    --secondary: #3a3a3a;
+    --secondary-foreground: #f5f5f5;
+    --muted: #3f3f46;
+    --muted-foreground: #a0a0a0;
+    --accent: #fae583;
+    --accent-foreground: #000;
+    --destructive: #e63946;
+    --destructive-foreground: #fff;
+    --border: #5c5c5c;
+}
+`},purple:{name:"purple",color:`:root {
+    --radius: ${e?"0.5rem":"0"};
+    --background: #f5f5f5;
+    --foreground: #1a1a1a;
+    --card: #FFFFFF;
+    --card-foreground: #f5f5f5;
+    --primary: #5F4FE6;
+    --primary-hover: #4938C2;
+    --primary-foreground: #fff;
+    --secondary: #3a3a3a;
+    --secondary-foreground: #f5f5f5;
+    --muted: #CFCCEA;
+    --muted-foreground: #5B5686;
+    --accent: #FED13B;
+    --accent-foreground: #000000;
+    --destructive: #EF4444;
+    --destructive-foreground: #fff;
+    --border: #3a3a3a;
+}
+
+.dark {
+    --background: #0f0f12;
+    --foreground: #f5f5f5;
+    --card: #1a1a1d;
+    --card-foreground: #eaeaea;
+    --primary: #7b6df5;
+    --primary-hover: #5F4FE6;
+    --primary-foreground: #fff;
+    --secondary: #2a2a2e;
+    --secondary-foreground: #eaeaea;
+    --muted: #3d395a;
+    --muted-foreground: #a49fce;
+    --accent: #FED13B;
+    --accent-foreground: #000;
+    --destructive: #EF4444;
+    --destructive-foreground: #fff;
+    --border: #2e2e32;
+}
+`},lime:{name:"Lime",color:`:root {
+    --radius: ${e?"0.5rem":"0"};
+    --background: #FFFFFF;
+    --foreground: #000000;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --input: #FFFFFF;
+    --ring: #AAFC3D;
+    --primary: #AAFC3D;
+    --primary-hover: #97f819;
+    --primary-foreground: #FFFFFF;
+    --secondary: #5252FF;
+    --secondary-foreground: #000000;
+    --muted: #F3F4F6;
+    --muted-foreground: #6B7280;
+    --accent: #FF00FF;
+    --accent-foreground: #000000;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #3a3a3a;
+}
+
+.dark {
+    --background: #FFFFFF;
+    --foreground: #000000;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --input: #FFFFFF;
+    --border: #000000;
+    --ring: #AAFC3D;
+    --primary: #AAFC3D;
+    --primary-hover: #97f819;
+    --primary-foreground: #000000;
+    --secondary: #000000;
+    --secondary-foreground: #FFFFFF;
+    --muted: #F3F3F3;
+    --muted-foreground: #444444;
+    --accent: #FF4FD8;
+    --accent-foreground: #000000;
+    --destructive: #FF0033;
+    --destructive-foreground: #FFFFFF;
+}
+`},red:{name:"Red",color:`:root {
+    --radius: ${e?"0.5rem":"0"};
+    --background: #FCFFE7;
+    --foreground: #000000;
+    --muted: #EFD0D5;
+    --muted-foreground: #A42439;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --popover: #FFFFFF;
+    --popover-foreground: #000000;
+    --border: #000000;
+    --input: #FFFFFF;
+    --primary: #EA435F;
+    --primary-hover: #D00000;
+    --primary-foreground: #FFFFFF;
+    --secondary: #FFDA5C;
+    --secondary-foreground: #000000;
+    --accent: #CEEBFC;
+    --accent-foreground: #000000;
+    --destructive: #D00000;
+    --destructive-foreground: #FFFFFF;
+    --ring: #000000;
+}
+    
+.dark {
+    --background: #0f0f0f;
+    --foreground: #f5f5f5;
+    --muted: #3a1f24;
+    --muted-foreground: #f2a7b2;
+    --card: #1a1a1a;
+    --card-foreground: #ffffff;
+    --popover: #1a1a1a;
+    --popover-foreground: #ffffff;
+    --border: #2a2a2a;
+    --input: #2a2a2a;
+    --primary: #EA435F;
+    --primary-hover: #D00000;
+    --primary-foreground: #ffffff;
+    --secondary: #FFDA5C;
+    --secondary-foreground: #000000;
+    --accent: #2a3b45;
+    --accent-foreground: #CEEBFC;
+    --destructive: #D00000;
+    --destructive-foreground: #ffffff;
+    --ring: #EA435F;
+}
+`},lavender:{name:"Lavender",color:`:root {
+    --radius: ${e?"0.5rem":"0"};
+    --background: #F9F5F2;
+    --foreground: #000000;
+    --muted: #EDE3FF;
+    --muted-foreground: #5B3B98;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --popover: #FFFFFF;
+    --popover-foreground: #000000;
+    --border: #000000;
+    --input: #FFFFFF;
+    --primary: #C4A1FF;
+    --primary-hover: #9678FF;
+    --primary-foreground: #000000;
+    --secondary: #E7F193;
+    --secondary-foreground: #000000;
+    --accent: #FE91E9;
+    --accent-foreground: #000000;
+    --destructive: #FE3B3B;
+    --destructive-foreground: #FFFFFF;
+    --ring: #000000;
+}
+
+.dark {
+    --background: #121014;
+    --foreground: #f5f5f5;
+    --muted: #2d2440;
+    --muted-foreground: #c7b6f3;
+    --card: #1a1820;
+    --card-foreground: #ffffff;
+    --popover: #1a1820;
+    --popover-foreground: #ffffff;
+    --border: #2a2a2e;
+    --input: #2a2a2e;
+    --primary: #C4A1FF;
+    --primary-hover: #9678FF;
+    --primary-foreground: #000000;
+    --secondary: #E7F193;
+    --secondary-foreground: #000000;
+    --accent: #FE91E9;
+    --accent-foreground: #000000;
+    --destructive: #FE3B3B;
+    --destructive-foreground: #ffffff;
+    --ring: #C4A1FF;
+}
+
+`},orange:{name:"Orange",color:`:root {
+    --radius: ${e?"0.5rem":"0"};
+    --background: #F9F5F2;
+    --foreground: #000000;
+    --muted: #EFD0D5;
+    --muted-foreground: #A42439;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --popover: #FFFFFF;
+    --popover-foreground: #000000;
+    --border: #000000;
+    --input: #FFFFFF;
+    --primary: #EA435F;
+    --primary-hover: #D00000;
+    --primary-foreground: #FFFFFF;
+    --secondary: #FFDA5C;
+    --secondary-foreground: #000000;
+    --accent: #CEEBFC;
+    --accent-foreground: #000000;
+    --destructive: #D00000;
+    --destructive-foreground: #FFFFFF;
+    --ring: #000000;
+}
+
+.dark {
+    --background: #12100e;
+    --foreground: #f5f5f5;
+    --muted: #3a2617;
+    --muted-foreground: #ffb679;
+    --card: #1a1a1a;
+    --card-foreground: #ffffff;
+    --popover: #1a1a1a;
+    --popover-foreground: #ffffff;
+    --border: #2a2a2a;
+    --input: #2a2a2a;
+    --primary: #F07200;
+    --primary-hover: #ff8011;
+    --primary-foreground: #FDEAD9;
+    --secondary: #EF8C27;
+    --secondary-foreground: #000000;
+    --accent: #FF6B6B;
+    --accent-foreground: #000000;
+    --destructive: #FE3B3B;
+    --destructive-foreground: #ffffff;
+    --ring: #F07200;
+}
+`},green:{name:"Green",color:`:root {
+    --radius: ${e?"0.5rem":"0"};
+    --background: #F9F5F2;
+    --foreground: #000000;
+    --muted: #EFD0D5;
+    --muted-foreground: #A42439;
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+    --popover: #FFFFFF;
+    --popover-foreground: #000000;
+    --border: #000000;
+    --input: #FFFFFF;
+    --primary: #EA435F;
+    --primary-hover: #D00000;
+    --primary-foreground: #FFFFFF;
+    --secondary: #FFDA5C;
+    --secondary-foreground: #000000;
+    --accent: #CEEBFC;
+    --accent-foreground: #000000;
+    --destructive: #D00000;
+    --destructive-foreground: #FFFFFF;
+    --ring: #000000;
+}
+
+.dark {
+    --background: #0f1210;
+    --foreground: #f5f5f5;
+    --muted: #1f3a2d;
+    --muted-foreground: #9cd9b8;
+    --card: #181c19;
+    --card-foreground: #ffffff;
+    --popover: #181c19;
+    --popover-foreground: #ffffff;
+    --border: #2a2e2b;
+    --input: #2a2e2b;
+    --primary: #599D77;
+    --primary-hover: #39654c;
+    --primary-foreground: #ffffff;
+    --secondary: #3a6f52;
+    --secondary-foreground: #ffffff;
+    --accent: #FFE75A;
+    --accent-foreground: #000000;
+    --destructive: #F05D5D;
+    --destructive-foreground: #ffffff;
+    --ring: #599D77;
+}
+`}});Object.keys(a({hasRadius:!1})),e.s(["Theme",()=>n,"themeConfig",0,a],383513);let u=(0,o.createContext)(void 0);e.s(["ThemeProvider",0,function({children:e}){let[r,a]=(0,o.useState)("light"),[i,d]=(0,o.useState)(n.Default),[s,c]=(0,o.useState)("box"),[f,l]=(0,o.useState)(!1);(0,o.useEffect)(()=>{l(!0);let e=localStorage.getItem("darkMode"),r=localStorage.getItem("colorTheme"),t=localStorage.getItem("variant")||"box";("dark"===e||"light"===e)&&(a(e),F(e)),r&&Object.values(n).includes(r)&&d(r),c(t)},[]);let F=e=>{"dark"===e?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")},p=e=>{a(e),localStorage.setItem("darkMode",e),F(e)};return f?(0,t.jsx)(u.Provider,{value:{darkMode:r,colorTheme:i,variant:s,isDarkMode:"dark"===r,toggleDarkMode:()=>{p("light"===r?"dark":"light")},setDarkMode:p,setColorTheme:e=>{d(e),localStorage.setItem("colorTheme",e)},setVariant:e=>{c(e),localStorage.setItem("variant",e)}},children:e}):null},"useTheme",0,function(){let e=(0,o.useContext)(u);if(void 0===e)throw Error("useTheme must be used within a ThemeProvider");return e}],847613)},294568,e=>{"use strict";var r=e.i(953769),t=e.i(149748),o=e.i(905552);function n(){return"u">typeof window}function a(){return"production"}function u(){return"development"===((n()?window.vam:a())||"production")}function i(e){return RegExp(`/${e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(?=[/?#]|$)`)}function d(e){return(0,t.useEffect)(()=>{var r;e.beforeSend&&(null==(r=window.va)||r.call(window,"beforeSend",e.beforeSend))},[e.beforeSend]),(0,t.useEffect)(()=>{!function(e={debug:!0}){var r;if(!n())return;!function(e="auto"){if("auto"===e){window.vam=a();return}window.vam=e}(e.mode),window.va||(window.va=function(...e){(window.vaq=window.vaq||[]).push(e)}),e.beforeSend&&(null==(r=window.va)||r.call(window,"beforeSend",e.beforeSend));let t=e.scriptSrc?e.scriptSrc:u()?"https://va.vercel-scripts.com/v1/script.debug.js":e.basePath?`${e.basePath}/insights/script.js`:"/_vercel/insights/script.js";if(document.head.querySelector(`script[src*="${t}"]`))return;let o=document.createElement("script");o.src=t,o.defer=!0,o.dataset.sdkn="@vercel/analytics"+(e.framework?`/${e.framework}`:""),o.dataset.sdkv="1.5.0",e.disableAutoTrack&&(o.dataset.disableAutoTrack="1"),e.endpoint?o.dataset.endpoint=e.endpoint:e.basePath&&(o.dataset.endpoint=`${e.basePath}/insights`),e.dsn&&(o.dataset.dsn=e.dsn),o.onerror=()=>{let e=u()?"Please check if any ad blockers are enabled and try again.":"Be sure to enable Web Analytics for your project and deploy again. See https://vercel.com/docs/analytics/quickstart for more information.";console.log(`[Vercel Web Analytics] Failed to load script from ${t}. ${e}`)},u()&&!1===e.debug&&(o.dataset.debug="false"),document.head.appendChild(o)}({framework:e.framework||"react",basePath:e.basePath??function(){if(void 0!==r.default&&void 0!==r.default.env)return r.default.env.REACT_APP_VERCEL_OBSERVABILITY_BASEPATH}(),...void 0!==e.route&&{disableAutoTrack:!0},...e})},[]),(0,t.useEffect)(()=>{e.route&&e.path&&function({route:e,path:r}){var t;null==(t=window.va)||t.call(window,"pageview",{route:e,path:r})}({route:e.route,path:e.path})},[e.route,e.path]),null}function s(e){let n,a,u,{route:s,path:c}=(n=(0,o.useParams)(),a=(0,o.useSearchParams)(),u=(0,o.usePathname)(),n?{route:function(e,r){if(!e||!r)return e;let t=e;try{let e=Object.entries(r);for(let[r,o]of e)if(!Array.isArray(o)){let e=i(o);e.test(t)&&(t=t.replace(e,`/[${r}]`))}for(let[r,o]of e)if(Array.isArray(o)){let e=i(o.join("/"));e.test(t)&&(t=t.replace(e,`/[...${r}]`))}return t}catch(r){return e}}(u,Object.keys(n).length?n:Object.fromEntries(a.entries())),path:u}:{route:null,path:u});return t.default.createElement(d,{path:c,route:s,...e,basePath:function(){if(void 0!==r.default&&void 0!==r.default.env)return r.default.env.NEXT_PUBLIC_VERCEL_OBSERVABILITY_BASEPATH}(),framework:"next"})}e.s(["Analytics",0,function(e){return t.default.createElement(t.Suspense,{fallback:null},t.default.createElement(s,{...e}))}])},572741,e=>{"use strict";var r=e.i(953769),t=e.i(149748),o=e.i(905552);function n(){return false}function a(e){return RegExp(`/${e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(?=[/?#]|$)`)}function u(e){(0,t.useEffect)(()=>{var r;e.beforeSend&&(null==(r=window.si)||r.call(window,"beforeSend",e.beforeSend))},[e.beforeSend]);let o=(0,t.useRef)(null);return(0,t.useEffect)(()=>{if(o.current)e.route&&o.current(e.route);else{let t=function(e={}){var r;if(!("u">typeof window)||null===e.route)return null;window.si||(window.si=function(...e){(window.siq=window.siq||[]).push(e)});let t=e.scriptSrc?e.scriptSrc:n()?"https://va.vercel-scripts.com/v1/speed-insights/script.debug.js":e.dsn?"https://va.vercel-scripts.com/v1/speed-insights/script.js":e.basePath?`${e.basePath}/speed-insights/script.js`:"/_vercel/speed-insights/script.js";if(document.head.querySelector(`script[src*="${t}"]`))return null;e.beforeSend&&(null==(r=window.si)||r.call(window,"beforeSend",e.beforeSend));let o=document.createElement("script");return o.src=t,o.defer=!0,o.dataset.sdkn="@vercel/speed-insights"+(e.framework?`/${e.framework}`:""),o.dataset.sdkv="1.2.0",e.sampleRate&&(o.dataset.sampleRate=e.sampleRate.toString()),e.route&&(o.dataset.route=e.route),e.endpoint?o.dataset.endpoint=e.endpoint:e.basePath&&(o.dataset.endpoint=`${e.basePath}/speed-insights/vitals`),e.dsn&&(o.dataset.dsn=e.dsn),n()&&!1===e.debug&&(o.dataset.debug="false"),o.onerror=()=>{console.log(`[Vercel Speed Insights] Failed to load script from ${t}. Please check if any content blockers are enabled and try again.`)},document.head.appendChild(o),{setRoute:e=>{o.dataset.route=e??void 0}}}({framework:e.framework??"react",basePath:e.basePath??function(){if(void 0!==r.default&&void 0!==r.default.env)return r.default.env.REACT_APP_VERCEL_OBSERVABILITY_BASEPATH}(),...e});t&&(o.current=t.setRoute)}},[e.route]),null}function i(e){let n=(()=>{let e=(0,o.useParams)(),r=(0,o.useSearchParams)()||new URLSearchParams,t=(0,o.usePathname)();if(!e)return null;let n=Object.keys(e).length?e:Object.fromEntries(r.entries());if(!t||!n)return t;let u=t;try{let e=Object.entries(n);for(let[r,t]of e)if(!Array.isArray(t)){let e=a(t);e.test(u)&&(u=u.replace(e,`/[${r}]`))}for(let[r,t]of e)if(Array.isArray(t)){let e=a(t.join("/"));e.test(u)&&(u=u.replace(e,`/[...${r}]`))}return u}catch(e){return t}})();return t.default.createElement(u,{route:n,...e,framework:"next",basePath:function(){if(void 0!==r.default&&void 0!==r.default.env)return r.default.env.NEXT_PUBLIC_VERCEL_OBSERVABILITY_BASEPATH}()})}e.s(["SpeedInsights",0,function(e){return t.default.createElement(t.Suspense,{fallback:null},t.default.createElement(i,{...e}))}])}]);

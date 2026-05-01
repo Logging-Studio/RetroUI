@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,852230,e=>{"use strict";var t=e.i(157700),s=e.i(149748),u=e.i(781376);e.s(["default",0,function(){let[e,r]=s.useState(13);return s.useEffect(()=>{let e=setTimeout(()=>r(66),500);return()=>clearTimeout(e)},[]),(0,t.jsx)(u.Progress,{value:e,className:"w-[60%]"})}])}]);

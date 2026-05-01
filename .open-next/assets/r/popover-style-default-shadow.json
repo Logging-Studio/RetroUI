@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-style-default-shadow",
+  "type": "registry:block",
+  "title": "popover-style-default-shadow",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://retroui.dev/r/popover.json",
+    "https://retroui.dev/r/label.json",
+    "https://retroui.dev/r/input.json",
+    "https://retroui.dev/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/popover-style-default-shadow.tsx",
+      "content": "\"use client\";\n\nimport { Popover, Label, Button, Input } from \"@/components/retroui\";\n\nexport default function PopoverStyleDefaultShadow() {\n  return (\n    <Popover>\n      <Popover.Trigger asChild>\n        <Button>Open Popover</Button>\n      </Popover.Trigger>\n      <Popover.Content className=\"w-80 shadow-md\">\n        <div className=\"grid gap-4\">\n          <div className=\"space-y-2\">\n            <h4 className=\"font-medium leading-none\">Dimensions</h4>\n            <p className=\"text-sm text-muted-foreground\">\n              Set the dimensions for the layer.\n            </p>\n          </div>\n\n          <div className=\"grid gap-2\">\n            <div className=\"grid grid-cols-3 items-center gap-4\">\n              <Label htmlFor=\"width\">Width</Label>\n\n              <Input\n                id=\"width\"\n                defaultValue=\"100%\"\n                className=\"col-span-2 h-8\"\n              />\n            </div>\n\n            <div className=\"grid grid-cols-3 items-center gap-4\">\n              <Label htmlFor=\"height\">Height</Label>\n\n              <Input\n                id=\"height\"\n                defaultValue=\"25px\"\n                className=\"col-span-2 h-8\"\n              />\n            </div>\n          </div>\n        </div>\n      </Popover.Content>\n    </Popover>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/popover-style-default-shadow.tsx"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-style-outlined",
+  "type": "registry:block",
+  "title": "toggle-group-style-outlined",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://retroui.dev/r/toggle.json",
+    "https://retroui.dev/r/toggle-group.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/toggle-group-style-outlined.tsx",
+      "content": "\"use client\";\n\nimport { ToggleGroup, ToggleGroupItem } from \"@/components/retroui\";\nimport { Bold, Italic, Underline } from \"lucide-react\";\n\nexport default function ToggleGroupStyleOutlined() {\n  return (\n    <ToggleGroup type=\"multiple\" variant=\"outlined\">\n      <ToggleGroupItem value=\"bold\">\n        <Bold className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n\n      <ToggleGroupItem value=\"italic\">\n        <Italic className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n\n      <ToggleGroupItem value=\"underline\">\n        <Underline className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n    </ToggleGroup>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/toggle-group-style-outlined.tsx"
+    }
+  ]
+}

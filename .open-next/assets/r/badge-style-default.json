@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-style-default",
+  "type": "registry:block",
+  "title": "badge-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/badge-style-rounded.tsx",
+      "content": "import { Badge } from \"@/components/retroui/Badge\";\n\nexport default function BadgeStyleRounded() {\n  return (\n    <div className=\"space-x-4\">\n      <Badge variant=\"solid\" className=\"rounded-sm\">\n        Rounded\n      </Badge>\n      <Badge variant=\"solid\" className=\"rounded-full\">\n        Full\n      </Badge>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/badge-style-rounded.tsx"
+    }
+  ]
+}

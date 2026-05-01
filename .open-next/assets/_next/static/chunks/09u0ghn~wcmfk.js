@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,128738,e=>{"use strict";var i=e.i(157700),s=e.i(523561);e.s(["default",0,function(){return(0,i.jsxs)("div",{className:"flex gap-4",children:[(0,i.jsx)(s.Checkbox,{}),(0,i.jsx)(s.Checkbox,{variant:"outline"}),(0,i.jsx)(s.Checkbox,{variant:"solid"})]})}])}]);

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card",
+  "type": "registry:component",
+  "title": "Card",
+  "description": "A customizable card component to visualize your content. 📝",
+  "files": [
+    {
+      "path": "components/retroui/Card.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\nimport { HTMLAttributes } from \"react\";\nimport { Text } from \"@/components/retroui/Text\";\n\ninterface ICardProps extends HTMLAttributes<HTMLDivElement> {\n  className?: string;\n}\n\nconst Card = ({ className, ...props }: ICardProps) => {\n  return (\n    <div\n      className={cn(\n        \"inline-block border-2 rounded shadow-md transition-all hover:shadow-none bg-card\",\n        className,\n      )}\n      {...props}\n    />\n  );\n};\n\nconst CardHeader = ({ className, ...props }: ICardProps) => {\n  return (\n    <div\n      className={cn(\"flex flex-col justify-start p-4\", className)}\n      {...props}\n    />\n  );\n};\n\nconst CardTitle = ({ className, ...props }: ICardProps) => {\n  return <Text as=\"h3\" className={cn(\"mb-2\", className)} {...props} />;\n};\n\nconst CardDescription = ({ className, ...props }: ICardProps) => (\n  <p className={cn(\"text-muted-foreground\", className)} {...props} />\n);\n\nconst CardContent = ({ className, ...props }: ICardProps) => {\n  return <div className={cn(\"p-4\", className)} {...props} />;\n};\n\nconst CardComponent = Object.assign(Card, {\n  Header: CardHeader,\n  Title: CardTitle,\n  Description: CardDescription,\n  Content: CardContent,\n});\n\nexport { CardComponent as Card };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Card.tsx"
+    },
+    {
+      "path": "components/retroui/Text.tsx",
+      "content": "import { ElementType, HTMLAttributes } from \"react\";\nimport { VariantProps, cva } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst textVariants = cva(\"font-head\", {\n  variants: {\n    as: {\n      p: \"font-sans text-base\",\n      li: \"font-sans text-base\",\n      a: \"font-sans text-base hover:underline underline-offset-2 decoration-primary\",\n      h1: \"text-4xl lg:text-5xl font-bold\",\n      h2: \"text-3xl lg:text-4xl font-semibold\",\n      h3: \"text-2xl font-medium\",\n      h4: \"text-xl font-normal\",\n      h5: \"text-lg font-normal\",\n      h6: \"text-base font-normal\",\n    },\n  },\n  defaultVariants: {\n    as: \"p\",\n  },\n});\n\ninterface TextProps\n  extends Omit<HTMLAttributes<HTMLElement>, \"className\">,\n    VariantProps<typeof textVariants> {\n  className?: string;\n}\n\nexport const Text = (props: TextProps) => {\n  const { className, as, ...otherProps } = props;\n  const Tag: ElementType = as || \"p\";\n\n  return (\n    <Tag className={cn(textVariants({ as }), className)} {...otherProps} />\n  );\n};\n",
+      "type": "registry:component",
+      "target": "components/retroui/Text.tsx"
+    }
+  ]
+}

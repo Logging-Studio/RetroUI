@@ -1,0 +1,3 @@
+module.exports=[503602,a=>{"use strict";var b=a.i(201918),c=a.i(836098),d=a.i(379892);a.s(["default",0,function(){return(0,b.jsxs)(d.Card,{className:"w-[350px] shadow-none hover:shadow-none",children:[(0,b.jsx)(d.Card.Content,{className:"pb-0",children:(0,b.jsx)("img",{src:"/images/gameboy.jpg",className:"w-full h-full",alt:"Gameboy"})}),(0,b.jsx)(d.Card.Header,{className:"pb-0",children:(0,b.jsx)(d.Card.Title,{children:"Classic 8-bit Gameboy"})}),(0,b.jsxs)(d.Card.Content,{className:"flex justify-between items-center",children:[(0,b.jsx)("p",{className:"text-lg font-semibold",children:"$29.90"}),(0,b.jsx)(c.Button,{children:"Add to cart"})]})]})}])}];
+
+//# sourceMappingURL=preview_components_card-style-commerce_tsx_00ou3~5._.js.map

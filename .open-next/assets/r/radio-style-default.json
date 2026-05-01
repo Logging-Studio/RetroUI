@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-style-default",
+  "type": "registry:block",
+  "title": "radio-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/radio.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/radio-style-default.tsx",
+      "content": "import { RadioGroup } from \"@/components/retroui/Radio\";\n\nexport default function RadioStyleSizes() {\n  return (\n    <RadioGroup>\n      <div className=\"flex items-center space-x-2\">\n        <RadioGroup.Item value=\"1\" />\n        <label htmlFor=\"1\"> Option 1</label>\n      </div>\n      <div className=\"flex items-center space-x-2\">\n        <RadioGroup.Item value=\"2\" />\n        <label htmlFor=\"2\"> Option 2</label>\n      </div>\n      <div className=\"flex items-center space-x-2\">\n        <RadioGroup.Item value=\"3\" />\n        <label htmlFor=\"3\"> Option 3</label>\n      </div>\n    </RadioGroup>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/radio-style-default.tsx"
+    }
+  ]
+}

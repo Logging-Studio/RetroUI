@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-style-variants",
+  "type": "registry:block",
+  "title": "badge-style-variants",
+  "registryDependencies": [
+    "https://retroui.dev/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/badge-style-variants.tsx",
+      "content": "import { Badge } from \"@/components/retroui/Badge\";\n\nexport default function BadgeStyleVariants() {\n  return (\n    <div className=\"flex flex-wrap gap-4\">\n      <Badge>Default</Badge>\n      <Badge variant=\"outline\">Outlined</Badge>\n      <Badge variant=\"solid\">Solid</Badge>\n      <Badge variant=\"surface\">Surface</Badge>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/badge-style-variants.tsx"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menu",
+  "type": "registry:component",
+  "title": "Menu",
+  "description": "Show your users a list of actions they can take. 📋",
+  "dependencies": [
+    "@radix-ui/react-dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Menu.tsx",
+      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\nimport * as DropdownMenu from \"@radix-ui/react-dropdown-menu\";\nimport React, { ComponentPropsWithoutRef } from \"react\";\n\nconst Menu = DropdownMenu.Root;\nconst Trigger = DropdownMenu.Trigger;\n\ninterface IMenuContent\n  extends ComponentPropsWithoutRef<typeof DropdownMenu.Content> {}\n\nconst Content = ({ className, ...props }: IMenuContent) => (\n  <DropdownMenu.Portal>\n    <DropdownMenu.Content\n      side=\"bottom\"\n      align=\"start\"\n      className={cn(\n        \"bg-white border-2 shadow-md absolute top-2 min-w-20\",\n        className,\n      )}\n      {...props}\n    />\n  </DropdownMenu.Portal>\n);\n\nconst MenuItem = React.forwardRef<\n  HTMLDivElement,\n  ComponentPropsWithoutRef<typeof DropdownMenu.Item>\n>(({ className, ...props }, ref) => (\n  <DropdownMenu.Item\n    ref={ref}\n    className={cn(\n      \"relative text-black flex cursor-default select-none items-center rounded-xs px-2 py-1.5 text-sm outline-hidden transition-colors hover:bg-primary focus:bg-primary data-disabled:pointer-events-none data-disabled:opacity-50\",\n      className,\n    )}\n    {...props}\n  />\n));\nMenuItem.displayName = \"MenuItem\";\n\nconst MenuComponent = Object.assign(Menu, {\n  Trigger,\n  Content,\n  Item: MenuItem,\n});\n\nexport { MenuComponent as Menu };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Menu.tsx"
+    }
+  ]
+}

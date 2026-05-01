@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover",
+  "type": "registry:component",
+  "title": "Popover",
+  "author": "Ankan Bhattacharya <https://github.com/ankan002>",
+  "description": "A handy small component for your little input needs...😉",
+  "dependencies": [
+    "@radix-ui/react-popover",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Popover.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport * as PopoverPrimitive from \"@radix-ui/react-popover\";\n\nimport { cn } from \"@/lib/utils\";\nimport { cva, VariantProps } from \"class-variance-authority\";\n\nconst popoverContentVariants = cva(\n  \"z-50 w-72 border-2 bg-background p-4 text-popover-foreground  outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-popover-content-transform-origin]\",\n);\n\nconst Popover = PopoverPrimitive.Root;\n\nconst PopoverTrigger = PopoverPrimitive.Trigger;\n\nconst PopoverAnchor = PopoverPrimitive.Anchor;\n\nconst PopoverContent = React.forwardRef<\n  React.ElementRef<typeof PopoverPrimitive.Content>,\n  React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content> &\n    VariantProps<typeof popoverContentVariants>\n>(({ className, align = \"center\", sideOffset = 4, ...props }, ref) => (\n  <PopoverPrimitive.Portal>\n    <PopoverPrimitive.Content\n      ref={ref}\n      align={align}\n      sideOffset={sideOffset}\n      className={cn(\n        popoverContentVariants({\n          className,\n        }),\n      )}\n      {...props}\n    />\n  </PopoverPrimitive.Portal>\n));\nPopoverContent.displayName = PopoverPrimitive.Content.displayName;\n\nconst PopoverObject = Object.assign(Popover, {\n  Trigger: PopoverTrigger,\n  Content: PopoverContent,\n  Anchor: PopoverAnchor,\n});\n\nexport { PopoverObject as Popover };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Popover.tsx"
+    }
+  ]
+}

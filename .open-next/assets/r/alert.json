@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert",
+  "type": "registry:component",
+  "title": "Alert",
+  "description": "Notify your users about important events and updates. 📣",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Alert.tsx",
+      "content": "import { HtmlHTMLAttributes } from \"react\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\nimport { Text } from \"@/components/retroui/Text\";\n\nconst alertVariants = cva(\"relative w-full rounded border-2 p-4\", {\n  variants: {\n    variant: {\n      default: \"bg-background text-foreground [&_svg]:shrink-0\",\n      solid: \"bg-black text-white\",\n    },\n    status: {\n      error: \"bg-red-300 text-red-800 border-red-800\",\n      success: \"bg-green-300 text-green-800 border-green-800\",\n      warning: \"bg-yellow-300 text-yellow-800 border-yellow-800\",\n      info: \"bg-blue-300 text-blue-800 border-blue-800\",\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n  },\n});\n\ninterface IAlertProps\n  extends HtmlHTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof alertVariants> {}\n\nconst Alert = ({ className, variant, status, ...props }: IAlertProps) => (\n  <div\n    role=\"alert\"\n    className={cn(alertVariants({ variant, status }), className)}\n    {...props}\n  />\n);\nAlert.displayName = \"Alert\";\n\ninterface IAlertTitleProps extends HtmlHTMLAttributes<HTMLHeadingElement> {}\nconst AlertTitle = ({ className, ...props }: IAlertTitleProps) => (\n  <Text as=\"h5\" className={cn(className)} {...props} />\n);\nAlertTitle.displayName = \"AlertTitle\";\n\ninterface IAlertDescriptionProps\n  extends HtmlHTMLAttributes<HTMLParagraphElement> {}\nconst AlertDescription = ({ className, ...props }: IAlertDescriptionProps) => (\n  <div className={cn(\"text-muted-foreground\", className)} {...props} />\n);\n\nAlertDescription.displayName = \"AlertDescription\";\n\nconst AlertComponent = Object.assign(Alert, {\n  Title: AlertTitle,\n  Description: AlertDescription,\n});\n\nexport { AlertComponent as Alert };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Alert.tsx"
+    }
+  ]
+}

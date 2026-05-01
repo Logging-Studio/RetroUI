@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio",
+  "type": "registry:component",
+  "title": "Radio",
+  "description": "Sometimes you need to pick multiple options! That's where the Radio component comes into play.",
+  "dependencies": [
+    "@radix-ui/react-radio-group",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Radio.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\nimport * as RadioPrimitive from \"@radix-ui/react-radio-group\";\nimport { cva, VariantProps } from \"class-variance-authority\";\n\nconst radioVariants = cva(\"border-border border-2\", {\n  variants: {\n    variant: {\n      default: \"\",\n      outline: \"\",\n      solid: \"\",\n    },\n    size: {\n      sm: \"h-4 w-4\",\n      md: \"h-5 w-5\",\n      lg: \"h-6 w-6\",\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n    size: \"md\",\n  },\n});\n\nconst radioIndicatorVariants = cva(\"flex \", {\n  variants: {\n    variant: {\n      default: \"bg-primary border-2 border-border\",\n      outline: \"border-2 border-border\",\n      solid: \"bg-border\",\n    },\n    size: {\n      sm: \"h-2 w-2\",\n      md: \"h-2.5 w-2.5\",\n      lg: \"h-3.5 w-3.5\",\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n    size: \"md\",\n  },\n});\n\ninterface RadioGroupProps\n  extends React.ComponentProps<typeof RadioPrimitive.Root> {}\n\nexport const RadioGroupRoot = ({ className, ...props }: RadioGroupProps) => (\n  <RadioPrimitive.Root className={cn(\"grid gap-2\", className)} {...props} />\n);\n\ninterface RadioProps\n  extends React.ComponentProps<typeof RadioPrimitive.Item>,\n    VariantProps<typeof radioVariants> {}\n\nexport const RadioItem = ({\n  children,\n  className,\n  size,\n  variant,\n  ...props\n}: RadioProps) => (\n  <RadioPrimitive.Item\n    {...props}\n    className={cn(\n      radioVariants({\n        size,\n        variant,\n      }),\n      className,\n    )}\n  >\n    <RadioPrimitive.Indicator className=\"flex justify-center items-center\">\n      <span className={radioIndicatorVariants({ size, variant })}></span>\n    </RadioPrimitive.Indicator>\n    {children}\n  </RadioPrimitive.Item>\n);\n\nconst RadioComponent = Object.assign(RadioGroupRoot, {\n  Item: RadioItem,\n});\n\nexport { RadioComponent as RadioGroup };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Radio.tsx"
+    }
+  ]
+}

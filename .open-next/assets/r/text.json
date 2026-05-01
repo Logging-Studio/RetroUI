@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text",
+  "type": "registry:component",
+  "title": "text",
+  "description": "Show your texts in different styles. 💅",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Text.tsx",
+      "content": "import { ElementType, HTMLAttributes } from \"react\";\nimport { VariantProps, cva } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst textVariants = cva(\"font-head\", {\n  variants: {\n    as: {\n      p: \"font-sans text-base\",\n      li: \"font-sans text-base\",\n      a: \"font-sans text-base hover:underline underline-offset-2 decoration-primary\",\n      h1: \"text-4xl lg:text-5xl font-bold\",\n      h2: \"text-3xl lg:text-4xl font-semibold\",\n      h3: \"text-2xl font-medium\",\n      h4: \"text-xl font-normal\",\n      h5: \"text-lg font-normal\",\n      h6: \"text-base font-normal\",\n    },\n  },\n  defaultVariants: {\n    as: \"p\",\n  },\n});\n\ninterface TextProps\n  extends Omit<HTMLAttributes<HTMLElement>, \"className\">,\n    VariantProps<typeof textVariants> {\n  className?: string;\n}\n\nexport const Text = (props: TextProps) => {\n  const { className, as, ...otherProps } = props;\n  const Tag: ElementType = as || \"p\";\n\n  return (\n    <Tag className={cn(textVariants({ as }), className)} {...otherProps} />\n  );\n};\n",
+      "type": "registry:component",
+      "target": "components/retroui/Text.tsx"
+    }
+  ]
+}

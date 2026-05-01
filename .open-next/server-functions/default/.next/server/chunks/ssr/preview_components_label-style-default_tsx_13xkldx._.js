@@ -1,0 +1,3 @@
+module.exports=[539215,a=>{"use strict";var b=a.i(316820);a.i(96235);var c=a.i(41612),d=a.i(513547);a.s(["default",0,function(){return(0,b.jsxs)("div",{className:"grid w-full max-w-sm items-center gap-1.5",children:[(0,b.jsx)(d.Label,{htmlFor:"pokemon",children:"Favorite Pokemon"}),(0,b.jsx)(c.Input,{type:"pokemon",id:"pokemon",placeholder:"Charmander"})]})}])}];
+
+//# sourceMappingURL=preview_components_label-style-default_tsx_13xkldx._.js.map

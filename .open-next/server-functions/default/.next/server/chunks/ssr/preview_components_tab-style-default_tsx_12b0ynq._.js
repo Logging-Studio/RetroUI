@@ -1,0 +1,3 @@
+module.exports=[35462,a=>{"use strict";var b=a.i(201918),c=a.i(398444);a.s(["default",0,function(){return(0,b.jsxs)(c.Tabs,{className:"w-full",defaultValue:"home",children:[(0,b.jsxs)(c.Tabs.List,{children:[(0,b.jsx)(c.Tabs.Trigger,{value:"home",children:"Home"}),(0,b.jsx)(c.Tabs.Trigger,{value:"about",children:"About"}),(0,b.jsx)(c.Tabs.Trigger,{value:"contact",children:"Contact"})]}),(0,b.jsx)(c.Tabs.Content,{value:"home",children:"Welcome to RetroUI!!"}),(0,b.jsx)(c.Tabs.Content,{value:"about",children:"This is the about section!"}),(0,b.jsx)(c.Tabs.Content,{value:"contact",children:"And, this is the contact section!"})]})}])}];
+
+//# sourceMappingURL=preview_components_tab-style-default_tsx_12b0ynq._.js.map

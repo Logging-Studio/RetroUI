@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-style-circle-sizes",
+  "type": "registry:block",
+  "title": "avatar-style-circle-sizes",
+  "registryDependencies": [
+    "https://retroui.dev/r/avatar.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/avatar-style-circle-sizes.tsx",
+      "content": "import { Avatar } from \"@/components/retroui/Avatar\";\n\nexport default function AvatarStyleCircleSizes() {\n  return (\n    <div className=\"flex items-center space-x-4\">\n      <Avatar>\n        <Avatar.Image src=\"/images/avatar.jpeg\" alt=\"Arif Logs\" />\n        <Avatar.Fallback>AH</Avatar.Fallback>\n      </Avatar>\n      <Avatar className=\"h-16 w-16\">\n        <Avatar.Image src=\"/images/avatar.jpeg\" alt=\"Arif Logs\" />\n        <Avatar.Fallback>AH</Avatar.Fallback>\n      </Avatar>\n      <Avatar className=\"h-20 w-20\">\n        <Avatar.Image src=\"/images/avatar.jpeg\" alt=\"Arif Logs\" />\n        <Avatar.Fallback>AH</Avatar.Fallback>\n      </Avatar>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/avatar-style-circle-sizes.tsx"
+    }
+  ]
+}

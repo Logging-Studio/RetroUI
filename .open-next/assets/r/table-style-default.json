@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-style-default",
+  "type": "registry:block",
+  "title": "table-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/table.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/table-style-default.tsx",
+      "content": "import { Badge } from \"@/components/retroui\"\nimport {\n    Table,\n} from \"@/components/retroui/Table\"\n\nconst invoices = [\n    {\n        invoice: \"INV001\",\n        customer: \"John Doe\",\n        paymentStatus: \"Paid\",\n        totalAmount: \"$250.00\",\n        paymentMethod: \"Credit Card\",\n    },\n    {\n        invoice: \"INV002\",\n        customer: \"Jane Doe\",\n        paymentStatus: \"Pending\",\n        totalAmount: \"$150.00\",\n        paymentMethod: \"PayPal\",\n    },\n    {\n        invoice: \"INV003\",\n        customer: \"Mark Doe\",\n        paymentStatus: \"Unpaid\",\n        totalAmount: \"$350.00\",\n        paymentMethod: \"Bank Transfer\",\n    },\n    {\n        invoice: \"INV004\",\n        customer: \"Robert Doe\",\n        paymentStatus: \"Paid\",\n        totalAmount: \"$450.00\",\n        paymentMethod: \"Credit Card\",\n    },\n    {\n        invoice: \"INV005\",\n        customer: \"Isabella Doe\",\n        paymentStatus: \"Paid\",\n        totalAmount: \"$550.00\",\n        paymentMethod: \"PayPal\",\n    },\n    {\n        invoice: \"INV006\",\n        customer: \"Mrs. Doe\",\n        paymentStatus: \"Pending\",\n        totalAmount: \"$200.00\",\n        paymentMethod: \"Bank Transfer\",\n    },\n    {\n        invoice: \"INV007\",\n        customer: \"Mr. Doe\",\n        paymentStatus: \"Unpaid\",\n        totalAmount: \"$300.00\",\n        paymentMethod: \"Credit Card\",\n    },\n]\n\nexport default function TableStyleDefault() {\n    return (\n        <Table className=\"max-w-lg mb-6 mx-auto\">\n            <Table.Header>\n                <Table.Row>\n                    <Table.Head className=\"w-[100px]\">Invoice</Table.Head>\n                    <Table.Head>Customer</Table.Head>\n                    <Table.Head>Status</Table.Head>\n                    <Table.Head>Method</Table.Head>\n                    <Table.Head className=\"text-right\">Amount</Table.Head>\n                </Table.Row>\n            </Table.Header>\n            <Table.Body>\n                {invoices.map((invoice) => (\n                    <Table.Row key={invoice.invoice}>\n                        <Table.Cell className=\"font-medium\">{invoice.invoice}</Table.Cell>\n                        <Table.Cell>{invoice.customer}</Table.Cell>\n                        <Table.Cell><Badge variant=\"solid\" size=\"sm\">{invoice.paymentStatus}</Badge></Table.Cell>\n                        <Table.Cell>{invoice.paymentMethod}</Table.Cell>\n                        <Table.Cell className=\"text-right\">{invoice.totalAmount}</Table.Cell>\n                    </Table.Row>\n                ))}\n            </Table.Body>\n            <Table.Footer>\n                <Table.Row>\n                    <Table.Cell colSpan={4}>Total</Table.Cell>\n                    <Table.Cell className=\"text-right\">$2,500.00</Table.Cell>\n                </Table.Row>\n            </Table.Footer>\n        </Table>\n    )\n}",
+      "type": "registry:block",
+      "target": "components/retroui/preview/table-style-default.tsx"
+    }
+  ]
+}

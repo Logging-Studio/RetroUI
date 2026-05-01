@@ -1,0 +1,3 @@
+module.exports=[288097,a=>{"use strict";var b=a.i(201918),c=a.i(174162);a.s(["default",0,function(){return(0,b.jsxs)("div",{className:"flex flex-wrap gap-4",children:[(0,b.jsx)(c.Badge,{children:"Default"}),(0,b.jsx)(c.Badge,{variant:"outline",children:"Outlined"}),(0,b.jsx)(c.Badge,{variant:"solid",children:"Solid"}),(0,b.jsx)(c.Badge,{variant:"surface",children:"Surface"})]})}])}];
+
+//# sourceMappingURL=preview_components_badge-style-variants_tsx_09j6k7w._.js.map

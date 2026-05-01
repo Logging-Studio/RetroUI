@@ -1,0 +1,3 @@
+module.exports=[8789,a=>{"use strict";var b=a.i(201918),c=a.i(395640);a.s(["default",0,function(){return(0,b.jsx)(c.Empty,{children:(0,b.jsxs)(c.Empty.Content,{children:[(0,b.jsx)(c.Empty.Icon,{children:(0,b.jsx)("span",{className:"text-4xl",children:"👻"})}),(0,b.jsx)(c.Empty.Title,{children:"No data"}),(0,b.jsx)(c.Empty.Separator,{}),(0,b.jsx)(c.Empty.Description,{children:"There is nothing to show here yet. Imagine you wrote some good stuff here."})]})})}])}];
+
+//# sourceMappingURL=preview_components_empty-style-custom-icon_tsx_005aswm._.js.map

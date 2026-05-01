@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-headings",
+  "type": "registry:block",
+  "title": "text-headings",
+  "registryDependencies": [
+    "https://retroui.dev/r/text.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/text-headings.tsx",
+      "content": "import { Text } from \"@/components/retroui/Text\";\n\nexport default function TextHeadings() {\n  return (\n    <div className=\"space-y-4\">\n      <Text as=\"h1\">This is H1</Text>\n      <Text as=\"h2\">This is H2</Text>\n      <Text as=\"h3\">This is H3</Text>\n      <Text as=\"h4\">This is H4</Text>\n      <Text as=\"h5\">This is H5</Text>\n      <Text as=\"h6\">This is H6</Text>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/text-headings.tsx"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<svg width="318" height="174" viewBox="0 0 318 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="74.795" y="46.6151" width="168.41" height="35.59" fill="white"/>
+<rect x="74.795" y="46.6151" width="168.41" height="35.59" stroke="black" stroke-width="1.59"/>
+<rect x="84.3851" y="56.2052" width="16.41" height="16.41" fill="#FFDB33"/>
+<rect x="84.3851" y="56.2052" width="16.41" height="16.41" stroke="black" stroke-width="1.59"/>
+<path d="M89.5901 64.4102L92.0901 66.9102L95.5901 62.4102" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<rect width="48" height="4" transform="translate(111.59 59.9102)" fill="black"/>
+<rect width="72" height="3" transform="translate(111.59 67.9102)" fill="black"/>
+<path d="M243.205 91.7949V127.385H74.7949V91.7949H243.205Z" fill="white"/>
+<path d="M243.205 91.7949V127.385H74.7949V91.7949H243.205Z" stroke="black" stroke-width="1.59"/>
+<rect width="18" height="18" transform="translate(83.5901 100.59)" fill="black"/>
+<path d="M90.5901 107.59L94.5901 111.59M94.5901 107.59L90.5901 111.59" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+<rect width="48" height="4" transform="translate(111.59 105.09)" fill="black"/>
+<rect width="72" height="3" transform="translate(111.59 113.09)" fill="black"/>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-style-default",
+  "type": "registry:block",
+  "title": "alert-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/alert.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/alert-style-default.tsx",
+      "content": "import { Alert } from \"@/components/retroui/Alert\";\n\nexport default function AlertStyleDefault() {\n  return (\n    <Alert>\n      <Alert.Title>Heads up!</Alert.Title>\n      <Alert.Description>\n        This is where you can write description that no one reads...\n      </Alert.Description>\n    </Alert>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/alert-style-default.tsx"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-style-default",
+  "type": "registry:block",
+  "title": "input-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/input.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/input-style-default.tsx",
+      "content": "import { Input } from \"@/components/retroui/Input\";\n\nexport default function InputStyleDefault() {\n  return <Input type=\"text\" placeholder=\"type something...\" />;\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/input-style-default.tsx"
+    }
+  ]
+}

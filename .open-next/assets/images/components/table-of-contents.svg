@@ -1,0 +1,20 @@
+<svg width="318" height="174" viewBox="0 0 318 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_1577_5319" fill="white">
+<path d="M84 49H234V125H84V49Z"/>
+</mask>
+<path d="M84 49H234V125H84V49Z" fill="white"/>
+<path d="M84 49V47H82V49H84ZM234 49H236V47H234V49ZM234 125V127H236V125H234ZM84 125H82V127H84V125ZM84 49V51H234V49V47H84V49ZM234 49H232V125H234H236V49H234ZM234 125V123H84V125V127H234V125ZM84 125H86V49H84H82V125H84Z" fill="black" mask="url(#path-1-inside-1_1577_5319)"/>
+<rect width="56" height="4" transform="translate(96 61)" fill="black"/>
+<mask id="path-3-inside-2_1577_5319" fill="white">
+<path d="M96 75H222V113H96V75Z"/>
+</mask>
+<path d="M96 113H98V75H96H94V113H96Z" fill="#FFDB33" mask="url(#path-3-inside-2_1577_5319)"/>
+<rect width="5" height="5" transform="translate(110 75)" fill="#FFDB33"/>
+<rect width="64" height="3" transform="translate(123 76)" fill="#FFDB33"/>
+<rect width="5" height="5" transform="translate(110 86)" fill="black"/>
+<rect width="52" height="3" transform="translate(123 87)" fill="black"/>
+<rect width="5" height="5" transform="translate(110 97)" fill="black"/>
+<rect width="44" height="3" transform="translate(123 98)" fill="black"/>
+<rect width="5" height="5" transform="translate(110 108)" fill="black"/>
+<rect width="56" height="3" transform="translate(123 109)" fill="black"/>
+</svg>

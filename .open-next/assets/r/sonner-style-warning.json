@@ -1,0 +1,18 @@
+{
+  "name": "sonner-style-warning",
+  "title": "sonner-style-warning",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://retroui.dev/r/sonner.json",
+    "https://retroui.dev/r/button.json"
+  ],
+  "dependencies": ["lucide-react"],
+  "files": [
+    {
+      "path": "preview/components/sonner-style-warning.tsx",
+      "target": "components/retroui/preview/sonner-style-warning.tsx",
+      "type": "registry:block",
+      "content": "import { Button } from \"@/components/retroui\";\nimport { toast } from \"sonner\";\n\nexport default function SonnerStyleWarning() {\n  const onClick = () => {\n    toast.warning(\"This is a serious warning\");\n  };\n\n  return <Button onClick={onClick}>Show Toast (Warning)</Button>;\n}\n"
+    }
+  ]
+}

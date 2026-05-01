@@ -1,0 +1,3 @@
+module.exports=[273152,a=>{"use strict";let b=(0,a.i(41184).default)("CircleCheckBig",[["path",{d:"M21.801 10A10 10 0 1 1 17 3.335",key:"yps3ct"}],["path",{d:"m9 11 3 3L22 4",key:"1pflzl"}]]);a.s(["CheckCircle",0,b],273152)},157066,a=>{"use strict";var b=a.i(201918),c=a.i(771613),d=a.i(273152);a.s(["default",0,function(){return(0,b.jsxs)(c.Alert,{className:"flex",children:[(0,b.jsx)(d.CheckCircle,{className:"h-5 w-5 mr-4 mt-2"}),(0,b.jsxs)("div",{children:[(0,b.jsx)(c.Alert.Title,{children:"Heads up!"}),(0,b.jsx)(c.Alert.Description,{children:"This is where you can write description that no one reads..."})]})]})}])}];
+
+//# sourceMappingURL=_02x7ile._.js.map

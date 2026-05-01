@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-style-solid",
+  "type": "registry:block",
+  "title": "tooltip-style-solid",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://retroui.dev/r/tooltip.json",
+    "https://retroui.dev/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/tooltip-style-solid.tsx",
+      "content": "\"use client\";\n\nimport { Button, Tooltip } from \"@/components/retroui\";\n\nexport default function TooltipStyleSolid() {\n  return (\n    <Tooltip.Provider>\n      <Tooltip>\n        <Tooltip.Trigger asChild>\n          <Button variant=\"outline\">Hover</Button>\n        </Tooltip.Trigger>\n        <Tooltip.Content variant=\"solid\">Add to Library</Tooltip.Content>\n      </Tooltip>\n    </Tooltip.Provider>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/tooltip-style-solid.tsx"
+    }
+  ]
+}

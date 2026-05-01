@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-style-with-icon",
+  "type": "registry:block",
+  "title": "alert-style-with-icon",
+  "registryDependencies": [
+    "https://retroui.dev/r/alert.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/alert-style-with-icon.tsx",
+      "content": "import { Alert } from \"@/components/retroui/Alert\";\nimport { CheckCircle } from \"lucide-react\";\n\nexport default function AlertStyleDefaultIcon() {\n  return (\n    <Alert className=\"flex\">\n      <CheckCircle className=\"h-5 w-5 mr-4 mt-2\" />\n      <div>\n        <Alert.Title>Heads up!</Alert.Title>\n        <Alert.Description>\n          This is where you can write description that no one reads...\n        </Alert.Description>\n      </div>\n    </Alert>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/alert-style-with-icon.tsx"
+    }
+  ]
+}

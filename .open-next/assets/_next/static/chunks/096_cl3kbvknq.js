@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,477527,r=>{"use strict";var t=r.i(157700),a=r.i(156198);r.s(["default",0,function(){return(0,t.jsxs)(a.Avatar,{children:[(0,t.jsx)(a.Avatar.Image,{src:"broken-link",alt:"Arif Logs"}),(0,t.jsx)(a.Avatar.Fallback,{children:"AH"})]})}])}]);

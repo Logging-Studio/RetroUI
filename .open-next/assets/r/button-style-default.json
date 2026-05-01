@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-style-default",
+  "type": "registry:block",
+  "title": "button-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/button-style-default.tsx",
+      "content": "import { Button } from \"@/components/retroui/Button\";\n\nexport default function ButtonStyleDefault() {\n  return <Button>Click Me!</Button>;\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/button-style-default.tsx"
+    }
+  ],
+  "cssVars": {
+    "light": {
+      "primary": "60 100% 60%",
+      "primary-foreground": "0 0% 0%"
+    },
+    "dark": {
+      "primary": "60 100% 50%",
+      "primary-foreground": "0 0% 0%"
+    }
+  }
+}

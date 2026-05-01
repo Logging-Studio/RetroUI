@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-style-default",
+  "type": "registry:block",
+  "title": "textarea-style-default",
+  "registryDependencies": [
+    "https://retroui.dev/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/textarea-style-default.tsx",
+      "content": "import { Textarea } from \"@/components/retroui/Textarea\";\n\nexport default function TextareaStyleDefault() {\n  return (\n    <Textarea\n      rows={4}\n      placeholder=\"type something...\"\n      className=\"px-4 py-2 w-full border-2 shadow-md transition focus:outline-hidden focus:shadow-xs\"\n    />\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/textarea-style-default.tsx"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typography-p",
+  "type": "registry:block",
+  "title": "typography-p",
+  "registryDependencies": [
+    "https://retroui.dev/r/text.json"
+  ],
+  "files": [
+    {
+      "path": "preview/components/typography-p.tsx",
+      "content": "import { Text } from \"@/components/retroui/Text\";\n\nexport default function TextParagraph() {\n  return (\n    <Text className=\"font-sans text-base\">\n      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat eos,\n      doloremque inventore nesciunt quo sequi veniam impedit alias libero\n      dolorem tempore quia esse fugit fuga iste aliquam expedita molestias\n      iusto?\n    </Text>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/retroui/preview/typography-p.tsx"
+    }
+  ]
+}
