@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "baseui-switch",
+  "title": "Base UI Switch",
+  "description": "Switch component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/base-retroui/Switch.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Switch as BaseSwitch } from \"@base-ui/react/switch\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst Switch = ({ className, ...props }: React.ComponentProps<typeof BaseSwitch.Root>) => (\n  <BaseSwitch.Root\n    className={cn(\n      \"peer inline-flex h-6 w-11 shrink-0 cursor-pointer border-2 border-foreground items-center disabled:cursor-not-allowed disabled:opacity-50 data-[checked]:bg-primary\",\n      className,\n    )}\n    {...props}\n  >\n    <BaseSwitch.Thumb\n      className={cn(\n        \"pointer-events-none block h-4 w-4 bg-primary border-2 mx-0.5 border-foreground ring-0 transition-transform data-[checked]:translate-x-5 data-[unchecked]:translate-x-0 data-[checked]:bg-background\",\n      )}\n    />\n  </BaseSwitch.Root>\n);\n\nexport { Switch };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Switch.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

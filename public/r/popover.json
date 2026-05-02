@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "popover",
-  "type": "registry:component",
   "title": "Popover",
   "author": "Ankan Bhattacharya <https://github.com/ankan002>",
   "description": "A handy small component for your little input needs...😉",
@@ -16,5 +15,6 @@
       "type": "registry:component",
       "target": "components/retroui/Popover.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sonner",
-  "type": "registry:component",
   "title": "Sonner",
   "description": "A beautiful toast component that can grab audience attention from any place.",
   "dependencies": [
@@ -16,5 +15,6 @@
       "type": "registry:component",
       "target": "components/retroui/Sonner.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

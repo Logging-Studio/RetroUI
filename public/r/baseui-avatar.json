@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "baseui-avatar",
+  "title": "Base UI Avatar",
+  "description": "Avatar component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/base-retroui/Avatar.tsx",
+      "content": "import * as React from \"react\";\nimport { Avatar as BaseAvatar } from \"@base-ui/react/avatar\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst Avatar = ({ className, ref, ...props }: React.ComponentPropsWithRef<typeof BaseAvatar.Root>) => (\n  <BaseAvatar.Root\n    ref={ref}\n    className={cn(\n      \"relative flex h-14 w-14 border-2 rounded-full overflow-hidden\",\n      className,\n    )}\n    {...props}\n  />\n);\n\nconst AvatarImage = ({ className, ref, ...props }: React.ComponentPropsWithRef<typeof BaseAvatar.Image>) => (\n  <BaseAvatar.Image\n    ref={ref}\n    className={cn(\"aspect-square h-full w-full\", className)}\n    {...props}\n  />\n);\n\nconst AvatarFallback = ({ className, ref, ...props }: React.ComponentPropsWithRef<typeof BaseAvatar.Fallback>) => (\n  <BaseAvatar.Fallback\n    ref={ref}\n    className={cn(\n      \"flex h-full w-full items-center justify-center rounded-full bg-primary text-primary-foreground\",\n      className,\n    )}\n    {...props}\n  />\n);\n\nconst AvatarComponent = Object.assign(Avatar, {\n  Image: AvatarImage,\n  Fallback: AvatarFallback,\n});\n\nexport { AvatarComponent as Avatar };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Avatar.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

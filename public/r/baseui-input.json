@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "baseui-input",
+  "title": "Base UI Input",
+  "description": "Input component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/base-retroui/Input.tsx",
+      "content": "import React, { InputHTMLAttributes } from \"react\";\n\ninterface InputProps extends InputHTMLAttributes<HTMLInputElement> {\n  className?: string;\n}\n\nexport const Input: React.FC<InputProps> = ({\n  type = \"text\",\n  placeholder = \"Enter text\",\n  className = \"\",\n  ...props\n}) => {\n  return (\n    <input\n      type={type}\n      placeholder={placeholder}\n      className={`px-4 py-2 w-full rounded border-2 shadow-md transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary focus:shadow-xs ${\n        props[\"aria-invalid\"]\n          ? \"border-destructive text-destructive shadow-xs shadow-destructive\"\n          : \"\"\n      } ${className}`}\n      {...props}\n    />\n  );\n};\n",
+      "type": "registry:component",
+      "target": "components/retroui/Input.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

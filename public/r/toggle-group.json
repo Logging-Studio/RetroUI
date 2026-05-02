@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "toggle-group",
-  "type": "registry:component",
   "title": "Toggle Group",
   "author": "Ankan Bhattacharya <https://github.com/ankan002>",
   "description": "Group of toggling buttons...🤙",
@@ -23,5 +22,6 @@
       "type": "registry:component",
       "target": "components/retroui/ToggleGroup.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

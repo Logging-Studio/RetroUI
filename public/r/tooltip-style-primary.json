@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tooltip-style-primary",
-  "type": "registry:block",
   "title": "tooltip-style-primary",
   "dependencies": [
     "lucide-react"
@@ -17,5 +16,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/tooltip-style-primary.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "baseui-label",
+  "title": "Base UI Label",
+  "description": "Label component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/base-retroui/Label.tsx",
+      "content": "import * as React from \"react\";\nimport { Field } from \"@base-ui/react/field\";\nimport { cva } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst labelVariants = cva(\n  \"leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\",\n);\n\nexport const Label = ({\n  className,\n  ...props\n}: React.ComponentProps<typeof Field.Label>) => (\n  <Field.Label className={cn(labelVariants(), className)} {...props} />\n);\n",
+      "type": "registry:component",
+      "target": "components/retroui/Label.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

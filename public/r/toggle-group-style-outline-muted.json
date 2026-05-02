@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "toggle-group-style-outline-muted",
-  "type": "registry:block",
   "title": "toggle-group-style-outline-muted",
   "dependencies": [
     "lucide-react"
@@ -17,5 +16,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/toggle-group-style-outline-muted.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

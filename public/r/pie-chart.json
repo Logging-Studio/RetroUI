@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "pie-chart",
-  "type": "registry:component",
   "title": "Pie Chart",
   "description": "Beautiful pie chart for data visualization with retro styling",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:component",
       "target": "components/retroui/charts/PieChart.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

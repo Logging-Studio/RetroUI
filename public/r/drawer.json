@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "drawer",
-  "type": "registry:component",
   "title": "Drawer",
   "description": "A component that can slide in from any side of the screen.",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:component",
       "target": "components/retroui/Drawer.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

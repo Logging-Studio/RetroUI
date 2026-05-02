@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dialog",
-  "type": "registry:component",
   "title": "Dialog",
   "description": "An impactful dialog that ensures your important messages and actions get the attention they deserve! 💬✨",
   "dependencies": [
@@ -17,5 +16,6 @@
       "type": "registry:component",
       "target": "components/retroui/Dialog.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

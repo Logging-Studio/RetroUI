@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "baseui-menu",
+  "title": "Base UI Menu",
+  "description": "Menu component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/base-retroui/Menu.tsx",
+      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\nimport { Menu as BaseMenu } from \"@base-ui/react/menu\";\nimport React, { ComponentPropsWithoutRef } from \"react\";\n\nconst Menu = BaseMenu.Root;\nconst Trigger = BaseMenu.Trigger;\n\ninterface IMenuContent\n  extends ComponentPropsWithoutRef<typeof BaseMenu.Popup> {}\n\nconst Content = ({ className, ...props }: IMenuContent) => (\n  <BaseMenu.Portal>\n    <BaseMenu.Popup\n      className={cn(\n        \"bg-white border-2 shadow-md absolute top-2 min-w-20\",\n        className,\n      )}\n      {...props}\n    />\n  </BaseMenu.Portal>\n);\n\nconst MenuItem = React.forwardRef<\n  HTMLDivElement,\n  ComponentPropsWithoutRef<typeof BaseMenu.Item>\n>(({ className, ...props }, ref) => (\n  <BaseMenu.Item\n    ref={ref}\n    className={cn(\n      \"relative text-black flex cursor-default select-none items-center rounded-xs px-2 py-1.5 text-sm outline-hidden transition-colors hover:bg-primary focus:bg-primary data-[disabled]:pointer-events-none data-[disabled]:opacity-50\",\n      className,\n    )}\n    {...props}\n  />\n));\nMenuItem.displayName = \"MenuItem\";\n\nconst MenuComponent = Object.assign(Menu, {\n  Trigger,\n  Content,\n  Item: MenuItem,\n});\n\nexport { MenuComponent as Menu };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Menu.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

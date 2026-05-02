@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "slider",
-  "type": "registry:component",
   "title": "Slider",
   "description": "Let your users pick what they want.",
   "dependencies": [
@@ -15,5 +14,6 @@
       "type": "registry:component",
       "target": "components/retroui/Slider.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

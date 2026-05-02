@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-style-all-status",
-  "type": "registry:block",
   "title": "alert-style-all-status",
   "registryDependencies": [
     "https://retroui.dev/r/alert.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/alert-style-all-status.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

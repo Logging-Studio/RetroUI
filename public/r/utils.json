@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "utils",
-  "type": "registry:lib",
   "title": "Utils",
   "dependencies": [
     "clsx",
@@ -10,8 +9,9 @@
   "files": [
     {
       "path": "lib/utils.ts",
-      "content": "import clsx from \"clsx\";\nimport { ClassNameValue, twMerge } from \"tailwind-merge\";\n\nexport function cn(...classes: ClassNameValue[]) {\n  return twMerge(clsx(classes));\n}\n",
+      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
       "type": "registry:lib"
     }
-  ]
+  ],
+  "type": "registry:lib"
 }

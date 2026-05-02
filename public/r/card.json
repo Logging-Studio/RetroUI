@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "card",
-  "type": "registry:component",
   "title": "Card",
   "description": "A customizable card component to visualize your content. 📝",
   "files": [
@@ -17,5 +16,6 @@
       "type": "registry:component",
       "target": "components/retroui/Text.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

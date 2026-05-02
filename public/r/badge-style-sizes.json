@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-style-sizes",
-  "type": "registry:block",
   "title": "badge-style-sizes",
   "registryDependencies": [
     "https://retroui.dev/r/badge.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/badge-style-sizes.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

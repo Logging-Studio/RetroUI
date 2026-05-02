@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "popover-style-default-shadow",
-  "type": "registry:block",
   "title": "popover-style-default-shadow",
   "dependencies": [
     "lucide-react"
@@ -19,5 +18,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/popover-style-default-shadow.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

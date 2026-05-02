@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "baseui-tab",
+  "title": "Base UI Tab",
+  "description": "Tab component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/base-retroui/Tab.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\nimport { Tabs as BaseTabs } from \"@base-ui/react/tabs\";\n\nconst Tabs = BaseTabs.Root;\nconst TabsPanels = ({ children, className, ...props }: React.ComponentProps<\"div\">) => (\n  <div className={className} {...props}>\n    {children}\n  </div>\n);\n\ninterface ITabsTriggerList extends React.ComponentProps<typeof BaseTabs.List> {\n  className?: string;\n}\nconst TabsTriggerList = ({\n  children,\n  className,\n  ...props\n}: ITabsTriggerList) => {\n  return (\n    <BaseTabs.List className={cn(\"flex flex-row space-x-2 w-full\", className)} {...props}>\n      {children}\n    </BaseTabs.List>\n  );\n};\n\ninterface ITabsTrigger extends React.ComponentProps<typeof BaseTabs.Tab> {\n  className?: string;\n}\nconst TabsTrigger = ({ children, className, ...props }: ITabsTrigger) => {\n  return (\n    <BaseTabs.Tab\n      className={cn(\n        \"px-4 flex items-center py-1 border-2 border-transparent data-[active]:border-border data-[active]:bg-primary data-[active]:text-primary-foreground data-[active]:font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary\",\n        className,\n      )}\n      {...props}\n    >\n      {children}\n    </BaseTabs.Tab>\n  );\n};\n\ninterface ITabsContent extends React.ComponentProps<typeof BaseTabs.Panel> {\n  className?: string;\n}\nconst TabsContent = ({ children, className, ...props }: ITabsContent) => {\n  return (\n    <BaseTabs.Panel className={cn(\"mt-2 w-full\", className)} {...props}>\n      {children}\n    </BaseTabs.Panel>\n  );\n};\n\nconst TabsObj = Object.assign(BaseTabs.Root, {\n  List: TabsTriggerList,\n  Trigger: TabsTrigger,\n  Content: TabsContent,\n});\n\nexport { TabsObj as Tabs };",
+      "type": "registry:component",
+      "target": "components/retroui/Tab.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

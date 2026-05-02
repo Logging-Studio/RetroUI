@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-style-secondary",
-  "type": "registry:block",
   "title": "button-style-secondary",
   "registryDependencies": [
     "https://retroui.dev/r/button.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/button-style-secondary.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

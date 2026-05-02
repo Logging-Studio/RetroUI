@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "baseui-tooltip",
+  "title": "Base UI Tooltip",
+  "description": "Tooltip component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/base-retroui/Tooltip.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Tooltip as BaseTooltip } from \"@base-ui/react/tooltip\";\n\nimport { cn } from \"@/lib/utils\";\nimport { cva, VariantProps } from \"class-variance-authority\";\n\nconst tooltipContentVariants = cva(\n  \"z-50 overflow-hidden border-2 border-border bg-background px-3 py-1.5 text-xs text-primary-foreground animate-in fade-in-0 zoom-in-95 data-[closed]:animate-out data-[closed]:fade-out-0 data-[closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-background text-foreground\",\n        primary: \"bg-primary text-primary-foreground\",\n        solid: \"bg-black text-white\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  },\n);\n\nconst TooltipProvider = BaseTooltip.Provider;\n\nconst Tooltip = BaseTooltip.Root;\n\nconst TooltipTrigger = BaseTooltip.Trigger;\n\nconst TooltipContent = ({ className, variant, ref, ...props }: React.ComponentPropsWithRef<typeof BaseTooltip.Popup> & VariantProps<typeof tooltipContentVariants>) => (\n  <BaseTooltip.Portal>\n    <BaseTooltip.Popup\n      ref={ref}\n      className={cn(\n        tooltipContentVariants({\n          variant,\n          className,\n        }),\n      )}\n      {...props}\n    />\n  </BaseTooltip.Portal>\n);\n\nconst TooltipObject = Object.assign(Tooltip, {\n  Trigger: TooltipTrigger,\n  Content: TooltipContent,\n  Provider: TooltipProvider,\n});\n\nexport { TooltipObject as Tooltip };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Tooltip.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

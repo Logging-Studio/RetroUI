@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "command",
-  "type": "registry:component",
   "title": "Command",
   "description": "Fast, keyboard-first command palette powered by cmdk.",
   "dependencies": [
@@ -16,5 +15,6 @@
       "type": "registry:component",
       "target": "components/retroui/Command.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tooltip",
-  "type": "registry:component",
   "title": "Tooltip",
   "description": "A cool way to give your users a hint of what a component does...😉",
   "dependencies": [
@@ -15,5 +14,6 @@
       "type": "registry:component",
       "target": "components/retroui/Tooltip.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

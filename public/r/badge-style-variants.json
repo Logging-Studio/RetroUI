@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-style-variants",
-  "type": "registry:block",
   "title": "badge-style-variants",
   "registryDependencies": [
     "https://retroui.dev/r/badge.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/badge-style-variants.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

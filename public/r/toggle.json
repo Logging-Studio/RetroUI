@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "toggle",
-  "type": "registry:component",
   "title": "Toggle",
   "author": "Ankan Bhattacharya <https://github.com/ankan002>",
   "description": "This crazy toggling button keeps people toggling...😃",
@@ -16,5 +15,6 @@
       "type": "registry:component",
       "target": "components/retroui/Toggle.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

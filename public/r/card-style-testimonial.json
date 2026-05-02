@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "card-style-testimonial",
-  "type": "registry:block",
   "title": "card-style-testimonial",
   "registryDependencies": [
     "https://retroui.dev/r/card.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/card-style-testimonial.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

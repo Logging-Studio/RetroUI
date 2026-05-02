@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "progress",
-  "type": "registry:component",
   "title": "Progress",
   "description": "Show progress...",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:component",
       "target": "components/retroui/Progress.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

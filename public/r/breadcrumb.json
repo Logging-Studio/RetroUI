@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "breadcrumb",
-  "type": "registry:component",
   "title": "Breadcrumb",
   "dependencies": [
     "@radix-ui/react-slot"
@@ -13,5 +12,6 @@
       "type": "registry:component",
       "target": "components/retroui/Breadcrumb.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

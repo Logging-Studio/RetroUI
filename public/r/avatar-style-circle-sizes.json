@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-style-circle-sizes",
-  "type": "registry:block",
   "title": "avatar-style-circle-sizes",
   "registryDependencies": [
     "https://retroui.dev/r/avatar.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/avatar-style-circle-sizes.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

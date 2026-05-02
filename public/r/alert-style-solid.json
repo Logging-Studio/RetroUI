@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-style-solid",
-  "type": "registry:block",
   "title": "alert-style-solid",
   "registryDependencies": [
     "https://retroui.dev/r/alert.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/alert-style-solid.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

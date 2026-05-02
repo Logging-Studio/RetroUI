@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert",
-  "type": "registry:component",
   "title": "Alert",
   "description": "Notify your users about important events and updates. 📣",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:component",
       "target": "components/retroui/Alert.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

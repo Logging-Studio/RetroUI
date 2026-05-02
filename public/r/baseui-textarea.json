@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "baseui-textarea",
+  "title": "Base UI Textarea",
+  "description": "Textarea component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/base-retroui/Textarea.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\nexport function Textarea({\n  type = \"text\",\n  placeholder = \"Enter text...\",\n  className = \"\",\n  ...props\n}) {\n  return (\n    <textarea\n      placeholder={placeholder}\n      rows={4}\n      className={cn(\n        \"px-4 py-2 w-full border-2 rounded border-input shadow-md transition focus:outline-hidden focus:shadow-xs placeholder:text-muted-foreground\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/retroui/Textarea.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

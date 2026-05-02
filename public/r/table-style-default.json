@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "table-style-default",
-  "type": "registry:block",
   "title": "table-style-default",
   "registryDependencies": [
     "https://retroui.dev/r/table.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/table-style-default.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

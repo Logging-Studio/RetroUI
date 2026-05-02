@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "baseui-progress",
+  "title": "Base UI Progress",
+  "description": "Progress component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/base-retroui/Progress.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Progress as BaseProgress } from \"@base-ui/react/progress\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst Progress = ({ className, value, ref, ...props }: React.ComponentPropsWithRef<typeof BaseProgress.Root>) => (\n  <BaseProgress.Root\n    ref={ref}\n    className={cn(\n      \"relative h-4 w-full overflow-hidden bg-background border-2\",\n      className,\n    )}\n    value={value}\n    {...props}\n  >\n    <BaseProgress.Indicator\n      className=\"h-full w-full flex-1 bg-primary transition-all\"\n      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}\n    />\n  </BaseProgress.Root>\n);\n\nexport { Progress };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Progress.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

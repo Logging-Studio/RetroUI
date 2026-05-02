@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-style-toggle",
-  "type": "registry:block",
   "title": "checkbox-style-toggle",
   "registryDependencies": [
     "https://retroui.dev/r/checkbox.json"
@@ -9,9 +8,10 @@
   "files": [
     {
       "path": "preview/components/checkbox-style-variants.tsx",
-      "content": "import { Checkbox } from \"@/components/retroui/Checkbox\";\n\nexport default function CheckboxStyleVariants() {\n  return (\n    <div className=\"flex gap-4\">\n      <Checkbox />\n      <Checkbox variant=\"outline\" />\n      <Checkbox variant=\"solid\" />\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport { Checkbox } from \"@/components/retroui/Checkbox\";\n\nexport default function CheckboxStyleVariants() {\n  return (\n    <div className=\"flex gap-4\">\n      <Checkbox />\n      <Checkbox variant=\"outline\" />\n      <Checkbox variant=\"solid\" />\n    </div>\n  );\n}\n",
       "type": "registry:block",
       "target": "components/retroui/preview/checkbox-style-variants.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

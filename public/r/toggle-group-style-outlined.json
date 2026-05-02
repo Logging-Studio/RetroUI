@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "toggle-group-style-outlined",
-  "type": "registry:block",
   "title": "toggle-group-style-outlined",
   "dependencies": [
     "lucide-react"
@@ -17,5 +16,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/toggle-group-style-outlined.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

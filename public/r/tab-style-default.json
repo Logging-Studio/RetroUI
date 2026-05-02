@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tab-style-default",
-  "type": "registry:block",
   "title": "tab-style-default",
   "registryDependencies": [
     "https://retroui.dev/r/tab.json"
@@ -9,9 +8,10 @@
   "files": [
     {
       "path": "preview/components/tab-style-default.tsx",
-      "content": "import { Tabs, TabsPanels, TabsTrigger, TabsContent, TabsTriggerList } from \"@/components/retroui/Tab\";\n\nexport default function TabStyleDefault() {\n  return (\n    <Tabs>\n      <TabsTriggerList>\n        <TabsTrigger>Home</TabsTrigger>\n        <TabsTrigger>About</TabsTrigger>\n        <TabsTrigger>Contact</TabsTrigger>\n      </TabsTriggerList>\n      <TabsPanels>\n        <TabsContent>\n          Welcome to RetroUI, a retro styled UI library built with React,\n          Tailwind CSS & Headless UI.\n        </TabsContent>\n        <TabsContent>This is the about section!</TabsContent>\n        <TabsContent>And, this is the contact section!</TabsContent>\n      </TabsPanels>\n    </Tabs>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport { Tabs } from \"@/components/retroui/Tab\";\n\nexport default function TabStyleDefault() {\n  return (\n    <Tabs className=\"w-full\" defaultValue=\"home\">\n      <Tabs.List>\n        <Tabs.Trigger value=\"home\">Home</Tabs.Trigger>\n        <Tabs.Trigger value=\"about\">About</Tabs.Trigger>\n        <Tabs.Trigger value=\"contact\">Contact</Tabs.Trigger>\n      </Tabs.List>\n      <Tabs.Content value=\"home\">\n        Welcome to RetroUI!!\n      </Tabs.Content>\n      <Tabs.Content value=\"about\">This is the about section!</Tabs.Content>\n      <Tabs.Content value=\"contact\">And, this is the contact section!</Tabs.Content>\n    </Tabs>\n  );\n}\n",
       "type": "registry:block",
       "target": "components/retroui/preview/tab-style-default.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

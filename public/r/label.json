@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "label",
-  "type": "registry:component",
   "title": "Label",
   "description": "Label for form fields",
   "dependencies": [
@@ -15,5 +14,6 @@
       "type": "registry:component",
       "target": "components/retroui/Label.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

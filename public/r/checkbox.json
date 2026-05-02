@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox",
-  "type": "registry:component",
   "title": "Checkbox",
   "description": "Let users confirm or reject an option.",
   "dependencies": [
@@ -16,5 +15,6 @@
       "type": "registry:component",
       "target": "components/retroui/Checkbox.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

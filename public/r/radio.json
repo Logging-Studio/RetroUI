@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "radio",
-  "type": "registry:component",
   "title": "Radio",
   "description": "Sometimes you need to pick multiple options! That's where the Radio component comes into play.",
   "dependencies": [
@@ -15,5 +14,6 @@
       "type": "registry:component",
       "target": "components/retroui/Radio.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

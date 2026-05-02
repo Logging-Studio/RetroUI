@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "toggle-style-solid",
-  "type": "registry:block",
   "title": "toggle-style-solid",
   "dependencies": [
     "lucide-react"
@@ -12,9 +11,10 @@
   "files": [
     {
       "path": "preview/components/toggle-style-solid.tsx",
-      "content": "import { Toggle } from \"@/components/retroui\";\nimport { Italic } from \"lucide-react\";\n\nexport default function ToggleStyleSolid() {\n  return (\n    <Toggle variant=\"solid\">\n      <Italic /> Italics\n    </Toggle>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport { Toggle } from \"@/components/retroui\";\nimport { Italic } from \"lucide-react\";\n\nexport default function ToggleStyleSolid() {\n  return (\n    <Toggle variant=\"solid\">\n      <Italic /> Italics\n    </Toggle>\n  );\n}\n",
       "type": "registry:block",
       "target": "components/retroui/preview/toggle-style-solid.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

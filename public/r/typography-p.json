@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "typography-p",
-  "type": "registry:block",
   "title": "typography-p",
   "registryDependencies": [
     "https://retroui.dev/r/text.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/typography-p.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

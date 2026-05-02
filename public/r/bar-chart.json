@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bar-chart",
-  "type": "registry:component",
   "title": "Bar Chart",
   "description": "Beautiful bar chart for data visualization with retro styling",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:component",
       "target": "components/retroui/charts/BarChart.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

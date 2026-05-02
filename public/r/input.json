@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input",
-  "type": "registry:component",
   "title": "Input",
   "description": "This pretty input makes your users want to type stuff! ⌨️",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:component",
       "target": "components/retroui/Input.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

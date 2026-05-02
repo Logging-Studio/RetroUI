@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-style-fallbacks",
-  "type": "registry:block",
   "title": "avatar-style-fallbacks",
   "registryDependencies": [
     "https://retroui.dev/r/avatar.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/avatar-style-circle-fallbacks.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

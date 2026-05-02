@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "progress-style-default",
-  "type": "registry:block",
   "title": "progress-style-default",
   "registryDependencies": [
     "https://retroui.dev/r/progress.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/progress-style-default.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

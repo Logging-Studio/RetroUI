@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "text-headings",
-  "type": "registry:block",
   "title": "text-headings",
   "registryDependencies": [
     "https://retroui.dev/r/text.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/text-headings.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

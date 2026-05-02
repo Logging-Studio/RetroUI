@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "table-with-sticky-header",
-  "type": "registry:block",
   "title": "table-with-sticky-header",
   "registryDependencies": [
     "https://retroui.dev/r/table.json"
@@ -13,5 +12,6 @@
       "type": "registry:block",
       "target": "components/retroui/preview/table-with-sticky-header.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

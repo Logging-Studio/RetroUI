@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-style-default",
-  "type": "registry:block",
   "title": "checkbox-style-default",
   "registryDependencies": [
     "https://retroui.dev/r/checkbox.json"
@@ -9,9 +8,10 @@
   "files": [
     {
       "path": "preview/components/checkbox-style-sizes.tsx",
-      "content": "import { Checkbox } from \"@/components/retroui/Checkbox\";\n\nexport default function CheckboxStyleSizes() {\n  return (\n    <div className=\"flex gap-4\">\n      <Checkbox size=\"sm\" />\n      <Checkbox />\n      <Checkbox size=\"lg\" />\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport { Checkbox } from \"@/components/retroui/Checkbox\";\n\nexport default function CheckboxStyleSizes() {\n  return (\n    <div className=\"flex gap-4\">\n      <Checkbox size=\"sm\" />\n      <Checkbox />\n      <Checkbox size=\"lg\" />\n    </div>\n  );\n}\n",
       "type": "registry:block",
       "target": "components/retroui/preview/checkbox-style-sizes.tsx"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

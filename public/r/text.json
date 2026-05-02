@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "text",
-  "type": "registry:component",
   "title": "text",
   "description": "Show your texts in different styles. 💅",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:component",
       "target": "components/retroui/Text.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

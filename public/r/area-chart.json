@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "area-chart",
-  "type": "registry:component",
   "title": "Area Chart",
   "description": "Beautiful area chart for data visualization with retro styling",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:component",
       "target": "components/retroui/charts/AreaChart.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

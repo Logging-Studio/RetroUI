@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "menu",
-  "type": "registry:component",
   "title": "Menu",
   "description": "Show your users a list of actions they can take. 📋",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:component",
       "target": "components/retroui/Menu.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "context-menu",
-  "type": "registry:component",
   "title": "Context Menu",
   "description": "Show contextual actions on right-click.",
   "dependencies": [
@@ -15,5 +14,6 @@
       "type": "registry:component",
       "target": "components/retroui/ContextMenu.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

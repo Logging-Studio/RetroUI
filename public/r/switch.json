@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "switch",
-  "type": "registry:component",
   "title": "Switch",
   "description": "Let users to turn on or off your marketing emails or notifications.",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:component",
       "target": "components/retroui/Switch.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }
