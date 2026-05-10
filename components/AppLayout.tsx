@@ -44,7 +44,7 @@ export default function AppLayout({
 
   return (
     <>
-      <div className="bg-foreground text-background py-3 px-4">
+      {/* <div className="bg-foreground text-background py-3 px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-4 flex-wrap text-sm">
           <span>🎉 Special discount for 2.0 launch</span>
           |
@@ -91,7 +91,7 @@ export default function AppLayout({
           |
           <span>Ends in: {timeLeft}</span>
         </div>
-      </div>
+      </div> */}
       <TopNav />
       {children}
       <Footer />
