@@ -1,12 +1,10 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sonner",
-  "title": "Sonner",
-  "description": "A beautiful toast component that can grab audience attention from any place.",
+  "title": "Base UI Sonner",
+  "description": "Sonner component using Base UI.",
   "dependencies": [
-    "sonner",
-    "lucide-react",
-    "class-variance-authority"
+    "@base-ui/react"
   ],
   "files": [
     {

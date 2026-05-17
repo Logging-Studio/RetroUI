@@ -1,10 +1,10 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "loader",
-  "title": "Loader",
-  "description": "A loading indicator",
+  "title": "Base UI Loader",
+  "description": "Loader component using Base UI.",
   "dependencies": [
-    "class-variance-authority"
+    "@base-ui/react"
   ],
   "files": [
     {

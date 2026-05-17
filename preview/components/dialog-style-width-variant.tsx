@@ -33,7 +33,7 @@ export default function DialogStyleWidthVariant() {
 
   return (
     <Dialog>
-      <Dialog.Trigger asChild>
+      <Dialog.Trigger>
         <Button>Open Dialog</Button>
       </Dialog.Trigger>
       <Dialog.Content size={variant}>

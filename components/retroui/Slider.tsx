@@ -1,15 +1,12 @@
 "use client";
 
 import * as React from "react";
-import * as SliderPrimitive from "@radix-ui/react-slider";
+import { Slider as BaseSlider } from "@base-ui/react/slider";
 
 import { cn } from "@/lib/utils";
 
-const Slider = React.forwardRef<
-  React.ElementRef<typeof SliderPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
->(({ className, ...props }, ref) => (
-  <SliderPrimitive.Root
+const Slider = ({ className, ref, ...props }: React.ComponentPropsWithRef<typeof BaseSlider.Root>) => (
+  <BaseSlider.Root
     ref={ref}
     className={cn(
       "relative flex w-full touch-none select-none items-center",
@@ -17,12 +14,11 @@ const Slider = React.forwardRef<
     )}
     {...props}
   >
-    <SliderPrimitive.Track className="relative h-3 w-full grow overflow-hidden bg-background border-2">
-      <SliderPrimitive.Range className="absolute h-full bg-primary" />
-    </SliderPrimitive.Track>
-    <SliderPrimitive.Thumb className="block h-4.5 w-4.5 border-2 bg-background shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
-  </SliderPrimitive.Root>
-));
-Slider.displayName = SliderPrimitive.Root.displayName;
+    <BaseSlider.Track className="relative h-3 w-full grow overflow-hidden bg-background border-2">
+      <BaseSlider.Indicator className="absolute h-full bg-primary" />
+    </BaseSlider.Track>
+    <BaseSlider.Thumb className="block h-4.5 w-4.5 border-2 bg-background shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
+  </BaseSlider.Root>
+);
 
 export { Slider };

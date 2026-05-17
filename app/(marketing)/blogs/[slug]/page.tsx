@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
-import { Avatar, Badge, Button, Text } from "@/components/base-retroui";
+import { Avatar, Badge, Button, Text } from "@/components/retroui";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";

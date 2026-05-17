@@ -4,7 +4,7 @@ import { Accordion } from "@/components/retroui/Accordion";
 
 export default function AccordionStyleDefault() {
   return (
-    <Accordion type="single" collapsible className="space-y-4 w-full">
+    <Accordion className="space-y-4 w-full">
       <Accordion.Item value="item-1">
         <Accordion.Header>Accordion Item 1</Accordion.Header>
         <Accordion.Content>

@@ -1,13 +1,13 @@
 "use client";
 
 import { Input } from "@/components/retroui/Input";
-import { Label } from "@/components/retroui/Label";
+import { Field } from "@/components/retroui/Field";
 
 export default function InputStyleWithLabel() {
   return (
-    <div className="grid w-full max-w-sm items-center gap-1.5">
-      <Label htmlFor="pokemon">Favorite Pokemon</Label>
+    <Field>
+      <Field.Label htmlFor="pokemon">Favorite Pokemon</Field.Label>
       <Input type="pokemon" id="pokemon" placeholder="Charmander" />
-    </div>
+    </Field>
   );
 }

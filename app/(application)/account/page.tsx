@@ -1,7 +1,7 @@
 "use client";
 
 import { ProfileSettings } from "@/components/ProfileSettings";
-import { Text } from "@/components/base-retroui";
+import { Text } from "@/components/retroui";
 
 export default function AccountPage() {
   return (

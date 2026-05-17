@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { Button, Text } from "@/components/base-retroui";
+import { Button, Text } from "@/components/retroui";
 import { verifyTokenAction } from "@/app/actions/auth";
 import { useAuth } from "@/contexts/AuthContext";
 import Image from "next/image";

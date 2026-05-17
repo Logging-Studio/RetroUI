@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty",
+  "title": "Base UI Empty",
+  "description": "Empty component using Base UI.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "files": [
+    {
+      "path": "components/retroui/Empty.tsx",
+      "content": "import { Text } from \"@/components/retroui/Text\";\nimport { cn } from \"@/lib/utils\";\nimport { Ghost } from \"lucide-react\";\nimport { HTMLAttributes } from \"react\";\n\ninterface IEmptyProps extends HTMLAttributes<HTMLDivElement> {\n  className?: string;\n}\n\nconst Empty = ({ className, ...props }: IEmptyProps) => {\n  return (\n    <div\n      className={cn(\n        \"flex flex-col items-center justify-center p-4 md:p-8 border-2 rounded shadow-md transition-all hover:shadow-none bg-card text-center\",\n        className,\n      )}\n      {...props}\n    />\n  );\n};\nEmpty.displayName = \"Empty\";\n\nconst EmptyContent = ({ className, ...props }: IEmptyProps) => {\n  return (\n    <div\n      className={cn(\"flex flex-col items-center gap-3\", className)}\n      {...props}\n    />\n  );\n};\nEmptyContent.displayName = \"Empty.Content\";\n\nconst EmptyIcon = ({ children, className, ...props }: IEmptyProps) => {\n  return (\n    <div className={cn(className)} {...props}>\n      {children || <Ghost className=\"w-full h-full\" />}\n    </div>\n  );\n};\nEmptyIcon.displayName = \"Empty.Icon\";\n\nconst EmptyTitle = ({ className, ...props }: IEmptyProps) => {\n  return (\n    <Text\n      as=\"h3\"\n      className={cn(\"text-lg md:text-2xl font-bold\", className)}\n      {...props}\n    />\n  );\n};\nEmptyTitle.displayName = \"Empty.Title\";\n\nconst EmptySeparator = ({ className, ...props }: IEmptyProps) => {\n  return <div role=\"separator\" className={cn(\"w-full h-1 bg-primary\", className)} {...props} />;\n};\nEmptySeparator.displayName = \"Empty.Separator\";\n\nconst EmptyDescription = ({\n  className,\n  ...props\n}: HTMLAttributes<HTMLParagraphElement>) => (\n  <p\n    className={cn(\"text-muted-foreground max-w-[320px]\", className)}\n    {...props}\n  />\n);\nEmptyDescription.displayName = \"Empty.Description\";\n\nconst EmptyComponent = Object.assign(Empty, {\n  Content: EmptyContent,\n  Icon: EmptyIcon,\n  Title: EmptyTitle,\n  Separator: EmptySeparator,\n  Description: EmptyDescription,\n});\n\nexport { EmptyComponent as Empty };\n",
+      "type": "registry:component",
+      "target": "components/retroui/Empty.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

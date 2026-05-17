@@ -2,7 +2,7 @@ import {
   Button,
   Text,
   Card,
-} from "@/components/base-retroui";
+} from "@/components/retroui";
 import {
   ArrowRight,
   ArrowUpRight,

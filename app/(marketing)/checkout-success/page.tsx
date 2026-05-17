@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { Text, Card, Badge } from "@/components/base-retroui";
+import { Text, Card, Badge } from "@/components/retroui";
 import { CheckCircle2 } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import Link from "next/link";

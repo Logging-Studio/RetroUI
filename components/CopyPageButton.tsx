@@ -3,12 +3,7 @@
 import { useState } from "react";
 import { CopyIcon, ChevronDownIcon, CheckIcon } from "lucide-react";
 import Image from "next/image";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
+import { Menu } from "@/components/retroui";
 
 interface CopyPageButtonProps {
   rawContent: string;
@@ -58,25 +53,25 @@ export function CopyPageButton({ rawContent, title }: CopyPageButtonProps) {
       <div className="w-[1px] bg-border" />
 
       {/* Dropdown Menu */}
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+      <Menu>
+        <Menu.Trigger>
           <button className="px-2 py-1.5 hover:bg-accent transition-colors focus:ring-none" aria-label="More copy options" aria-haspopup="menu">
             <ChevronDownIcon className="h-3.5 w-3.5" />
           </button>
-        </DropdownMenuTrigger>
+        </Menu.Trigger>
 
-        <DropdownMenuContent align="end" className="w-48 rounded-none border">
-          <DropdownMenuItem onClick={openInClaude} className="h-8">
+        <Menu.Content className="w-48 rounded-none border">
+          <Menu.Item onClick={openInClaude} className="h-8">
             <Image src="/images/logos/claude.svg" alt="Claude" width={16} height={16} />
             Open in Claude
-          </DropdownMenuItem>
+          </Menu.Item>
 
-          <DropdownMenuItem onClick={openInChatGPT} className="h-8">
+          <Menu.Item onClick={openInChatGPT} className="h-8">
             <Image src="/images/logos/chatgpt.png" alt="ChatGPT" width={16} height={16} />
             Open in ChatGPT
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+          </Menu.Item>
+        </Menu.Content>
+      </Menu>
     </div>
   );
 }

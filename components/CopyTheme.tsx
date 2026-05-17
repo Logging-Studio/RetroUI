@@ -7,7 +7,7 @@ import { CodeBlock } from "./CodeBlock";
 export default function CopyTheme({ theme, hasRadius = false }: { theme: Theme, hasRadius?: boolean }) {
     return (
         <Dialog>
-            <Dialog.Trigger asChild>
+            <Dialog.Trigger>
                 <Button>Copy Theme</Button>
             </Dialog.Trigger>
             <Dialog.Content className={`theme-${theme} ${hasRadius ? "with-radius" : ""}`}>

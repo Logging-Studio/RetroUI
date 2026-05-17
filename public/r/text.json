@@ -1,10 +1,10 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "text",
-  "title": "text",
-  "description": "Show your texts in different styles. 💅",
+  "title": "Base UI Text",
+  "description": "Text component using Base UI.",
   "dependencies": [
-    "class-variance-authority"
+    "@base-ui/react"
   ],
   "files": [
     {

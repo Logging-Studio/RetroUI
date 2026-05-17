@@ -6,7 +6,7 @@ import { Menu } from "@/components/retroui/Menu";
 export default function MenuDefault() {
   return (
     <Menu>
-      <Menu.Trigger asChild>
+      <Menu.Trigger>
         <Button>Menu</Button>
       </Menu.Trigger>
       <Menu.Content className="min-w-36">

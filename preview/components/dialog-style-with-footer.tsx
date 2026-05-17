@@ -7,7 +7,7 @@ import { Dialog } from "@/components/retroui/Dialog";
 export default function DialogStyleWithFooter() {
   return (
     <Dialog>
-      <Dialog.Trigger asChild>
+      <Dialog.Trigger>
         <Button>Open Dialog</Button>
       </Dialog.Trigger>
       <Dialog.Content>
@@ -21,10 +21,10 @@ export default function DialogStyleWithFooter() {
           </section>
         </section>
         <Dialog.Footer>
-          <Dialog.Trigger asChild>
+          <Dialog.Trigger>
             <Button>Confirm</Button>
           </Dialog.Trigger>
-          <Dialog.Trigger asChild>
+          <Dialog.Trigger>
             <Button variant={"outline"}>Close</Button>
           </Dialog.Trigger>
         </Dialog.Footer>

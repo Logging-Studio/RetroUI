@@ -70,564 +70,6 @@
       ]
     },
     {
-      "name": "accordion",
-      "type": "registry:component",
-      "title": "Accordion",
-      "description": "This collapsible component let's your users read only the content they care about. 😌",
-      "dependencies": [
-        "@radix-ui/react-accordion",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Accordion.tsx",
-          "target": "components/retroui/Accordion.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "alert",
-      "type": "registry:component",
-      "title": "Alert",
-      "description": "Notify your users about important events and updates. 📣",
-      "dependencies": [
-        "class-variance-authority"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Alert.tsx",
-          "target": "components/retroui/Alert.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "avatar",
-      "type": "registry:component",
-      "title": "Avatar",
-      "description": "Default rounded avatar that can show your users profile picture. ✨",
-      "dependencies": [
-        "@radix-ui/react-avatar"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Avatar.tsx",
-          "target": "components/retroui/Avatar.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "badge",
-      "type": "registry:component",
-      "title": "Badge",
-      "description": "The component that looks like a button but isn't clickable!",
-      "dependencies": [
-        "class-variance-authority"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Badge.tsx",
-          "target": "components/retroui/Badge.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "button",
-      "type": "registry:component",
-      "title": "Retro Button",
-      "description": "This bold button makes sure your users click on it and perform the actions you want!",
-      "dependencies": [
-        "class-variance-authority",
-        "@radix-ui/react-slot"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Button.tsx",
-          "target": "components/retroui/Button.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "breadcrumb",
-      "type": "registry:component",
-      "title": "Breadcrumb",
-      "dependencies": [
-        "@radix-ui/react-slot"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Breadcrumb.tsx",
-          "target": "components/retroui/Breadcrumb.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "card",
-      "type": "registry:component",
-      "title": "Card",
-      "description": "A customizable card component to visualize your content. 📝",
-      "files": [
-        {
-          "path": "components/retroui/Card.tsx",
-          "target": "components/retroui/Card.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "components/retroui/Text.tsx",
-          "target": "components/retroui/Text.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "calendar",
-      "type": "registry:component",
-      "title": "Calendar",
-      "description": "A customizable calendar component for showing dates. 📝",
-      "dependencies": [
-        "react-day-picker",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Calendar.tsx",
-          "target": "components/retroui/Calendar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "components/retroui/Button.tsx",
-          "target": "components/retroui/Button.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "carousel",
-      "type": "registry:component",
-      "title": "Carousel",
-      "description": "A customizable carousel component to show animated cards",
-      "dependencies": [
-        "embla-carousel-react",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Carousel.tsx",
-          "target": "components/retroui/Carousel.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "components/retroui/Button.tsx",
-          "target": "components/retroui/Button.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "checkbox",
-      "type": "registry:component",
-      "title": "Checkbox",
-      "description": "Let users confirm or reject an option.",
-      "dependencies": [
-        "@radix-ui/react-checkbox",
-        "class-variance-authority",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Checkbox.tsx",
-          "target": "components/retroui/Checkbox.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "dialog",
-      "type": "registry:component",
-      "title": "Dialog",
-      "description": "An impactful dialog that ensures your important messages and actions get the attention they deserve! 💬✨",
-      "dependencies": [
-        "@radix-ui/react-dialog",
-        "@radix-ui/react-visually-hidden",
-        "class-variance-authority",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Dialog.tsx",
-          "target": "components/retroui/Dialog.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "drawer",
-      "type": "registry:component",
-      "title": "Drawer",
-      "description": "A component that can slide in from any side of the screen.",
-      "dependencies": [
-        "vaul"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Drawer.tsx",
-          "target": "components/retroui/Drawer.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "command",
-      "type": "registry:component",
-      "title": "Command",
-      "description": "Fast, keyboard-first command palette powered by cmdk.",
-      "dependencies": [
-        "cmdk",
-        "@radix-ui/react-dialog",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Command.tsx",
-          "target": "components/retroui/Command.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "input",
-      "type": "registry:component",
-      "title": "Input",
-      "description": "This pretty input makes your users want to type stuff! ⌨️",
-      "files": [
-        {
-          "path": "components/retroui/Input.tsx",
-          "target": "components/retroui/Input.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "label",
-      "type": "registry:component",
-      "title": "Label",
-      "description": "Label for form fields",
-      "dependencies": [
-        "@radix-ui/react-label",
-        "class-variance-authority"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Label.tsx",
-          "target": "components/retroui/Label.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "loader",
-      "type": "registry:component",
-      "title": "Loader",
-      "description": "A loading indicator",
-      "dependencies": [
-        "class-variance-authority"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Loader.tsx",
-          "target": "components/retroui/Loader.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "menu",
-      "type": "registry:component",
-      "title": "Menu",
-      "description": "Show your users a list of actions they can take. 📋",
-      "dependencies": [
-        "@radix-ui/react-dropdown-menu"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Menu.tsx",
-          "target": "components/retroui/Menu.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "context-menu",
-      "type": "registry:component",
-      "title": "Context Menu",
-      "description": "Show contextual actions on right-click.",
-      "dependencies": [
-        "@radix-ui/react-context-menu",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/ContextMenu.tsx",
-          "target": "components/retroui/ContextMenu.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "popover",
-      "type": "registry:component",
-      "title": "Popover",
-      "description": "A handy small component for your little input needs...😉",
-      "dependencies": [
-        "@radix-ui/react-popover",
-        "class-variance-authority"
-      ],
-      "author": "Ankan Bhattacharya <https://github.com/ankan002>",
-      "files": [
-        {
-          "path": "components/retroui/Popover.tsx",
-          "target": "components/retroui/Popover.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "progress",
-      "type": "registry:component",
-      "title": "Progress",
-      "description": "Show progress...",
-      "dependencies": [
-        "@radix-ui/react-progress"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Progress.tsx",
-          "target": "components/retroui/Progress.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "radio",
-      "type": "registry:component",
-      "title": "Radio",
-      "description": "Sometimes you need to pick multiple options! That's where the Radio component comes into play.",
-      "dependencies": [
-        "@radix-ui/react-radio-group",
-        "class-variance-authority"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Radio.tsx",
-          "target": "components/retroui/Radio.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "select",
-      "type": "registry:component",
-      "title": "Select",
-      "description": "Let your users pick what they want.",
-      "dependencies": [
-        "@radix-ui/react-select",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Select.tsx",
-          "target": "components/retroui/Select.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "slider",
-      "type": "registry:component",
-      "title": "Slider",
-      "description": "Let your users pick what they want.",
-      "dependencies": [
-        "@radix-ui/react-slider",
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Slider.tsx",
-          "target": "components/retroui/Slider.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "sonner",
-      "type": "registry:component",
-      "title": "Sonner",
-      "description": "A beautiful toast component that can grab audience attention from any place.",
-      "dependencies": [
-        "sonner",
-        "lucide-react",
-        "class-variance-authority"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Sonner.tsx",
-          "target": "components/retroui/Sonner.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "switch",
-      "type": "registry:component",
-      "title": "Switch",
-      "description": "Let users to turn on or off your marketing emails or notifications.",
-      "dependencies": [
-        "@radix-ui/react-switch"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Switch.tsx",
-          "target": "components/retroui/Switch.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "tab",
-      "type": "registry:component",
-      "title": "Tab",
-      "description": "Switch between different views using tabs.",
-      "dependencies": [
-        "@headlessui/react"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Tab.tsx",
-          "target": "components/retroui/Tab.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "table",
-      "type": "registry:component",
-      "title": "Table",
-      "description": "Show your data in a tabular format. 📊",
-      "files": [
-        {
-          "path": "components/retroui/Table.tsx",
-          "target": "components/retroui/Table.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "text",
-      "type": "registry:component",
-      "title": "text",
-      "description": "Show your texts in different styles. 💅",
-      "dependencies": [
-        "class-variance-authority"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Text.tsx",
-          "target": "components/retroui/Text.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "textarea",
-      "type": "registry:component",
-      "title": "textarea",
-      "description": "This pretty input makes your users want to type lots of stuff! ⌨️ ⌨",
-      "files": [
-        {
-          "path": "components/retroui/Textarea.tsx",
-          "target": "components/retroui/Textarea.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "toc",
-      "type": "registry:component",
-      "title": "Table of Contents",
-      "description": "Show your table of contents in a sidebar.",
-      "files": [
-        {
-          "path": "components/retroui/TableOfContents.tsx",
-          "target": "components/retroui/TableOfContents.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "toggle",
-      "type": "registry:component",
-      "title": "Toggle",
-      "description": "This crazy toggling button keeps people toggling...😃",
-      "dependencies": [
-        "@radix-ui/react-toggle",
-        "class-variance-authority"
-      ],
-      "author": "Ankan Bhattacharya <https://github.com/ankan002>",
-      "files": [
-        {
-          "path": "components/retroui/Toggle.tsx",
-          "target": "components/retroui/Toggle.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "toggle-group",
-      "type": "registry:component",
-      "title": "Toggle Group",
-      "description": "Group of toggling buttons...🤙",
-      "dependencies": [
-        "@radix-ui/react-toggle",
-        "@radix-ui/react-toggle-group",
-        "class-variance-authority"
-      ],
-      "author": "Ankan Bhattacharya <https://github.com/ankan002>",
-      "files": [
-        {
-          "path": "components/retroui/Toggle.tsx",
-          "target": "components/retroui/Toggle.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "components/retroui/ToggleGroup.tsx",
-          "target": "components/retroui/ToggleGroup.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "tooltip",
-      "type": "registry:component",
-      "title": "Tooltip",
-      "description": "A cool way to give your users a hint of what a component does...😉",
-      "dependencies": [
-        "@radix-ui/react-tooltip",
-        "class-variance-authority"
-      ],
-      "files": [
-        {
-          "path": "components/retroui/Tooltip.tsx",
-          "target": "components/retroui/Tooltip.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "area-chart",
       "type": "registry:component",
       "title": "Area Chart",
@@ -692,7 +134,7 @@
       ]
     },
     {
-      "name": "baseui-accordion",
+      "name": "accordion",
       "type": "registry:component",
       "title": "Base UI Accordion",
       "description": "Accordion component using Base UI.",
@@ -701,14 +143,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Accordion.tsx",
+          "path": "components/retroui/Accordion.tsx",
           "target": "components/ui/Accordion.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-alert",
+      "name": "alert",
       "type": "registry:component",
       "title": "Base UI Alert",
       "description": "Alert component using Base UI.",
@@ -717,14 +159,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Alert.tsx",
+          "path": "components/retroui/Alert.tsx",
           "target": "components/retroui/Alert.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-avatar",
+      "name": "avatar",
       "type": "registry:component",
       "title": "Base UI Avatar",
       "description": "Avatar component using Base UI.",
@@ -733,14 +175,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Avatar.tsx",
+          "path": "components/retroui/Avatar.tsx",
           "target": "components/retroui/Avatar.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-badge",
+      "name": "badge",
       "type": "registry:component",
       "title": "Base UI Badge",
       "description": "Badge component using Base UI.",
@@ -749,14 +191,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Badge.tsx",
+          "path": "components/retroui/Badge.tsx",
           "target": "components/retroui/Badge.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-breadcrumb",
+      "name": "breadcrumb",
       "type": "registry:component",
       "title": "Base UI Breadcrumb",
       "description": "Breadcrumb component using Base UI.",
@@ -765,14 +207,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Breadcrumb.tsx",
+          "path": "components/retroui/Breadcrumb.tsx",
           "target": "components/retroui/Breadcrumb.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-button",
+      "name": "button",
       "type": "registry:component",
       "title": "Base UI Button",
       "description": "Button component using Base UI.",
@@ -781,14 +223,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Button.tsx",
+          "path": "components/retroui/Button.tsx",
           "target": "components/retroui/Button.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-calendar",
+      "name": "calendar",
       "type": "registry:component",
       "title": "Base UI Calendar",
       "description": "Calendar component using Base UI.",
@@ -797,14 +239,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Calendar.tsx",
+          "path": "components/retroui/Calendar.tsx",
           "target": "components/retroui/Calendar.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-card",
+      "name": "card",
       "type": "registry:component",
       "title": "Base UI Card",
       "description": "Card component using Base UI.",
@@ -813,14 +255,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Card.tsx",
+          "path": "components/retroui/Card.tsx",
           "target": "components/retroui/Card.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-carousel",
+      "name": "carousel",
       "type": "registry:component",
       "title": "Base UI Carousel",
       "description": "Carousel component using Base UI.",
@@ -829,14 +271,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Carousel.tsx",
+          "path": "components/retroui/Carousel.tsx",
           "target": "components/retroui/Carousel.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-checkbox",
+      "name": "checkbox",
       "type": "registry:component",
       "title": "Base UI Checkbox",
       "description": "Checkbox component using Base UI.",
@@ -845,14 +287,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Checkbox.tsx",
+          "path": "components/retroui/Checkbox.tsx",
           "target": "components/retroui/Checkbox.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-command",
+      "name": "command",
       "type": "registry:component",
       "title": "Base UI Command",
       "description": "Command component using Base UI.",
@@ -861,14 +303,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Command.tsx",
+          "path": "components/retroui/Command.tsx",
           "target": "components/retroui/Command.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-context-menu",
+      "name": "context-menu",
       "type": "registry:component",
       "title": "Base UI Context Menu",
       "description": "Context-menu component using Base UI.",
@@ -877,14 +319,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/ContextMenu.tsx",
+          "path": "components/retroui/ContextMenu.tsx",
           "target": "components/retroui/ContextMenu.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-dialog",
+      "name": "dialog",
       "type": "registry:component",
       "title": "Base UI Dialog",
       "description": "Dialog component using Base UI.",
@@ -893,14 +335,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Dialog.tsx",
+          "path": "components/retroui/Dialog.tsx",
           "target": "components/retroui/Dialog.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-drawer",
+      "name": "drawer",
       "type": "registry:component",
       "title": "Base UI Drawer",
       "description": "Drawer component using Base UI.",
@@ -909,14 +351,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Drawer.tsx",
+          "path": "components/retroui/Drawer.tsx",
           "target": "components/retroui/Drawer.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-empty",
+      "name": "empty",
       "type": "registry:component",
       "title": "Base UI Empty",
       "description": "Empty component using Base UI.",
@@ -925,14 +367,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Empty.tsx",
+          "path": "components/retroui/Empty.tsx",
           "target": "components/retroui/Empty.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-input",
+      "name": "input",
       "type": "registry:component",
       "title": "Base UI Input",
       "description": "Input component using Base UI.",
@@ -941,14 +383,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Input.tsx",
+          "path": "components/retroui/Input.tsx",
           "target": "components/retroui/Input.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-label",
+      "name": "label",
       "type": "registry:component",
       "title": "Base UI Label",
       "description": "Label component using Base UI.",
@@ -957,14 +399,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Label.tsx",
+          "path": "components/retroui/Label.tsx",
           "target": "components/retroui/Label.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-loader",
+      "name": "loader",
       "type": "registry:component",
       "title": "Base UI Loader",
       "description": "Loader component using Base UI.",
@@ -973,14 +415,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Loader.tsx",
+          "path": "components/retroui/Loader.tsx",
           "target": "components/retroui/Loader.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-menu",
+      "name": "menu",
       "type": "registry:component",
       "title": "Base UI Menu",
       "description": "Menu component using Base UI.",
@@ -989,14 +431,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Menu.tsx",
+          "path": "components/retroui/Menu.tsx",
           "target": "components/retroui/Menu.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-popover",
+      "name": "popover",
       "type": "registry:component",
       "title": "Base UI Popover",
       "description": "Popover component using Base UI.",
@@ -1005,14 +447,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Popover.tsx",
+          "path": "components/retroui/Popover.tsx",
           "target": "components/retroui/Popover.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-progress",
+      "name": "progress",
       "type": "registry:component",
       "title": "Base UI Progress",
       "description": "Progress component using Base UI.",
@@ -1021,14 +463,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Progress.tsx",
+          "path": "components/retroui/Progress.tsx",
           "target": "components/retroui/Progress.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-radio",
+      "name": "radio",
       "type": "registry:component",
       "title": "Base UI Radio",
       "description": "Radio component using Base UI.",
@@ -1037,14 +479,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Radio.tsx",
+          "path": "components/retroui/Radio.tsx",
           "target": "components/retroui/Radio.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-select",
+      "name": "select",
       "type": "registry:component",
       "title": "Base UI Select",
       "description": "Select component using Base UI.",
@@ -1053,14 +495,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Select.tsx",
+          "path": "components/retroui/Select.tsx",
           "target": "components/retroui/Select.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-slider",
+      "name": "slider",
       "type": "registry:component",
       "title": "Base UI Slider",
       "description": "Slider component using Base UI.",
@@ -1069,14 +511,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Slider.tsx",
+          "path": "components/retroui/Slider.tsx",
           "target": "components/retroui/Slider.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-sonner",
+      "name": "sonner",
       "type": "registry:component",
       "title": "Base UI Sonner",
       "description": "Sonner component using Base UI.",
@@ -1085,14 +527,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Sonner.tsx",
+          "path": "components/retroui/Sonner.tsx",
           "target": "components/retroui/Sonner.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-switch",
+      "name": "switch",
       "type": "registry:component",
       "title": "Base UI Switch",
       "description": "Switch component using Base UI.",
@@ -1101,14 +543,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Switch.tsx",
+          "path": "components/retroui/Switch.tsx",
           "target": "components/retroui/Switch.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-tab",
+      "name": "tab",
       "type": "registry:component",
       "title": "Base UI Tab",
       "description": "Tab component using Base UI.",
@@ -1117,14 +559,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Tab.tsx",
+          "path": "components/retroui/Tab.tsx",
           "target": "components/retroui/Tab.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-table",
+      "name": "table",
       "type": "registry:component",
       "title": "Base UI Table",
       "description": "Table component using Base UI.",
@@ -1133,14 +575,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Table.tsx",
+          "path": "components/retroui/Table.tsx",
           "target": "components/retroui/Table.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-text",
+      "name": "text",
       "type": "registry:component",
       "title": "Base UI Text",
       "description": "Text component using Base UI.",
@@ -1149,14 +591,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Text.tsx",
+          "path": "components/retroui/Text.tsx",
           "target": "components/retroui/Text.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-textarea",
+      "name": "textarea",
       "type": "registry:component",
       "title": "Base UI Textarea",
       "description": "Textarea component using Base UI.",
@@ -1165,14 +607,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Textarea.tsx",
+          "path": "components/retroui/Textarea.tsx",
           "target": "components/retroui/Textarea.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-toc",
+      "name": "toc",
       "type": "registry:component",
       "title": "Base UI Table of Contents",
       "description": "Toc component using Base UI.",
@@ -1181,14 +623,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/TableOfContents.tsx",
+          "path": "components/retroui/TableOfContents.tsx",
           "target": "components/retroui/TableOfContents.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-toggle-group",
+      "name": "toggle-group",
       "type": "registry:component",
       "title": "Base UI Toggle Group",
       "description": "Toggle-group component using Base UI.",
@@ -1197,14 +639,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/ToggleGroup.tsx",
+          "path": "components/retroui/ToggleGroup.tsx",
           "target": "components/retroui/ToggleGroup.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-toggle",
+      "name": "toggle",
       "type": "registry:component",
       "title": "Base UI Toggle",
       "description": "Toggle component using Base UI.",
@@ -1213,14 +655,14 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Toggle.tsx",
+          "path": "components/retroui/Toggle.tsx",
           "target": "components/retroui/Toggle.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "baseui-tooltip",
+      "name": "tooltip",
       "type": "registry:component",
       "title": "Base UI Tooltip",
       "description": "Tooltip component using Base UI.",
@@ -1229,7 +671,7 @@
       ],
       "files": [
         {
-          "path": "components/base-retroui/Tooltip.tsx",
+          "path": "components/retroui/Tooltip.tsx",
           "target": "components/retroui/Tooltip.tsx",
           "type": "registry:component"
         }

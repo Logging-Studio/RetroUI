@@ -1,4 +1,4 @@
-import { Card, Text } from "@/components/base-retroui";
+import { Card, Text } from "@/components/retroui";
 import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";

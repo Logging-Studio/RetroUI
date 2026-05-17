@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Button, Text } from "@/components/base-retroui";
+import { Button, Text } from "@/components/retroui";
 import { useAuth } from "@/contexts/AuthContext";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/react";
 import {

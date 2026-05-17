@@ -7,7 +7,7 @@ import { Button } from "@/components/retroui/Button"
 export default function DrawerStyleDefault() {
     return (
         <Drawer>
-            <Drawer.Trigger asChild>
+            <Drawer.Trigger>
                 <Button>Submit</Button>
             </Drawer.Trigger>
             <Drawer.Content>

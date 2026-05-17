@@ -1,7 +1,7 @@
 import "./global.css";
 import { Archivo_Black, Space_Mono, Geist, Space_Grotesk } from "next/font/google";
 import { Metadata } from "next";
-import { Toaster } from "@/components/base-retroui";
+import { Toaster } from "@/components/retroui";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/contexts/ThemeContext";

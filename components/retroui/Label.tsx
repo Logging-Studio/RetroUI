@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
+import { Field } from "@base-ui/react/field";
 import { cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
@@ -11,6 +11,6 @@ const labelVariants = cva(
 export const Label = ({
   className,
   ...props
-}: React.ComponentProps<typeof LabelPrimitive.Root>) => (
-  <LabelPrimitive.Root className={cn(labelVariants(), className)} {...props} />
+}: React.ComponentProps<typeof Field.Label>) => (
+  <Field.Label className={cn(labelVariants(), className)} {...props} />
 );
