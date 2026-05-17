@@ -9,9 +9,8 @@ export const templateConfig = {
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_1.png"
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_2.png",
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstack/screen_3.png",
             ],
 
             features: [
@@ -40,9 +39,8 @@ export const templateConfig = {
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/neoflux/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/neoflux/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/neoflux/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/neoflux/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/neoflux/screen_1.png"
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/neoflux/screen_2.png",
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/neoflux/screen_3.png",
             ],
             features: [
                 "Modern design",
@@ -70,9 +68,8 @@ export const templateConfig = {
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstudio/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brutstudio/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brut-studio/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brut-studio/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brut-studio/screen_1.png"
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brut-studio/screen_2.png",
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/brut-studio/screen_3.png",
             ],
             features: [
                 "Modern design",
@@ -100,9 +97,8 @@ export const templateConfig = {
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/defolio/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/defolio/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/defolio/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/defolio/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/defolio/screen_1.png"
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/defolio/screen_2.png",
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/defolio/screen_3.png",
             ],
             features: [
                 "Modern design",
@@ -130,9 +126,8 @@ export const templateConfig = {
             cover_image: "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/artis/screen_1.png",
             preview_images: [
                 "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/artis/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/artis/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/artis/screen_1.png",
-                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/artis/screen_1.png"
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/artis/screen_2.png",
+                "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/templates/artis/screen_3.png",
             ],
             features: [
                 "Modern design",

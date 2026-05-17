@@ -31,9 +31,11 @@ export default async function TemplatePage(props: TemplatePageProps) {
     <main className="min-h-screen pt-16 space-y-12">
       {/* Header with Title and Preview Button */}
       <section className="container max-w-7xl mx-auto px-4">
-        <div className="max-w-4xl mb-6">
-          <Text as="h1" className="text-4xl lg:text-5xl">
-            {template.name}
+        <div className="max-w-4xl space-y-4 mb-6">
+          <Text as="h1">
+            <span className="text-card text-outline-foreground text-shadow-foreground">
+              {template.name}
+            </span>
           </Text>
           <Text className="text-muted-foreground mt-2">
             {template.description}
