@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button, Input, Text } from "@/components/base-retroui";
+import { Button, Input, Text } from "@/components/retroui";
 import Link from "next/link";
 import Image from "next/image";
 import { signInAction } from "@/app/actions/auth";

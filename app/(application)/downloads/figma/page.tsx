@@ -1,4 +1,4 @@
-import { Card, Text, Button } from "@/components/base-retroui";
+import { Card, Text, Button } from "@/components/retroui";
 import { getCurrentUser } from "@/lib/auth";
 import { redirect } from "next/navigation";
 

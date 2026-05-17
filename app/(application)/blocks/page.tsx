@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Card, Text, Tabs } from "@/components/base-retroui";
+import { Card, Text, Tabs } from "@/components/retroui";
 import { blockConfig } from "@/config/blocks";
 import Image from "next/image";
 import { Megaphone, Search, ListMinus, LayoutGrid } from "lucide-react";

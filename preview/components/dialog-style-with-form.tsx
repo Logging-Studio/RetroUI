@@ -8,7 +8,7 @@ import { Text } from "@/components/retroui/Text";
 export default function DialogStyleWithForm() {
   return (
     <Dialog>
-      <Dialog.Trigger asChild>
+      <Dialog.Trigger>
         <Button>Open Form</Button>
       </Dialog.Trigger>
       <Dialog.Content size={"md"}>
@@ -31,7 +31,7 @@ export default function DialogStyleWithForm() {
             </div>
           </div>
           <Dialog.Footer>
-            <Dialog.Trigger asChild>
+            <Dialog.Trigger>
               <Button type="submit">Submit</Button>
             </Dialog.Trigger>
           </Dialog.Footer>

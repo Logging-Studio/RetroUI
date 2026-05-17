@@ -7,7 +7,7 @@ import { Text } from "@/components/retroui/Text";
 export default function DialogStyleDefault() {
   return (
     <Dialog>
-      <Dialog.Trigger asChild>
+      <Dialog.Trigger>
         <Button>Open Dialog</Button>
       </Dialog.Trigger>
       <Dialog.Content>
@@ -20,7 +20,7 @@ export default function DialogStyleDefault() {
             <p>This action cannout be undone.</p>
           </section>
           <section className="flex w-full justify-end">
-            <Dialog.Trigger asChild>
+            <Dialog.Trigger>
               <Button>Confirm</Button>
             </Dialog.Trigger>
           </section>

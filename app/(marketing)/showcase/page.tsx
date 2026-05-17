@@ -16,11 +16,11 @@ export default function ShowcasePage() {
                     <Text className="text-lg text-muted-foreground mb-4">
                         Build something cool using RetroUI? Share it with the community.
                     </Text>
-                    <Button asChild>
-                        <Link href="https://github.com/Logging-Studio/RetroUI/discussions/102" target="_blank">
+                    <Link href="https://github.com/Logging-Studio/RetroUI/discussions/102" target="_blank">
+                        <Button>
                             Add Your Project
-                        </Link>
-                    </Button>
+                        </Button>
+                    </Link>
                 </div>
 
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -38,11 +38,11 @@ export default function ShowcasePage() {
                                     <div className="flex items-center justify-between gap-2">
                                         <Card.Title>{value.name}</Card.Title>
 
-                                        <Button asChild size="sm" variant="secondary">
-                                            <Link href={value.url} target="_blank" rel="noopener noreferrer">
+                                        <Link href={value.url} target="_blank" rel="noopener noreferrer">
+                                            <Button size="sm" variant="secondary">
                                                 Visit <ArrowUpRight className="ml-2 h-4 w-4" />
-                                            </Link>
-                                        </Button>
+                                            </Button>
+                                        </Link>
                                     </div>
                                 </Card.Header>
                             </Card>

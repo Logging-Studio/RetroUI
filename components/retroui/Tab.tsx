@@ -1,10 +1,14 @@
 import { cn } from "@/lib/utils";
-import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { Tabs as BaseTabs } from "@base-ui/react/tabs";
 
-const Tabs = TabsPrimitive.Root;
+const Tabs = BaseTabs.Root;
+const TabsPanels = ({ children, className, ...props }: React.ComponentProps<"div">) => (
+  <div className={className} {...props}>
+    {children}
+  </div>
+);
 
-interface ITabsTriggerList
-  extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> {
+interface ITabsTriggerList extends React.ComponentProps<typeof BaseTabs.List> {
   className?: string;
 }
 const TabsTriggerList = ({
@@ -13,52 +17,44 @@ const TabsTriggerList = ({
   ...props
 }: ITabsTriggerList) => {
   return (
-    <TabsPrimitive.List
-      className={cn("flex flex-row space-x-2 w-full", className)}
-      {...props}
-    >
+    <BaseTabs.List className={cn("flex flex-row space-x-2 w-full", className)} {...props}>
       {children}
-    </TabsPrimitive.List>
+    </BaseTabs.List>
   );
 };
 
-interface ITabsTrigger
-  extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> {
+interface ITabsTrigger extends React.ComponentProps<typeof BaseTabs.Tab> {
   className?: string;
 }
 const TabsTrigger = ({ children, className, ...props }: ITabsTrigger) => {
   return (
-    <TabsPrimitive.Trigger
+    <BaseTabs.Tab
       className={cn(
-        "px-4 py-1 border-2 border-transparent data-[state=active]:border-border data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-semibold focus:outline-hidden",
-        className
+        "px-4 flex items-center py-1 border-2 border-transparent data-[active]:border-border data-[active]:bg-primary data-[active]:text-primary-foreground data-[active]:font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+        className,
       )}
       {...props}
     >
       {children}
-    </TabsPrimitive.Trigger>
+    </BaseTabs.Tab>
   );
 };
 
-interface ITabsContent
-  extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content> {
+interface ITabsContent extends React.ComponentProps<typeof BaseTabs.Panel> {
   className?: string;
 }
 const TabsContent = ({ children, className, ...props }: ITabsContent) => {
   return (
-    <TabsPrimitive.Content
-      className={cn("border-2 border-border mt-2 p-4 w-full", className)}
-      {...props}
-    >
+    <BaseTabs.Panel className={cn("mt-2 w-full", className)} {...props}>
       {children}
-    </TabsPrimitive.Content>
+    </BaseTabs.Panel>
   );
 };
 
-const TabsObj = Object.assign(Tabs, {
+const TabsObj = Object.assign(BaseTabs.Root, {
+  List: TabsTriggerList,
   Trigger: TabsTrigger,
   Content: TabsContent,
-  List: TabsTriggerList,
 });
 
 export { TabsObj as Tabs };

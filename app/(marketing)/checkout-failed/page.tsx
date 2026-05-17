@@ -1,6 +1,6 @@
 "use client";
 
-import { Text, Card, Badge } from "@/components/base-retroui";
+import { Text, Card, Badge } from "@/components/retroui";
 import { AlertCircle } from "lucide-react";
 import Link from "next/link";
 import Footer from "@/components/footer";

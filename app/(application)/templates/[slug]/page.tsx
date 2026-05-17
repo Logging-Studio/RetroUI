@@ -1,6 +1,6 @@
 import { templateConfig } from "@/config/templates";
 import { notFound } from "next/navigation";
-import { Text, Button, Badge } from "@/components/base-retroui";
+import { Text, Button, Badge } from "@/components/retroui";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Calendar, Package } from "lucide-react";

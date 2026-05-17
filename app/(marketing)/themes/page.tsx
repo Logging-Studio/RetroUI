@@ -65,7 +65,7 @@ export default function Themes() {
 
                 <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
                     <div className="flex gap-6">
-                        <Select value={colorTheme} onValueChange={(value: Theme) => setColorTheme(value)}>
+                        <Select value={colorTheme} onValueChange={(value) => value && setColorTheme(value as Theme)}>
                             <Select.Trigger>
                                 <Select.Value placeholder="Select Color" />
                             </Select.Trigger>
@@ -82,7 +82,7 @@ export default function Themes() {
                             </Select.Content>
                         </Select>
 
-                        <Select value={variant} onValueChange={(value) => setVariant(value)}>
+                        <Select value={variant} onValueChange={(value) => value && setVariant(value)}>
                             <Select.Trigger>
                                 <Select.Value placeholder="Select Variant" />
                             </Select.Trigger>

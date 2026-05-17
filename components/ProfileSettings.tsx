@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Card, Button, Text } from "@/components/base-retroui";
+import { Card, Button, Text } from "@/components/retroui";
 import { useAuth } from "@/contexts/AuthContext";
 import { updateProfileAction } from "@/app/actions/auth";
 import { toast } from "sonner";

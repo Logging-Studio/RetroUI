@@ -1,4 +1,4 @@
-import { Text } from "@/components/base-retroui";
+import { Text } from "@/components/retroui";
 import Image from "next/image";
 import { testimonials } from "@/config/data";
 

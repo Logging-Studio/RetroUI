@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, Text, Button } from "@/components/base-retroui";
+import { Card, Text, Button } from "@/components/retroui";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import { Building } from "lucide-react";

@@ -1,6 +1,6 @@
 "use client";
 
-import { Text, Card } from "@/components/base-retroui";
+import { Text, Card } from "@/components/retroui";
 import { componentConfig } from "@/config/components";
 import Image from "next/image";
 import Link from "next/link";

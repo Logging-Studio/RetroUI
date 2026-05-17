@@ -8,7 +8,7 @@ import {
   Card,
   Badge,
   Button,
-} from "@/components/base-retroui";
+} from "@/components/retroui";
 import { Accordion } from "@/components/retroui/Accordion";
 import { Check, Gift, Rocket, Crown, Users } from "lucide-react";
 import { toast } from "sonner";
@@ -394,7 +394,7 @@ export default function PricingPage() {
           </div>
 
           <div>
-            <Accordion type="single" collapsible className="space-y-4 w-full">
+            <Accordion className="space-y-4 w-full">
               {faqs.map((faq) => {
                 return (
                   <Accordion.Item key={faq.question} value={faq.question} className="bg-card">

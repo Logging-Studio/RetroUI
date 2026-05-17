@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/base-retroui/Button";
+import { Button } from "@/components/retroui/Button";
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -81,7 +81,7 @@ export default function TopNav() {
                         <NavigationMenuContent className="border">
                           <div className="w-48 p-2">
                             {item.children.map((child) => (
-                              <NavigationMenuLink key={child.title} asChild className="hover:bg-none hover:underline decoration-primary decoration-4 underline-offset-4">
+                              <NavigationMenuLink key={child.title} className="hover:bg-none hover:underline decoration-primary decoration-4 underline-offset-4">
                                 <Link
                                   href={child.href}
                                   className="hover:bg-none hover:underline decoration-primary decoration-4 underline-offset-4"
@@ -98,7 +98,7 @@ export default function TopNav() {
 
                   return (
                     <NavigationMenuItem key={item.title}>
-                      <NavigationMenuLink asChild className="hover:bg-none hover:underline decoration-primary decoration-4 underline-offset-4">
+                      <NavigationMenuLink className="hover:bg-none hover:underline decoration-primary decoration-4 underline-offset-4">
                         <Link href={item.href}>
                           {item.title}
                         </Link>
@@ -112,8 +112,8 @@ export default function TopNav() {
 
           <div className="flex items-center space-x-3">
             {/* Mobile Menu Button */}
-            <Drawer open={mobileMenuOpen} onOpenChange={setMobileMenuOpen} direction="left">
-              <Drawer.Trigger asChild>
+            <Drawer open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <Drawer.Trigger>
                 <Button
                   variant="outline"
                   size="sm"
@@ -129,7 +129,7 @@ export default function TopNav() {
                     <Drawer.Title className="text-foreground font-head text-xl">
                       Menu
                     </Drawer.Title>
-                    <Drawer.Close asChild>
+                    <Drawer.Close>
                       <Button variant="outline" size="sm" className="p-2 bg-card" aria-label="Close menu">
                         <X className="h-5 w-5" />
                       </Button>

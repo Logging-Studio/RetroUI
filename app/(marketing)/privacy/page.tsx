@@ -1,4 +1,4 @@
-import { Text } from "@/components/base-retroui";
+import { Text } from "@/components/retroui";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import { Metadata } from "next";

@@ -1,10 +1,10 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert",
-  "title": "Alert",
-  "description": "Notify your users about important events and updates. 📣",
+  "title": "Base UI Alert",
+  "description": "Alert component using Base UI.",
   "dependencies": [
-    "class-variance-authority"
+    "@base-ui/react"
   ],
   "files": [
     {

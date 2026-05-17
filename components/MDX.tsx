@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Badge, Card, Text } from "@/components/base-retroui";
+import { Alert, Badge, Card, Text } from "@/components/retroui";
 import * as runtime from "react/jsx-runtime";
 import React, { AnchorHTMLAttributes, HTMLAttributes } from "react";
 import { ComponentShowcase } from "./ComponentShowcase";

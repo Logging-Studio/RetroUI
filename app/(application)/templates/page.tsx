@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Text } from "@/components/base-retroui";
-import { Tabs } from "@/components/base-retroui/Tab";
-import { Button } from "@/components/base-retroui";
+import { Text } from "@/components/retroui";
+import { Tabs } from "@/components/retroui/Tab";
+import { Button } from "@/components/retroui";
 import { templateConfig } from "@/config/templates";
 import Image from "next/image";
 import { Search, Newspaper, ShoppingCart, LayoutDashboard, Sparkles, ArrowUpRight } from "lucide-react";

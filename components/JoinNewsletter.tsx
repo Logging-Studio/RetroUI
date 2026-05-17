@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Text, Input } from "@/components/base-retroui";
+import { Button, Text, Input } from "@/components/retroui";
 import { useState } from "react";
 
 const INIT = "INIT";

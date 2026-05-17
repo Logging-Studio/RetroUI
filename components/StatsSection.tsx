@@ -1,4 +1,4 @@
-import { Button, Text } from "@/components/base-retroui";
+import { Button, Text } from "@/components/retroui";
 import { GithubIcon, MessageCircleIcon, FigmaIcon } from "lucide-react";
 import Image from "next/image";
 

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/base-retroui";
+import { Button } from "@/components/retroui";
 
 interface ICodeBlock extends React.HTMLAttributes<HTMLPreElement> {}
 

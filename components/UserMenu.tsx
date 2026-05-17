@@ -2,12 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { User, LogOut, Building } from "lucide-react";
 import Avatar, { genConfig } from "react-nice-avatar";
 import { useAuth } from "@/contexts/AuthContext";
 import type { User as UserType } from "@/types/auth";
-import { Badge } from "./retroui";
+import { Badge, Menu } from "./retroui";
 
 export default function UserMenu({ user }: { user: UserType }) {
   const { logout } = useAuth();
@@ -17,19 +16,16 @@ export default function UserMenu({ user }: { user: UserType }) {
   };
 
   return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
+    <Menu>
+      <Menu.Trigger>
         <button className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" aria-label="Open user menu">
           <Avatar className="w-10 h-10 cursor-pointer border" {...genConfig(user?.email || "User")} />
         </button>
-      </DropdownMenu.Trigger>
+      </Menu.Trigger>
 
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          className="min-w-[240px] bg-white border-2 border-black mt-2 relative z-10 shadow-md"
-          sideOffset={8}
-          align="end"
-        >
+      <Menu.Content
+        className="min-w-[240px] bg-white border-2 border-black mt-2 relative z-10 shadow-md"
+      >
           <div className="relative bg-popover">
             {/* User Info Header */}
             <div className="flex items-center space-x-2 p-4">
@@ -47,7 +43,7 @@ export default function UserMenu({ user }: { user: UserType }) {
             {/* Menu Items */}
             <div className="space-y-1 p-4">
               {user.isOrg && (
-                <DropdownMenu.Item asChild>
+                <Menu.Item>
                   <Link
                     href="/organization"
                     className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-primary transition-colors duration-200 outline-none cursor-pointer"
@@ -55,10 +51,10 @@ export default function UserMenu({ user }: { user: UserType }) {
                     <Building className="w-4 h-4" />
                     <span>Organization</span>
                   </Link>
-                </DropdownMenu.Item>
+                </Menu.Item>
               )}
 
-              <DropdownMenu.Item asChild>
+              <Menu.Item>
                 <Link
                   href="/account"
                   className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-primary transition-colors duration-200 outline-none cursor-pointer"
@@ -66,9 +62,9 @@ export default function UserMenu({ user }: { user: UserType }) {
                   <User className="w-4 h-4" />
                   <span>Account</span>
                 </Link>
-              </DropdownMenu.Item>
+              </Menu.Item>
 
-              <DropdownMenu.Item asChild>
+              <Menu.Item>
                 <button
                   onClick={handleLogout}
                   className="flex items-center gap-2 w-full px-3 py-2 text-sm hover:bg-primary transition-colors duration-200 outline-none cursor-pointer text-destructive"
@@ -76,11 +72,10 @@ export default function UserMenu({ user }: { user: UserType }) {
                   <LogOut className="w-4 h-4" />
                   <span>Logout</span>
                 </button>
-              </DropdownMenu.Item>
+              </Menu.Item>
             </div>
           </div>
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
+        </Menu.Content>
+    </Menu>
   );
 }
