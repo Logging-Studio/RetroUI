@@ -5,7 +5,7 @@ import { Popover, Label, Button, Input } from "@/components/retroui";
 export default function PopoverStyleDefault() {
   return (
     <Popover>
-      <Popover.Trigger asChild>
+      <Popover.Trigger>
         <Button>Open Popover</Button>
       </Popover.Trigger>
       <Popover.Content className="w-80 font-sans">

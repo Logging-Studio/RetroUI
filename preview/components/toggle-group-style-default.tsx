@@ -5,7 +5,7 @@ import { Bold, Italic, Underline } from "lucide-react";
 
 export default function ToggleGroupStyleDefault() {
   return (
-    <ToggleGroup type="multiple" variant="default">
+    <ToggleGroup variant="default">
       <ToggleGroupItem value="bold">
         <Bold className="h-4 w-4" />
       </ToggleGroupItem>

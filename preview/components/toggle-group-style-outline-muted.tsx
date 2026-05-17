@@ -5,7 +5,7 @@ import { Bold, Italic, Underline } from "lucide-react";
 
 export default function ToggleGroupStyleOutlineMuted() {
   return (
-    <ToggleGroup type="multiple" variant="outline-muted">
+    <ToggleGroup variant="outline-muted">
       <ToggleGroupItem value="bold">
         <Bold className="h-4 w-4" />
       </ToggleGroupItem>
