@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "preview/components/input-style-with-label.tsx",
-      "content": "\"use client\";\n\nimport { Input } from \"@/components/retroui/Input\";\nimport { Label } from \"@/components/retroui/Label\";\n\nexport default function InputStyleWithLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm items-center gap-1.5\">\n      <Label htmlFor=\"pokemon\">Favorite Pokemon</Label>\n      <Input type=\"pokemon\" id=\"pokemon\" placeholder=\"Charmander\" />\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport { Input } from \"@/components/retroui/Input\";\nimport { Field } from \"@/components/retroui/Field\";\n\nexport default function InputStyleWithLabel() {\n  return (\n    <Field>\n      <Field.Label htmlFor=\"pokemon\">Favorite Pokemon</Field.Label>\n      <Input type=\"pokemon\" id=\"pokemon\" placeholder=\"Charmander\" />\n    </Field>\n  );\n}\n",
       "type": "registry:block",
       "target": "components/retroui/preview/input-style-with-label.tsx"
     }

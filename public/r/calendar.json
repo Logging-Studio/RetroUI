@@ -4,7 +4,8 @@
   "title": "Base UI Calendar",
   "description": "Calendar component using Base UI.",
   "dependencies": [
-    "@base-ui/react"
+    "@base-ui/react",
+    "react-day-picker"
   ],
   "files": [
     {

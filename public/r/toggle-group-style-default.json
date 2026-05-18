@@ -12,7 +12,7 @@
   "files": [
     {
       "path": "preview/components/toggle-group-style-default.tsx",
-      "content": "\"use client\";\n\nimport { ToggleGroup, ToggleGroupItem } from \"@/components/retroui\";\nimport { Bold, Italic, Underline } from \"lucide-react\";\n\nexport default function ToggleGroupStyleDefault() {\n  return (\n    <ToggleGroup type=\"multiple\" variant=\"default\">\n      <ToggleGroupItem value=\"bold\">\n        <Bold className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n\n      <ToggleGroupItem value=\"italic\">\n        <Italic className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n\n      <ToggleGroupItem value=\"underline\">\n        <Underline className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n    </ToggleGroup>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport { ToggleGroup, ToggleGroupItem } from \"@/components/retroui\";\nimport { Bold, Italic, Underline } from \"lucide-react\";\n\nexport default function ToggleGroupStyleDefault() {\n  return (\n    <ToggleGroup variant=\"default\">\n      <ToggleGroupItem value=\"bold\">\n        <Bold className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n\n      <ToggleGroupItem value=\"italic\">\n        <Italic className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n\n      <ToggleGroupItem value=\"underline\">\n        <Underline className=\"h-4 w-4\" />\n      </ToggleGroupItem>\n    </ToggleGroup>\n  );\n}\n",
       "type": "registry:block",
       "target": "components/retroui/preview/toggle-group-style-default.tsx"
     }

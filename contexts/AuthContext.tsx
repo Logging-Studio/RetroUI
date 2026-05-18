@@ -8,6 +8,7 @@ import type { User } from "@/types/auth";
 interface AuthContextType {
   user: User | null;
   isLoading: boolean;
+  mounted: boolean;
   error: string | null;
   checkAuth: () => Promise<void>;
   logout: () => Promise<void>;
@@ -117,14 +118,11 @@ export function AuthProvider({
   const value: AuthContextType = {
     user,
     isLoading,
+    mounted,
     error,
     checkAuth,
     logout,
   };
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <AuthContext.Provider value={value}>

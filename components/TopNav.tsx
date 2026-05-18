@@ -19,7 +19,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import UserMenu from "@/components/UserMenu";
 
 export default function TopNav() {
-  const { user } = useAuth();
+  const { user, mounted } = useAuth();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -171,7 +171,7 @@ export default function TopNav() {
                 </nav>
                 <Drawer.Footer>
                   <div className="flex flex-col gap-2 w-full">
-                    {user ? (
+                    {mounted && user ? (
                       <div className="px-3 py-2">
                         <UserMenu user={user} />
                       </div>
@@ -197,7 +197,7 @@ export default function TopNav() {
 
             {/* Desktop Auth Buttons */}
             <div className="hidden md:flex items-center space-x-3">
-              {user ? (
+              {mounted && user ? (
                 <UserMenu user={user} />
               ) : (
                 <>

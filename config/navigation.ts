@@ -13,6 +13,7 @@ export const navConfig: INavigationConfig = {
     {
       title: "Resources", href: "", children: [
         { title: "Themes", href: "/themes" },
+        { title: "Neo Screenshot", href: "https://neo.retroui.dev" },
         { title: "Documentation", href: "/docs" },
         { title: "Blog Posts", href: "/blogs" },
         { title: "Showcase", href: "/showcase" },

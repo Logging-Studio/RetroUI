@@ -29,7 +29,7 @@ const productLinks = [
   { name: "Templates", href: "/templates" },
   { name: "Figma Kit", href: "/figma" },
   { name: "Themes", href: "/themes" },
-  { name: "Neo Screenshot", href: "https://no.retroui.dev" },
+  { name: "Neo Screenshot", href: "https://neo.retroui.dev" },
 ];
 
 function Footer() {
