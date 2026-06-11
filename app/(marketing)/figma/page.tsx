@@ -3,12 +3,18 @@ import {
   Text,
   Card,
 } from "@/components/retroui";
-import { ArrowRight, Figma } from "lucide-react";
+import { ArrowRight, Download, Figma } from "lucide-react";
 import Image from "next/image";
 import { StatsSection } from "@/components/StatsSection";
 import Link from "next/link";
+import { getCurrentUser } from "@/lib/auth";
 
-export default function FigmaHomepage() {
+const FIGMA_DOWNLOAD_URL = "https://pub-5f7cbdfd9ffa4c838e386788f395f0c4.r2.dev/figma-kit/bdad8996-1899-4b8b-939f-a202a99eb04b/retroui_figma_1.3.fig";
+
+export default async function FigmaHomepage() {
+  const user = await getCurrentUser();
+  const isProUser = user?.isPro === true;
+
   return (
     <main>
       {/* Hero Section */}
@@ -44,10 +50,21 @@ export default function FigmaHomepage() {
                 Live Preview
               </a>
             </div>
-            <Button className="text-lg" variant="link" render={<Link href="/pricing" />}>
-              Access Now
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            {isProUser ? (
+              <a
+                href={FIGMA_DOWNLOAD_URL}
+                download
+                className="relative inline-flex items-center gap-2 px-6 py-3 font-head border-2 border-black bg-card text-lg transition-all duration-200 hover:translate-x-1 hover:translate-y-1"
+              >
+                <Download className="w-4 h-4" />
+                Download Kit
+              </a>
+            ) : (
+              <Button className="text-lg" variant="link" render={<Link href="/pricing" />}>
+                Access Now
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            )}
           </div>
         </div>
       </section>
@@ -268,7 +285,21 @@ export default function FigmaHomepage() {
             </Text>
 
             <div className="relative inline-block group">
-              <Button className="text-lg" render={<Link href="/signup">Get Started</Link>} />
+              {isProUser ? (
+                <div className="relative inline-block group">
+                  <div className="absolute -bottom-1.5 -right-1.5 left-1.5 top-1.5 border-2 bg-primary transition-all duration-200" />
+                  <a
+                    href={FIGMA_DOWNLOAD_URL}
+                    download
+                    className="px-6 py-3 font-head border-2 transition-all duration-200 relative bg-card shadow-none group-hover:translate-x-1 group-hover:translate-y-1 hover:shadow-none active:translate-x-1.5 active:translate-y-1.5 flex items-center gap-2 text-lg"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download Kit
+                  </a>
+                </div>
+              ) : (
+                <Button className="text-lg" render={<Link href="/signup">Get Started</Link>} />
+              )}
             </div>
           </div>
         </div>

@@ -41,7 +41,7 @@ export default function Page() {
   return (
     <div className="relative flex items-start">
       {/* Main Content */}
-      <div className="flex-1 space-y-12 max-w-2xl mx-auto w-full">
+      <div className="flex-1 space-y-12 max-w-2xl mx-auto w-full px-0 lg:px-12 xl:px-0">
         <div className="border-b pb-6">
           <div className="flex flex-col md:flex-row items-start justify-between gap-4 mb-8">
             <div className="flex-1">

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Text, Button, Badge } from "@/components/retroui";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Calendar, Package } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { DownloadButton } from "@/components/DownloadButton";
 
