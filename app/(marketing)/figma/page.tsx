@@ -298,7 +298,7 @@ export default async function FigmaHomepage() {
                   </a>
                 </div>
               ) : (
-                <Button className="text-lg" render={<Link href="/signup">Get Started</Link>} />
+                <Button className="text-lg" render={<Link href="/sign-in">Get Started</Link>} />
               )}
             </div>
           </div>

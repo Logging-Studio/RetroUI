@@ -9,16 +9,16 @@ import Image from "next/image";
 
 const companyLinks = [
   { name: "Blog", href: "/blogs" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "mailto:arif@retroui.dev" },
   { name: "Terms of Use", href: "/terms" },
   { name: "Privacy Policy", href: "/privacy" },
 ];
 
 const supportLinks = [
   { name: "Pricing", href: "/pricing" },
-  { name: "FAQ", href: "/faq" },
+  { name: "FAQ", href: "/pricing#faq" },
   { name: "Documentation", href: "/docs" },
-  { name: "Changelog", href: "/changelog" },
+  { name: "Changelog", href: "/docs/changelog" },
   { name: "Discord Community", href: "https://discord.com/invite/Jum3NJxK6Q" },
   { name: "Email Support", href: "mailto:arif@retroui.dev" },
 ];

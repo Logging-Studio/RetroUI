@@ -3,7 +3,7 @@ import { Text } from "@/components/retroui/Text";
 
 import { Checkbox } from "@/components/retroui/Checkbox";
 import { Input } from "@/components/retroui/Input";
-import { Label } from "@/components/retroui/Label";
+import { Field } from "@/components/retroui/Field";
 import { Eye, EyeOff, Github, Mail } from "lucide-react";
 import { useState } from "react";
 
@@ -20,13 +20,13 @@ export default function SignInBlock() {
         </div>
         <div className="p-6">
           <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+            <Field className="space-y-2">
+              <Field.Label htmlFor="email">Email</Field.Label>
               <Input id="email" type="email" placeholder="you@example.com" />
-            </div>
-            <div className="space-y-2">
+            </Field>
+            <Field className="space-y-2">
               <div className="flex items-center justify-between">
-                <Label htmlFor="password">Password</Label>
+                <Field.Label htmlFor="password">Password</Field.Label>
                 <a
                   href="/forgot-password"
                   className="text-sm font-medium underline underline-offset-4"
@@ -55,7 +55,7 @@ export default function SignInBlock() {
                   </span>
                 </button>
               </div>
-            </div>
+            </Field>
 
             <div className="flex items-center space-x-2">
               <Checkbox id="remember" />

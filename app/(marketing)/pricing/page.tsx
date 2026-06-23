@@ -349,7 +349,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section id="faq" className="container mx-auto px-4 py-16 scroll-mt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex flex-col justify-between">
             <div>
